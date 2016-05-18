@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPosition extends TableImpl<RecruitPositionRecord> {
 
-	private static final long serialVersionUID = 1673972643;
+	private static final long serialVersionUID = -1362193734;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.recruit_position</code>
@@ -130,6 +130,11 @@ public class RecruitPosition extends TableImpl<RecruitPositionRecord> {
 	 * The column <code>ss1604c195_rd4.recruit_position.positionid</code>.
 	 */
 	public final TableField<RecruitPositionRecord, Integer> POSITIONID = createField("positionid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.recruit_position.description</code>.
+	 */
+	public final TableField<RecruitPositionRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.recruit_position</code> table reference

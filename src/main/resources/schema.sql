@@ -11,7 +11,7 @@ Target Server Type    : PGSQL
 Target Server Version : 90502
 File Encoding         : 65001
 
-Date: 2016-05-10 18:57:33
+Date: 2016-05-18 11:43:01
 */
 
 
@@ -67,9 +67,9 @@ CREATE SEQUENCE "ss1604c195_rd4"."COMMENTS_ID_seq"
  INCREMENT 1
  MINVALUE 1
  MAXVALUE 9223372036854775807
- START 17
+ START 25
  CACHE 1;
-SELECT setval('"ss1604c195_rd4"."COMMENTS_ID_seq"', 17, true);
+SELECT setval('"ss1604c195_rd4"."COMMENTS_ID_seq"', 25, true);
 
 -- ----------------------------
 -- Sequence structure for department_departmentid_seq
@@ -101,9 +101,9 @@ CREATE SEQUENCE "ss1604c195_rd4"."POSTS_ID_seq"
  INCREMENT 1
  MINVALUE 1
  MAXVALUE 9223372036854775807
- START 17
+ START 25
  CACHE 1;
-SELECT setval('"ss1604c195_rd4"."POSTS_ID_seq"', 17, true);
+SELECT setval('"ss1604c195_rd4"."POSTS_ID_seq"', 25, true);
 
 -- ----------------------------
 -- Sequence structure for recruit_agency_agencyid_seq
@@ -411,7 +411,8 @@ CREATE TABLE "ss1604c195_rd4"."recruit_agency" (
 "agencyid" int4 DEFAULT nextval('"ss1604c195_rd4".recruit_agency_agencyid_seq'::regclass) NOT NULL,
 "agency_url" varchar COLLATE "default",
 "agency_tpl" char(1) COLLATE "default",
-"agency_auth" varchar COLLATE "default"
+"agency_auth" varchar COLLATE "default",
+"agencyname" varchar COLLATE "default"
 )
 WITH (OIDS=FALSE)
 
@@ -548,7 +549,8 @@ CREATE TABLE "ss1604c195_rd4"."recruit_position" (
 "createdat" timestamp(6),
 "updatedat" timestamp(6),
 "departmentid" int4,
-"positionid" int4 DEFAULT nextval('"ss1604c195_rd4".recruit_position_positionid_seq'::regclass) NOT NULL
+"positionid" int4 DEFAULT nextval('"ss1604c195_rd4".recruit_position_positionid_seq'::regclass) NOT NULL,
+"description" varchar COLLATE "default"
 )
 WITH (OIDS=FALSE)
 
@@ -576,7 +578,8 @@ CREATE TABLE "ss1604c195_rd4"."recruit_position_log" (
 "updatedat" timestamp(6),
 "departmentid" int4,
 "positionid" int4,
-"id" int4 DEFAULT nextval('"ss1604c195_rd4".recruit_position_copy_id_seq'::regclass) NOT NULL
+"id" int4 DEFAULT nextval('"ss1604c195_rd4".recruit_position_copy_id_seq'::regclass) NOT NULL,
+"description" varchar COLLATE "default"
 )
 WITH (OIDS=FALSE)
 

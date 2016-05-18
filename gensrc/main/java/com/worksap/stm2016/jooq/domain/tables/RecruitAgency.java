@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitAgency extends TableImpl<RecruitAgencyRecord> {
 
-	private static final long serialVersionUID = 536981119;
+	private static final long serialVersionUID = -1087946724;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.recruit_agency</code>
@@ -68,6 +68,11 @@ public class RecruitAgency extends TableImpl<RecruitAgencyRecord> {
 	 * The column <code>ss1604c195_rd4.recruit_agency.agency_auth</code>. auth string
 	 */
 	public final TableField<RecruitAgencyRecord, String> AGENCY_AUTH = createField("agency_auth", org.jooq.impl.SQLDataType.VARCHAR, this, "auth string");
+
+	/**
+	 * The column <code>ss1604c195_rd4.recruit_agency.agencyname</code>.
+	 */
+	public final TableField<RecruitAgencyRecord, String> AGENCYNAME = createField("agencyname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.recruit_agency</code> table reference
