@@ -1,0 +1,1 @@
+create index on check_performance(steid);

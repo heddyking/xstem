@@ -34,7 +34,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoAccount extends TableImpl<InfoAccountRecord> {
 
-	private static final long serialVersionUID = -126405244;
+	private static final long serialVersionUID = 1436756228;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.info_account</code>
@@ -70,9 +70,17 @@ public class InfoAccount extends TableImpl<InfoAccountRecord> {
 	public final TableField<InfoAccountRecord, Integer> REFID = createField("refid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_account.role</code>.
+	 * The column <code>ss1604c195_rd4.info_account.role</code>. 0-admin
+1-hrm
+2-hr
+3-mg
+4-other
+
+10-candidate ste
+11-ste
+12-dismissed ste
 	 */
-	public final TableField<InfoAccountRecord, Integer> ROLE = createField("role", org.jooq.impl.SQLDataType.INTEGER, this, "");
+	public final TableField<InfoAccountRecord, Integer> ROLE = createField("role", org.jooq.impl.SQLDataType.INTEGER, this, "0-admin\r\n1-hrm\r\n2-hr\r\n3-mg\r\n4-other\r\n\r\n10-candidate ste\r\n11-ste\r\n12-dismissed ste");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.info_account</code> table reference

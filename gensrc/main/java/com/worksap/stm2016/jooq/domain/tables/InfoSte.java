@@ -35,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoSte extends TableImpl<InfoSteRecord> {
 
-	private static final long serialVersionUID = -1690398385;
+	private static final long serialVersionUID = 162946475;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.info_ste</code>
@@ -126,6 +126,16 @@ public class InfoSte extends TableImpl<InfoSteRecord> {
 	 * The column <code>ss1604c195_rd4.info_ste.skills</code>.
 	 */
 	public final TableField<InfoSteRecord, String> SKILLS = createField("skills", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.info_ste.experiences</code>.
+	 */
+	public final TableField<InfoSteRecord, String> EXPERIENCES = createField("experiences", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.info_ste.resume_url</code>.
+	 */
+	public final TableField<InfoSteRecord, String> RESUME_URL = createField("resume_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.info_ste</code> table reference

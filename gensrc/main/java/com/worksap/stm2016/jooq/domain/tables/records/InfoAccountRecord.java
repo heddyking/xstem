@@ -28,7 +28,7 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoAccountRecord extends UpdatableRecordImpl<InfoAccountRecord> implements Record5<Integer, String, String, Integer, Integer> {
 
-	private static final long serialVersionUID = -2033592778;
+	private static final long serialVersionUID = -2079389042;
 
 	/**
 	 * Setter for <code>ss1604c195_rd4.info_account.accountid</code>.
@@ -87,14 +87,30 @@ public class InfoAccountRecord extends UpdatableRecordImpl<InfoAccountRecord> im
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_account.role</code>.
+	 * Setter for <code>ss1604c195_rd4.info_account.role</code>. 0-admin
+1-hrm
+2-hr
+3-mg
+4-other
+
+10-candidate ste
+11-ste
+12-dismissed ste
 	 */
 	public void setRole(Integer value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_account.role</code>.
+	 * Getter for <code>ss1604c195_rd4.info_account.role</code>. 0-admin
+1-hrm
+2-hr
+3-mg
+4-other
+
+10-candidate ste
+11-ste
+12-dismissed ste
 	 */
 	public Integer getRole() {
 		return (Integer) getValue(4);

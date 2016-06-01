@@ -1,0 +1,1 @@
+create index on info_department(parent_departmentid);

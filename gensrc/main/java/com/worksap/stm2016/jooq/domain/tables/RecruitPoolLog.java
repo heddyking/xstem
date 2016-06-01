@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPoolLog extends TableImpl<RecruitPoolLogRecord> {
 
-	private static final long serialVersionUID = -1034948090;
+	private static final long serialVersionUID = 1264684244;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.recruit_pool_log</code>
@@ -105,6 +105,11 @@ public class RecruitPoolLog extends TableImpl<RecruitPoolLogRecord> {
 	 * The column <code>ss1604c195_rd4.recruit_pool_log.id</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.recruit_pool_log.isvalid</code>.
+	 */
+	public final TableField<RecruitPoolLogRecord, Boolean> ISVALID = createField("isvalid", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.recruit_pool_log</code> table reference

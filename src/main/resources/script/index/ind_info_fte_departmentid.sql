@@ -1,0 +1,1 @@
+create index on info_fte(departmentid);

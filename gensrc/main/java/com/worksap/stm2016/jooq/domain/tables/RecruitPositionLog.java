@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPositionLog extends TableImpl<RecruitPositionLogRecord> {
 
-	private static final long serialVersionUID = -1304367795;
+	private static final long serialVersionUID = 1292616128;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.recruit_position_log</code>
@@ -64,7 +64,7 @@ public class RecruitPositionLog extends TableImpl<RecruitPositionLogRecord> {
 	/**
 	 * The column <code>ss1604c195_rd4.recruit_position_log.location_req</code>.
 	 */
-	public final TableField<RecruitPositionLogRecord, String> LOCATION_REQ = createField("location_req", org.jooq.impl.SQLDataType.CHAR.length(1), this, "");
+	public final TableField<RecruitPositionLogRecord, String> LOCATION_REQ = createField("location_req", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
 	 * The column <code>ss1604c195_rd4.recruit_position_log.date_req</code>.
@@ -140,6 +140,11 @@ public class RecruitPositionLog extends TableImpl<RecruitPositionLogRecord> {
 	 * The column <code>ss1604c195_rd4.recruit_position_log.description</code>.
 	 */
 	public final TableField<RecruitPositionLogRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.recruit_position_log.isvalid</code>.
+	 */
+	public final TableField<RecruitPositionLogRecord, Boolean> ISVALID = createField("isvalid", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.recruit_position_log</code> table reference

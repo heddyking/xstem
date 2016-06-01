@@ -1,8 +1,8 @@
 package com.worksap.stm2016;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+
+import java.sql.Date;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,5 +26,13 @@ public class ApplicationTests
 	@Test
 	public void check()  {
 		assertNotNull(application);
+	}
+	
+	@Test
+	public void test(){
+		Date date=Date.valueOf("1993-02-02");
+		System.out.println(date.toString());
+		Date created=new Date(System.currentTimeMillis());
+		System.out.println(created.toString());
 	}
 }

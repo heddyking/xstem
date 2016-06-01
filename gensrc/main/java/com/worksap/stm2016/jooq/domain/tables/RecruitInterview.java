@@ -35,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitInterview extends TableImpl<RecruitInterviewRecord> {
 
-	private static final long serialVersionUID = 1430319499;
+	private static final long serialVersionUID = -380670183;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.recruit_interview</code>
@@ -84,6 +84,11 @@ public class RecruitInterview extends TableImpl<RecruitInterviewRecord> {
 	 * The column <code>ss1604c195_rd4.recruit_interview.replenish</code>.
 	 */
 	public final TableField<RecruitInterviewRecord, String> REPLENISH = createField("replenish", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.recruit_interview.applymentid</code>.
+	 */
+	public final TableField<RecruitInterviewRecord, Integer> APPLYMENTID = createField("applymentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.recruit_interview</code> table reference

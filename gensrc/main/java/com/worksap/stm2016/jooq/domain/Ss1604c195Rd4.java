@@ -26,6 +26,7 @@ import com.worksap.stm2016.jooq.domain.tables.StaffingChange;
 import com.worksap.stm2016.jooq.domain.tables.StaffingChangeLog;
 import com.worksap.stm2016.jooq.domain.tables.TestComments;
 import com.worksap.stm2016.jooq.domain.tables.TestPosts;
+import com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -51,7 +52,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ss1604c195Rd4 extends SchemaImpl {
 
-	private static final long serialVersionUID = -2130627661;
+	private static final long serialVersionUID = -795674277;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4</code>
@@ -128,6 +129,7 @@ public class Ss1604c195Rd4 extends SchemaImpl {
 			StaffingChange.STAFFING_CHANGE,
 			StaffingChangeLog.STAFFING_CHANGE_LOG,
 			TestComments.TEST_COMMENTS,
-			TestPosts.TEST_POSTS);
+			TestPosts.TEST_POSTS,
+			ViRecruitApplymentHistory.VI_RECRUIT_APPLYMENT_HISTORY);
 	}
 }

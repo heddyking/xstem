@@ -1,0 +1,1 @@
+create index on recruit_pool(positionid);

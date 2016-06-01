@@ -3,8 +3,11 @@
  */
 package com.worksap.stm2016.service;
 
-import static com.worksap.stm2016.jooq.domain.tables.TestPosts.TEST_POSTS;
 import static com.worksap.stm2016.jooq.domain.tables.TestComments.TEST_COMMENTS;
+import static com.worksap.stm2016.jooq.domain.tables.TestPosts.TEST_POSTS;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -17,10 +20,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.worksap.stm2016.jooq.domain.tables.records.TestCommentsRecord;
-import com.worksap.stm2016.jooq.domain.tables.records.TestPostsRecord;
 import com.worksap.stm2016.entities.TestComment;
 import com.worksap.stm2016.entities.TestPost;
+import com.worksap.stm2016.jooq.domain.tables.records.TestCommentsRecord;
+import com.worksap.stm2016.jooq.domain.tables.records.TestPostsRecord;
 
 /**
  * @author Siva
@@ -39,7 +42,7 @@ public class TestService
 				.set(TEST_POSTS.CONTENT, post.getContent())
 				.set(TEST_POSTS.CREATED_ON, post.getCreatedOn())
 				.returning(TEST_POSTS.ID)
-				.fetchOne();
+				.fetchOne(); 
 			
 		post.setId(postsRecord.getId());
 		return post;
@@ -47,9 +50,10 @@ public class TestService
 	
 	public List<TestPost> getAllPosts(){		
 		List<TestPost> posts = new ArrayList<>();		
-		Result<Record> result = dsl.select().from(TEST_POSTS).fetch();
+		Result<Record> result = (dsl.select().from(TEST_POSTS).fetch());
 		for (Record r : result) {
-		    posts.add(getPostEntity(r));
+			TestPostsRecord a=(TestPostsRecord)r;
+		    posts.add(getPostEntity(a));
 		}
 		return posts ;
 	}
@@ -113,5 +117,49 @@ public class TestService
 	    String content = r.getValue(TEST_COMMENTS.CONTENT, String.class);
 	    Timestamp createdOn = r.getValue(TEST_COMMENTS.CREATED_ON, Timestamp.class);
 	    return new TestComment(id, postId, name, email, content, createdOn);
+	}
+	
+	public void aaaa(){
+		TestPost post = new TestPost(0, "My new Post", "This is my new test post", new Timestamp(System.currentTimeMillis()));
+		TestPost savedPost = createPost(post);
+		TestPost newPost = getPost(savedPost.getId());
+		int tempid=savedPost.getId();
+		assertEquals("My new Post", newPost.getTitle());
+		assertEquals("This is my new test post", newPost.getContent());
+		
+		int a=10/0;
+
+		Integer postId = tempid;
+		TestComment comment = new TestComment(0, postId, "User4", "user4@gmail.com", "This is my new comment on post1", new Timestamp(System.currentTimeMillis()));
+		TestComment savedComment = createComment(comment);
+		TestPost post2 = getPost(postId);
+		List<TestComment> comments = post2.getComments();
+		assertNotNull(comments);
+		for (TestComment comm : comments)
+		{
+			if(savedComment.getId() == comm.getId()){
+				assertEquals("User4", comm.getName());
+				assertEquals("user4@gmail.com", comm.getEmail());
+				assertEquals("This is my new comment on post1", comm.getContent());
+			}
+		}
+
+
+		TestPost post3 = getPost(tempid);
+		assertNotNull(post3);
+		System.out.println(post3);
+		List<TestComment> comments2 = post3.getComments();
+		System.out.println(comments2);
+
+
+		List<TestPost> posts = getAllPosts();
+		assertNotNull(posts);
+		assertTrue(!posts.isEmpty());
+		for (TestPost post4 : posts)
+		{
+			System.out.println(post4);
+		}	
+		
+		System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 	}
 }
