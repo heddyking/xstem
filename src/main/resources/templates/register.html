@@ -23,8 +23,11 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <style>
+  	.ta-background{position:fixed;z-index:-1;height:100%;width:100%;background-size:cover}
+  </style>
 </head>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page ta-background"   style="background-image: url(&#39;/images/5.jpg&#39;); opacity: 1;">
 <div class="register-box">
   <div class="register-logo">
     <a href="/index.html"> Xstem </a>
@@ -33,21 +36,21 @@
   <div class="register-box-body">
     <p class="login-box-msg">Register a new membership</p>
 
-    <form action="index.html" method="post">
+    <div>
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Full name"/>
+        <input id="name" type="text" class="form-control" placeholder="Full name"/>
         <span class="glyphicon glyphicon-user form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email"/>
+        <input id="email" type="email" class="form-control" placeholder="Email"/>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password"/>
+        <input id="password" type="password" class="form-control" placeholder="Password(3~16 chars)"/>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Retype password"/>
+        <input id="password_" type="password" class="form-control" placeholder="Retype password"/>
         <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
       </div>
       <div class="row">
@@ -60,11 +63,11 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+          <button id="submit" class="btn btn-primary btn-block btn-flat" onclick="regist()">Register</button>
         </div>
         <!-- /.col -->
       </div>
-    </form>
+    </div>
 
     <div class="social-auth-links text-center">
       <p>- OR -</p>
@@ -86,6 +89,9 @@
 <script src="/bootstrap/js/bootstrap.min.js"></script>
 <!-- iCheck -->
 <script src="/plugins/iCheck/icheck.min.js"></script>
+<script src="/js/validate.js"></script>
+<script src="/js/ajax.js"></script>
+<script src="/js/regist.js"></script>
 <script>
   $(function () {
     $('input').iCheck({

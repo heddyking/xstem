@@ -188,8 +188,10 @@ public class DataTests
 
 
 //--##check
+//--0. self canceled
 //--1. wait check
 //--2. checked
+//--3. rejected
 //
 //
 //--##role

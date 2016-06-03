@@ -40,7 +40,7 @@ public class InfoService
 		}
 	}
 	
-	public Integer updatePersonalInfo(Integer steid,String name,boolean gender,Date birthday, String location,String email,
+	public Integer updatePersonalInfo(Integer steid,String name,Boolean gender,Date birthday, String location,String email,
 			String email_self,String phone,String telephone,String experiences,String skills,String resume_url){
 		return dsl.update(INFO_STE)
 			.set(INFO_STE.NAME,name)
@@ -58,6 +58,14 @@ public class InfoService
 			.execute();
 	}
 	
-	
+	public Integer updateOnboardInfo(Integer steid,String email,String phone,String offer_url, String contract_url ){
+		return dsl.update(INFO_STE)
+				.set(INFO_STE.EMAIL,email)
+				.set(INFO_STE.PHONE,phone)
+				.set(INFO_STE.OFFER_URL,offer_url)
+				.set(INFO_STE.CONTRACT_URL,contract_url)
+				.where(INFO_STE.STEID.eq(steid))
+				.execute();
+	}
 	
 }

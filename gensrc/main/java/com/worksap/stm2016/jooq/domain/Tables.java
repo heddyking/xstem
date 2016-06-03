@@ -27,6 +27,7 @@ import com.worksap.stm2016.jooq.domain.tables.StaffingChangeLog;
 import com.worksap.stm2016.jooq.domain.tables.TestComments;
 import com.worksap.stm2016.jooq.domain.tables.TestPosts;
 import com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory;
+import com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewContext;
 
 import javax.annotation.Generated;
 
@@ -158,4 +159,9 @@ public class Tables {
 	 * The table ss1604c195_rd4.vi_recruit_applyment_history
 	 */
 	public static final ViRecruitApplymentHistory VI_RECRUIT_APPLYMENT_HISTORY = com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory.VI_RECRUIT_APPLYMENT_HISTORY;
+
+	/**
+	 * The table ss1604c195_rd4.vi_recruit_interview_context
+	 */
+	public static final ViRecruitInterviewContext VI_RECRUIT_INTERVIEW_CONTEXT = com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewContext.VI_RECRUIT_INTERVIEW_CONTEXT;
 }

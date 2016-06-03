@@ -66,5 +66,11 @@ public class InfoServiceTests
 		assertEquals(r1,1);
 		assertEquals(r2,1);
 	}
-
+	
+	@Test 
+	public void updateOnboardInfo(){
+		int r1=infoService.updateOnboardInfo(6,"z1@qq.com", "0215737"+(new Random().nextInt(9000)+1000), "http://dwz.cn/3vqEeh", "http://dwz.cn/3vqEeh");
+		
+		assertEquals(r1,1);
+	}
 }
