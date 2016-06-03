@@ -10,6 +10,7 @@ public class UserInfo implements Principal{
 	private Integer userid;
 	private Integer departmentid;
 	private Integer positionid;
+	private String name;
 	
 	@Override
 	public String getName() {
@@ -57,8 +58,17 @@ public class UserInfo implements Principal{
 		this.role = role;
 	}
 	
+	public String getNm() {
+		return name;
+	}
+
+	public void setNm(String name) {
+		this.name = name;
+	}
+	
 	public Map<String,Object> toMap(){
 		Map<String,Object> map=new HashMap<String,Object>();
+		map.put("name",name);
 		map.put("email",email);
 		map.put("role",role);
 		map.put("userid",userid);

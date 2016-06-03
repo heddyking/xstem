@@ -50,6 +50,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     	UserInfo userinfo=new UserInfo();
     	try{
     		Map<String,Object> map=accountService.fteAccount(email);
+    		userinfo.setNm((String)map.get("name"));
     		userinfo.setEmail(email);
     		userinfo.setRole((Integer)map.get("role"));
     		userinfo.setUserid((Integer)map.get("fteid"));
@@ -60,6 +61,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     	}catch(Exception e){
     		try{
     			Map<String,Object> map=accountService.steAccount(email);
+    			userinfo.setNm((String)map.get("name"));
     			userinfo.setEmail(email);
         		userinfo.setRole((Integer)map.get("role"));
         		userinfo.setUserid((Integer)map.get("steid"));
