@@ -4,6 +4,8 @@
 package com.worksap.stm2016.service;
 
 import static com.worksap.stm2016.jooq.domain.tables.InfoSte.INFO_STE;
+import static com.worksap.stm2016.jooq.domain.tables.InfoDepartment.INFO_DEPARTMENT;
+import static com.worksap.stm2016.jooq.domain.tables.RecruitPosition.RECRUIT_POSITION;
 
 import java.sql.Date;
 import java.util.List;
@@ -27,16 +29,42 @@ public class InfoService
 	private DSLContext dsl;
 	
 	public Map<String,Object> getPersonalInfo(Integer steid){
-		Record r=dsl.select().from(INFO_STE).where(INFO_STE.STEID.eq(steid)).fetchOne();
+		Record r=dsl.select(INFO_STE.fields())
+				.select(INFO_DEPARTMENT.DEPARTMENTNAME)
+				.select(RECRUIT_POSITION.POSITIONNAME)
+				.from(INFO_STE)
+				.leftJoin(INFO_DEPARTMENT)
+				.on(INFO_STE.DEPARTMENTID.eq(INFO_DEPARTMENT.DEPARTMENTID))
+				.leftJoin(RECRUIT_POSITION)
+				.on(INFO_STE.POSITIONID.eq(RECRUIT_POSITION.POSITIONID))
+				.where(INFO_STE.STEID.eq(steid))
+				.fetchOne();
 		return r.intoMap();
 	}
 	
 	public List<Map<String,Object>> getInfoList(Integer departmentid){
 		if(departmentid==null){
-			return dsl.select().from(INFO_STE).fetchMaps();
+			return dsl.select(INFO_STE.fields())
+					.select(INFO_DEPARTMENT.DEPARTMENTNAME)
+					.select(RECRUIT_POSITION.POSITIONNAME)
+					.from(INFO_STE)
+					.leftJoin(INFO_DEPARTMENT)
+					.on(INFO_STE.DEPARTMENTID.eq(INFO_DEPARTMENT.DEPARTMENTID))
+					.leftJoin(RECRUIT_POSITION)
+					.on(INFO_STE.POSITIONID.eq(RECRUIT_POSITION.POSITIONID))
+					.fetchMaps();
 		}
 		else{
-			return dsl.select().from(INFO_STE).where(INFO_STE.DEPARTMENTID.eq(departmentid)).fetchMaps();
+			return dsl.select(INFO_STE.fields())
+					.select(INFO_DEPARTMENT.DEPARTMENTNAME)
+					.select(RECRUIT_POSITION.POSITIONNAME)
+					.from(INFO_STE)
+					.leftJoin(INFO_DEPARTMENT)
+					.on(INFO_STE.DEPARTMENTID.eq(INFO_DEPARTMENT.DEPARTMENTID))
+					.leftJoin(RECRUIT_POSITION)
+					.on(INFO_STE.POSITIONID.eq(RECRUIT_POSITION.POSITIONID))
+					.where(INFO_STE.DEPARTMENTID.eq(departmentid))
+					.fetchMaps();
 		}
 	}
 	

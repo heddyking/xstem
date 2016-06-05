@@ -56,6 +56,8 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
     		userinfo.setUserid((Integer)map.get("fteid"));
     		userinfo.setDepartmentid((Integer)map.get("departmentid"));
     		userinfo.setPositionid((Integer)map.get("positionid"));
+    		userinfo.setPositionname((String)map.get("positionname"));
+    		userinfo.setDepartmentname((String)map.get("departmentname"));
     		if(password.equals(map.get("password"))) return userinfo;
     		else return null;
     	}catch(Exception e){
@@ -67,6 +69,8 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         		userinfo.setUserid((Integer)map.get("steid"));
         		userinfo.setDepartmentid((Integer)map.get("departmentid"));
         		userinfo.setPositionid((Integer)map.get("positionid"));
+        		userinfo.setPositionname((String)map.get("positionname"));
+        		userinfo.setDepartmentname((String)map.get("departmentname"));
         		if(password.equals(map.get("password"))) return userinfo;
         		else return null;
         	}catch(Exception exp){

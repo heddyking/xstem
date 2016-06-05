@@ -4,12 +4,15 @@
 package com.worksap.stm2016.service;
 
 import static com.worksap.stm2016.jooq.domain.tables.InfoAccount.INFO_ACCOUNT;
-import static com.worksap.stm2016.jooq.domain.tables.InfoSte.INFO_STE;
+import static com.worksap.stm2016.jooq.domain.tables.InfoDepartment.INFO_DEPARTMENT;
 import static com.worksap.stm2016.jooq.domain.tables.InfoFte.INFO_FTE;
+import static com.worksap.stm2016.jooq.domain.tables.InfoSte.INFO_STE;
+import static com.worksap.stm2016.jooq.domain.tables.RecruitPosition.RECRUIT_POSITION;
 
 import java.util.Map;
 
 import org.jooq.DSLContext;
+import org.jooq.impl.DSL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -48,10 +51,16 @@ public class AccountService
 	public Map<String,Object> steAccount(String email){
 		return 	dsl.select(INFO_STE.fields())
 					.select(INFO_ACCOUNT.ACCOUNTID,INFO_ACCOUNT.PASSWORD)
+					.select(INFO_DEPARTMENT.DEPARTMENTNAME)
+					.select(RECRUIT_POSITION.POSITIONNAME)
 					.from(INFO_ACCOUNT)
 					.join(INFO_STE)
 					.on(INFO_ACCOUNT.EMAIL.eq(INFO_STE.EMAIL))
 					.or(INFO_ACCOUNT.EMAIL.eq(INFO_STE.EMAIL_SELF))
+					.leftJoin(INFO_DEPARTMENT)
+					.on(INFO_STE.DEPARTMENTID.eq(INFO_DEPARTMENT.DEPARTMENTID))
+					.leftJoin(RECRUIT_POSITION)
+					.on(INFO_STE.POSITIONID.eq(RECRUIT_POSITION.POSITIONID))
 					.where(INFO_STE.EMAIL.eq(email))
 					.or(INFO_STE.EMAIL_SELF.eq(email))
 					.fetchOne()
@@ -61,10 +70,14 @@ public class AccountService
 	public Map<String,Object> fteAccount(String email){
 		return 	dsl.select(INFO_FTE.fields())
 					.select(INFO_ACCOUNT.ACCOUNTID,INFO_ACCOUNT.PASSWORD)
+					.select(INFO_DEPARTMENT.DEPARTMENTNAME)
+					.select(DSL.val("FTE").as("positionname"))
 					.from(INFO_ACCOUNT)
 					.join(INFO_FTE)
 					.on(INFO_ACCOUNT.EMAIL.eq(INFO_FTE.EMAIL))
 					.or(INFO_ACCOUNT.EMAIL.eq(INFO_FTE.EMAIL_SELF))
+					.leftJoin(INFO_DEPARTMENT)
+					.on(INFO_FTE.DEPARTMENTID.eq(INFO_DEPARTMENT.DEPARTMENTID))
 					.where(INFO_FTE.EMAIL.eq(email))
 					.or(INFO_FTE.EMAIL_SELF.eq(email))
 					.fetchOne()

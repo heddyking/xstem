@@ -25,6 +25,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
 
   <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
+  
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker-bs3.css">
 
   <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
   <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"> -->
@@ -141,41 +144,7 @@ desired effect
             </ul>
           </li>
           <!-- Tasks Menu -->
-          <li class="dropdown tasks-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>
-                <!-- Inner menu: contains the tasks -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <!-- Task title and progress text -->
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <!-- The progress bar -->
-                      <div class="progress xs">
-                        <!-- Change the css width attribute to simulate progress -->
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li>
+       
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -191,11 +160,11 @@ desired effect
                 <img src="https://robohash.org/default/bgset_bg2" class="myimg img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <p id="user_pos">User - Position</p>
+                  <small id="user_dept">Department</small>
                 </p>
               </li>
-              <!-- Menu Body -->
+              <!-- Menu Body --><!-- 
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
@@ -208,9 +177,9 @@ desired effect
                     <a href="#">Friends</a>
                   </div>
                 </div>
-                <!-- /.row -->
+                
               </li>
-              <!-- Menu Footer-->
+              --> <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -314,25 +283,36 @@ desired effect
 
      <div class="form-horizontal">
                 <div class="form-group">
-                    <label for="inputDate" class="col-sm-1 control-label">Week(Lastday)</label>
+                    <label for="inputDate" class="col-sm-1 control-label">Date Range</label>
 
                     <div class="col-sm-10">
-                      <div class="input-group date">
+                    
+                     <!--  <div class="input-group date">
                         <div class="input-group-addon">
                           <i class="fa fa-calendar"></i>
                         </div>
                         <input type="text" class="form-control pull-right" id="inputDate">
-                      </div>
+                      </div> -->
+                      
+                      <div class="input-group">
+                  		<div class="input-group-addon">
+                    		<i class="fa fa-calendar"></i>
+                  		</div>
+                  		<input type="text" class="form-control pull-right" id="range">
+                	  </div>
+                      
                     </div>
                 </div>
                
                 <div class="form-group">
-                    <label for="inputHours" class="col-sm-1 control-label">Hours</label>
+						<label for="inputHours" class="col-sm-1 control-label">Hours</label>
 
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control pull-right" id="inputHours" placeholder="Hours">
-                    </div>
-                </div>
+						<div class="col-sm-10">
+							<!-- <input type="text" class="form-control pull-right" id="inputHours" placeholder="Hours"> -->
+							<input id="inputHours" type="text" value="8" name="inputHours">
+
+						</div>
+				</div>
 
                 <div class="form-group">
                     <label for="inputDescription" class="col-sm-1 control-label">Description</label>
@@ -344,7 +324,7 @@ desired effect
 
                 <div class="form-group">
                     <div class="col-sm-offset-1 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Submit</button>
+                      <button type="submit" class="btn btn-danger" onclick="addPerformance()">Submit</button>
                     </div>
                 </div>
        </div>
@@ -357,7 +337,8 @@ desired effect
               <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Week Lastday</th>
+                  <th>Date From</th>
+                  <th>Date To</th>
                   <th>Hours</th>
                   <th>Performance Description</th>
                   <th>Updated At</th>
@@ -368,6 +349,7 @@ desired effect
                 <tbody>
                 <tr>
                   <td>2016-5-8</td>
+                  <td>2016-5-8</td>
                   <td>8</td>
                   <td>deploy the realse 2.11 project</td>
                   <td>2016-5-8 17:50:32</td>
@@ -376,12 +358,15 @@ desired effect
                 </tr>
                <tr>
                   <td>2016-5-9</td>
+                  <td>2016-5-9</td>
                   <td>8</td>
                   <td>develop a snapshot module</td>
                   <td>2016-5-9 17:50:32</td>
                   <td><small class="label bg-green" margin-top="-2px">Approved</small></td>
                   <td><button class="btn btn-primary btn-xs edit">Edit</button> <button class="btn btn-danger btn-xs delete">Delete</button></td>
-                </tr><tr>
+                </tr>
+                <tr>
+                  <td>2016-5-10</td>
                   <td>2016-5-10</td>
                   <td>8</td>
                   <td>qa test for 8 hours</td>
@@ -389,6 +374,7 @@ desired effect
                   <td><small class="label bg-green" margin-top="-2px">Approved</small></td>
                   <td><button class="btn btn-primary btn-xs edit">Edit</button> <button class="btn btn-danger btn-xs delete">Delete</button></td>
                 </tr><tr>
+                  <td>2016-5-11</td>
                   <td>2016-5-11</td>
                   <td>8</td>
                   <td>revise bugs of HUE search module</td>
@@ -418,7 +404,79 @@ desired effect
         </div>
         <!-- /.col -->
       </div>
-
+	
+			
+			<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Edit Attendance</h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-horizontal">
+								
+										<div class="form-group">
+							                 <label for="inputDate2" class="col-sm-1 control-label">Date Range</label>
+							
+							                    <div class="col-sm-10">
+							                    
+							                     <!--  <div class="input-group date">
+							                        <div class="input-group-addon">
+							                          <i class="fa fa-calendar"></i>
+							                        </div>
+							                        <input type="text" class="form-control pull-right" id="inputDate">
+							                      </div> -->
+							                      
+							                      <div class="input-group">
+							                  		<div class="input-group-addon">
+							                    		<i class="fa fa-calendar"></i>
+							                  		</div>
+							                  		<input type="text" class="form-control pull-right" id="range2">
+							                	  </div>
+							                      
+							                    </div>
+							                </div>
+							               
+							                <div class="form-group">
+													<label for="inputHours2" class="col-sm-1 control-label">Hours</label>
+							
+													<div class="col-sm-10">
+														<!-- <input type="text" class="form-control pull-right" id="inputHours" placeholder="Hours"> -->
+														<input id="inputHours2" type="text" value="8" name="inputHours2">
+							
+													</div>
+											</div>
+							
+							                <div class="form-group">
+							                    <label for="inputDescription2" class="col-sm-1 control-label">Description</label>
+							
+							                    <div class="col-sm-10">
+							                      <textarea class="form-control" id="inputDescription2" placeholder="Description"></textarea>
+							                    </div>
+							                </div>
+                
+								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary" id="updatebtn" onclick="updatePerformance()">Save
+									changes</button>
+							</div>
+							<input type="hidden" id="a_id" />
+						</div>
+					</div>
+				</div>
+				
+				
+				
     
     </section>
     <!-- /.content -->
@@ -446,7 +504,7 @@ desired effect
     <div class="tab-content">
       <!-- Home tab content -->
       <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <!-- <h3 class="control-sidebar-heading">Recent Activity</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
@@ -460,9 +518,9 @@ desired effect
             </a>
           </li>
         </ul>
-        <!-- /.control-sidebar-menu -->
+         /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <!-- <h3 class="control-sidebar-heading">Tasks Progress</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
@@ -477,15 +535,15 @@ desired effect
             </a>
           </li>
         </ul>
-        <!-- /.control-sidebar-menu -->
+         /.control-sidebar-menu -->
 
       </div>
-      <!-- /.tab-pane -->
+      
       <!-- Stats tab content -->
       <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
+      
       <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
+      <div class="tab-pane" id="control-sidebar-settings-tab"><!--
         <form method="post">
           <h3 class="control-sidebar-heading">General Settings</h3>
 
@@ -499,11 +557,11 @@ desired effect
               Some information about this general settings option
             </p>
           </div>
-          <!-- /.form-group -->
+          
         </form>
       </div>
-      <!-- /.tab-pane -->
-    </div>
+      
+    --> </div>
   </aside>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
@@ -519,40 +577,88 @@ desired effect
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <!-- Select2 -->
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
+<!-- date-range-picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script src="https://cdn.datatables.net/rowreorder/1.1.1/js/dataTables.rowReorder.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
+<script src="../plugins/spinner/jquery.bootstrap-touchspin.js"></script>
+
+<script src="../dist/js/app.min.js"></script>
+<script src="/js/ajax.js"></script>
+<script src="/js/reset.js"></script>
+<script src="/js/date.js"></script>
+<script src="/js/validate.js"></script>
+<script src="/js/ste_performance.js"></script>
 
 <script>
   $(function(){
-    $('#inputDate').datepicker({
+	$("input[id^='range']").daterangepicker({
+		/* startDate:moment(new Date()),
+		endDate:moment(new Date()), */
+		format: 'YYYY-MM-DD',
+	    autoclose: true
+	});
+	
+    $("#input[id^='inputDate']").datepicker({
       format: 'yyyy-mm-dd',
       autoclose: true
     }).datepicker("setDate", new Date());
-
-    var table = $('#example2').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 15,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-        },
-      responsive: true
-    });
-
-    $('#example2 tbody').on( 'click', 'button', function () {
-        var data = table.row( $(this).parents('tr')).data();
-        if(!data) data = table.row( $(this).parents('tr').prev() ).data();
-        alert( JSON.stringify(data));
-    } );
+    
+    $("input[name^='inputHours']").TouchSpin({
+  	  // Minimum value.
+  	  min: 0, 
+  	  // Maximum value.
+  	  max: 50, 
+  	  // Applied when no explicit value is set on the input with the value attribute. 
+  	  // Empty string means that the value remains empty on initialization.
+  	  initval: '',
+  	  replacementval: '',
+  	  // Number of decimal points.
+  	  decimals: 0,
+  	  // none | floor | round | ceil
+  	  forcestepdivisibility: 'round', 
+  	  // Enables the traditional up/down buttons.
+  	  verticalbuttons: false,
+  	  // Class of the up button with vertical buttons mode enabled.
+  	  verticalupclass: 'glyphicon glyphicon-chevron-up',
+  	  // Class of the down button with vertical buttons mode enabled.
+  	  verticaldownclass: 'glyphicon glyphicon-chevron-down',
+  	  // Boost at every nth step.
+  	  boostat: 5, 
+  	  // If enabled, the the spinner is continually becoming faster as holding the button.
+  	  booster: true,
+  	  // Maximum step when boosted.
+  	  maxboostedstep: 10, 
+  	  // Text after the input.
+  	  //postfix: '%', 
+  	  // Text before the input.
+  	  //prefix: '$', 
+  	  // Extra class(es) for prefix.
+  	  //prefix_extraclass: '',
+  	  //  Extra class(es) for postfix.
+  	  //postfix_extraclass: '',
+  	  // Incremental/decremental step on up/down change.
+  	  step: 1, 
+  	  // Refresh rate of the spinner in milliseconds.
+  	  stepinterval: 100, 
+  	  // Time in milliseconds before the spinner starts to spin.
+  	  stepintervaldelay: 500,
+  	  //  Enables the mouse wheel to change the value of the input.
+  	  mousewheel: true,
+  	  //  Class(es) of down button.
+  	  buttondown_class: 'btn btn-default',
+  	  //  Class(es) of up button.
+  	  buttonup_class: 'btn btn-default',
+  	  // Text for down button
+  	  buttondown_txt: '-',
+  	  // Text for up button
+  	  buttonup_txt: '+'
+  	});
+    
   })
 </script>
 </body>

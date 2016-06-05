@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	//--11-ste
 	//--12-dismissed ste
 	protected void configure(HttpSecurity http) throws Exception {
-		http
+		http.csrf().disable()
 		.authorizeRequests()
 		.antMatchers("/pages_ste/*").hasAnyRole(Role.ADMIN.v(),Role.CANDIDATE.v(),Role.STE.v())
 		.antMatchers("/ste/*").hasAnyRole(Role.ADMIN.v(),Role.CANDIDATE.v(),Role.STE.v())

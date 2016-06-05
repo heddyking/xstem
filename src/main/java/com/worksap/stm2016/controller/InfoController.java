@@ -4,6 +4,8 @@ import java.sql.Date;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,30 +19,43 @@ import com.worksap.stm2016.util.JsonUtil;
 
 @RestController
 public class InfoController {
-	
+	private final static Logger logger = LoggerFactory.getLogger(InfoController.class);
+
 	@Autowired
 	private InfoService infoService;
-	
+
 	//http://localhost/ste/personalInfo
 	@RequestMapping("/ste/personalInfo")
 	public Map<String,Object> getPersonalInfo(){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return infoService.getPersonalInfo(userinfo.getUserid());
 	}
-	
+
 	//http://localhost/hr/getSTEList
 	@RequestMapping("/hr/getSTEList")
 	public List<Map<String,Object>> getSTEList(){
 		return infoService.getInfoList(null);
 	}
-	
+
+	//http://localhost/hr/getSTEByID
+	@RequestMapping("/hr/getSTEByID")
+	public Map<String,Object> getSTEByID(Integer steid){
+		return infoService.getPersonalInfo(steid);
+	}
+
 	//http://localhost/getSTEListInDept
 	@RequestMapping("/mg/getSTEListInDept")
 	public List<Map<String,Object>> getSTEListInDept(){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return infoService.getInfoList(userinfo.getDepartmentid());
 	}
-	
+
+	//http://localhost/mg/getSTEByID
+	@RequestMapping("/mg/getSTEByID")
+	public Map<String,Object> getSTEByID2(Integer steid){
+		return infoService.getPersonalInfo(steid);
+	}
+
 	//http://localhost/updatePersonalInfo?
 	@RequestMapping(value = "/ste/updatePersonalInfo", method = RequestMethod.GET)
 	public Integer updatePersonalInfo(String name,Boolean gender,Date birthday, String location,String email,
@@ -49,9 +64,11 @@ public class InfoController {
 		return infoService.updatePersonalInfo(userinfo.getUserid(), name, gender, birthday, location, 
 				email, email_self, phone, telephone, experiences, skills, resume_url);
 	}
-	
+
 	@RequestMapping(value = "/ste/updatePersonalInfo", method = RequestMethod.POST)
 	public Integer updatePersonalInfo(String jsonStr){
+		logger.info("/ste/updatePersonalInfo");
+		logger.warn("jsonStr="+jsonStr);
 		Map<String,Object> params=null;
 		try {
 			params=JsonUtil.parseMap(jsonStr);
@@ -59,8 +76,8 @@ public class InfoController {
 			return -1;
 		} 
 		String name=(String) params.get("name");
-		Boolean gender=(Boolean) params.get("gender");
-		Date birthday=DateUtil.parseDate((String)params.get("birtday"));
+		Boolean gender=Boolean.valueOf((String) params.get("gender"));
+		Date birthday=DateUtil.parseDate((String)params.get("birthday"));
 		String location=(String) params.get("location");
 		String email=(String) params.get("email");
 		String email_self=(String) params.get("email_self");
@@ -70,18 +87,18 @@ public class InfoController {
 		String skills=(String) params.get("skills");
 		String resume_url=(String) params.get("resume_url");
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		
+
 		return infoService.updatePersonalInfo(userinfo.getUserid(), name, gender, birthday, location, 
 				email, email_self, phone, telephone, experiences, skills, resume_url);
 	}
-	
-	
+
+
 	//http://localhost/updateOnboardInfo?
 	@RequestMapping(value = "/hr/updateOnboardInfo", method = RequestMethod.GET)
 	public Integer updateOnboardInfo(Integer steid,String email,String phone,String offer_url, String contract_url ){
 		return infoService.updateOnboardInfo(steid, email, phone, offer_url, contract_url);
 	}
-	
+
 	@RequestMapping(value = "/hr/updateOnboardInfo", method = RequestMethod.POST)
 	public Integer updateOnboardInfo(String jsonStr){
 		Map<String,Object> params=null;

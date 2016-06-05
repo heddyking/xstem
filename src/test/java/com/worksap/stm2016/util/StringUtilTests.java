@@ -13,8 +13,13 @@ import com.worksap.stm2016.Application;
 @SpringApplicationConfiguration(Application.class)
 public class StringUtilTests {
 	private static final Logger logger = LoggerFactory.getLogger(StringUtilTests.class);
-	
+
 	@Test
+	public void blank(){
+		
+	}
+	
+//	@Test
 	public void regular(){
 		logger.info(StringUtil.regular("QEA123 DfJ67++ \n\f	XxXx"));
 	}

@@ -14,6 +14,7 @@ public class OtherController {
 	//http://localhost/getSkills
 	@RequestMapping("/getSkills")
 	public List<String> getSkills(){
+		Arrays.sort(Constants.skills);
 		return Arrays.asList(Constants.skills);
 	}
 }

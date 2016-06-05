@@ -36,6 +36,11 @@ public class TestServiceTests
 
 	@Autowired DataSourceTransactionManager txMgr;
 
+	@Test
+	public void blank(){
+		
+	}
+	
 //	@Test
 //	public void createPost_createComment_findById_findAllPosts() {
 //		TransactionStatus tx = txMgr.getTransaction(new DefaultTransactionDefinition());
@@ -90,7 +95,7 @@ public class TestServiceTests
 //	}
 
 
-	@Test
+//	@Test
 	public void createPost_createComment_findById_findAllPosts2() {
 		blogService.aaaa();
 	}

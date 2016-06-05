@@ -35,7 +35,11 @@ public interface Constants {
 		"AI",
 		"AR",
 		"VR",
-		"Others"
+		"Others",
+		"JOOQ",
+		"Hibernate",
+		"iBatis",
+		"PHP"
 	};
 	
 }

@@ -16,6 +16,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  
+  <link rel="stylesheet" href="../plugins/select2/select2.min.css">
+    
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -141,41 +144,7 @@ desired effect
             </ul>
           </li>
           <!-- Tasks Menu -->
-          <li class="dropdown tasks-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>
-                <!-- Inner menu: contains the tasks -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <!-- Task title and progress text -->
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <!-- The progress bar -->
-                      <div class="progress xs">
-                        <!-- Change the css width attribute to simulate progress -->
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li>
+       
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -191,11 +160,11 @@ desired effect
                 <img src="https://robohash.org/default/bgset_bg2" class="myimg img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <p id="user_pos">User - Position</p>
+                  <small id="user_dept">Department</small>
                 </p>
               </li>
-              <!-- Menu Body -->
+              <!-- Menu Body --><!-- 
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
@@ -208,9 +177,9 @@ desired effect
                     <a href="#">Friends</a>
                   </div>
                 </div>
-                <!-- /.row -->
+                
               </li>
-              <!-- Menu Footer-->
+              --> <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -314,13 +283,26 @@ desired effect
 
      <div class="form-horizontal">
      
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label for="inputSkill" class="col-sm-1 control-label">Skill</label>
 
                     <div class="col-sm-10">
                       <input type="text" class="form-control pull-right" id="inputSkill" placeholder="Skill">
                     </div>
-                </div>
+                </div> -->
+                
+                 <div class="form-group">
+                     <label for="inputSkill" class="col-sm-1 control-label">Skill</label>
+
+                    <div class="col-sm-10">
+                      <select id="inputSkill" class="form-control select2" style="width: 100%;">
+                            <option></option>
+                            <option>Java</option>
+                            <option>PHP</option>
+                            <option>Linux</option>
+                        </select>
+                    </div>
+                  </div>
 
                 <div class="form-group">
                     <label for="inputDescription" class="col-sm-1 control-label">Description</label>
@@ -332,7 +314,7 @@ desired effect
 
                 <div class="form-group">
                     <div class="col-sm-offset-1 col-sm-10">
-                      <button type="submit" class="btn btn-danger">Submit</button>
+                      <button type="submit" class="btn btn-danger" onclick="addSkill()">Submit</button>
                     </div>
                 </div>
        </div>
@@ -407,7 +389,68 @@ desired effect
         <!-- /.col -->
       </div>
 
-    
+    	
+    	
+    	
+    	<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Edit Attendance</h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-horizontal">
+								
+								
+									<div class="form-group">
+					                     <label for="inputSkill2" class="col-sm-1 control-label">Skill</label>
+					
+					                    <div class="col-sm-10">
+					                      <select id="inputSkill2" class="form-control select2" style="width: 100%;">
+					                            <option></option>
+					                            <option>Java</option>
+					                            <option>PHP</option>
+					                            <option>Linux</option>
+					                        </select>
+					                    </div>
+					                  </div>
+					
+					                <div class="form-group">
+					                    <label for="inputDescription2" class="col-sm-1 control-label">Description</label>
+					
+					                    <div class="col-sm-10">
+					                      <textarea class="form-control" id="inputDescription2" placeholder="Description"></textarea>
+					                    </div>
+					                </div>	
+					                
+					                									
+								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary" id="updatebtn" onclick="updateSkill()">Save
+									changes</button>
+							</div>
+							<input type="hidden" id="a_id" />
+						</div>
+					</div>
+				</div>
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+    	
     </section>
     <!-- /.content -->
   </div>
@@ -434,7 +477,7 @@ desired effect
     <div class="tab-content">
       <!-- Home tab content -->
       <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <!-- <h3 class="control-sidebar-heading">Recent Activity</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
@@ -448,9 +491,9 @@ desired effect
             </a>
           </li>
         </ul>
-        <!-- /.control-sidebar-menu -->
+         /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <!-- <h3 class="control-sidebar-heading">Tasks Progress</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
@@ -465,15 +508,15 @@ desired effect
             </a>
           </li>
         </ul>
-        <!-- /.control-sidebar-menu -->
+         /.control-sidebar-menu -->
 
       </div>
-      <!-- /.tab-pane -->
+      
       <!-- Stats tab content -->
       <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
+      
       <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
+      <div class="tab-pane" id="control-sidebar-settings-tab"><!--
         <form method="post">
           <h3 class="control-sidebar-heading">General Settings</h3>
 
@@ -487,11 +530,11 @@ desired effect
               Some information about this general settings option
             </p>
           </div>
-          <!-- /.form-group -->
+          
         </form>
       </div>
-      <!-- /.tab-pane -->
-    </div>
+      
+    --> </div>
   </aside>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
@@ -512,35 +555,24 @@ desired effect
 <script src="https://cdn.datatables.net/rowreorder/1.1.1/js/dataTables.rowReorder.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
+<script src="../plugins/select2/select2.full.min.js"></script>
+
+<script src="../dist/js/app.min.js"></script>
+<script src="/js/ajax.js"></script>
+<script src="/js/reset.js"></script>
+<script src="/js/date.js"></script>
+<script src="/js/validate.js"></script>
+<script src="/js/ste_skills.js"></script>
 
 <script>
   $(function(){
+	 $(".select2").select2();
+	  
     $('#inputDate').datepicker({
       format: 'yyyy-mm-dd',
       autoclose: true
     }).datepicker("setDate", new Date());
 
-    var table = $('#example2').DataTable({
-      "order": [[ 3, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 15,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-        },
-      responsive: true
-    });
-
-    $('#example2 tbody').on( 'click', 'button', function () {
-        var data = table.row( $(this).parents('tr')).data();
-        if(!data) data = table.row( $(this).parents('tr').prev() ).data();
-        alert( JSON.stringify(data));
-    } );
   })
 </script>
 </body>

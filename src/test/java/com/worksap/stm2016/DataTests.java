@@ -19,8 +19,13 @@ public class DataTests
 
 	@Autowired
 	private DSLContext dsl;
-	
+
 	@Test
+	public void blank(){
+		
+	}
+	
+//	@Test
 	public void generate()  {
 		dsl.execute(reset);
 		dsl.execute(data);

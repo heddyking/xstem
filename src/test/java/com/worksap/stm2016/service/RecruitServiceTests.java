@@ -32,6 +32,11 @@ public class RecruitServiceTests
 	private static final Logger logger = LoggerFactory.getLogger(RecruitServiceTests.class);
 
 	@Test
+	public void blank(){
+		
+	}
+	
+//	@Test
 	public void positionTest(){
 		int r1=recruitService.addPosition(4, "Java HA Dev", 3, "shanghai", Date.valueOf("2016-06-25"), 8, 
 				"Java", "Distributed System", "Database", "Golang", "Network", "Use Java develop a HA system", 3);
@@ -57,7 +62,7 @@ public class RecruitServiceTests
 		logger.info(r4.toString());
 	}
 
-	@Test
+//	@Test
 	public void poolTest(){
 		int r1=recruitService.addPosition(4, "Java HA Dev", 3, "shanghai", Date.valueOf("2016-06-25"), 8, 
 				"Java", "Distributed System", "Database", "Golang", "Network", "Use Java develop a HA system", 3);
@@ -90,7 +95,7 @@ public class RecruitServiceTests
 		logger.info(r8.toString());
 	}
 
-	@Test
+//	@Test
 	//--0-self cancelled
 	//--1- wait hr check
 	//--2- wait mg check

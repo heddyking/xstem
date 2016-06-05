@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. We have chosen the skin-green for this starter
@@ -148,41 +150,7 @@ desired effect
             </ul>
           </li>
           <!-- Tasks Menu -->
-          <li class="dropdown tasks-menu">
-            <!-- Menu Toggle Button -->
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>
-                <!-- Inner menu: contains the tasks -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <!-- Task title and progress text -->
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <!-- The progress bar -->
-                      <div class="progress xs">
-                        <!-- Change the css width attribute to simulate progress -->
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li>
+       
           <!-- User Account Menu -->
           <li class="dropdown user user-menu">
             <!-- Menu Toggle Button -->
@@ -198,11 +166,11 @@ desired effect
                 <img src="https://robohash.org/default/bgset_bg2" class="myimg img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
+                  <p id="user_pos">User - Position</p>
+                  <small id="user_dept">Department</small>
                 </p>
               </li>
-              <!-- Menu Body -->
+              <!-- Menu Body --><!-- 
               <li class="user-body">
                 <div class="row">
                   <div class="col-xs-4 text-center">
@@ -215,9 +183,9 @@ desired effect
                     <a href="#">Friends</a>
                   </div>
                 </div>
-                <!-- /.row -->
+                
               </li>
-              <!-- Menu Footer-->
+              --> <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -343,9 +311,12 @@ desired effect
                    <div class="form-group">
                     <label for="inputNumber" class="col-sm-1 control-label">Number</label>
 
-                    <div class="col-sm-10">
+<!--                <div class="col-sm-10">
                       <input type="text" class="form-control" id="inputNumber" placeholder="Plan Number">
-                    </div>
+                    </div> -->
+                    <div class="col-sm-10">
+						<input id="inputNumber" type="text" value="1" name="inputNumber">
+					</div>
                   </div>
 
                   <div class="form-group">
@@ -357,7 +328,7 @@ desired effect
                   </div>
 
                   <div class="form-group">
-                    <label for="inputDate" class="col-sm-1 control-label">Date</label>
+                    <label for="inputDate" class="col-sm-1 control-label">Onboard</label>
 
                     <div class="col-sm-10">
                       <div class="input-group date">
@@ -372,50 +343,37 @@ desired effect
                   <div class="form-group">
                     <label for="inputDuration" class="col-sm-1 control-label">Duration</label>
 
-                    <div class="col-sm-10">
+                    <!-- <div class="col-sm-10">
                       <input type="text" class="form-control" id="inputDuration" placeholder="Duration Requirement (Months)">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="inputSkill1" class="col-sm-1 control-label">Skill1</label>
-
+                    </div> -->
                     <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkill1" placeholder="Skill Requirement 1">
-                    </div>
+						<input id="inputDuration" type="text" value="6" name="inputDuration">
+					</div>
                   </div>
 
                   <div class="form-group">
+                    <label for="inputSkills" class="col-sm-1 control-label">Skills</label>
+					
+					<div class="col-sm-10">
+                    	<select id="inputSkills" class="form-control select2" multiple="multiple" data-placeholder="Select Skills" style="width: 100%;">
+                  			<option>Alabama</option>
+                  			<option>Alaska</option>
+                  			<option>California</option>
+                  			<option>Delaware</option>
+                  			<option>Tennessee</option>
+                  			<option>Texas</option>
+                  			<option>Washington</option>
+                		</select>
+                	</div>
+                  </div>
+
+                  <!-- <div class="form-group">
                     <label for="inputSkill2" class="col-sm-1 control-label">Skill2</label>
 
                     <div class="col-sm-10">
                       <input type="text" class="form-control" id="inputSkill2" placeholder="Skill Requirement 2">
                     </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="inputSkill3" class="col-sm-1 control-label">Skill3</label>
-
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkill3" placeholder="Skill Requirement 3">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="inputSkill4" class="col-sm-1 control-label">Skill4</label>
-
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkill4" placeholder="Skill Requirement 4">
-                    </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="inputSkill5" class="col-sm-1 control-label">Skill5</label>
-
-                    <div class="col-sm-10">
-                      <input type="text" class="form-control" id="inputSkill5" placeholder="Skill Requirement 5">
-                    </div>
-                  </div>
+                  </div> -->
                   
                  
                   <div class="form-group">
@@ -429,14 +387,15 @@ desired effect
 
                   <div class="form-group" id="add_mode">
                     <div class="col-sm-offset-1 col-sm-10">
-                      <button type="submit" class="btn btn-success">Add</button>
+                      <button type="submit" class="btn btn-success" onclick="addPosition()">Add</button>
                     </div>
                   </div>
 
                   <div class="form-group" id="edit_mode" style="display:none">
                     <div class="col-sm-offset-1 col-sm-10">
-                      <button type="submit" class="btn btn-primary">Update</button>
+                      <button type="submit" class="btn btn-primary" onclick="updatePosition()">Update</button>
                       <button type="submit" class="btn btn-danger" onclick="cancelEdit()">Cancel</button>
+                      <input type="hidden" id="p_id" />
                     </div>
                   </div>
         </div>
@@ -554,7 +513,7 @@ desired effect
     <div class="tab-content">
       <!-- Home tab content -->
       <div class="tab-pane active" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <!-- <h3 class="control-sidebar-heading">Recent Activity</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
@@ -568,9 +527,9 @@ desired effect
             </a>
           </li>
         </ul>
-        <!-- /.control-sidebar-menu -->
+         /.control-sidebar-menu -->
 
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <!-- <h3 class="control-sidebar-heading">Tasks Progress</h3>
         <ul class="control-sidebar-menu">
           <li>
             <a href="javascript::;">
@@ -585,15 +544,15 @@ desired effect
             </a>
           </li>
         </ul>
-        <!-- /.control-sidebar-menu -->
+         /.control-sidebar-menu -->
 
       </div>
-      <!-- /.tab-pane -->
+      
       <!-- Stats tab content -->
       <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
+      
       <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
+      <div class="tab-pane" id="control-sidebar-settings-tab"><!--
         <form method="post">
           <h3 class="control-sidebar-heading">General Settings</h3>
 
@@ -607,11 +566,11 @@ desired effect
               Some information about this general settings option
             </p>
           </div>
-          <!-- /.form-group -->
+          
         </form>
       </div>
-      <!-- /.tab-pane -->
-    </div>
+      
+    --> </div>
   </aside>
   <!-- /.control-sidebar -->
   <!-- Add the sidebar's background. This div must be placed
@@ -627,6 +586,8 @@ desired effect
 <!-- Bootstrap 3.3.6 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <!-- Select2 -->
+<script src="../../plugins/select2/select2.full.min.js"></script>
+
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
@@ -641,51 +602,128 @@ desired effect
 
 <!-- <script src="../plugins/datatables/dataTables.editor.min.js"></script> -->
 <!-- AdminLTE App -->
-<script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
+<script src="../plugins/spinner/jquery.bootstrap-touchspin.js"></script>
 
+<script src="../dist/js/app.min.js"></script>
+<script src="/js/ajax.js"></script>
+<script src="/js/reset.js"></script>
+<script src="/js/validate.js"></script>
+<script src="/js/mg_position.js"></script>
 
 
 <script>
   $(function(){
+	$(".select2").select2();
+	  
     $('#inputDate').datepicker({
       format: 'yyyy-mm-dd',
       autoclose: true
     });
+    
+    $("input[name^='inputNumber']").TouchSpin({
+  	  // Minimum value.
+  	  min: 0, 
+  	  // Maximum value.
+  	  max: 100, 
+  	  // Applied when no explicit value is set on the input with the value attribute. 
+  	  // Empty string means that the value remains empty on initialization.
+  	  initval: '',
+  	  replacementval: '',
+  	  // Number of decimal points.
+  	  decimals: 0,
+  	  // none | floor | round | ceil
+  	  forcestepdivisibility: 'round', 
+  	  // Enables the traditional up/down buttons.
+  	  verticalbuttons: false,
+  	  // Class of the up button with vertical buttons mode enabled.
+  	  verticalupclass: 'glyphicon glyphicon-chevron-up',
+  	  // Class of the down button with vertical buttons mode enabled.
+  	  verticaldownclass: 'glyphicon glyphicon-chevron-down',
+  	  // Boost at every nth step.
+  	  boostat: 5, 
+  	  // If enabled, the the spinner is continually becoming faster as holding the button.
+  	  booster: true,
+  	  // Maximum step when boosted.
+  	  maxboostedstep: 10, 
+  	  // Text after the input.
+  	  //postfix: '%', 
+  	  // Text before the input.
+  	  //prefix: '$', 
+  	  // Extra class(es) for prefix.
+  	  //prefix_extraclass: '',
+  	  //  Extra class(es) for postfix.
+  	  //postfix_extraclass: '',
+  	  // Incremental/decremental step on up/down change.
+  	  step: 1, 
+  	  // Refresh rate of the spinner in milliseconds.
+  	  stepinterval: 100, 
+  	  // Time in milliseconds before the spinner starts to spin.
+  	  stepintervaldelay: 500,
+  	  //  Enables the mouse wheel to change the value of the input.
+  	  mousewheel: true,
+  	  //  Class(es) of down button.
+  	  buttondown_class: 'btn btn-default',
+  	  //  Class(es) of up button.
+  	  buttonup_class: 'btn btn-default',
+  	  // Text for down button
+  	  buttondown_txt: '-',
+  	  // Text for up button
+  	  buttonup_txt: '+'
+  	});
 
-      var table = $('#example').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 5,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-      },
-      responsive: true
-    }); 
-
-
-    $('#example tbody').on( 'click', 'button', function () {
-        var data = table.row( $(this).parents('tr')).data();
-        if(!data) data = table.row( $(this).parents('tr').prev() ).data();
-        alert( JSON.stringify(data));
-
-        if($(this).html()=="Edit"){
-          $("#edit_mode").show();
-          $("#add_mode").hide();
-        }
+    $("input[name^='inputDuration']").TouchSpin({
+      	  // Minimum value.
+      	  min: 1, 
+      	  // Maximum value.
+      	  max: 36, 
+      	  // Applied when no explicit value is set on the input with the value attribute. 
+      	  // Empty string means that the value remains empty on initialization.
+      	  initval: '',
+      	  replacementval: '',
+      	  // Number of decimal points.
+      	  decimals: 0,
+      	  // none | floor | round | ceil
+      	  forcestepdivisibility: 'round', 
+      	  // Enables the traditional up/down buttons.
+      	  verticalbuttons: false,
+      	  // Class of the up button with vertical buttons mode enabled.
+      	  verticalupclass: 'glyphicon glyphicon-chevron-up',
+      	  // Class of the down button with vertical buttons mode enabled.
+      	  verticaldownclass: 'glyphicon glyphicon-chevron-down',
+      	  // Boost at every nth step.
+      	  boostat: 5, 
+      	  // If enabled, the the spinner is continually becoming faster as holding the button.
+      	  booster: true,
+      	  // Maximum step when boosted.
+      	  maxboostedstep: 10, 
+      	  // Text after the input.
+      	  //postfix: 'Months', 
+      	  // Text before the input.
+      	  prefix: 'Months', 
+      	  // Extra class(es) for prefix.
+      	  //prefix_extraclass: '',
+      	  //  Extra class(es) for postfix.
+      	  //postfix_extraclass: '',
+      	  // Incremental/decremental step on up/down change.
+      	  step: 1, 
+      	  // Refresh rate of the spinner in milliseconds.
+      	  stepinterval: 100, 
+      	  // Time in milliseconds before the spinner starts to spin.
+      	  stepintervaldelay: 500,
+      	  //  Enables the mouse wheel to change the value of the input.
+      	  mousewheel: true,
+      	  //  Class(es) of down button.
+      	  buttondown_class: 'btn btn-default',
+      	  //  Class(es) of up button.
+      	  buttonup_class: 'btn btn-default',
+      	  // Text for down button
+      	  buttondown_txt: '-',
+      	  // Text for up button
+      	  buttonup_txt: '+'
      });
-
+        
   })
 
-
-  function cancelEdit(){
-      $("#edit_mode").hide();
-      $("#add_mode").show();
-  }
 
 </script>
 

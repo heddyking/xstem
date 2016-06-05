@@ -75,16 +75,16 @@ public class CareerController {
 
 	//http://localhost/ste/addPerformance
     @RequestMapping("/ste/addPerformance")
-	public int addPerformance(String date, Integer hours, String description){
+	public int addPerformance(String from,String to, Integer hours, String description){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		return careerService.addPerformance(userinfo.getUserid(), DateUtil.parseDate(date), hours, description);
+		return careerService.addPerformance(userinfo.getUserid(), DateUtil.parseDate(from), DateUtil.parseDate(to), hours, description);
 	}
 
 	//http://localhost/ste/updatePerformance
     @RequestMapping("/ste/updatePerformance")
-	public int updatePerformance(Integer performanceid,String date, Integer hours,String description){
+	public int updatePerformance(Integer performanceid,String from,String to,  Integer hours,String description){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		return careerService.updatePerformance(performanceid, userinfo.getUserid(), DateUtil.parseDate(date), hours, description);
+		return careerService.updatePerformance(performanceid, userinfo.getUserid(), DateUtil.parseDate(from), DateUtil.parseDate(to), hours, description);
 	}
 
 	//http://localhost/mg/approvePerformance
@@ -125,7 +125,7 @@ public class CareerController {
     @RequestMapping("/mg/getPerformanceListByDepartment")
 	public List<Map<String,Object>> getPerformanceListByDepartment(){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		return careerService.getPerformanceListByDepartment(userinfo.getUserid());
+		return careerService.getPerformanceListByDepartment(userinfo.getDepartmentid());
 	}
 
 	//http://localhost/ste/addSkill

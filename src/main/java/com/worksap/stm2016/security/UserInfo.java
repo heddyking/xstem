@@ -11,6 +11,8 @@ public class UserInfo implements Principal{
 	private Integer departmentid;
 	private Integer positionid;
 	private String name;
+	private String positionname;
+	private String departmentname;
 	
 	@Override
 	public String getName() {
@@ -74,6 +76,24 @@ public class UserInfo implements Principal{
 		map.put("userid",userid);
 		map.put("departmentid",departmentid);
 		map.put("positionid",positionid);
+		map.put("positionname", positionname);
+		map.put("departmentname",departmentname);
 		return map;
+	}
+
+	public String getPositionname() {
+		return positionname;
+	}
+
+	public void setPositionname(String positionname) {
+		this.positionname = positionname;
+	}
+
+	public String getDepartmentname() {
+		return departmentname;
+	}
+
+	public void setDepartmentname(String departmentname) {
+		this.departmentname = departmentname;
 	}
 }

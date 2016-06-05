@@ -36,7 +36,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CheckPerformance extends TableImpl<CheckPerformanceRecord> {
 
-	private static final long serialVersionUID = -890156971;
+	private static final long serialVersionUID = 472606543;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.check_performance</code>
@@ -96,6 +96,11 @@ public class CheckPerformance extends TableImpl<CheckPerformanceRecord> {
 	 * The column <code>ss1604c195_rd4.check_performance.updatedat</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.check_performance.week_firstday</code>.
+	 */
+	public final TableField<CheckPerformanceRecord, Date> WEEK_FIRSTDAY = createField("week_firstday", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.check_performance</code> table reference

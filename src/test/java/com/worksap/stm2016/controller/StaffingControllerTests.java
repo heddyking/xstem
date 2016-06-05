@@ -1,5 +1,6 @@
 package com.worksap.stm2016.controller;
 
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,4 +25,9 @@ public class StaffingControllerTests
 	
 	private static final Logger logger = LoggerFactory.getLogger(StaffingControllerTests.class);
 
+	@Test
+	public void blank(){
+		
+	}
+	
 }

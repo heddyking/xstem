@@ -31,7 +31,7 @@ function dateFormatCheck(date){
 	if(!pattern.test(date)){
 		return false;
 	}
-	var valid = (new Date(timestamp)).getTime() > 0;
+	var valid = (new Date(date)).getTime() > 0;
 	return valid;
 }
 
@@ -42,4 +42,23 @@ function timestampFormatCheck(timestamp){
 	}
 	var valid = (new Date(timestamp)).getTime() > 0;
 	return valid;
+}
+
+function integerFormatCheck(i){
+	var pattern=/^\d+$/;
+	if(!pattern.test(i)){
+		return false;
+	}
+	return true;
+}
+
+function dateRangeCheck(r){
+	if(!r) return false;
+	var i=r.indexOf(" - ");
+	if(i<0) return false;
+	var from=r.substring(0,i);
+	var to=r.substring(i+3,r.length);
+	var validfrom = (new Date(from)).getTime() > 0;
+	var validto = (new Date(to)).getTime() > 0;
+	return validfrom && validto;
 }

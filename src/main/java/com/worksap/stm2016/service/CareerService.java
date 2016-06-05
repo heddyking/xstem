@@ -52,6 +52,7 @@ public class CareerService
 			.set(CHECK_ATTENDANCE.HOURS,hours)
 			.set(CHECK_ATTENDANCE.STATE,1)
 			.set(CHECK_ATTENDANCE.UPDATEDBY,steid)
+			.set(CHECK_ATTENDANCE.UPDATEDAT,new Timestamp(System.currentTimeMillis()))
 			.where(CHECK_ATTENDANCE.ATTENDANCEID.eq(attendanceid))
 			.execute();
 	}
@@ -107,11 +108,12 @@ public class CareerService
 			.fetchMaps();
 	}
 	
-	public int addPerformance(Integer steid,Date date, Integer hours, String description){
+	public int addPerformance(Integer steid,Date date0, Date date, Integer hours, String description){
 		Timestamp createdAt=new Timestamp(System.currentTimeMillis());
 		Timestamp updatedAt=createdAt;
 		return dsl.insertInto(CHECK_PERFORMANCE)
 					.set(CHECK_PERFORMANCE.STEID,steid)
+					.set(CHECK_PERFORMANCE.WEEK_FIRSTDAY,date0)
 					.set(CHECK_PERFORMANCE.WEEK_LASTDAY,date)
 					.set(CHECK_PERFORMANCE.HOURS,hours)
 					.set(CHECK_PERFORMANCE.DESCRIPTION,description)
@@ -124,13 +126,15 @@ public class CareerService
 					.getValue(CHECK_PERFORMANCE.PERFORMANCEID);
 	}
 	
-	public int updatePerformance(Integer performanceid,Integer steid,Date date, Integer hours,String description){
+	public int updatePerformance(Integer performanceid,Integer steid,Date date0, Date date, Integer hours,String description){
 		return dsl.update(CHECK_PERFORMANCE)
+			.set(CHECK_PERFORMANCE.WEEK_FIRSTDAY,date0)
 			.set(CHECK_PERFORMANCE.WEEK_LASTDAY,date)
 			.set(CHECK_PERFORMANCE.HOURS,hours)
 			.set(CHECK_PERFORMANCE.DESCRIPTION,description)
 			.set(CHECK_PERFORMANCE.STATE,1)
 			.set(CHECK_PERFORMANCE.UPDATEDBY,steid)
+			.set(CHECK_PERFORMANCE.UPDATEDAT,new Timestamp(System.currentTimeMillis()))
 			.where(CHECK_PERFORMANCE.PERFORMANCEID.eq(performanceid))
 			.execute();
 	}
@@ -170,6 +174,7 @@ public class CareerService
 			.join(INFO_STE)
 			.on(CHECK_PERFORMANCE.STEID.eq(INFO_STE.STEID))
 			.where(CHECK_PERFORMANCE.STEID.eq(steid))
+			.and(CHECK_PERFORMANCE.STATE.ne(0))
 			.fetchMaps();
 	}
 	
@@ -181,6 +186,7 @@ public class CareerService
 			.join(INFO_STE)
 			.on(CHECK_PERFORMANCE.STEID.eq(INFO_STE.STEID))
 			.where(INFO_STE.DEPARTMENTID.eq(departmentid))
+			.and(CHECK_PERFORMANCE.STATE.eq(1))
 			.fetchMaps();
 	}
 	
@@ -207,6 +213,7 @@ public class CareerService
 				.set(CHECK_SKILL.SCORE,DSL.value(null,Integer.class))
 				.set(CHECK_SKILL.STATE,1)
 				.set(CHECK_SKILL.UPDATEDBY,steid)
+				.set(CHECK_SKILL.UPDATEDAT,new Timestamp(System.currentTimeMillis()))
 				.where(CHECK_SKILL.SKILLID.eq(skillid))
 				.execute();
 	}
@@ -247,6 +254,7 @@ public class CareerService
 			.join(INFO_STE)
 			.on(CHECK_SKILL.STEID.eq(INFO_STE.STEID))
 			.where(CHECK_SKILL.STEID.eq(steid))
+			.and(CHECK_SKILL.STATE.ne(0))
 			.fetchMaps();
 	}
 	
@@ -258,6 +266,7 @@ public class CareerService
 			.join(INFO_STE)
 			.on(CHECK_SKILL.STEID.eq(INFO_STE.STEID))
 			.where(INFO_STE.DEPARTMENTID.eq(departmentid))
+			.and(CHECK_SKILL.STATE.eq(1))
 			.fetchMaps();
 	}
 }

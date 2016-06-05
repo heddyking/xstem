@@ -5,9 +5,9 @@ package com.worksap.stm2016.service;
 
 import static com.worksap.stm2016.jooq.domain.tables.TestComments.TEST_COMMENTS;
 import static com.worksap.stm2016.jooq.domain.tables.TestPosts.TEST_POSTS;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+//import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertNotNull;
+//import static org.junit.Assert.assertTrue;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
@@ -124,8 +124,8 @@ public class TestService
 		TestPost savedPost = createPost(post);
 		TestPost newPost = getPost(savedPost.getId());
 		int tempid=savedPost.getId();
-		assertEquals("My new Post", newPost.getTitle());
-		assertEquals("This is my new test post", newPost.getContent());
+//		assertEquals("My new Post", newPost.getTitle());
+//		assertEquals("This is my new test post", newPost.getContent());
 		
 		int a=10/0;
 
@@ -134,27 +134,27 @@ public class TestService
 		TestComment savedComment = createComment(comment);
 		TestPost post2 = getPost(postId);
 		List<TestComment> comments = post2.getComments();
-		assertNotNull(comments);
+//		assertNotNull(comments);
 		for (TestComment comm : comments)
 		{
 			if(savedComment.getId() == comm.getId()){
-				assertEquals("User4", comm.getName());
-				assertEquals("user4@gmail.com", comm.getEmail());
-				assertEquals("This is my new comment on post1", comm.getContent());
+//				assertEquals("User4", comm.getName());
+//				assertEquals("user4@gmail.com", comm.getEmail());
+//				assertEquals("This is my new comment on post1", comm.getContent());
 			}
 		}
 
 
 		TestPost post3 = getPost(tempid);
-		assertNotNull(post3);
+//		assertNotNull(post3);
 		System.out.println(post3);
 		List<TestComment> comments2 = post3.getComments();
 		System.out.println(comments2);
 
 
 		List<TestPost> posts = getAllPosts();
-		assertNotNull(posts);
-		assertTrue(!posts.isEmpty());
+//		assertNotNull(posts);
+//		assertTrue(!posts.isEmpty());
 		for (TestPost post4 : posts)
 		{
 			System.out.println(post4);

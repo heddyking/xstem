@@ -33,10 +33,10 @@ public class RecruitController {
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		Integer departmentid=userinfo.getDepartmentid();
 		String positionname=(String)params.get("positionname");
-		Integer number=(Integer)params.get("number");
+		Integer number=Integer.valueOf((String)params.get("number"));
 		String location_req=(String)params.get("location_req");
 		Date date_req=DateUtil.parseDate((String)params.get("date_req"));
-		Integer duration_req=(Integer)params.get("duration_req");
+		Integer duration_req=Integer.valueOf((String)params.get("duration_req"));
 		String skill_req1=(String)params.get("skill_req1");
 		String skill_req2=(String)params.get("skill_req2");
 		String skill_req3=(String)params.get("skill_req3");
@@ -59,13 +59,13 @@ public class RecruitController {
 			return -1;
 		} 
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		Integer positionid=(Integer)params.get("positionid");
+		Integer positionid=Integer.valueOf((String)params.get("positionid"));
 		Integer departmentid=userinfo.getDepartmentid();
 		String positionname=(String)params.get("positionname");
-		Integer number=(Integer)params.get("number");
+		Integer number=Integer.valueOf((String)params.get("number"));
 		String location_req=(String)params.get("location_req");
 		Date date_req=DateUtil.parseDate((String)params.get("date_req"));
-		Integer duration_req=(Integer)params.get("duration_req");
+		Integer duration_req=Integer.valueOf((String)params.get("duration_req"));
 		String skill_req1=(String)params.get("skill_req1");
 		String skill_req2=(String)params.get("skill_req2");
 		String skill_req3=(String)params.get("skill_req3");
@@ -88,7 +88,7 @@ public class RecruitController {
 
 	//http://localhost/mg/getPositionList
 	@RequestMapping("/mg/getPositionList")
-	public List<Map<String,Object>> getPositionList(Integer departmentid){
+	public List<Map<String,Object>> getPositionList(){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return recruitService.getPositionList(userinfo.getDepartmentid());
 	}
