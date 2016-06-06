@@ -6,6 +6,7 @@ package com.worksap.stm2016.service;
 import static com.worksap.stm2016.jooq.domain.tables.InfoSte.INFO_STE;
 import static com.worksap.stm2016.jooq.domain.tables.InfoDepartment.INFO_DEPARTMENT;
 import static com.worksap.stm2016.jooq.domain.tables.RecruitPosition.RECRUIT_POSITION;
+import static com.worksap.stm2016.jooq.domain.tables.InfoFte.INFO_FTE;
 
 import java.sql.Date;
 import java.util.List;
@@ -16,6 +17,8 @@ import org.jooq.Record;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.worksap.stm2016.global.Role;
 
 /**
  * @author Xiaoxi
@@ -96,4 +99,18 @@ public class InfoService
 				.execute();
 	}
 	
+	
+	public List<Map<String,Object>> getMGbyDepartment(Integer departmentid){
+		return dsl.select()
+				.from(INFO_FTE)
+				.where(INFO_FTE.DEPARTMENTID.eq(departmentid))
+				.and(INFO_FTE.ROLE.eq(Integer.valueOf(Role.MG.i())))
+				.fetchMaps();
+	}
+	
+	public Map<String,Object> getFTE(Integer fteid){
+		return dsl.selectFrom(INFO_FTE)
+				.where(INFO_FTE.FTEID.eq(fteid))
+				.fetchOne().intoMap();
+	}
 }

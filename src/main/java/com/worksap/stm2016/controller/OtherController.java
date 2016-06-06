@@ -10,11 +10,19 @@ import com.worksap.stm2016.global.Constants;
 
 @RestController
 public class OtherController {
-	
+
 	//http://localhost/getSkills
 	@RequestMapping("/getSkills")
 	public List<String> getSkills(){
 		Arrays.sort(Constants.skills);
 		return Arrays.asList(Constants.skills);
 	}
+
+	//http://localhost/getSkills
+	@RequestMapping("/getSites")
+	public List<String> getSites(){
+		return Arrays.asList(Constants.sites);
+	}
+	
+	
 }

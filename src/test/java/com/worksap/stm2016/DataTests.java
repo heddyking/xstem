@@ -251,3 +251,11 @@ public class DataTests
 //from (select positionid, rank() over (partition by (positionname) order by updatedat desc) as rank from recruit_position) as t 
 //where t.positionid=recruit_position.positionid
 //) <> 1
+
+////delete duplicate pool
+//delete from recruit_pool where 
+//(
+//select rank 
+//from (select poolid, rank() over (partition by (positionid) order by updatedat desc) as rank from recruit_pool) as t 
+//where t.poolid=recruit_pool.poolid
+//) <> 1

@@ -42,4 +42,12 @@ public interface Constants {
 		"PHP"
 	};
 	
+	public final String[] sites=new String[]{
+			"Melo Park, No.850 Zhongshan Road, Shanghai",
+			"Mountain Rainer, No.600 Longhua Road, Shanghai",
+			"Wudaokou, No.230 Helun Road, Beijing",
+			"Yan Square, No.123 Siyuan Road, Shenzhen",
+			"Sky Bay, No.222 Green Road, Sydney"
+	};
+	
 }

@@ -17,4 +17,8 @@ public enum Role {
 	public String v(){
 		return this.value;
 	}
+	
+	public Integer i(){
+		return Integer.valueOf(this.value);
+	}
 }

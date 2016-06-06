@@ -62,3 +62,14 @@ function dateRangeCheck(r){
 	var validto = (new Date(to)).getTime() > 0;
 	return validfrom && validto;
 }
+
+function timeRangeCheck(r){
+	if(!r) return false;
+	var i=r.indexOf(" - ");
+	if(i<0) return false;
+	var from=r.substring(0,i);
+	var to=r.substring(i+3,r.length);
+	var validfrom = timestampFormatCheck(from);
+	var validto = timestampFormatCheck(to);
+	return validfrom && validto;
+}

@@ -23,7 +23,7 @@ import com.worksap.stm2016.util.JsonUtil;
 @RestController
 public class RecruitController {
 	private final static Logger logger = LoggerFactory.getLogger(RecruitController.class);
-	
+
 	@Autowired
 	private RecruitService recruitService;
 
@@ -111,8 +111,8 @@ public class RecruitController {
 		logger.info("/hr/addPool");
 		logger.info("positionid="+positionid);
 		logger.info("number="+number);
-//		logger.info(Arrays.deepToString(new Object(){}.getClass ().getEnclosingMethod().getParameters()));
-	    
+		//		logger.info(Arrays.deepToString(new Object(){}.getClass ().getEnclosingMethod().getParameters()));
+
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return recruitService.addPool(positionid, number, userinfo.getUserid());
 	}
@@ -206,7 +206,8 @@ public class RecruitController {
 	//http://localhost/mg/getApplymentListHRChecking
 	@RequestMapping("/mg/getApplymentListMGChecking")
 	public List<Map<String,Object>>getApplymentListMGChecking(){
-		return recruitService.getApplymentListByState(2);
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return recruitService.getApplymentListByStateDepartment(2,userinfo.getDepartmentid());
 	}
 
 	//http://localhost/hr/getApplymentListArranging
@@ -218,13 +219,15 @@ public class RecruitController {
 	//http://localhost/mg/getApplymentListInterviewing
 	@RequestMapping("/mg/getApplymentListInterviewing")
 	public List<Map<String,Object>>getApplymentListInterviewing(){
-		return recruitService.getApplymentListByState(4);
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return recruitService.getApplymentListByStateDepartment(4,userinfo.getDepartmentid());
 	}
 
 	//http://localhost/mg/getApplymentListPassed
 	@RequestMapping("/mg/getApplymentListPassed")
 	public List<Map<String,Object>>getApplymentListPassed(){
-		return recruitService.getApplymentListByState(5);
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return recruitService.getApplymentListByStateDepartment(5,userinfo.getDepartmentid());
 	}
 
 	//http://localhost/hr/getApplymentListAccepted
@@ -291,11 +294,21 @@ public class RecruitController {
 
 	//http://localhost/hr/arrangeInterview
 	@RequestMapping("/hr/arrangeInterview")
-	public int arrangeInterview(Integer applymentid,Timestamp starttime, Timestamp endtime,
+	public int arrangeInterview(Integer applymentid,String starttime, String endtime,
 			String location,String contact_person, String contact_phone,String replenish){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		return recruitService.arrangeInterview(applymentid, starttime, endtime, 
+		return recruitService.arrangeInterview(applymentid, Timestamp.valueOf(starttime),  Timestamp.valueOf(endtime), 
 				location, contact_person, contact_phone, replenish, userinfo.getUserid());
+	}
+
+	
+	//http://localhost/hr/arrangeInterviewEmail
+	@RequestMapping("/hr/arrangeInterviewEmail")
+	public int arrangeInterviewEmail(Integer applymentid,String starttime, String endtime,
+			String location,String contact_person, String contact_phone,String replenish,String mgEmail, String steEmail, Boolean mgSend, Boolean steSend){
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return recruitService.arrangeInterviewEmail(applymentid, Timestamp.valueOf(starttime),  Timestamp.valueOf(endtime), 
+				location, contact_person, contact_phone, replenish,mgEmail, steEmail, mgSend, steSend, userinfo.getUserid());
 	}
 
 	//http://localhost/hr/getInterviewList

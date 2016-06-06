@@ -1,5 +1,7 @@
 package com.worksap.stm2016.controller;
 
+import static com.worksap.stm2016.jooq.domain.tables.InfoFte.INFO_FTE;
+
 import java.sql.Date;
 import java.util.List;
 import java.util.Map;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.worksap.stm2016.entities.UserInfo;
+import com.worksap.stm2016.global.Role;
 import com.worksap.stm2016.service.InfoService;
 import com.worksap.stm2016.util.DateUtil;
 import com.worksap.stm2016.util.JsonUtil;
@@ -113,5 +116,17 @@ public class InfoController {
 		String offer_url=(String) params.get("offer_url");
 		String contract_url=(String) params.get("contract_url");
 		return infoService.updateOnboardInfo(steid, email, phone, offer_url, contract_url);
+	}
+	
+	//http://localhost/hr/getMGbyDepartment
+	@RequestMapping("/hr/getMGbyDepartment")
+	public List<Map<String,Object>> getMGbyDepartment(Integer departmentid){
+		return infoService.getMGbyDepartment(departmentid);
+	}
+	
+	//http://localhost/hr/getFTE
+	@RequestMapping("/hr/getFTE")
+	public Map<String,Object> getFTE(Integer fteid){
+		return infoService.getFTE(fteid);
 	}
 }

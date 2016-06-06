@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. We have chosen the skin-purple for this starter
@@ -24,7 +26,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   -->
   <link rel="stylesheet" href="../dist/css/skins/skin-purple.min.css">
 
-
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker-bs3.css">
   <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
 
   <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
@@ -284,7 +287,7 @@ desired effect
       <!-- ################## -->
 
              <table id="example" class="table table-bordered table-hover">
-                <thead>
+                <!-- <thead>
                 <tr>
                   <th>Candidate</th>
                   <th>Email</th>
@@ -366,11 +369,105 @@ desired effect
                   <th><button class="btn btn-primary btn-xs edit">Edit</button> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
                
-                </tbody>
+                </tbody> -->
               </table>
 
 
       <!-- ######################## -->
+      			
+      			<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Arrange Interview</h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-horizontal">
+								
+								
+										<div class="form-group">
+							                 <label for="inputDate2" class="col-sm-2 control-label">Time</label>
+							
+							                    <div class="col-sm-9">
+							                    
+							                     	<div class="input-group">
+									                  <div class="input-group-addon">
+									                    <i class="fa fa-clock-o"></i>
+									                  </div>
+									                  <input type="text" class="form-control pull-right" id="rangeTime">
+									                </div>
+							                      
+							                    </div>
+							                </div>
+							               
+							                <div class="form-group">
+						                    	<label for="inputLocation" class="col-sm-2 control-label">Location</label>
+						                    	<div class="col-sm-9">
+						                    			<select id="inputLocation" class="form-control select2"  style="width: 100%;">
+						                				</select>
+						                		</div>
+						                  	</div>
+							
+							               <div class="form-group">
+						                    	<label for="inputInterviewer" class="col-sm-2 control-label">Interviewer</label>
+						                    	<div class="col-sm-9">
+						                    			<select id="inputInterviewer" class="form-control select2" style="width: 100%;">
+						                				</select>
+						                		</div>
+						                   </div>
+						                   
+						                   <div class="form-group">
+						                    <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+											<label for="inputReplenish" class="col-sm-2 control-label">Replenish</label>
+											<div class="col-sm-9">
+												<textarea class="form-control" id="inputReplenish"
+													placeholder="Replenish"></textarea>
+											</div>
+										  </div>
+						                  
+						                  <div class="form-group">
+						                  	<label for="options" class="col-sm-2 control-label"></label>
+						                  	<div class="col-sm-9">
+						                      <label>
+						                          <input id="isToMG" type="checkbox" class="flat-red" checked>
+						                          Send Manager Email
+						                      </label>
+						                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						                      <label>
+						                          <input id="isToSTE" type="checkbox" class="flat-red" checked>
+						                          Send Candidate Email
+						                      </label>
+						                     </div>
+						                  </div>
+                
+								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary" id="updatebtn" onclick="arrangeInterview()">Arrange</button>
+							</div>
+							<input type="hidden" id="a_id" />
+							<input type="hidden" id="mgEmail" />
+							<input type="hidden" id="steEmail" />
+						</div>
+					</div>
+				</div>
+      
+      <!-- ############################ -->
 
     </section>
     <!-- /.content -->
@@ -470,6 +567,8 @@ desired effect
 <!-- Bootstrap 3.3.6 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <!-- Select2 -->
+<script src="../../plugins/select2/select2.full.min.js"></script>
+
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
@@ -490,23 +589,14 @@ desired effect
 <script src="/js/validate.js"></script>
 <script src="/js/hr_arrange.js"></script>
 
+<!-- date-range-picker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+
 
 <script>
   $(function(){
-      var table = $('#example').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 5,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-      },
-      responsive: true
-    }); 
+	  
 
   })
 

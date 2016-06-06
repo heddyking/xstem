@@ -36,8 +36,8 @@ public class RecruitService
 	@Autowired
 	private DSLContext dsl;
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int addPosition(Integer departmentid,String positionname,Integer number,
 			String location_req, Date date_req,Integer duration_req,String skill_req1,
 			String skill_req2,String skill_req3,String skill_req4,String skill_req5,String description,Integer fteid){
@@ -65,8 +65,8 @@ public class RecruitService
 			.getValue(RECRUIT_POSITION.POSITIONID);
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int updatePosition(Integer positionid,Integer departmentid,String positionname,
 			Integer number,String location_req, Date date_req,Integer duration_req,String skill_req1,
 			String skill_req2,String skill_req3,String skill_req4,String skill_req5,String description,Integer fteid){
@@ -89,8 +89,8 @@ public class RecruitService
 			.execute();
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int deletePosition(Integer positionid,Integer fteid){
 		return dsl.update(RECRUIT_POSITION)
 			.set(RECRUIT_POSITION.ISVALID,false)
@@ -100,8 +100,8 @@ public class RecruitService
 			.execute();
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public List<Map<String,Object>> getPositionList(Integer departmentid){
 		if(departmentid==null){
 			return dsl.select(RECRUIT_POSITION.fields())
@@ -124,8 +124,8 @@ public class RecruitService
 		}
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int addPool(Integer positionid,Integer number,Integer fteid){
 		Timestamp createdAt=new Timestamp(System.currentTimeMillis());
 		Timestamp updatedAt=createdAt;
@@ -141,8 +141,8 @@ public class RecruitService
 			.getValue(RECRUIT_POOL.POOLID);
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int updatePool(Integer poolid,Integer realnumber,Date apply_start,Date apply_due,Integer fteid){
 		if(apply_due!=null && apply_start!=null && apply_due.after(apply_start)){
 			return dsl.update(RECRUIT_POOL)
@@ -157,8 +157,8 @@ public class RecruitService
 		return 0;
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int deletePool(Integer poolid,Integer fteid){
 		return dsl.update(RECRUIT_POOL)
 			.set(RECRUIT_POOL.ISVALID,false)
@@ -168,8 +168,8 @@ public class RecruitService
 			.execute();
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public List<Map<String,Object>> getHRPoolList(){
 		return dsl.select(RECRUIT_POOL.POOLID,RECRUIT_POOL.APPLY_START,RECRUIT_POOL.APPLY_DUE,RECRUIT_POOL.REALNUMBER)
 				.select(RECRUIT_POSITION.fields())
@@ -181,8 +181,8 @@ public class RecruitService
 				.fetchMaps();
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public List<Map<String,Object>> getPoolList(){
 		return dsl.select(RECRUIT_POOL.POOLID,RECRUIT_POOL.UPDATEDAT.as("updatedat2"),RECRUIT_POOL.APPLY_START,RECRUIT_POOL.APPLY_DUE,RECRUIT_POOL.REALNUMBER)
 				.select(RECRUIT_POSITION.fields())
@@ -196,14 +196,14 @@ public class RecruitService
 				.fetchMaps();
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public List<Map<String,Object>> getAgencies(){
 		return dsl.selectFrom(RECRUIT_AGENCY).fetchMaps();
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public List<Map<String,Object>> getPublishedList(Integer poolid){
 		return dsl.select(RECRUIT_PUBLISHED.fields())
 			.select(RECRUIT_AGENCY.AGENCYNAME,RECRUIT_AGENCY.AGENCY_URL)
@@ -213,8 +213,8 @@ public class RecruitService
 			.fetchMaps();
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int addPublished(Integer poolid,Integer agencyid){
 		return dsl.insertInto(RECRUIT_PUBLISHED)
 				.set(RECRUIT_PUBLISHED.POOLID,poolid)
@@ -224,8 +224,8 @@ public class RecruitService
 				.getValue(RECRUIT_PUBLISHED.PUBLISHEDID);
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int delPublished(Integer poolid,Integer agencyid){
 		return dsl.deleteFrom(RECRUIT_PUBLISHED)
 			.where(RECRUIT_PUBLISHED.POOLID.eq(poolid))
@@ -234,8 +234,8 @@ public class RecruitService
 	}
 	
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int addApplyment(Integer steid,Integer positionid){
 		Timestamp createdAt=new Timestamp(System.currentTimeMillis());
 		Timestamp updatedAt=createdAt;
@@ -260,8 +260,8 @@ public class RecruitService
 	//--5- pass
 	//--6- fail
 	//--10-accepted
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public Map<String,Object> getSelfActiveApplyment(Integer steid){
 		return dsl.select(RECRUIT_POSITION.POSITIONNAME,RECRUIT_POSITION.DATE_REQ,RECRUIT_POSITION.DURATION_REQ,
 							RECRUIT_POSITION.LOCATION_REQ,RECRUIT_POSITION.NUMBER,RECRUIT_POSITION.DESCRIPTION,
@@ -284,8 +284,8 @@ public class RecruitService
 	}
 	
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public Map<String,Object> getSelfLatestApplyment(Integer steid){
 		return dsl.select(RECRUIT_POSITION.POSITIONNAME,RECRUIT_POSITION.DATE_REQ,RECRUIT_POSITION.DURATION_REQ,
 						RECRUIT_POSITION.LOCATION_REQ,RECRUIT_POSITION.NUMBER,RECRUIT_POSITION.DESCRIPTION,
@@ -306,8 +306,8 @@ public class RecruitService
 	}
 	
 	//get the applyment history of the latest applyment
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public List<Map<String,Object>>getApplymentHistory(Integer applymentid){
 		return dsl.selectFrom(VI_RECRUIT_APPLYMENT_HISTORY)
 				.where(VI_RECRUIT_APPLYMENT_HISTORY.APPLYMENTID.eq(applymentid))
@@ -315,8 +315,8 @@ public class RecruitService
 	}
 	
 	//get applyment list of certain state
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public List<Map<String,Object>>getApplymentListByState(Integer state){
 		return dsl.select(RECRUIT_POSITION.POSITIONNAME,RECRUIT_POSITION.DATE_REQ,RECRUIT_POSITION.DURATION_REQ,
 						RECRUIT_POSITION.LOCATION_REQ,RECRUIT_POSITION.NUMBER,RECRUIT_POSITION.DESCRIPTION,
@@ -343,8 +343,36 @@ public class RecruitService
 				.fetchMaps();
 	}		
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	public List<Map<String,Object>>getApplymentListByStateDepartment(Integer state, Integer departmentid){
+		return dsl.select(RECRUIT_POSITION.POSITIONNAME,RECRUIT_POSITION.DATE_REQ,RECRUIT_POSITION.DURATION_REQ,
+						RECRUIT_POSITION.LOCATION_REQ,RECRUIT_POSITION.NUMBER,RECRUIT_POSITION.DESCRIPTION,
+						RECRUIT_POSITION.DEPARTMENTID,RECRUIT_POSITION.POSITIONID,RECRUIT_POSITION.SKILL_REQ1,
+						RECRUIT_POSITION.SKILL_REQ2,RECRUIT_POSITION.SKILL_REQ3,RECRUIT_POSITION.SKILL_REQ4,
+						RECRUIT_POSITION.SKILL_REQ5)
+				.select(RECRUIT_APPLYMENT.APPLYMENTID,RECRUIT_APPLYMENT.CREATEDAT,RECRUIT_APPLYMENT.STATE,
+						RECRUIT_APPLYMENT.STEID,RECRUIT_APPLYMENT.UPDATEDAT,RECRUIT_APPLYMENT.UPDATEDBY)
+				.select(INFO_STE.NAME,INFO_STE.GENDER,INFO_STE.BIRTHDAY,INFO_STE.EMAIL,INFO_STE.EMAIL_SELF,
+						INFO_STE.PHONE,INFO_STE.TELEPHONE,INFO_STE.LOCATION,INFO_STE.EXPERIENCES,INFO_STE.SKILLS,
+						INFO_STE.RESUME_URL)
+				.select(INFO_DEPARTMENT.DEPARTMENTNAME)
+				.select(RECRUIT_POOL.REALNUMBER,RECRUIT_POOL.APPLY_START,RECRUIT_POOL.APPLY_DUE)
+				.from(RECRUIT_APPLYMENT)
+				.join(RECRUIT_POSITION)
+				.on(RECRUIT_APPLYMENT.POSITIONID.eq(RECRUIT_POSITION.POSITIONID))
+				.join(INFO_STE)
+				.on(RECRUIT_APPLYMENT.STEID.eq(INFO_STE.STEID))
+				.leftJoin(INFO_DEPARTMENT)
+				.on(RECRUIT_POSITION.DEPARTMENTID.eq(INFO_DEPARTMENT.DEPARTMENTID))
+				.leftJoin(RECRUIT_POOL)
+				.on(RECRUIT_POSITION.POSITIONID.eq(RECRUIT_POOL.POSITIONID))
+				.where(RECRUIT_APPLYMENT.STATE.eq(state))
+				.and(RECRUIT_POSITION.DEPARTMENTID.eq(departmentid))
+				.fetchMaps();
+	}	
+	
+	
+	
 	public int updateApplyment(Integer applymentid, Integer state, Integer userid){
 		return dsl.update(RECRUIT_APPLYMENT)
 				.set(RECRUIT_APPLYMENT.STATE,state)
@@ -354,8 +382,8 @@ public class RecruitService
 				.execute();
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	
 	public int arrangeInterview(Integer applymentid,Timestamp starttime, Timestamp endtime,
 			String location,String contact_person, String contact_phone,String replenish,Integer fteid){
 		
@@ -376,8 +404,30 @@ public class RecruitService
 		return id;
 	}
 	
-	//http://localhost/
-	@RequestMapping("//")
+	
+	public int arrangeInterviewEmail(Integer applymentid,Timestamp starttime, Timestamp endtime,
+			String location,String contact_person, String contact_phone,String replenish,
+			String mgEmail, String steEmail, Boolean mgSend,Boolean steSend, Integer fteid){
+		
+		int id=dsl.insertInto(RECRUIT_INTERVIEW)
+				.set(RECRUIT_INTERVIEW.APPLYMENTID,applymentid)
+				.set(RECRUIT_INTERVIEW.STARTTIME,starttime)
+				.set(RECRUIT_INTERVIEW.ENDTIME,endtime)
+				.set(RECRUIT_INTERVIEW.CONTACT_PERSON,contact_person)
+				.set(RECRUIT_INTERVIEW.CONTACT_PHONE,contact_phone)
+				.set(RECRUIT_INTERVIEW.LOCATION,location)
+				.set(RECRUIT_INTERVIEW.REPLENISH,replenish)
+				.returning(RECRUIT_INTERVIEW.INTERVIEWID)
+				.fetchOne()
+				.getValue(RECRUIT_INTERVIEW.INTERVIEWID);
+		
+		updateApplyment(applymentid,4,fteid);
+		
+		return id;
+	}
+	
+	
+	
 	public List<Map<String,Object>> getInterviewList(Integer departmentid){
 		if(departmentid==null){
 			return dsl.selectFrom(VI_RECRUIT_INTERVIEW_CONTEXT)

@@ -78,4 +78,20 @@ public class InfoServiceTests
 		
 		assertEquals(r1,1);
 	}
+	
+//	@Test
+	public void getMGbyDepartment(){
+		List r1=infoService.getMGbyDepartment(4);
+		
+		assertTrue(r1.size()>0);
+		logger.info(r1.toString());
+	}
+	
+//	@Test
+	public void getFTE(){
+		Map r1=infoService.getFTE(2);
+				
+		assertTrue(r1!=null);
+		logger.info(r1.toString());
+	}
 }
