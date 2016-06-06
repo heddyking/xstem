@@ -240,3 +240,14 @@ public class DataTests
 //--10-hr apply check fail
 //--11-hr apply wait mg check
 //--12-hr apply pass
+
+
+
+
+////delete duplicate positions
+//delete from recruit_position where 
+//(
+//select rank 
+//from (select positionid, rank() over (partition by (positionname) order by updatedat desc) as rank from recruit_position) as t 
+//where t.positionid=recruit_position.positionid
+//) <> 1

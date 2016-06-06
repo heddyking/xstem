@@ -1,23 +1,29 @@
 package com.worksap.stm2016.controller;
 
+import java.lang.reflect.Method;
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.worksap.stm2016.security.UserInfo;
+import com.worksap.stm2016.entities.UserInfo;
 import com.worksap.stm2016.service.RecruitService;
 import com.worksap.stm2016.util.DateUtil;
 import com.worksap.stm2016.util.JsonUtil;
 
 @RestController
 public class RecruitController {
+	private final static Logger logger = LoggerFactory.getLogger(RecruitController.class);
+	
 	@Autowired
 	private RecruitService recruitService;
 
@@ -102,6 +108,11 @@ public class RecruitController {
 	//http://localhost/hr/addPool
 	@RequestMapping("/hr/addPool")
 	public int addPool(Integer positionid,Integer number){
+		logger.info("/hr/addPool");
+		logger.info("positionid="+positionid);
+		logger.info("number="+number);
+//		logger.info(Arrays.deepToString(new Object(){}.getClass ().getEnclosingMethod().getParameters()));
+	    
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return recruitService.addPool(positionid, number, userinfo.getUserid());
 	}
@@ -173,7 +184,7 @@ public class RecruitController {
 
 	//http://localhost/ste/getSelfLatestApplyment
 	@RequestMapping("/ste/getSelfLatestApplyment")
-	public Map<String,Object> getSelfLatestApplyment(Integer steid){
+	public Map<String,Object> getSelfLatestApplyment(){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return recruitService.getSelfLatestApplyment(userinfo.getUserid());
 	}

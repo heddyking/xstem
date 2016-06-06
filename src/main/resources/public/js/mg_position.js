@@ -19,12 +19,15 @@ function initSkills(){
 	ajax(url,type,data,cb);
 }
 
+var positions=[];
+
 function getAllPositions(){
 	var url="/mg/getPositionList";
 	var type="get";
 	var data={};
 	var cb=function(msg){
 //		alert(JSON.stringify(msg));
+		positions=msg;
 		for(var k=0;k<msg.length;k++){
 			msg[k].operations='<button class="btn btn-primary btn-xs edit" data-toggle="modal" data-target="#myModal">Edit</button> <button class="btn btn-danger btn-xs delete">Delete</button>';
 			msg[k].skills="";
@@ -56,13 +59,13 @@ function getAllPositions(){
 	        "autoWidth": false,
 	        "pageLength": 5,
 	        "bDestroy":true,
-	        rowReorder: {
-	              selector: 'td:nth-child(2)'
-	        },
+//	        rowReorder: {
+//	              selector: 'td:nth-child(2)'
+//	        },
 	        responsive: true
 	   }); 
 
-	  $('#example tbody').off( 'click');
+	  $('#example tbody').off( 'click', 'button');
 	  $('#example tbody').on( 'click', 'button', function () {
 	      var data = table.row( $(this).parents('tr')).data();
 	      if(!data) data = table.row( $(this).parents('tr').prev() ).data();
@@ -108,8 +111,15 @@ function addPosition(){
 //	alert(positionname+" "+number+" "+location_req+" "+date_req+" "+duration_req+" "+skills+" "+description);
 //	alert(skills[0])
 	
+	
 	if(!positionname){alert("Please input Position Name!");return;}
 	if(positionname.length>32){alert("Position Name is too long!");return;}
+	for(var k=0;k<positions.length;k++){
+		if(positionname==positions[k].positionname){
+			alert("Already having the position! Please change a Name");
+			return;
+		}
+	}
 	if(!number){alert("Please input Number!");return;}
 	if(!integerFormatCheck(number)){alert("Number wrong format!");return;}
 	if(!location_req){alert("Please input Location!");return;}

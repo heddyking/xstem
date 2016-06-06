@@ -38,13 +38,13 @@ function getPerformances(){
 			"autoWidth": false,
 			"pageLength": 6,
 			"bDestroy":true,
-			rowReorder: {
-			     selector: 'td:nth-child(2)'
-			},
+//			rowReorder: {
+//			     selector: 'td:nth-child(2)'
+//			},
 			responsive: true
 		});
 
-		$('#example2 tbody').off( 'click');
+		$('#example2 tbody').off( 'click', 'button');
 		$('#example2 tbody').on( 'click', 'button', function () {
 			var data = table.row( $(this).parents('tr')).data();
 			if(!data) data = table.row( $(this).parents('tr').prev() ).data();

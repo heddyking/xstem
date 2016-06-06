@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.worksap.stm2016.security.UserInfo;
+import com.worksap.stm2016.entities.UserInfo;
 import com.worksap.stm2016.service.InfoService;
 import com.worksap.stm2016.util.DateUtil;
 import com.worksap.stm2016.util.JsonUtil;

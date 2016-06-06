@@ -14,6 +14,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
+import com.worksap.stm2016.entities.UserInfo;
 import com.worksap.stm2016.service.AccountService;
 
 @Component

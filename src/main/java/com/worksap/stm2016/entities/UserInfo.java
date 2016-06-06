@@ -1,4 +1,4 @@
-package com.worksap.stm2016.security;
+package com.worksap.stm2016.entities;
 
 import java.security.Principal;
 import java.util.HashMap;

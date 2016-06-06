@@ -42,10 +42,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		.loginPage("/login")
 		.permitAll()
 		.and()
+        .logout()
+        .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll()
+        .logoutSuccessUrl("/")
+		.and()
 		.exceptionHandling().accessDeniedPage("/403");
-		//            .and()
-		//            .logout()
-		//            .logoutRequestMatcher(new AntPathRequestMatcher("/logout")).permitAll();
+		            
 	}
 
 	@Autowired

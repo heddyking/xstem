@@ -284,23 +284,20 @@ desired effect
       <!-- ################## -->
 
              <table id="example" class="table table-bordered table-hover">
-                <thead>
+                <!-- <thead>
                 <tr>
                   <th>Position</th>
                   <th>Department</th>
                   <th>Plan Number</th>
-                  <th>Location Req</th>
                   <th>Date Req</th>
-                  <th>Duration Req</th>
                   <th>Skills Req</th>
                   <th>Candidate</th>
                   <th>Email</th>
                   <th>Skills</th>
                   <th>Suggestion</th>
-                  <th>Operation</th>
                 </tr>
-                </thead>
-                <tbody>
+                </thead> -->
+                <!-- <tbody>
                 <tr>
                   <td>Java Dev</td>
                   <td>HUE</td>
@@ -357,7 +354,7 @@ desired effect
                   <th><small class="label bg-green" margin-top="-2px">approve</small></th>
                   <th><button class="btn btn-primary btn-xs edit">Detail</button> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
-                </tbody>
+                </tbody> -->
               </table>
 
 
@@ -477,24 +474,15 @@ desired effect
 <!-- AdminLTE App -->
 <script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
 
+<script src="/js/date.js"></script>
+<script src="/js/validate.js"></script>
+<script src="/js/hr_filter.js"></script>
+
 
 
 <script>
   $(function(){
-      var table = $('#example').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 5,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-      },
-      responsive: true
-    }); 
+     
 
   })
 

@@ -28,7 +28,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
 
   <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
-  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"> -->
+<!--  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">  -->
 <!--   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css">
   <link rel="stylesheet" href="../plugins/datatables/editor.dataTables.min.css"> -->
@@ -299,17 +299,17 @@ desired effect
           <table id="example" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Position ID</th>
+                <!--   <th>Position ID</th>
                   <th>Position</th>
                   <th>Department</th>
                   <th>Number</th>
                   <th>Location</th>
                   <th>Date</th>
                   <th>Duration</th>
-                  <th>Skills</th>
+                  <th>Skills</th> -->
                 </tr>
                 </thead>
-                <tbody>
+                <!-- <tbody>
                 <tr>
                   <td>1</td>
                   <td>Java Dev</td>
@@ -319,6 +319,7 @@ desired effect
                   <td>2016-6-1</td>
                   <td>6 Months</td>
                   <td>Java, Javascript, Android</td>
+                  <td><button class="btn btn-primary btn-xs edit" >Add Into Pool</button></td>
                 </tr>
                <tr>
                   <td>2</td>
@@ -329,6 +330,7 @@ desired effect
                   <td>2016-6-1</td>
                   <td>6 Months</td>
                   <td>Java, Junit</td>
+                  <td><button class="btn btn-primary btn-xs edit" >Add Into Pool</button></td>
                 </tr>
                 <tr>
                   <td>3</td>
@@ -339,6 +341,7 @@ desired effect
                   <td>2016-6-10</td>
                   <td>6 Months</td>
                   <td>C++, STL, OC</td>
+                  <td><button class="btn btn-primary btn-xs edit" >Add Into Pool</button></td>
                 </tr>
                 <tr>
                   <td>4</td>
@@ -349,8 +352,9 @@ desired effect
                   <td>2016-6-5</td>
                   <td>12 Months</td>
                   <td>DM, ML, NLP, DL, AI</td>
+                  <td><button class="btn btn-primary btn-xs edit" >Add Into Pool</button></td>
                 </tr>
-                </tbody>
+                </tbody> -->
               </table>
 
          </div>
@@ -389,7 +393,7 @@ desired effect
           <table id="example2" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Position ID</th>
+             <!--      <th>Position ID</th>
                   <th>Position</th>
                   <th>Department</th>
                   <th>Recruit Number</th>
@@ -397,10 +401,10 @@ desired effect
                   <th>Date</th>
                   <th>Duration</th>
                   <th>Skills</th>
-                  <th>Operations</th>
+                  <th>Operation</th> -->
                 </tr>
                 </thead>
-                <tbody>
+                <!-- <tbody>
                 <tr>
                   <td>1</td>
                   <td>Java Dev</td>
@@ -445,7 +449,7 @@ desired effect
                   <td>DM, ML, NLP, DL, AI</td>
                   <td><button class="btn btn-success btn-xs edit">Poster</button> <button class="btn btn-primary btn-xs edit">Edit</button> <button class="btn btn-danger btn-xs delete">Delete</button></td>
                 </tr>
-                </tbody>
+                </tbody> -->
               </table>
 
          </div>
@@ -477,8 +481,8 @@ desired effect
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
-                  <div class="form-horizontal">
-                    <div>
+                  <div id="publishment" class="form-horizontal">
+                    <!-- <div>
                       <label>
                           <input type="checkbox" class="flat-red">
                           <a href="http://www.dajie.com/">Dajiewang</a>
@@ -501,9 +505,10 @@ desired effect
                           <input type="checkbox" class="flat-red" checked>
                           <a href="http://www.lagou.com/">Lagouwang</a>
                       </label>
-                    </div>
+                    </div> -->
                  </div>
                 </div>
+                <input type="hidden" id="p_id"/>
               </div>
          </div>
 
@@ -513,6 +518,73 @@ desired effect
 
 
 <!-- ############################ -->
+
+
+		<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Edit Attendance</h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-horizontal">
+								
+								<div class="form-group">
+									<label for="inputNumber" class="col-sm-2 control-label">Plan Num</label>
+
+									<div class="col-sm-9">
+										<!-- <input type="text" class="form-control pull-right" id="inputHours" placeholder="Hours"> -->
+										<input id="inputNumber" type="text" value="8" name="inputNumber">
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="inputDate1" class="col-sm-2 control-label">Apply Start</label>
+
+									<div class="col-sm-9">
+										<div class="input-group date">
+											<div class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+											</div>
+											<input type="text" class="form-control pull-right"
+												id="inputDate1">
+										</div>
+									</div>
+								</div>
+								
+								<div class="form-group">
+									<label for="inputDate2" class="col-sm-2 control-label">Apply Due</label>
+
+									<div class="col-sm-9">
+										<div class="input-group date">
+											<div class="input-group-addon">
+												<i class="fa fa-calendar"></i>
+											</div>
+											<input type="text" class="form-control pull-right"
+												id="inputDate2">
+										</div>
+									</div>
+								</div>
+								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary" id="updatebtn" onclick="updatePool()">Save
+									changes</button>
+							</div>
+							<input type="hidden" id="a_id" />
+						</div>
+					</div>
+				</div>
+		
 
 
 
@@ -628,50 +700,78 @@ desired effect
 
 <!-- <script src="../plugins/datatables/dataTables.editor.min.js"></script> -->
 <!-- AdminLTE App -->
+<script src="../plugins/spinner/jquery.bootstrap-touchspin.js"></script>
+
 <script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
 
+<script src="/js/date.js"></script>
+<script src="/js/validate.js"></script>
+<script src="/js/hr_publish.js"></script>
 
 
 <script>
   $(function(){
-      var table = $('#example').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 5,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-      },
-      responsive: true
-    }); 
-
-
-    var table2 = $('#example2').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 5,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-      },
-      responsive: true
-    });
-
-
+	  $("input[id^='inputDate']").datepicker({
+	      format: 'yyyy-mm-dd',
+	      autoclose: true
+	  }).datepicker("setDate", new Date());
+	    
+	    $("input[name^='inputNumber']").TouchSpin({
+	    	  // Minimum value.
+	    	  min: 0, 
+	    	  // Maximum value.
+	    	  max: 1000, 
+	    	  // Applied when no explicit value is set on the input with the value attribute. 
+	    	  // Empty string means that the value remains empty on initialization.
+	    	  initval: '',
+	    	  replacementval: '',
+	    	  // Number of decimal points.
+	    	  decimals: 0,
+	    	  // none | floor | round | ceil
+	    	  forcestepdivisibility: 'round', 
+	    	  // Enables the traditional up/down buttons.
+	    	  verticalbuttons: false,
+	    	  // Class of the up button with vertical buttons mode enabled.
+	    	  verticalupclass: 'glyphicon glyphicon-chevron-up',
+	    	  // Class of the down button with vertical buttons mode enabled.
+	    	  verticaldownclass: 'glyphicon glyphicon-chevron-down',
+	    	  // Boost at every nth step.
+	    	  boostat: 5, 
+	    	  // If enabled, the the spinner is continually becoming faster as holding the button.
+	    	  booster: true,
+	    	  // Maximum step when boosted.
+	    	  maxboostedstep: 10, 
+	    	  // Text after the input.
+	    	  //postfix: '%', 
+	    	  // Text before the input.
+	    	  //prefix: '$', 
+	    	  // Extra class(es) for prefix.
+	    	  //prefix_extraclass: '',
+	    	  //  Extra class(es) for postfix.
+	    	  //postfix_extraclass: '',
+	    	  // Incremental/decremental step on up/down change.
+	    	  step: 1, 
+	    	  // Refresh rate of the spinner in milliseconds.
+	    	  stepinterval: 100, 
+	    	  // Time in milliseconds before the spinner starts to spin.
+	    	  stepintervaldelay: 500,
+	    	  //  Enables the mouse wheel to change the value of the input.
+	    	  mousewheel: true,
+	    	  //  Class(es) of down button.
+	    	  buttondown_class: 'btn btn-default',
+	    	  //  Class(es) of up button.
+	    	  buttonup_class: 'btn btn-default',
+	    	  // Text for down button
+	    	  buttondown_txt: '-',
+	    	  // Text for up button
+	    	  buttonup_txt: '+'
+	 });
+	    
     $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
       checkboxClass: 'icheckbox_flat-green',
       radioClass: 'iradio_flat-green'
     });
-
-
+    
   })
 
 </script>

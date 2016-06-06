@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.worksap.stm2016.security.UserInfo;
+import com.worksap.stm2016.entities.UserInfo;
 import com.worksap.stm2016.service.AccountService;
 
 @RestController
@@ -28,4 +28,16 @@ public class AccountController {
 		UserInfo userinfo=(UserInfo) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return userinfo.toMap();
 	}
+	
+//	//when is login as a role, then access another role's login page it will get /403, but we will redirect it to /
+//  @RequestMapping(value="/403", method = RequestMethod.GET)
+//  public String denied (HttpServletRequest request, HttpServletResponse response) {
+//  	System.out.println("#################");
+//      Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//      if (auth != null){    
+//          new SecurityContextLogoutHandler().logout(request, response, auth);
+//      }
+//      System.out.println(auth.getAuthorities());
+//      return "redirect:/";//You can redirect wherever you want, but generally it's a good practice to show login screen again.
+//  }
 }

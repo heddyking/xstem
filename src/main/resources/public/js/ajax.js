@@ -7,12 +7,12 @@ function ajax(url,type,data,cb,eb){
 		'datatype': 'html',
 		'timeout': 30000,
 		'error': function (msg) {
-			//alert(JSON.stringify(msg)); 
 			if(eb){
 				eb(msg);
 			}
 			else{
-				alert('System Error! Please Retry.');
+				alert(JSON.stringify(msg)); 
+//				alert('System Error! Please Retry.');
 			}
 			return;
 		},

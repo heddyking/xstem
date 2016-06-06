@@ -497,7 +497,7 @@ desired effect
                           <div>
                                   <div style="float:left;width:140px">
                
-                                      <a href="http://www.baidu.com/img/bd_logo1.png"><button id="fakeBrowse" style="float:left;width:140px;margin-top:3px" >Dowload Resume</button></a>
+                                      <a id="resume_download" target="_blank" href=""><button id="resume_btn" style="float:left;width:140px;margin-top:3px" >No Resume</button></a>
                                   </div>
 
                                  <div style="clear:both"></div>
@@ -512,7 +512,7 @@ desired effect
                           <div>
                                   <div style="float:left;width:140px">
                
-                                      <a href="http://www.baidu.com/img/bd_logo1.png"><button id="fakeBrowse" style="float:left;width:140px;margin-top:3px" >Dowload Offer</button></a>
+                                      <a id="offer_download" target="_blank" href=""><button id="offer_btn" style="float:left;width:140px;margin-top:3px" >No Offer</button></a>
                                   </div>
 
                                  <div style="clear:both"></div>
@@ -527,7 +527,7 @@ desired effect
                           <div>
                                   <div style="float:left;width:140px">
                
-                                      <a href="http://www.baidu.com/img/bd_logo1.png"><button id="fakeBrowse" style="float:left;width:140px;margin-top:3px" >Dowload Contract</button></a>
+                                      <a id="contract_download" target="_blank" href=""><button id="contract_btn" style="float:left;width:140px;margin-top:3px" >No Contract</button></a>
                                   </div>
 
                                  <div style="clear:both"></div>
@@ -579,7 +579,7 @@ desired effect
                   <th>Status</th>
                 </tr>
                 </thead>
-                <tbody>
+                <!-- <tbody>
                 <tr>
                   <td>2016-5-8</td>
                   <td>8</td>
@@ -602,7 +602,7 @@ desired effect
                   <td>2016-5-11 17:50:32</td>
                   <td><small class="label bg-yellow" margin-top="-2px">Pending</small></td>
                 </tr>
-                </tbody>
+                </tbody> -->
               </table>
                                   
 
@@ -630,13 +630,13 @@ desired effect
                   </div>
                 </div>
                 <!-- /.box-header -->
-                <div class="box-body">
+                <div id="skill_box" class="box-body">
                   <!-- Conversations are loaded here -->
-                      <span class="label label-danger">Date Mining -- 10 scores</span><br/><br/>
+                      <!-- <span class="label label-danger">Date Mining -- 10 scores</span><br/><br/>
                       <span class="label label-success">Coding -- 9.5 scores</span><br/><br/>
                       <span class="label label-info">Javascript -- 8 scores</span><br/><br/>
                       <span class="label label-warning">PHP -- 7 scores</span><br/><br/>
-                      <span class="label label-primary">Node.js -- 6 scores</span><br/><br/>
+                      <span class="label label-primary">Node.js -- 6 scores</span><br/><br/> -->
                 </div>
 
               </div>
@@ -670,14 +670,15 @@ desired effect
                  <table id="example1" class="table table-bordered table-hover">
                 <thead>
                 <tr>
-                  <th>Week Lastday</th>
+                  <th>From</th>
+                  <th>To</th>
                   <th>Hours</th>
-                  <th>Performance Description</th>
+                  <th>Description</th>
                   <th>Updated At</th>
                   <th>Status</th>
                 </tr>
                 </thead>
-                <tbody>
+               <!--  <tbody>
                 <tr>
                   <td>2016-5-8</td>
                   <td>8</td>
@@ -704,7 +705,7 @@ desired effect
                   <td>2016-5-11 17:50:32</td>
                   <td><small class="label bg-yellow" margin-top="-2px">Pending</small></td>
                 </tr>
-                </tbody>
+                </tbody> -->
               </table>
 
 
@@ -832,6 +833,7 @@ desired effect
 <script src="https://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
 <!-- AdminLTE App -->
 <script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
+<script src="/js/date.js"></script>
 <script src="/js/mg_info.js"></script>
 
 <script>
@@ -842,37 +844,6 @@ desired effect
       format: 'yyyy-mm-dd',
       autoclose: true
     });
-
-    var table2 = $('#example2').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 5,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-      },
-      responsive: true
-    });
-
-    var table1= $('#example1').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 5,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-      },
-      responsive: true
-    });
-
 
   })
 
