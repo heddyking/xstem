@@ -95,8 +95,19 @@ public class InfoController {
 				email, email_self, phone, telephone, experiences, skills, resume_url);
 	}
 
+	//http://localhost/hr/updateOfferInfo?
+	@RequestMapping(value = "/hr/updateOfferInfo", method = RequestMethod.GET)
+	public Integer updateOfferInfo(Integer steid,String offer_url){
+		return infoService.updateOfferInfo(steid,offer_url);
+	}
 
-	//http://localhost/updateOnboardInfo?
+	//http://localhost/hr/updateContractInfo?
+	@RequestMapping(value = "/hr/updateContractInfo", method = RequestMethod.GET)
+	public Integer updateContractInfo(Integer steid,String contract_url){
+		return infoService.updateContractInfo(steid,contract_url);
+	}
+	
+	//http://localhost/hr/updateOnboardInfo?
 	@RequestMapping(value = "/hr/updateOnboardInfo", method = RequestMethod.GET)
 	public Integer updateOnboardInfo(Integer steid,String email,String phone,String offer_url, String contract_url ){
 		return infoService.updateOnboardInfo(steid, email, phone, offer_url, contract_url);
@@ -117,13 +128,13 @@ public class InfoController {
 		String contract_url=(String) params.get("contract_url");
 		return infoService.updateOnboardInfo(steid, email, phone, offer_url, contract_url);
 	}
-	
+
 	//http://localhost/hr/getMGbyDepartment
 	@RequestMapping("/hr/getMGbyDepartment")
 	public List<Map<String,Object>> getMGbyDepartment(Integer departmentid){
 		return infoService.getMGbyDepartment(departmentid);
 	}
-	
+
 	//http://localhost/hr/getFTE
 	@RequestMapping("/hr/getFTE")
 	public Map<String,Object> getFTE(Integer fteid){

@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. We have chosen the skin-green for this starter
@@ -244,18 +246,20 @@ desired effect
             <li class="active"><a href="interview.html">Interview</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Staffing</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a href="approve.html">Approve Adjustment</a></li>
-          </ul>
-        </li>
+       
         <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Career</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
             <li><a href="attendance.html">Check Attendance</a></li>
             <li><a href="performance.html">Check Performance</a></li>
             <li><a href="skills.html">Check Skills</a></li>
+          </ul>
+        </li>
+        
+         <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Staffing</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="approve.html">Approve Adjustment</a></li>
           </ul>
         </li>
       </ul>
@@ -287,7 +291,7 @@ desired effect
       <!-- ################## -->
 
              <table id="example" class="table table-bordered table-hover">
-                <thead>
+                <!-- <thead>
                 <tr>
                   <th>Candidate</th>
                   <th>Email</th>
@@ -369,11 +373,163 @@ desired effect
                   <th> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
                
-                </tbody>
+                </tbody> -->
               </table>
 
 
       <!-- ######################## -->
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Detail</h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-horizontal">
+										
+						                  <div class="form-group">
+						                    <label for="inputPosition" class="col-sm-2 control-label">Position</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputPosition" placeholder="Postion">
+						                    </div>
+						                  </div>
+
+						                  <div class="form-group">
+						                    <label for="inputDescription" class="col-sm-2 control-label">Detail</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputDescription" placeholder="Postion Detail">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputSkills2" class="col-sm-2 control-label">Required</label>
+						                    <div class="col-sm-9">
+						                    	<select id="inputSkills2" class="form-control select2" multiple="multiple" style="width: 100%;">
+						                		</select>
+						                	</div>
+						                  </div>
+						                  
+						                  <hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+						             
+										<div class="form-group">
+						                    <label for="inputName" class="col-sm-2 control-label">Applicant</label>
+						
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputName" placeholder="Applicant Name">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputName" class="col-sm-2 control-label">Gender</label>
+						                    <div class="col-sm-9" style="margin-top:7px">
+						                       <label><input name="gender" type="radio" value="true" checked="true">
+						                            <label id="male_lb">Male</label>
+						                       </label>&nbsp;&nbsp;&nbsp;
+						                       <label><input name="gender" type="radio" value="false">
+						                            <label id="female_lb">Female</label>
+						                       </label>
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputDate" class="col-sm-2 control-label">Birthday</label>
+						
+						                    <div class="col-sm-9">
+						                      <div class="input-group date">
+						                        <div class="input-group-addon">
+						                          <i class="fa fa-calendar"></i>
+						                        </div>
+						                        <input type="text" class="form-control pull-right" id="inputDate">
+						                      </div>
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+						
+						                    <div class="col-sm-9">
+						                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="otherEmail" class="col-sm-2 control-label">Email2</label>
+						                    <div class="col-sm-9">
+						                      <input type="email" class="form-control" id="otherEmail" placeholder="Other Email">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputTelephone" class="col-sm-2 control-label">Telephone</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputTelephone" placeholder="Telephone">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="Phone" placeholder="Phone">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputLocation" class="col-sm-2 control-label">Location</label>
+						                    <div class="col-sm-9">
+						                      <textarea class="form-control" id="inputLocation" placeholder="Location"></textarea>
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+						                    <div class="col-sm-9">
+						                    	<select id="inputSkills" class="form-control select2" multiple="multiple"  style="width: 100%;">
+						                		</select>
+						                	</div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+						                    <div class="col-sm-9">
+						                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+						                    </div>
+						                  </div>
+						                  
+						                   <div class="form-group">
+						                    <label for="inputResume" class="col-sm-2 control-label">Resume</label>
+						                      <div class="col-sm-9">
+						                          <div>
+						                                  <div style="float:left;width:140px">
+						                                      <a id="resume_download" target="_blank" href=""><button id="resume_btn" style="float:left;width:140px;margin-top:3px" >No Resume</button></a>
+						                                  </div>
+						                                 <div style="clear:both"></div>
+						                          </div>
+						                      </div>  
+						                  </div>
+								
+								
+								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								
+							</div>
+							<input type="hidden" id="a_id" />
+						</div>
+					</div>
+				</div>
+	  			
+	  		
+	  <!-- ######################## -->
+	  
 
     </section>
     <!-- /.content -->
@@ -474,6 +630,7 @@ desired effect
 <!-- Bootstrap 3.3.6 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <!-- Select2 -->
+<script src="../../plugins/select2/select2.full.min.js"></script>
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
@@ -497,20 +654,6 @@ desired effect
 
 <script>
   $(function(){
-      var table = $('#example').DataTable({
-      "order": [[ 0, "desc" ]],
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "pageLength": 5,
-      rowReorder: {
-            selector: 'td:nth-child(2)'
-      },
-      responsive: true
-    }); 
 
   })
 

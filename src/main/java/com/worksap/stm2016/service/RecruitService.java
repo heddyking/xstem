@@ -25,6 +25,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.worksap.stm2016.global.Constants;
+import com.worksap.stm2016.util.EmailUtil;
+
 /**
  * @author Xiaoxi
  *
@@ -260,7 +263,7 @@ public class RecruitService
 	//--5- pass
 	//--6- fail
 	//--10-accepted
-	
+	//--11-unaccepted
 	
 	public Map<String,Object> getSelfActiveApplyment(Integer steid){
 		return dsl.select(RECRUIT_POSITION.POSITIONNAME,RECRUIT_POSITION.DATE_REQ,RECRUIT_POSITION.DURATION_REQ,
@@ -327,7 +330,7 @@ public class RecruitService
 						RECRUIT_APPLYMENT.STEID,RECRUIT_APPLYMENT.UPDATEDAT,RECRUIT_APPLYMENT.UPDATEDBY)
 				.select(INFO_STE.NAME,INFO_STE.GENDER,INFO_STE.BIRTHDAY,INFO_STE.EMAIL,INFO_STE.EMAIL_SELF,
 						INFO_STE.PHONE,INFO_STE.TELEPHONE,INFO_STE.LOCATION,INFO_STE.EXPERIENCES,INFO_STE.SKILLS,
-						INFO_STE.RESUME_URL)
+						INFO_STE.RESUME_URL,INFO_STE.OFFER_URL,INFO_STE.CONTRACT_URL)
 				.select(INFO_DEPARTMENT.DEPARTMENTNAME)
 				.select(RECRUIT_POOL.REALNUMBER,RECRUIT_POOL.APPLY_START,RECRUIT_POOL.APPLY_DUE)
 				.from(RECRUIT_APPLYMENT)
@@ -407,7 +410,31 @@ public class RecruitService
 	
 	public int arrangeInterviewEmail(Integer applymentid,Timestamp starttime, Timestamp endtime,
 			String location,String contact_person, String contact_phone,String replenish,
-			String mgEmail, String steEmail, Boolean mgSend,Boolean steSend, Integer fteid){
+			String mgEmail, String steEmail, Boolean mgSend,Boolean steSend,
+			String steName,Boolean steGender,String steTelephone,String resume, Integer fteid){
+		
+		String mg_msg=Constants.email_mg_msg
+				.replace("@MG", contact_person)
+				.replace("@TIME", starttime.toString().substring(0,Math.min(16, starttime.toString().length()))
+						  		  +" ~ "
+						  		  +endtime.toString().substring(0,Math.min(16, endtime.toString().length())))
+				.replace("@STE", steName)
+				.replace("@GENDER", steGender?"Male":"Female")
+				.replace("@TELEPHONE", steTelephone)
+				.replace("@RESUME", resume);
+		
+		String ste_msg=Constants.email_ste_msg
+				.replace("@STE", steName)
+				.replace("@TIME", starttime.toString().substring(0,Math.min(16, starttime.toString().length()))
+								  +" ~ "
+						          +endtime.toString().substring(0,Math.min(16, endtime.toString().length())))
+				.replace("@LOCATION", location)
+				.replace("@PERSON", contact_person)
+				.replace("@PHONE", contact_phone)
+				.replace("@REPLENISH", replenish);
+		
+		new Thread(() -> {EmailUtil.sendEmail(mgEmail, Constants.email_title, mg_msg);}).start();
+		new Thread(() -> {EmailUtil.sendEmail(steEmail, Constants.email_title, ste_msg);}).start();
 		
 		int id=dsl.insertInto(RECRUIT_INTERVIEW)
 				.set(RECRUIT_INTERVIEW.APPLYMENTID,applymentid)
@@ -431,8 +458,7 @@ public class RecruitService
 	public List<Map<String,Object>> getInterviewList(Integer departmentid){
 		if(departmentid==null){
 			return dsl.selectFrom(VI_RECRUIT_INTERVIEW_CONTEXT)
-					.where(VI_RECRUIT_INTERVIEW_CONTEXT.DEPARTMENTID.eq(departmentid))
-					.and(VI_RECRUIT_INTERVIEW_CONTEXT.STATE.eq(4))
+					.where(VI_RECRUIT_INTERVIEW_CONTEXT.STATE.eq(4))
 					.fetchMaps();
 					
 		}

@@ -1,4 +1,4 @@
-create or replace view vi_recruit_interview_context as
+create or replace view vi_recruit_interview_reminder as
 select 
 i.*,
 a."state",
@@ -34,3 +34,6 @@ join recruit_applyment as a on i.applymentid=a.applymentid
 join recruit_position as p on a.positionid=p.positionid
 join info_department as d on p.departmentid=d.departmentid
 join info_ste as s on a.steid=s.steid
+where a.state=4
+and i.starttime< (NOW() + '1 day'::INTERVAL)
+and i.starttime> NOW();

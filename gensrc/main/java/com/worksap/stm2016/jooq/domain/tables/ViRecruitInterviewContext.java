@@ -31,7 +31,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViRecruitInterviewContext extends TableImpl<ViRecruitInterviewContextRecord> {
 
-	private static final long serialVersionUID = 1210265678;
+	private static final long serialVersionUID = 325999950;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.vi_recruit_interview_context</code>
@@ -50,11 +50,6 @@ public class ViRecruitInterviewContext extends TableImpl<ViRecruitInterviewConte
 	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.interviewid</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> INTERVIEWID = createField("interviewid", org.jooq.impl.SQLDataType.INTEGER, this, "");
-
-	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.starttime</code>.
-	 */
-	public final TableField<ViRecruitInterviewContextRecord, Timestamp> STARTTIME = createField("starttime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
 	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.endtime</code>.
@@ -85,6 +80,11 @@ public class ViRecruitInterviewContext extends TableImpl<ViRecruitInterviewConte
 	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.applymentid</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> APPLYMENTID = createField("applymentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.starttime</code>.
+	 */
+	public final TableField<ViRecruitInterviewContextRecord, Timestamp> STARTTIME = createField("starttime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
 	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.state</code>.

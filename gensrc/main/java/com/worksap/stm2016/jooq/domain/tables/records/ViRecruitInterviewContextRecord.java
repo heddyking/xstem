@@ -27,7 +27,7 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViRecruitInterviewContextRecord extends TableRecordImpl<ViRecruitInterviewContextRecord> {
 
-	private static final long serialVersionUID = -1690768389;
+	private static final long serialVersionUID = 1990298277;
 
 	/**
 	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.interviewid</code>.
@@ -44,101 +44,101 @@ public class ViRecruitInterviewContextRecord extends TableRecordImpl<ViRecruitIn
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.starttime</code>.
-	 */
-	public void setStarttime(Timestamp value) {
-		setValue(1, value);
-	}
-
-	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_context.starttime</code>.
-	 */
-	public Timestamp getStarttime() {
-		return (Timestamp) getValue(1);
-	}
-
-	/**
 	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.endtime</code>.
 	 */
 	public void setEndtime(Timestamp value) {
-		setValue(2, value);
+		setValue(1, value);
 	}
 
 	/**
 	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_context.endtime</code>.
 	 */
 	public Timestamp getEndtime() {
-		return (Timestamp) getValue(2);
+		return (Timestamp) getValue(1);
 	}
 
 	/**
 	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.location</code>.
 	 */
 	public void setLocation(String value) {
-		setValue(3, value);
+		setValue(2, value);
 	}
 
 	/**
 	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_context.location</code>.
 	 */
 	public String getLocation() {
-		return (String) getValue(3);
+		return (String) getValue(2);
 	}
 
 	/**
 	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.contact_person</code>.
 	 */
 	public void setContactPerson(String value) {
-		setValue(4, value);
+		setValue(3, value);
 	}
 
 	/**
 	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_context.contact_person</code>.
 	 */
 	public String getContactPerson() {
-		return (String) getValue(4);
+		return (String) getValue(3);
 	}
 
 	/**
 	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.contact_phone</code>.
 	 */
 	public void setContactPhone(String value) {
-		setValue(5, value);
+		setValue(4, value);
 	}
 
 	/**
 	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_context.contact_phone</code>.
 	 */
 	public String getContactPhone() {
-		return (String) getValue(5);
+		return (String) getValue(4);
 	}
 
 	/**
 	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.replenish</code>.
 	 */
 	public void setReplenish(String value) {
-		setValue(6, value);
+		setValue(5, value);
 	}
 
 	/**
 	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_context.replenish</code>.
 	 */
 	public String getReplenish() {
-		return (String) getValue(6);
+		return (String) getValue(5);
 	}
 
 	/**
 	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.applymentid</code>.
 	 */
 	public void setApplymentid(Integer value) {
-		setValue(7, value);
+		setValue(6, value);
 	}
 
 	/**
 	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_context.applymentid</code>.
 	 */
 	public Integer getApplymentid() {
-		return (Integer) getValue(7);
+		return (Integer) getValue(6);
+	}
+
+	/**
+	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_context.starttime</code>.
+	 */
+	public void setStarttime(Timestamp value) {
+		setValue(7, value);
+	}
+
+	/**
+	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_context.starttime</code>.
+	 */
+	public Timestamp getStarttime() {
+		return (Timestamp) getValue(7);
 	}
 
 	/**
@@ -547,17 +547,17 @@ public class ViRecruitInterviewContextRecord extends TableRecordImpl<ViRecruitIn
 	/**
 	 * Create a detached, initialised ViRecruitInterviewContextRecord
 	 */
-	public ViRecruitInterviewContextRecord(Integer interviewid, Timestamp starttime, Timestamp endtime, String location, String contactPerson, String contactPhone, String replenish, Integer applymentid, Integer state, Timestamp createdat, Timestamp updatedat, Integer updatedby, String positionname, Integer number, String locationReq, Date dateReq, Integer durationReq, String skillReq1, String skillReq2, String skillReq3, String skillReq4, String skillReq5, String description, Integer departmentid, String departmentname, Integer parentDepartmentid, String name, Date birthday, Boolean gender, String email, String emailSelf, String phone, String telephone, String skills, String experiences, String resumeUrl) {
+	public ViRecruitInterviewContextRecord(Integer interviewid, Timestamp endtime, String location, String contactPerson, String contactPhone, String replenish, Integer applymentid, Timestamp starttime, Integer state, Timestamp createdat, Timestamp updatedat, Integer updatedby, String positionname, Integer number, String locationReq, Date dateReq, Integer durationReq, String skillReq1, String skillReq2, String skillReq3, String skillReq4, String skillReq5, String description, Integer departmentid, String departmentname, Integer parentDepartmentid, String name, Date birthday, Boolean gender, String email, String emailSelf, String phone, String telephone, String skills, String experiences, String resumeUrl) {
 		super(ViRecruitInterviewContext.VI_RECRUIT_INTERVIEW_CONTEXT);
 
 		setValue(0, interviewid);
-		setValue(1, starttime);
-		setValue(2, endtime);
-		setValue(3, location);
-		setValue(4, contactPerson);
-		setValue(5, contactPhone);
-		setValue(6, replenish);
-		setValue(7, applymentid);
+		setValue(1, endtime);
+		setValue(2, location);
+		setValue(3, contactPerson);
+		setValue(4, contactPhone);
+		setValue(5, replenish);
+		setValue(6, applymentid);
+		setValue(7, starttime);
 		setValue(8, state);
 		setValue(9, createdat);
 		setValue(10, updatedat);

@@ -8,6 +8,8 @@ import java.nio.file.Paths;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
@@ -25,7 +27,8 @@ import com.worksap.stm2016.util.HashUtil;
 
 @Controller	
 public class FileController {
-
+	private final static Logger logger = LoggerFactory.getLogger(FileController.class);
+	
 	// The Environment object will be used to read parameters from the 
 	// application.properties configuration file
 	@Autowired

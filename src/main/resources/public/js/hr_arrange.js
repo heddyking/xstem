@@ -147,6 +147,12 @@ function getApplications(){
 			if($(this).html()=="Arrange Interview"){
 				$("#a_id").val(data.applymentid);
 				$("#steEmail").val(data.email);
+				$("#steName").val(data.name);
+				$("#steGender").val(data.gender);
+				$("#steTelephone").val(data.telephone);
+				var getUrl = window.location;
+				var baseUrl = getUrl .protocol + "//" + getUrl.host;
+				$("#resume").val(baseUrl+data.resume_url);
 				$("#mgEmail").val("");
 				initModal();
 				initInterviewer(data.departmentid);
@@ -161,6 +167,10 @@ function getApplications(){
 function arrangeInterview(){
 	var applymentid=$("#a_id").val();
 	var steEmail=$("#steEmail").val();
+	var steName=$("#steName").val();
+	var steGender=$("#steGender").val();
+	var steTelephone=$("#steTelephone").val();
+	var resume=$("#resume").val();
 	var mgEmail=$("#mgEmail").val();
 	var range=$('#rangeTime').val();
 	var location=$("#inputLocation").val();
@@ -175,7 +185,7 @@ function arrangeInterview(){
 //	alert(contact_person);
 	
 	
-	if(!applymentid || !steEmail) {alert("Please reselect the applyment again!");return;}
+	if(!applymentid || !steEmail || !steName) {alert("Please reselect the applyment again!");return;}
 	if(!range) {alert("Please select the interview time!");return;}
 	var i=range.indexOf(" - ");
 	var from=range.substring(0,i);
@@ -198,10 +208,14 @@ function arrangeInterview(){
 			mgEmail:mgEmail, 
 			steEmail:steEmail, 
 			mgSend:mgSend, 
-			steSend:steSend
+			steSend:steSend,
+			steName:steName,
+			steGender:steGender,
+			steTelephone:steTelephone,
+			resume:resume
 	};
 	
-	alert(JSON.stringify(data)); return;
+//	alert(JSON.stringify(data)); return;
 	
 	var cb=function(msg){
 		if(msg<=0){

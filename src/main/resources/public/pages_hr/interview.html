@@ -16,18 +16,28 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
-  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+  <!-- AdminLTE Skins. We have chosen the skin-purple for this starter
         page. However, you can choose any other skin. Make sure you
         apply the skin class to the body tag so the changes take effect.
   -->
-  <link rel="stylesheet" href="../dist/css/skins/skin-blue.min.css">
-  
+  <link rel="stylesheet" href="../dist/css/skins/skin-purple.min.css">
+
+
+  <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
+
   <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
   <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"> -->
+<!--   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css">
+  <link rel="stylesheet" href="../plugins/datatables/editor.dataTables.min.css"> -->
   <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.1.1/css/rowReorder.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css">
+
+  <link rel="stylesheet" href="../plugins/iCheck/all.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -42,7 +52,7 @@ BODY TAG OPTIONS:
 Apply one or more of the following classes to get the
 desired effect
 |---------------------------------------------------------|
-| SKINS         | skin-blue                               |
+| SKINS         | skin-purple                               |
 |               | skin-black                              |
 |               | skin-purple                             |
 |               | skin-yellow                             |
@@ -56,7 +66,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
 
   <!-- Main Header -->
@@ -227,31 +237,27 @@ desired effect
       <ul class="sidebar-menu">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li ><a href="info.html"><i class="fa fa-link"></i> <span>Personal Info</span></a></li>
+        <li ><a href="info.html"><i class="fa fa-link"></i> <span>STE Info</span></a></li>
         <li class="treeview active">
-          <a href="#"><i class="fa fa-link"></i> <span>Job</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu ">
-            <li class="active"><a href="apply.html">Apply</a></li>
-            <li><a href="application.html">My Application</a></li>
+          <a href="#"><i class="fa fa-link"></i> <span>Recruit</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="publish.html">Publish Recruitment</a></li>
+            <li><a href="filter.html">Filter Recruitment</a></li>
+            <li><a href="arrange.html">Arrange Interview</a></li>
+            <li class="active"><a href="interview.html">Interview Info</a></li>
+            <li><a href="onboard.html">Offer Stage</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#"><i class="fa fa-link"></i> <span>Staffing</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li><a href="adjust_suggestion.html">Adjustment Suggestion</a></li>
+            <li><a href="adjust_raise.html">Raise Adjustment</a></li>
+            <li><a href="adjust_approve.html">Approve Adjustment</a></li>
+            <li><a href="adjust_info.html">Adjustment Info</a></li>
           </ul>
         </li>
        
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Career</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a href="attendance.html">Attendance</a></li>
-            <li><a href="performance.html">Performance</a></li>
-            <li><a href="skills.html">Skills</a></li>
-          </ul>
-        </li>
-        
-         <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Change</span> <i class="fa fa-angle-left pull-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a href="change.html">Apply Change</a></li>
-          </ul>
-        </li>
-        
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -263,95 +269,263 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Find a job
-        <small>just apply your favorite</small>
+        Interview Information
+        <small>find the candidates in the interview process</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Job</a></li>
-        <li class="active">Apply</li>
+        <li><a href="#"> Recruitment</a></li>
+        <li class="active">Interview Information</li>
       </ol>
     </section>
 
     <!-- Main content -->
     <section class="content">
 
-      <div class="box-body">
-              <table id="example2" class="table table-bordered table-hover">
-                <thead>
+     		
+      <!-- Your Page Content Here -->
+
+      <!-- ################## -->
+
+             <table id="example" class="table table-bordered table-hover">
+                <!-- <thead>
                 <tr>
-                  <th>Job Position Name</th>
-                  <th>Number</th>
-                  <th>Department Name</th>
-                  <th>Location Requirement</th>
-                  <th>Date Requirement</th>
-                  <th>Duration Requirement(Month)</th>
-                  <th>Skills Requirement</th>
-                  <th>Publish Date</th>
-                  <th>Apply</th>
+                  <th>Candidate</th>
+                  <th>Email</th>
+                  <th>Telephone</th>
+                  <th>Position</th>
+                  <th>Department</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th>Location</th>
+                  <th>Contact Person</th>
+                  <th>Contact Number</th>
+                  <th>Operation</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                  <td>Java Developer</td>
-                  <td>3</td>
+                  <td>Zhang Lily</td>
+                  <td>zhanglili@wap.com</td>
+                  <td>15216666888</td>
+                  <td>Java Dev</td>
                   <td>HUE</td>
-                  <td>Shanghai</td>
-                  <td>2016-8</td>
-                  <td>6</td>
-                  <td>Java Spring Mysql Js</td>
-                  <td>2016-5-12</td>
-                  <td><button class="btn btn-primary btn-xs">Apply</button></td>
-                </tr>
-               <tr>
-                  <td>C++ Developer</td>
-                  <td>5</td>
-                  <td>CCS</td>
-                  <td>Shanghai</td>
-                  <td>2016-8</td>
-                  <td>6</td>
-                  <td>C++ Linux Mysql Js</td>
-                  <td>2016-5-18</td>
-                  <td><button class="btn btn-primary btn-xs">Apply</button></td>
+                  <td>2016-5-20 09:00:00</td>
+                  <td>2016-5-20 11:00:00</td>
+                  <th>Shanghai</th>
+                  <th>Wang Ming</th>
+                  <th>021-8978889</th>
+                  <th> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
                 <tr>
-                  <td>Nodejs Developer</td>
-                  <td>2</td>
-                  <td>STL</td>
-                  <td>Shanghai</td>
-                  <td>2016-8</td>
-                  <td>6</td>
-                  <td>Nodejs Js Meteor</td>
-                  <td>2016-5-11</td>
-                  <td><button class="btn btn-primary btn-xs">Apply</button></td>
-                </tr>
-                <tr>
-                  <td>QA Developer</td>
-                  <td>5</td>
+                  <td>Zhang Lily</td>
+                  <td>zhanglili@wap.com</td>
+                  <td>15216666888</td>
+                  <td>Java Dev</td>
                   <td>HUE</td>
-                  <td>Shanghai</td>
-                  <td>2016-8</td>
-                  <td>6</td>
-                  <td>Junit Mysql Jmeter</td>
-                  <td>2016-5-9</td>
-                  <td><button class="btn btn-primary btn-xs">Apply</button></td>
+                  <td>2016-5-20 09:00:00</td>
+                  <td>2016-5-20 11:00:00</td>
+                  <th>Shanghai</th>
+                  <th>Wang Ming</th>
+                  <th>021-8978889</th>
+                  <th> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
-                </tbody>
-                <!-- <tfoot>
                 <tr>
-                  <th>Job Position Name</th>
-                  <th>Number</th>
-                  <th>Department Name</th>
-                  <th>Location Requirement</th>
-                  <th>Date Requirement</th>
-                  <th>Duration Requirement(Month)</th>
-                  <th>Skills Requirement</th>
-                  <th>Publish Date</th>
-                  <th>Apply</th>
+                  <td>Zhang Lily</td>
+                  <td>zhanglili@wap.com</td>
+                  <td>15216666888</td>
+                  <td>Java Dev</td>
+                  <td>HUE</td>
+                  <td>2016-5-20 09:00:00</td>
+                  <td>2016-5-20 11:00:00</td>
+                  <th>Shanghai</th>
+                  <th>Wang Ming</th>
+                  <th>021-8978889</th>
+                  <th> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
-                </tfoot> -->
+                <tr>
+                  <td>Zhang Lily</td>
+                  <td>zhanglili@wap.com</td>
+                  <td>15216666888</td>
+                  <td>Java Dev</td>
+                  <td>HUE</td>
+                  <td>2016-5-20 09:00:00</td>
+                  <td>2016-5-20 11:00:00</td>
+                  <th>Shanghai</th>
+                  <th>Wang Ming</th>
+                  <th>021-8978889</th>
+                  <th> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
+                </tr>
+                <tr>
+                  <td>Zhang Lily</td>
+                  <td>zhanglili@wap.com</td>
+                  <td>15216666888</td>
+                  <td>Java Dev</td>
+                  <td>HUE</td>
+                  <td>2016-5-20 09:00:00</td>
+                  <td>2016-5-20 11:00:00</td>
+                  <th>Shanghai</th>
+                  <th>Wang Ming</th>
+                  <th>021-8978889</th>
+                  <th> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
+                </tr>
+               
+                </tbody> -->
               </table>
-      </div>
+
+
+      <!-- ######################## -->
+				<!-- Modal -->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Detail</h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-horizontal">
+										
+						                  <div class="form-group">
+						                    <label for="inputPosition" class="col-sm-2 control-label">Position</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputPosition" placeholder="Postion">
+						                    </div>
+						                  </div>
+
+						                  <div class="form-group">
+						                    <label for="inputDescription" class="col-sm-2 control-label">Detail</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputDescription" placeholder="Postion Detail">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputSkills2" class="col-sm-2 control-label">Required</label>
+						                    <div class="col-sm-9">
+						                    	<select id="inputSkills2" class="form-control select2" multiple="multiple" style="width: 100%;">
+						                		</select>
+						                	</div>
+						                  </div>
+						                  
+						                  <hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+						             
+										<div class="form-group">
+						                    <label for="inputName" class="col-sm-2 control-label">Applicant</label>
+						
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputName" placeholder="Applicant Name">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputName" class="col-sm-2 control-label">Gender</label>
+						                    <div class="col-sm-9" style="margin-top:7px">
+						                       <label><input name="gender" type="radio" value="true" checked="true">
+						                            <label id="male_lb">Male</label>
+						                       </label>&nbsp;&nbsp;&nbsp;
+						                       <label><input name="gender" type="radio" value="false">
+						                            <label id="female_lb">Female</label>
+						                       </label>
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputDate" class="col-sm-2 control-label">Birthday</label>
+						
+						                    <div class="col-sm-9">
+						                      <div class="input-group date">
+						                        <div class="input-group-addon">
+						                          <i class="fa fa-calendar"></i>
+						                        </div>
+						                        <input type="text" class="form-control pull-right" id="inputDate">
+						                      </div>
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+						
+						                    <div class="col-sm-9">
+						                      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="otherEmail" class="col-sm-2 control-label">Email2</label>
+						                    <div class="col-sm-9">
+						                      <input type="email" class="form-control" id="otherEmail" placeholder="Other Email">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputTelephone" class="col-sm-2 control-label">Telephone</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="inputTelephone" placeholder="Telephone">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputPhone" class="col-sm-2 control-label">Phone</label>
+						                    <div class="col-sm-9">
+						                      <input type="text" class="form-control" id="Phone" placeholder="Phone">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputLocation" class="col-sm-2 control-label">Location</label>
+						                    <div class="col-sm-9">
+						                      <textarea class="form-control" id="inputLocation" placeholder="Location"></textarea>
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputSkills" class="col-sm-2 control-label">Skills</label>
+						                    <div class="col-sm-9">
+						                    	<select id="inputSkills" class="form-control select2" multiple="multiple"  style="width: 100%;">
+						                		</select>
+						                	</div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="inputExperience" class="col-sm-2 control-label">Experience</label>
+						                    <div class="col-sm-9">
+						                      <textarea class="form-control" id="inputExperience" placeholder="Experience"></textarea>
+						                    </div>
+						                  </div>
+						                  
+						                   <div class="form-group">
+						                    <label for="inputResume" class="col-sm-2 control-label">Resume</label>
+						                      <div class="col-sm-9">
+						                          <div>
+						                                  <div style="float:left;width:140px">
+						                                      <a id="resume_download" target="_blank" href=""><button id="resume_btn" style="float:left;width:140px;margin-top:3px" >No Resume</button></a>
+						                                  </div>
+						                                 <div style="clear:both"></div>
+						                          </div>
+						                      </div>  
+						                  </div>
+								
+								
+								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								
+							</div>
+							<input type="hidden" id="a_id" />
+						</div>
+					</div>
+				</div>
+	  			
+	  		
+	  <!-- ######################## -->
 
     </section>
     <!-- /.content -->
@@ -451,26 +625,32 @@ desired effect
 <!-- Bootstrap 3.3.6 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
 <!-- Select2 -->
+<script src="../../plugins/select2/select2.full.min.js"></script>
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
+
+<!-- <script src="https://cdn.datatables.net/buttons/1.1.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/select/1.1.2/js/dataTables.select.min.js"></script> -->
+
 <script src="https://cdn.datatables.net/rowreorder/1.1.1/js/dataTables.rowReorder.min.js"></script>
 <script src="https://cdn.datatables.net/responsive/2.0.2/js/dataTables.responsive.min.js"></script>
-<!-- AdminLTE App -->
 
-<script src="../dist/js/app.min.js"></script>
-<script src="/js/ajax.js"></script>
-<script src="/js/reset.js"></script>
+<script src="../plugins/iCheck/icheck.min.js"></script>
+
+<!-- <script src="../plugins/datatables/dataTables.editor.min.js"></script> -->
+<!-- AdminLTE App -->
+<script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
 
 <script src="/js/date.js"></script>
 <script src="/js/validate.js"></script>
-<script src="/js/ste_apply.js"></script>
+<script src="/js/hr_interview.js"></script>
 
-<!-- page script -->
+
 <script>
-  $(function () {
+  $(function(){
 
-  });
+  })
 </script>
 </body>
 </html>

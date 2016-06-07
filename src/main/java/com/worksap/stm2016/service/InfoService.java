@@ -89,12 +89,26 @@ public class InfoService
 			.execute();
 	}
 	
-	public Integer updateOnboardInfo(Integer steid,String email,String phone,String offer_url, String contract_url ){
+	public Integer updateOnboardInfo(Integer steid,String email,String phone,String offer_url, String contract_url){
 		return dsl.update(INFO_STE)
 				.set(INFO_STE.EMAIL,email)
 				.set(INFO_STE.PHONE,phone)
 				.set(INFO_STE.OFFER_URL,offer_url)
 				.set(INFO_STE.CONTRACT_URL,contract_url)
+				.where(INFO_STE.STEID.eq(steid))
+				.execute();
+	}
+	
+	public Integer updateContractInfo(Integer steid,String contract_url ){
+		return dsl.update(INFO_STE)
+				.set(INFO_STE.CONTRACT_URL,contract_url)
+				.where(INFO_STE.STEID.eq(steid))
+				.execute();
+	}
+	
+	public Integer updateOfferInfo(Integer steid,String offer_url){
+		return dsl.update(INFO_STE)
+				.set(INFO_STE.OFFER_URL,offer_url)
 				.where(INFO_STE.STEID.eq(steid))
 				.execute();
 	}

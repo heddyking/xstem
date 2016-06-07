@@ -62,10 +62,10 @@ public class DataTests
 			"\n" +
 			"\n" +
 			"\n" +
-			"insert into info_fte (fteid,birthday,departmentid,email,email_self,gender,\"location\",\"name\",phone,\"role\",telephone) values(1,'1990-1-1',2,'shuimuyanyuan@qq.com','shuimuyanyuan@qq.com',false,'shanghai','Zhang Joy','02154742387',1,'13866666666');\n" +
-			"insert into info_fte (fteid,birthday,departmentid,email,email_self,gender,\"location\",\"name\",phone,\"role\",telephone) values(2,'1990-1-2',2,'hr@qq.com','hr@qq.com',true,'shanghai','Wang Ming','02154742388',2,'13866688888');\n" +
-			"insert into info_fte (fteid,birthday,departmentid,email,email_self,gender,\"location\",\"name\",phone,\"role\",telephone) values(3,'1990-1-3',4,'mg1@qq.com','mg1@qq.com',true,'shanghai','Wang Xiao','02154742389',3,'13866689999');\n" +
-			"insert into info_fte (fteid,birthday,departmentid,email,email_self,gender,\"location\",\"name\",phone,\"role\",telephone) values(4,'1990-1-4',5,'mg2@qq.com','mg2@qq.com',true,'shanghai','Wang Xi','02154742380',3,'13866680000');\n" +
+			"insert into info_fte (fteid,birthday,departmentid,email,email_self,gender,\"location\",\"name\",phone,\"role\",telephone) values(1,'1990-1-1',2,'shuimuyanyuan@qq.com','shuimuyanyuan@qq.com',false,'shanghai','Zhang Joy','021-54742387',1,'13866666666');\n" +
+			"insert into info_fte (fteid,birthday,departmentid,email,email_self,gender,\"location\",\"name\",phone,\"role\",telephone) values(2,'1990-1-2',2,'hr@qq.com','hr@qq.com',true,'shanghai','Wang Ming','021-54742388',2,'13866688888');\n" +
+			"insert into info_fte (fteid,birthday,departmentid,email,email_self,gender,\"location\",\"name\",phone,\"role\",telephone) values(3,'1990-1-3',4,'mg1@qq.com','mg1@qq.com',true,'shanghai','Wang Xiao','021-54742389',3,'13866689999');\n" +
+			"insert into info_fte (fteid,birthday,departmentid,email,email_self,gender,\"location\",\"name\",phone,\"role\",telephone) values(4,'1990-1-4',5,'mg2@qq.com','mg2@qq.com',true,'shanghai','Wang Xi','021-54742380',3,'13866680000');\n" +
 			"\n" +
 			"\n" +
 			"\n" +
@@ -151,17 +151,17 @@ public class DataTests
 			"\n" +
 			"\n" +
 			"INSERT INTO info_ste(steid, name, gender, birthday, location, email, email_self, phone, telephone, departmentid, role, offer_url, contract_url, positionid, skills)\n" +
-			"VALUES (1, 'Wang Yi', true, '1990-2-2', 'shanghai', 'w1@qq.com', 'w1@qq.com', '02157378851', '15216688611', null, 10, null, null, null, 'java,algorithm,mysql,hadoop,spring');\n" +
+			"VALUES (1, 'Wang Yi', true, '1990-2-2', 'shanghai', 'w1@qq.com', 'w1@qq.com', '021-57378851', '15216688611', null, 10, null, null, null, 'java,algorithm,mysql,hadoop,spring');\n" +
 			"INSERT INTO info_ste(steid, name, gender, birthday, location, email, email_self, phone, telephone, departmentid, role, offer_url, contract_url, positionid, skills)\n" +
-			"VALUES (2, 'Wang Er', true, '1989-2-21', 'shanghai', 'w2@qq.com', 'w2@qq.com', '02157378852', '15216688628', null, 10, null, null, null, 'java,jmeter,database,system,network,junit');\n" +
+			"VALUES (2, 'Wang Er', true, '1989-2-21', 'shanghai', 'w2@qq.com', 'w2@qq.com', '021-57378852', '15216688628', null, 10, null, null, null, 'java,jmeter,database,system,network,junit');\n" +
 			"INSERT INTO info_ste(steid, name, gender, birthday, location, email, email_self, phone, telephone, departmentid, role, offer_url, contract_url, positionid, skills)\n" +
-			"VALUES (3, 'Wang San', true, '1991-3-2', 'shanghai', 'w3@qq.com', 'w3@qq.com', '02157378853', '15216688638', null, 10, null, null, null, 'spark,cloudera,artifical neural network,data mining, NLP');\n" +
+			"VALUES (3, 'Wang San', true, '1991-3-2', 'shanghai', 'w3@qq.com', 'w3@qq.com', '021-57378853', '15216688638', null, 10, null, null, null, 'spark,cloudera,artifical neural network,data mining, NLP');\n" +
 			"INSERT INTO info_ste(steid, name, gender, birthday, location, email, email_self, phone, telephone, departmentid, role, offer_url, contract_url, positionid, skills)\n" +
-			"VALUES (4, 'Wang Si', true, '1990-5-25', 'shanghai', 'w4@qq.com', 'w4@qq.com', '02157378854', '15216688648', null, 10, null, null, null, 'data mining,algorithm,jmeter,spark,spring');\n" +
+			"VALUES (4, 'Wang Si', true, '1990-5-25', 'shanghai', 'w4@qq.com', 'w4@qq.com', '021-57378854', '15216688648', null, 10, null, null, null, 'data mining,algorithm,jmeter,spark,spring');\n" +
 			"INSERT INTO info_ste(steid, name, gender, birthday, location, email, email_self, phone, telephone, departmentid, role, offer_url, contract_url, positionid, skills)\n" +
-			"VALUES (5, 'Wang Wu', true, '1992-6-5', 'shanghai', 'w5@qq.com', 'w5@qq.com', '02157378855', '15216688655', null, 10, null, null, null, 'c++, nodejs,android,meteor,html5');\n" +
+			"VALUES (5, 'Wang Wu', true, '1992-6-5', 'shanghai', 'w5@qq.com', 'w5@qq.com', '021-57378855', '15216688655', null, 10, null, null, null, 'c++, nodejs,android,meteor,html5');\n" +
 			"INSERT INTO info_ste(steid, name, gender, birthday, location, email, email_self, phone, telephone, departmentid, role, offer_url, contract_url, positionid, skills)\n" +
-			"VALUES (6, 'Zhang Yi', true, '1989-11-2', 'shanghai', 'z1@qq.com', 'z1@qq.com', '02157378856', '15216688668', 4, 11, null, null, 1, 'java,linux,mysql,spring,ml');\n" +
+			"VALUES (6, 'Zhang Yi', true, '1989-11-2', 'shanghai', 'z1@qq.com', 'z1@qq.com', '021-57378856', '15216688668', 4, 11, null, null, 1, 'java,linux,mysql,spring,ml');\n" +
 			"\n" +
 			"\n" +
 			"\n" +
@@ -252,6 +252,7 @@ public class DataTests
 //where t.positionid=recruit_position.positionid
 //) <> 1
 
+
 ////delete duplicate pool
 //delete from recruit_pool where 
 //(
@@ -259,3 +260,9 @@ public class DataTests
 //from (select poolid, rank() over (partition by (positionid) order by updatedat desc) as rank from recruit_pool) as t 
 //where t.poolid=recruit_pool.poolid
 //) <> 1
+
+
+////delete test qq email
+//update info_ste set email=(trunc(random() * 9999 + 1) || '@qq.com') where email='981088636@qq.com';
+//update info_ste set email_self=(trunc(random() * 9999 + 1) || '@qq.com') where email_self='981088636@qq.com';
+//update info_account set email=(trunc(random() * 9999 + 1) || '@qq.com') where email='981088636@qq.com';

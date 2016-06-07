@@ -44,6 +44,26 @@ function getInfo(){
 		else {
 			$("#downloadbtn").html("Download Resume");
 		}
+		
+		$("#offer_download").attr("href",msg.offer_url);
+		if(!msg.offer_url) {
+			$("#offer_btn").html("No Offer");
+			$("#offer_div").hide();
+		}
+		else {
+			$("#offer_btn").html("Download Offer");
+			$("#offer_div").show();
+		}
+
+		$("#contract_download").attr("href",msg.contract_url);
+		if(!msg.contract_url) {
+			$("#contract_btn").html("No Contract");
+			$("#contract_div").hide();
+		}
+		else {
+			$("#contract_btn").html("Download Contract");
+			$("#contract_div").show();
+		}
 	}
 	
 	ajax(url,type,data,cb);

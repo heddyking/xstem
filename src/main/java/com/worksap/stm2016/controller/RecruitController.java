@@ -1,9 +1,8 @@
 package com.worksap.stm2016.controller;
 
-import java.lang.reflect.Method;
 import java.sql.Date;
 import java.sql.Timestamp;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -236,6 +235,19 @@ public class RecruitController {
 		return recruitService.getApplymentListByState(10);
 	}
 
+	//http://localhost/hr/getOfferStageList
+	@RequestMapping("/hr/getOfferStageList")
+	public List<Map<String,Object>>getOfferStageList(){
+		List<Map<String,Object>> list1=recruitService.getApplymentListByState(5);
+		List<Map<String,Object>> list2=recruitService.getApplymentListByState(10);
+		List<Map<String,Object>> list3=recruitService.getApplymentListByState(11);
+		List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
+		list.addAll(list1);
+		list.addAll(list2);
+		list.addAll(list3);
+		return list;
+	}
+
 	//http://localhost/hr/checkPass
 	@RequestMapping("/hr/checkPass")
 	public int HRcheckPass(Integer applymentid){
@@ -289,7 +301,14 @@ public class RecruitController {
 	@RequestMapping("/ste/cancel")
 	public int cancel(Integer applymentid){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		return recruitService.updateApplyment(applymentid, 0, userinfo.getUserid());
+		return recruitService.updateApplyment(applymentid, 11, userinfo.getUserid());
+	}
+
+	//http://localhost/hr/terminate
+	@RequestMapping("/hr/terminate")
+	public int terminate(Integer applymentid){
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return recruitService.updateApplyment(applymentid, 6, userinfo.getUserid());
 	}
 
 	//http://localhost/hr/arrangeInterview
@@ -301,14 +320,16 @@ public class RecruitController {
 				location, contact_person, contact_phone, replenish, userinfo.getUserid());
 	}
 
-	
+
 	//http://localhost/hr/arrangeInterviewEmail
 	@RequestMapping("/hr/arrangeInterviewEmail")
 	public int arrangeInterviewEmail(Integer applymentid,String starttime, String endtime,
-			String location,String contact_person, String contact_phone,String replenish,String mgEmail, String steEmail, Boolean mgSend, Boolean steSend){
+			String location,String contact_person, String contact_phone,String replenish,String mgEmail, String steEmail, Boolean mgSend, 
+			String steName,Boolean steGender,String steTelephone,String resume, Boolean steSend){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return recruitService.arrangeInterviewEmail(applymentid, Timestamp.valueOf(starttime),  Timestamp.valueOf(endtime), 
-				location, contact_person, contact_phone, replenish,mgEmail, steEmail, mgSend, steSend, userinfo.getUserid());
+				location, contact_person, contact_phone, replenish,mgEmail, steEmail, mgSend, steSend, 
+				steName,steGender,steTelephone,resume, userinfo.getUserid());
 	}
 
 	//http://localhost/hr/getInterviewList
@@ -321,6 +342,8 @@ public class RecruitController {
 	@RequestMapping("/mg/getInterviewList")
 	public List<Map<String,Object>> getInterviewList2(){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		return recruitService.getInterviewList(userinfo.getUserid());
+		return recruitService.getInterviewList(userinfo.getDepartmentid());
 	}
+
+
 }

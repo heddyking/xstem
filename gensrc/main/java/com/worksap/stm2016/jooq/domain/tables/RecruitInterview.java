@@ -35,7 +35,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitInterview extends TableImpl<RecruitInterviewRecord> {
 
-	private static final long serialVersionUID = -380670183;
+	private static final long serialVersionUID = -1978669159;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.recruit_interview</code>
@@ -54,11 +54,6 @@ public class RecruitInterview extends TableImpl<RecruitInterviewRecord> {
 	 * The column <code>ss1604c195_rd4.recruit_interview.interviewid</code>.
 	 */
 	public final TableField<RecruitInterviewRecord, Integer> INTERVIEWID = createField("interviewid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
-
-	/**
-	 * The column <code>ss1604c195_rd4.recruit_interview.starttime</code>.
-	 */
-	public final TableField<RecruitInterviewRecord, Timestamp> STARTTIME = createField("starttime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
 	 * The column <code>ss1604c195_rd4.recruit_interview.endtime</code>.
@@ -89,6 +84,11 @@ public class RecruitInterview extends TableImpl<RecruitInterviewRecord> {
 	 * The column <code>ss1604c195_rd4.recruit_interview.applymentid</code>.
 	 */
 	public final TableField<RecruitInterviewRecord, Integer> APPLYMENTID = createField("applymentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.recruit_interview.starttime</code>.
+	 */
+	public final TableField<RecruitInterviewRecord, Timestamp> STARTTIME = createField("starttime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
 	 * Create a <code>ss1604c195_rd4.recruit_interview</code> table reference

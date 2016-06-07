@@ -26,8 +26,10 @@ import com.worksap.stm2016.jooq.domain.tables.StaffingChange;
 import com.worksap.stm2016.jooq.domain.tables.StaffingChangeLog;
 import com.worksap.stm2016.jooq.domain.tables.TestComments;
 import com.worksap.stm2016.jooq.domain.tables.TestPosts;
+import com.worksap.stm2016.jooq.domain.tables.ViCareerLastMonth;
 import com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory;
 import com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewContext;
+import com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewReminder;
 
 import javax.annotation.Generated;
 
@@ -156,6 +158,11 @@ public class Tables {
 	public static final TestPosts TEST_POSTS = com.worksap.stm2016.jooq.domain.tables.TestPosts.TEST_POSTS;
 
 	/**
+	 * The table ss1604c195_rd4.vi_career_last_month
+	 */
+	public static final ViCareerLastMonth VI_CAREER_LAST_MONTH = com.worksap.stm2016.jooq.domain.tables.ViCareerLastMonth.VI_CAREER_LAST_MONTH;
+
+	/**
 	 * The table ss1604c195_rd4.vi_recruit_applyment_history
 	 */
 	public static final ViRecruitApplymentHistory VI_RECRUIT_APPLYMENT_HISTORY = com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory.VI_RECRUIT_APPLYMENT_HISTORY;
@@ -164,4 +171,9 @@ public class Tables {
 	 * The table ss1604c195_rd4.vi_recruit_interview_context
 	 */
 	public static final ViRecruitInterviewContext VI_RECRUIT_INTERVIEW_CONTEXT = com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewContext.VI_RECRUIT_INTERVIEW_CONTEXT;
+
+	/**
+	 * The table ss1604c195_rd4.vi_recruit_interview_reminder
+	 */
+	public static final ViRecruitInterviewReminder VI_RECRUIT_INTERVIEW_REMINDER = com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewReminder.VI_RECRUIT_INTERVIEW_REMINDER;
 }

@@ -20,7 +20,7 @@ function initSkills(){
 }
 
 function getInterviews(){
-	var url="/mg/getInterviewList";
+	var url="/hr/getInterviewList";
 	var type="get";
 	var data={};
 	var cb=function(msg){
@@ -29,7 +29,7 @@ function getInterviews(){
 			msg[k].updatedat=getSmpFormatDateByLong(msg[k].updatedat,true);
 			msg[k].starttime=getSmpFormatDateByLong(msg[k].endtime,true);
 			msg[k].endtime=getSmpFormatDateByLong(msg[k].updatedat,true);
-			msg[k].operation='<button class="btn btn-primary btn-xs edit" data-toggle="modal" data-target="#myModal" >Detail</button> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button>';
+			msg[k].operation='<button class="btn btn-primary btn-xs edit" data-toggle="modal" data-target="#myModal" >Detail</button>';
 			msg[k].recruitnumber='<small class="label bg-blue" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+msg[k].realnumber+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small>';
 			
 			msg[k].genderStr=msg[k].gender?"Male":"Female";
@@ -57,6 +57,7 @@ function getInterviews(){
 			}
 			if(msg[k].skills.length>=2) msg[k].skills= msg[k].skills.substring(0,msg[k].skills.length-2);
 			
+			msg[k].remind='<span class="badge bg-green">&nbsp;&nbsp;ON&nbsp;&nbsp;</span>'
 		}
         
 		var table = $('#example').DataTable({
@@ -71,6 +72,7 @@ function getInterviews(){
 			         { title: "End Time", data:"endtime"},
 			         { title: "Onboard At", data:"date_req"},
 			         { title: "Applied At", data:"updatedat"},
+			         { title: "System Remind", data:"remind"},
 			         { title: "Operation", data:"operation"}
 			],
 			"order": [[ 0, "desc" ]],
@@ -97,51 +99,12 @@ function getInterviews(){
 			if($(this).html()=="Detail"){
 				showDetail(data);
 			}
-			else if($(this).html()=="Approve"){
-				approveInterview(data.applymentid);
-			}
-			else if($(this).html()=="Deny"){
-				denyInterview(data.applymentid);
-			}
 		});
 	}
 
 	ajax(url,type,data,cb);
 }
 
-function approveInterview(aid){
-	var url="/mg/MGinvPass";
-	var type="get";
-	var data={applymentid:aid};
-	var cb=function(msg){
-		if(msg<=0){
-			alert("System Error!");
-			return;
-		}
-		
-		alert("Pass One Interview Successfully!");
-		getInterviews();
-	}
-	
-	ajax(url,type,data,cb);
-}
-
-function denyInterview(aid){
-	var url="/mg/MGinvFail";
-	var type="get";
-	var data={applymentid:aid};
-	var cb=function(msg){
-		if(msg<=0){
-			alert("System Error!");
-			return;
-		}
-		
-		alert("Fail One Interview Successfully!");
-		getInterviews();
-	}
-	
-	ajax(url,type,data,cb);
-}
 
 function showDetail(msg){
 	$("#inputPosition").val(msg.positionname);
