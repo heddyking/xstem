@@ -1,5 +1,7 @@
 package com.worksap.stm2016.controller;
 
+import static com.worksap.stm2016.jooq.domain.tables.ViCareerLastMonth.VI_CAREER_LAST_MONTH;
+
 import java.util.List;
 import java.util.Map;
 
@@ -203,5 +205,18 @@ public class CareerController {
 	public List<Map<String,Object>> getSkillListByDepartment(){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		return careerService.getSkillListByDepartment(userinfo.getDepartmentid());
+	}
+	
+	//http://localhost/hr/getCareerLastMonth
+	@RequestMapping("/hr/getCareerLastMonth")
+	public List<Map<String,Object>> getCareerLastMonth(){
+		return careerService.getCareerLastMonth();
+	}
+	
+	//http://localhost/ste/getCareerEachMonthBySTE
+	@RequestMapping("/ste/getCareerEachMonthBySTE")
+	public List<Map<String,Object>> getCareerEachMonthBySTE(){
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return careerService.getCareerEachMonthBySTE(userinfo.getUserid());
 	}
 }

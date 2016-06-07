@@ -26,6 +26,7 @@ import com.worksap.stm2016.jooq.domain.tables.StaffingChange;
 import com.worksap.stm2016.jooq.domain.tables.StaffingChangeLog;
 import com.worksap.stm2016.jooq.domain.tables.TestComments;
 import com.worksap.stm2016.jooq.domain.tables.TestPosts;
+import com.worksap.stm2016.jooq.domain.tables.ViCareerEachMonth;
 import com.worksap.stm2016.jooq.domain.tables.ViCareerLastMonth;
 import com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory;
 import com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewContext;
@@ -156,6 +157,11 @@ public class Tables {
 	 * The table ss1604c195_rd4.test_posts
 	 */
 	public static final TestPosts TEST_POSTS = com.worksap.stm2016.jooq.domain.tables.TestPosts.TEST_POSTS;
+
+	/**
+	 * The table ss1604c195_rd4.vi_career_each_month
+	 */
+	public static final ViCareerEachMonth VI_CAREER_EACH_MONTH = com.worksap.stm2016.jooq.domain.tables.ViCareerEachMonth.VI_CAREER_EACH_MONTH;
 
 	/**
 	 * The table ss1604c195_rd4.vi_career_last_month

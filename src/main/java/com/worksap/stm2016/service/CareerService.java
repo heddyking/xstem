@@ -7,6 +7,8 @@ import static com.worksap.stm2016.jooq.domain.tables.CheckAttendance.CHECK_ATTEN
 import static com.worksap.stm2016.jooq.domain.tables.CheckPerformance.CHECK_PERFORMANCE;
 import static com.worksap.stm2016.jooq.domain.tables.CheckSkill.CHECK_SKILL;
 import static com.worksap.stm2016.jooq.domain.tables.InfoSte.INFO_STE;
+import static com.worksap.stm2016.jooq.domain.tables.ViCareerLastMonth.VI_CAREER_LAST_MONTH;
+import static com.worksap.stm2016.jooq.domain.tables.ViCareerEachMonth.VI_CAREER_EACH_MONTH;
 
 import java.sql.Date;
 import java.sql.Timestamp;
@@ -268,5 +270,13 @@ public class CareerService
 			.where(INFO_STE.DEPARTMENTID.eq(departmentid))
 			.and(CHECK_SKILL.STATE.eq(1))
 			.fetchMaps();
+	}
+	
+	public List<Map<String,Object>> getCareerLastMonth(){
+		return dsl.selectFrom(VI_CAREER_LAST_MONTH).orderBy(VI_CAREER_LAST_MONTH.STEID.asc()).fetchMaps();
+	}
+	
+	public List<Map<String,Object>> getCareerEachMonthBySTE(Integer steid){
+		return dsl.selectFrom(VI_CAREER_EACH_MONTH).where(VI_CAREER_EACH_MONTH.STEID.eq(steid)).orderBy(VI_CAREER_EACH_MONTH.MONTH.desc()).fetchMaps();
 	}
 }

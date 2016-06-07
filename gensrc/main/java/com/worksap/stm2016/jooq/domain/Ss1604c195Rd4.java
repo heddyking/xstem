@@ -26,6 +26,7 @@ import com.worksap.stm2016.jooq.domain.tables.StaffingChange;
 import com.worksap.stm2016.jooq.domain.tables.StaffingChangeLog;
 import com.worksap.stm2016.jooq.domain.tables.TestComments;
 import com.worksap.stm2016.jooq.domain.tables.TestPosts;
+import com.worksap.stm2016.jooq.domain.tables.ViCareerEachMonth;
 import com.worksap.stm2016.jooq.domain.tables.ViCareerLastMonth;
 import com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory;
 import com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewContext;
@@ -55,7 +56,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ss1604c195Rd4 extends SchemaImpl {
 
-	private static final long serialVersionUID = -207082810;
+	private static final long serialVersionUID = 183212135;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4</code>
@@ -133,6 +134,7 @@ public class Ss1604c195Rd4 extends SchemaImpl {
 			StaffingChangeLog.STAFFING_CHANGE_LOG,
 			TestComments.TEST_COMMENTS,
 			TestPosts.TEST_POSTS,
+			ViCareerEachMonth.VI_CAREER_EACH_MONTH,
 			ViCareerLastMonth.VI_CAREER_LAST_MONTH,
 			ViRecruitApplymentHistory.VI_RECRUIT_APPLYMENT_HISTORY,
 			ViRecruitInterviewContext.VI_RECRUIT_INTERVIEW_CONTEXT,

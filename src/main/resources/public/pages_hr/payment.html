@@ -16,6 +16,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+   <!-- Select2 -->
+  <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. We have chosen the skin-purple for this starter
@@ -28,7 +30,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="../plugins/datepicker/datepicker3.css">
 
   <link rel="stylesheet" href="../plugins/datatables/dataTables.bootstrap.css">
-<!--  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">  -->
+  <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"> -->
 <!--   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.1.2/css/buttons.dataTables.min.css">
   <link rel="stylesheet" href="https://cdn.datatables.net/select/1.1.2/css/select.dataTables.min.css">
   <link rel="stylesheet" href="../plugins/datatables/editor.dataTables.min.css"> -->
@@ -36,7 +38,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.0.2/css/responsive.dataTables.min.css">
 
   <link rel="stylesheet" href="../plugins/iCheck/all.css">
-
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -237,21 +238,21 @@ desired effect
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <li><a href="info.html"><i class="fa fa-link"></i> <span>STE Info</span></a></li>
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#"><i class="fa fa-link"></i> <span>Recruit</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li  class="active"><a href="publish.html">Publish Recruitment</a></li>
-            <li><a href="filter.html">Filter Recruitment</a></li>
+            <li><a href="publish.html">Publish Recruitment</a></li>
+            <li"><a href="filter.html">Filter Recruitment</a></li>
             <li><a href="arrange.html">Arrange Interview</a></li>
             <li><a href="interview.html">Interview Info</a></li>
             <li><a href="onboard.html">Offer Stage</a></li>
           </ul>
         </li>
         
-        <li class="treeview">
+        <li class="treeview active">
           <a href="#"><i class="fa fa-link"></i> <span>Payroll</span> <i class="fa fa-angle-left pull-right"></i></a>
           <ul class="treeview-menu">
-            <li><a href="payment.html">Latest Payment</a></li>
+            <li class="active"><a href="payment.html">Latest Payment</a></li>
           </ul>
         </li>
         
@@ -276,13 +277,13 @@ desired effect
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Recruitment Publish
-        <small>set recruitment plan and publish it</small>
+        Latest Payment
+        <small>show the STE payment least of the latest month</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#"> Recruit</a></li>
-        <li class="active">Recruitment Publish</li>
+        <li><a href="#"> Payroll</a></li>
+        <li class="active">Latest Payment</li>
       </ol>
     </section>
 
@@ -291,245 +292,136 @@ desired effect
 
       <!-- Your Page Content Here -->
 
-      <!-- ############################# -->
+      <!-- ################## -->
 
-
-          
-          <div id="stes" class="col-md-13">
-              <!-- USERS LIST -->
+		  <div class="col-md-13" >
               <div class="box box-info">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Recruitment Suggestion</h3>
+                  <h3 class="box-title">Payment List</h3>
                 </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-
-
-          <table id="example" class="table table-bordered table-hover">
-                <thead>
+                <div class="box-body"> 
+                
+                
+             <table id="example" class="table table-bordered table-hover">
+                <!-- <thead>
                 <tr>
-                <!--   <th>Position ID</th>
                   <th>Position</th>
                   <th>Department</th>
-                  <th>Number</th>
-                  <th>Location</th>
-                  <th>Date</th>
-                  <th>Duration</th>
-                  <th>Skills</th> -->
-                </tr>
-                </thead>
-                <!-- <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Java Dev</td>
-                  <td>HUE</td>
-                  <td><small class="label bg-blue" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small></td>
-                  <td>Shanghai</td>
-                  <td>2016-6-1</td>
-                  <td>6 Months</td>
-                  <td>Java, Javascript, Android</td>
-                  <td><button class="btn btn-primary btn-xs edit" >Add Into Pool</button></td>
-                </tr>
-               <tr>
-                  <td>2</td>
-                  <td>Java QA</td>
-                  <td>HUE</td>
-                  <td><small class="label bg-blue" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small></td>
-                  <td>Singapore</td>
-                  <td>2016-6-1</td>
-                  <td>6 Months</td>
-                  <td>Java, Junit</td>
-                  <td><button class="btn btn-primary btn-xs edit" >Add Into Pool</button></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>C++ Dev</td>
-                  <td>CCS</td>
-                  <td><small class="label bg-blue" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small></td>
-                  <td>Shanghai</td>
-                  <td>2016-6-10</td>
-                  <td>6 Months</td>
-                  <td>C++, STL, OC</td>
-                  <td><button class="btn btn-primary btn-xs edit" >Add Into Pool</button></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Data Mining</td>
-                  <td>HUE</td>
-                  <td><small class="label bg-blue" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small></td>
-                  <td>Shanghai</td>
-                  <td>2016-6-5</td>
-                  <td>12 Months</td>
-                  <td>DM, ML, NLP, DL, AI</td>
-                  <td><button class="btn btn-primary btn-xs edit" >Add Into Pool</button></td>
-                </tr>
-                </tbody> -->
-              </table>
-
-         </div>
-                <!-- /.box-body -->
-               <!--  <div class="box-footer text-center">
-                  <a href="javascript:void(0)" class="uppercase">View All Users</a>
-                </div> -->
-                <!-- /.box-footer -->
-              </div>
-              <!--/.box -->
-         </div>
-
-
-
-
-
-
-
-
-      <!-- ################################# -->
-
-
-
-
-
-           <div id="plan" class="col-md-13">
-              <!-- USERS LIST -->
-              <div class="box box-primary">
-                <div class="box-header with-border">
-                  <h3 class="box-title">Recruitment Plan</h3>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-
-
-          <table id="example2" class="table table-bordered table-hover">
-                <thead>
-                <tr>
-             <!--      <th>Position ID</th>
-                  <th>Position</th>
-                  <th>Department</th>
-                  <th>Recruit Number</th>
-                  <th>Location</th>
-                  <th>Date</th>
-                  <th>Duration</th>
+                  <th>Plan Number</th>
+                  <th>Date Req</th>
+                  <th>Skills Req</th>
+                  <th>Candidate</th>
+                  <th>Email</th>
                   <th>Skills</th>
-                  <th>Operation</th> -->
+                  <th>Suggestion</th>
                 </tr>
-                </thead>
+                </thead> -->
                 <!-- <tbody>
                 <tr>
-                  <td>1</td>
                   <td>Java Dev</td>
                   <td>HUE</td>
-                  <td><small class="label bg-green" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small></td>
+                  <td>3</td>
                   <td>Shanghai</td>
                   <td>2016-6-1</td>
                   <td>6 Months</td>
                   <td>Java, Javascript, Android</td>
-                  <td><button class="btn btn-success btn-xs edit">Poster</button> <button class="btn btn-primary btn-xs edit">Edit</button> <button class="btn btn-danger btn-xs delete">Delete</button></td>
+                  <th>Candidate</th>
+                  <th>Email</th>
+                  <th>Skills</th>
+                  <th><small class="label bg-green" margin-top="-2px">approve</small></th>
+                  <th><button class="btn btn-primary btn-xs edit">Detail</button> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
                <tr>
-                  <td>2</td>
                   <td>Java QA</td>
                   <td>HUE</td>
-                  <td><small class="label bg-green" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small></td>
+                  <td>5</td>
                   <td>Singapore</td>
                   <td>2016-6-1</td>
                   <td>6 Months</td>
                   <td>Java, Junit</td>
-                  <td><button class="btn btn-success btn-xs edit">Poster</button> <button class="btn btn-primary btn-xs edit">Edit</button> <button class="btn btn-danger btn-xs delete">Delete</button></td>
+                   <th>Candidate</th>
+                  <th>Email</th>
+                  <th>Skills</th>
+                  <th><small class="label bg-green" margin-top="-2px">approve</small></th>
+                  <th><button class="btn btn-primary btn-xs edit">Detail</button> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
                 <tr>
-                  <td>3</td>
                   <td>C++ Dev</td>
                   <td>CCS</td>
-                  <td><small class="label bg-green" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small></td>
+                  <td>5</td>
                   <td>Shanghai</td>
                   <td>2016-6-10</td>
                   <td>6 Months</td>
                   <td>C++, STL, OC</td>
-                  <td><button class="btn btn-success btn-xs edit">Poster</button> <button class="btn btn-primary btn-xs edit">Edit</button> <button class="btn btn-danger btn-xs delete">Delete</button></td>
+                   <th>Candidate</th>
+                  <th>Email</th>
+                  <th>Skills</th>
+                  <th><small class="label bg-red" margin-top="-2px">deny</small></th>
+                  <th><button class="btn btn-primary btn-xs edit">Detail</button> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
                 <tr>
-                  <td>4</td>
                   <td>Data Mining</td>
                   <td>HUE</td>
-                  <td><small class="label bg-green" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small></td>
+                  <td>2</td>
                   <td>Shanghai</td>
                   <td>2016-6-5</td>
                   <td>12 Months</td>
                   <td>DM, ML, NLP, DL, AI</td>
-                  <td><button class="btn btn-success btn-xs edit">Poster</button> <button class="btn btn-primary btn-xs edit">Edit</button> <button class="btn btn-danger btn-xs delete">Delete</button></td>
+                   <th>Candidate</th>
+                  <th>Email</th>
+                  <th>Skills</th>
+                  <th><small class="label bg-green" margin-top="-2px">approve</small></th>
+                  <th><button class="btn btn-primary btn-xs edit">Detail</button> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button></th>
                 </tr>
                 </tbody> -->
               </table>
-
-         </div>
-                <!-- /.box-body -->
-               <!--  <div class="box-footer text-center">
-                  <a href="javascript:void(0)" class="uppercase">View All Users</a>
-                </div> -->
-                <!-- /.box-footer -->
+              
+              
+              
+             </div>
               </div>
-              <!--/.box -->
          </div>
-
-
-
-
-
-
- <!-- ################################# -->
-
-
-
-
-
-           <div id="publish" class="col-md-13">
-              <!-- USERS LIST -->
-              <div class="box box-danger">
+			
+			
+		
+		<!-- ######################## -->
+		
+			
+			
+			
+		 <div class="col-md-13">
+              <div class="box box-success">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Recruitment Publishment</h3>
+                  <h3 class="box-title">Payment Graph</h3>
                 </div>
-                <!-- /.box-header -->
                 <div class="box-body">
-                  <div id="publishment" class="form-horizontal">
-                    <!-- <div>
-                      <label>
-                          <input type="checkbox" class="flat-red">
-                          <a href="http://www.dajie.com/">Dajiewang</a>
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                          <input type="checkbox" class="flat-red" checked>
-                          <a href="http://www.indeed.com/">Indeed</a>
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                          <input type="checkbox" class="flat-red" >
-                          <a href="http://www.51job.com/">51job</a>
-                      </label>
-                    </div>
-                    <div>
-                      <label>
-                          <input type="checkbox" class="flat-red" checked>
-                          <a href="http://www.lagou.com/">Lagouwang</a>
-                      </label>
-                    </div> -->
-                 </div>
-                </div>
-                <input type="hidden" id="p_id"/>
+                
+               <div id="legend">
+               
+               </div>
+               <div>
+               	<span class="label label-primary">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Salary
+               </div>
+               <br>
+               <div>
+               	<span class="label label-success">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;Bonus
+               </div>
+               <br>
+			  <canvas id="barChart" style="height:230px"></canvas>
+				
+				
+		
+			</div>
               </div>
          </div>
-
-
-
-
-
-
-<!-- ############################ -->
-
-
-		<!-- Modal -->
+         
+         
+         
+      <!-- ######################## -->
+      		
+      		
+      		
+      			<!-- Modal -->
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 					aria-labelledby="myModalLabel">
 					<div class="modal-dialog" role="document">
@@ -539,63 +431,49 @@ desired effect
 									aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
-								<h4 class="modal-title" id="myModalLabel">Recruit Plan</h4>
+								<h4 class="modal-title" id="myModalLabel">Detail</h4>
 							</div>
 							<div class="modal-body">
 								<div class="form-horizontal">
-								
-								<div class="form-group">
-									<label for="inputNumber" class="col-sm-2 control-label">Plan Num</label>
+										
+						                  <div class="form-group">
+						                    <label for="attendanceUnit" class="col-sm-4 control-label">Attendance Pay /Hour</label>
+						                    <div class="col-sm-7">
+						                      <input type="text" class="form-control" id="attendanceUnit" value="50">
+						                    </div>
+						                  </div>
+						                  
+						                  <div class="form-group">
+						                    <label for="performanceUnit" class="col-sm-4 control-label">Performance Pay /Hour</label>
+						                    <div class="col-sm-7">
+						                      <input type="text" class="form-control" id="performanceUnit" value="70">
+						                    </div>
+						                  </div>
 
-									<div class="col-sm-9">
-										<!-- <input type="text" class="form-control pull-right" id="inputHours" placeholder="Hours"> -->
-										<input id="inputNumber" type="text" value="8" name="inputNumber">
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label for="inputDate1" class="col-sm-2 control-label">Apply Start</label>
+						                  <hr style=" height:2px;border:none;border-top:2px dotted #185598;" />
+						             
+										<div class="form-group">
+						                    <div class="col-sm-11">
+						                      <canvas id="pieChart" style="height:25px"></canvas>
+						                    </div>
+						                </div>
 
-									<div class="col-sm-9">
-										<div class="input-group date">
-											<div class="input-group-addon">
-												<i class="fa fa-calendar"></i>
-											</div>
-											<input type="text" class="form-control pull-right"
-												id="inputDate1">
-										</div>
-									</div>
-								</div>
-								
-								<div class="form-group">
-									<label for="inputDate2" class="col-sm-2 control-label">Apply Due</label>
-
-									<div class="col-sm-9">
-										<div class="input-group date">
-											<div class="input-group-addon">
-												<i class="fa fa-calendar"></i>
-											</div>
-											<input type="text" class="form-control pull-right"
-												id="inputDate2">
-										</div>
-									</div>
-								</div>
 								
 								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-default"
 									data-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary" id="updatebtn" onclick="updatePool()">Save
-									changes</button>
+								
 							</div>
 							<input type="hidden" id="a_id" />
 						</div>
 					</div>
 				</div>
-		
-
-
+      		
+      			
+      			
+      <!-- ################################ -->
 
     </section>
     <!-- /.content -->
@@ -694,7 +572,10 @@ desired effect
 <script src="../plugins/jQuery/jQuery-2.2.0.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="../bootstrap/js/bootstrap.min.js"></script>
+<!-- ChartJS 1.0.1 -->
+<script src="../../plugins/chartjs/Chart.min.js"></script>
 <!-- Select2 -->
+<script src="../../plugins/select2/select2.full.min.js"></script>
 <script src="../plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
 <script src="../plugins/datatables/dataTables.bootstrap.min.js"></script>
@@ -709,78 +590,18 @@ desired effect
 
 <!-- <script src="../plugins/datatables/dataTables.editor.min.js"></script> -->
 <!-- AdminLTE App -->
-<script src="../plugins/spinner/jquery.bootstrap-touchspin.js"></script>
-
 <script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
 
 <script src="/js/date.js"></script>
 <script src="/js/validate.js"></script>
-<script src="/js/hr_publish.js"></script>
+<script src="/js/hr_payment.js"></script>
+
 
 
 <script>
   $(function(){
-	  $("input[id^='inputDate']").datepicker({
-	      format: 'yyyy-mm-dd',
-	      autoclose: true
-	  }).datepicker("setDate", new Date());
-	    
-	    $("input[name^='inputNumber']").TouchSpin({
-	    	  // Minimum value.
-	    	  min: 0, 
-	    	  // Maximum value.
-	    	  max: 1000, 
-	    	  // Applied when no explicit value is set on the input with the value attribute. 
-	    	  // Empty string means that the value remains empty on initialization.
-	    	  initval: '',
-	    	  replacementval: '',
-	    	  // Number of decimal points.
-	    	  decimals: 0,
-	    	  // none | floor | round | ceil
-	    	  forcestepdivisibility: 'round', 
-	    	  // Enables the traditional up/down buttons.
-	    	  verticalbuttons: false,
-	    	  // Class of the up button with vertical buttons mode enabled.
-	    	  verticalupclass: 'glyphicon glyphicon-chevron-up',
-	    	  // Class of the down button with vertical buttons mode enabled.
-	    	  verticaldownclass: 'glyphicon glyphicon-chevron-down',
-	    	  // Boost at every nth step.
-	    	  boostat: 5, 
-	    	  // If enabled, the the spinner is continually becoming faster as holding the button.
-	    	  booster: true,
-	    	  // Maximum step when boosted.
-	    	  maxboostedstep: 10, 
-	    	  // Text after the input.
-	    	  //postfix: '%', 
-	    	  // Text before the input.
-	    	  //prefix: '$', 
-	    	  // Extra class(es) for prefix.
-	    	  //prefix_extraclass: '',
-	    	  //  Extra class(es) for postfix.
-	    	  //postfix_extraclass: '',
-	    	  // Incremental/decremental step on up/down change.
-	    	  step: 1, 
-	    	  // Refresh rate of the spinner in milliseconds.
-	    	  stepinterval: 100, 
-	    	  // Time in milliseconds before the spinner starts to spin.
-	    	  stepintervaldelay: 500,
-	    	  //  Enables the mouse wheel to change the value of the input.
-	    	  mousewheel: true,
-	    	  //  Class(es) of down button.
-	    	  buttondown_class: 'btn btn-default',
-	    	  //  Class(es) of up button.
-	    	  buttonup_class: 'btn btn-default',
-	    	  // Text for down button
-	    	  buttondown_txt: '-',
-	    	  // Text for up button
-	    	  buttonup_txt: '+'
-	 });
-	    
-    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
-      checkboxClass: 'icheckbox_flat-green',
-      radioClass: 'iradio_flat-green'
-    });
-    
+     
+
   })
 
 </script>
