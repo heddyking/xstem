@@ -23,7 +23,7 @@ info_department.departmentname,
 recruit_position.positionname,
 count(a.steid) as attendanceNums,
 sum(a.hours) as attendanceHours
-from (select * from check_attendance where state=2 and date between date_trunc('month', now()) - interval '1 month' and date_trunc('month', now()) - interval '1 day') as a
+from (select * from check_attendance where state=2 and date between date_trunc('month', now()) - interval '1 month' and date_trunc('month', now()) - interval '1 second') as a
 join info_ste on info_ste.steid=a.steid
 join info_department on info_ste.departmentid=info_department.departmentid
 join recruit_position on info_ste.positionid=recruit_position.positionid
@@ -47,7 +47,7 @@ recruit_position.positionname,
 count(a.steid) as performanceNums,
 sum(a.hours) as performanceHours
 
-from (select * from check_performance where state=2 and week_lastday between date_trunc('month', now()) - interval '1 month' and date_trunc('month', now()) - interval '1 day') as a
+from (select * from check_performance where state=2 and week_lastday between date_trunc('month', now()) - interval '1 month' and date_trunc('month', now()) - interval '1 second') as a
 join info_ste on info_ste.steid=a.steid
 join info_department on info_ste.departmentid=info_department.departmentid
 join recruit_position on info_ste.positionid=recruit_position.positionid

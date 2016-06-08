@@ -63,9 +63,9 @@ function initialLineChart(msg){
     ds1 = [65, 59, 80, 81, 56, 55, 40];
 	ds2 = [28, 48, 40, 19, 86, 27, 90];*/
 	
-	var lbs=[];
-	var ds1=[];
-	var ds2=[];
+	var lbs=[""];
+	var ds1=[0];
+	var ds2=[0];
 	
 	for(var k=msg.length-1;k>=0;k--){
 		lbs.push(msg[k].month);

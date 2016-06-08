@@ -240,6 +240,10 @@ public class RecruitService
 	
 	
 	public int addApplyment(Integer steid,Integer positionid){
+		//cancel all the past applyment
+		dsl.update(RECRUIT_APPLYMENT)
+			.set(RECRUIT_APPLYMENT.STATE,0)
+			.execute();
 		Timestamp createdAt=new Timestamp(System.currentTimeMillis());
 		Timestamp updatedAt=createdAt;
 		return dsl.insertInto(RECRUIT_APPLYMENT)
@@ -264,6 +268,7 @@ public class RecruitService
 	//--6- fail
 	//--10-accepted
 	//--11-unaccepted
+	//--12-signed contract
 	
 	public Map<String,Object> getSelfActiveApplyment(Integer steid){
 		return dsl.select(RECRUIT_POSITION.POSITIONNAME,RECRUIT_POSITION.DATE_REQ,RECRUIT_POSITION.DURATION_REQ,
@@ -277,8 +282,8 @@ public class RecruitService
 				.join(RECRUIT_POSITION)
 				.on(RECRUIT_APPLYMENT.POSITIONID.eq(RECRUIT_POSITION.POSITIONID))
 				.where(RECRUIT_APPLYMENT.STEID.eq(steid))
-				.and(RECRUIT_APPLYMENT.STATE.ne(0)) 
-				.and(RECRUIT_APPLYMENT.STATE.ne(6)) 
+				.and(RECRUIT_APPLYMENT.STATE.ne(0)) //not deleted by self
+				.and(RECRUIT_APPLYMENT.STATE.ne(6)) //not terminated by fte
 				.orderBy(RECRUIT_APPLYMENT.CREATEDAT.desc())
 				.limit(1)
 				.offset(0)
@@ -301,6 +306,7 @@ public class RecruitService
 				.join(RECRUIT_POSITION)
 				.on(RECRUIT_APPLYMENT.POSITIONID.eq(RECRUIT_POSITION.POSITIONID))
 				.where(RECRUIT_APPLYMENT.STEID.eq(steid))
+				.and(RECRUIT_APPLYMENT.STATE.ne(0))  //Not deleted by self
 				.orderBy(RECRUIT_APPLYMENT.CREATEDAT.desc())
 				.limit(1)
 				.offset(0)
@@ -382,6 +388,7 @@ public class RecruitService
 				.set(RECRUIT_APPLYMENT.UPDATEDBY,userid)
 				.set(RECRUIT_APPLYMENT.UPDATEDAT,new Timestamp(System.currentTimeMillis()))
 				.where(RECRUIT_APPLYMENT.APPLYMENTID.eq(applymentid))
+				.and(RECRUIT_APPLYMENT.STATE.ne(0)) //if 0 means its invalid, so we will do nothing for it
 				.execute();
 	}
 	

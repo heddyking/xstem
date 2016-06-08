@@ -31,7 +31,7 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViRecruitApplymentHistory extends TableImpl<ViRecruitApplymentHistoryRecord> {
 
-	private static final long serialVersionUID = 2056886779;
+	private static final long serialVersionUID = 891350150;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4.vi_recruit_applyment_history</code>
@@ -50,6 +50,51 @@ public class ViRecruitApplymentHistory extends TableImpl<ViRecruitApplymentHisto
 	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.steid</code>.
 	 */
 	public final TableField<ViRecruitApplymentHistoryRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.gender</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, Boolean> GENDER = createField("gender", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.birthday</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, Date> BIRTHDAY = createField("birthday", org.jooq.impl.SQLDataType.DATE, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.email</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, String> EMAIL = createField("email", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.telephone</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, String> TELEPHONE = createField("telephone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.experiences</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, String> EXPERIENCES = createField("experiences", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.skills</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, String> SKILLS = createField("skills", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.resume_url</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, String> RESUME_URL = createField("resume_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.offer_url</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, String> OFFER_URL = createField("offer_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
+
+	/**
+	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.contract_url</code>.
+	 */
+	public final TableField<ViRecruitApplymentHistoryRecord, String> CONTRACT_URL = createField("contract_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
 	 * The column <code>ss1604c195_rd4.vi_recruit_applyment_history.positionid</code>.

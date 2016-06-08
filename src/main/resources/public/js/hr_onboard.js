@@ -23,10 +23,13 @@ function getOnboards(){
 			if(msg[k].state==5) msg[k].status='<small class="label bg-primary" margin-top="-2px">Waiting</small>';
 			else if(msg[k].state==10) msg[k].status='<small class="label bg-green" margin-top="-2px">Accepted</small>';
 			else if(msg[k].state==11) msg[k].status='<small class="label bg-red" margin-top="-2px">Refused</small>';
+			else if(msg[k].state==12) msg[k].status='<small class="label bg-teal" margin-top="-2px">Onboaded</small>';
 			
 			if(msg[k].state==5) msg[k].operation='<button class="btn btn-primary btn-xs edit" data-toggle="modal" data-target="#myModal1" >Upload Offer</button>';
 			else if(msg[k].state==10) msg[k].operation='<button class="btn btn-success btn-xs edit" data-toggle="modal" data-target="#myModal2" >Upload Contract</button>';
 			else if(msg[k].state==11) msg[k].operation='<button class="btn btn-danger btn-xs edit" >Terminated</button>';
+			else if(msg[k].state==12) msg[k].operation='<button class="btn btn-success btn-xs edit" data-toggle="modal" data-target="#myModal2" >Upload Contract</button>';
+			
 		}
 
 		var table = $('#example').DataTable({

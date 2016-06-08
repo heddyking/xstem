@@ -1,5 +1,15 @@
 CREATE OR REPLACE VIEW "ss1604c195_rd4"."vi_recruit_applyment_history" AS 
- SELECT a.steid,
+ SELECT 
+		a.steid,
+		g.gender,
+		g.birthday,
+		g.email,
+		g.telephone,
+		g.experiences,
+		g.skills,
+		g.resume_url,
+		g.offer_url,
+		g.contract_url,
     a.positionid,
     a.state,
     a.updatedby,
@@ -46,4 +56,5 @@ CREATE OR REPLACE VIEW "ss1604c195_rd4"."vi_recruit_applyment_history" AS
      JOIN ss1604c195_rd4.info_department c ON ((b.departmentid = c.departmentid)))
      LEFT JOIN ss1604c195_rd4.info_fte d ON (((a.updatedby = d.fteid) AND (a.state > 1))))
      LEFT JOIN ss1604c195_rd4.info_department e ON ((d.departmentid = e.departmentid)))
-     LEFT JOIN ss1604c195_rd4.recruit_interview f ON ((a.applymentid = f.applymentid)));
+     LEFT JOIN ss1604c195_rd4.recruit_interview f ON ((a.applymentid = f.applymentid)))
+		 JOIN ss1604c195_rd4.info_ste g ON a.steid=g.steid;

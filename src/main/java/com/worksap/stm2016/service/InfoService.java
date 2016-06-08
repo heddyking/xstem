@@ -7,6 +7,7 @@ import static com.worksap.stm2016.jooq.domain.tables.InfoSte.INFO_STE;
 import static com.worksap.stm2016.jooq.domain.tables.InfoDepartment.INFO_DEPARTMENT;
 import static com.worksap.stm2016.jooq.domain.tables.RecruitPosition.RECRUIT_POSITION;
 import static com.worksap.stm2016.jooq.domain.tables.InfoFte.INFO_FTE;
+import static com.worksap.stm2016.jooq.domain.tables.RecruitApplyment.RECRUIT_APPLYMENT;
 
 import java.sql.Date;
 import java.util.List;
@@ -100,6 +101,24 @@ public class InfoService
 	}
 	
 	public Integer updateContractInfo(Integer steid,String contract_url ){
+		Map<String,Object> map=dsl.select(RECRUIT_POSITION.POSITIONID,RECRUIT_POSITION.DEPARTMENTID)
+					.from(INFO_STE)
+					.join(RECRUIT_APPLYMENT)
+					.on(INFO_STE.STEID.eq(RECRUIT_APPLYMENT.STEID))
+					.join(RECRUIT_POSITION)
+					.on(RECRUIT_APPLYMENT.POSITIONID.eq(RECRUIT_POSITION.POSITIONID))
+					.where(RECRUIT_APPLYMENT.STATE.eq(10))
+					.and(INFO_STE.STEID.eq(steid))
+					.fetchOne().intoMap();
+		
+		Integer departmentid=(Integer) map.get("departmentid");
+		Integer positionid=(Integer) map.get("positionid");
+		
+		//update info_ste
+		dsl.update(INFO_STE).set(INFO_STE.DEPARTMENTID,departmentid).set(INFO_STE.POSITIONID,positionid).execute();
+		//update state
+		dsl.update(RECRUIT_APPLYMENT).set(RECRUIT_APPLYMENT.STATE,12).where(RECRUIT_APPLYMENT.STATE.eq(10)).execute();
+		
 		return dsl.update(INFO_STE)
 				.set(INFO_STE.CONTRACT_URL,contract_url)
 				.where(INFO_STE.STEID.eq(steid))

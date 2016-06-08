@@ -192,8 +192,15 @@ public class RecruitController {
 	@RequestMapping("/ste/getApplymentHistory")
 	public List<Map<String,Object>>getApplymentHistory(Integer applymentid){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		Map<String,Object> map=recruitService.getSelfLatestApplyment(userinfo.getUserid());
-		return recruitService.getApplymentHistory((Integer)map.get("applymentid"));
+		List<Map<String,Object>> result=new ArrayList<Map<String,Object>>();
+		try{
+			Map<String,Object> map=recruitService.getSelfLatestApplyment(userinfo.getUserid());
+			result=recruitService.getApplymentHistory((Integer)map.get("applymentid"));
+		}catch(Exception e){
+			result=new ArrayList<Map<String,Object>>();
+			return result;
+		}
+		return result;
 	}
 
 	//http://localhost/hr/getApplymentListHRChecking
@@ -241,10 +248,12 @@ public class RecruitController {
 		List<Map<String,Object>> list1=recruitService.getApplymentListByState(5);
 		List<Map<String,Object>> list2=recruitService.getApplymentListByState(10);
 		List<Map<String,Object>> list3=recruitService.getApplymentListByState(11);
+		List<Map<String,Object>> list4=recruitService.getApplymentListByState(12);
 		List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
 		list.addAll(list1);
 		list.addAll(list2);
 		list.addAll(list3);
+		list.addAll(list4);
 		return list;
 	}
 
@@ -297,11 +306,18 @@ public class RecruitController {
 		return recruitService.updateApplyment(applymentid, 10, userinfo.getUserid());
 	}
 
+	//http://localhost/ste/reject
+	@RequestMapping("/ste/reject")
+	public int reject(Integer applymentid){
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		return recruitService.updateApplyment(applymentid, 11, userinfo.getUserid());
+	}
+
 	//http://localhost/ste/cancel
 	@RequestMapping("/ste/cancel")
 	public int cancel(Integer applymentid){
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		return recruitService.updateApplyment(applymentid, 11, userinfo.getUserid());
+		return recruitService.updateApplyment(applymentid, 0, userinfo.getUserid());
 	}
 
 	//http://localhost/hr/terminate

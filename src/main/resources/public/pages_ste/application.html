@@ -90,7 +90,7 @@ desired effect
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <img src="https://robohash.org/default/bgset_bg2" class="myimg img-circle" alt="User Image">
+                        <img src="" class="myimg img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
@@ -140,14 +140,14 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="https://robohash.org/default/bgset_bg2" class="myimg user-image" alt="User Image">
+              <img src="" class="myimg user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span id="myName1" class="hidden-xs">Default User</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="https://robohash.org/default/bgset_bg2" class="myimg img-circle" alt="User Image">
+                <img src="" class="myimg img-circle" alt="User Image">
 
                 <p>
                   <p id="user_pos">User - Position</p>
@@ -197,7 +197,7 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="https://robohash.org/default/bgset_bg2" class="myimg img-circle" alt="User Image">
+          <img src="" class="myimg img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p id="myName2">Default User</p>
@@ -277,12 +277,13 @@ desired effect
 
     <!-- Main content -->
     <section class="content">
+	<input type="hidden" id="aid"/>
+   <!-- ########################## -->
 
       <!-- Your Page Content Here -->
       <div class="row">
         <div class="col-md-12">
-          <!-- The time line -->
-          <ul class="timeline">
+          <ul id="mytimeline" class="timeline">
             <!-- timeline time label -->
             <li class="time-label">
                   <span class="bg-red">
@@ -292,7 +293,7 @@ desired effect
             <!-- /.timeline-label -->
             <!-- timeline item -->
             <li>
-              <i class="fa fa-plus-circle bg-blue"></i>
+              <i class="fa fa-plus-circle bg-coral"></i>
 
               <div class="timeline-item">
                 <span class="time"><i class="fa fa-clock-o"></i> 12:05</span>
@@ -417,9 +418,40 @@ desired effect
             </li>
           </ul>
         </div>
-        <!-- /.col -->
       </div>
-
+	
+	
+	 <!-- ########################## -->
+	 	
+	 	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+					aria-labelledby="myModalLabel">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<h4 class="modal-title" id="myModalLabel">Details</h4>
+							</div>
+							<div class="modal-body">
+								<div class="form-horizontal" id="modalContent">
+								
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-default"
+									data-dismiss="modal">Close</button>
+								<!-- <button type="button" class="btn btn-primary" id="updatebtn" onclick="updatePerformance()">Save
+									changes</button> -->
+							</div>
+							<input type="hidden" id="a_id" />
+						</div>
+					</div>
+				</div>
+	 
+	 <!-- ####################### -->
+	 
     </section>
     <!-- /.content -->
   </div>
@@ -523,6 +555,7 @@ desired effect
 
 <script src="/js/date.js"></script>
 <script src="/js/validate.js"></script>
+<script src="/js/timeline.js"></script>
 <script src="/js/ste_application.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
