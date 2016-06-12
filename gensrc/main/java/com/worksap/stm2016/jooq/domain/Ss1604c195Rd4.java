@@ -11,6 +11,7 @@ import com.worksap.stm2016.jooq.domain.tables.InfoAccount;
 import com.worksap.stm2016.jooq.domain.tables.InfoDepartment;
 import com.worksap.stm2016.jooq.domain.tables.InfoFte;
 import com.worksap.stm2016.jooq.domain.tables.InfoSte;
+import com.worksap.stm2016.jooq.domain.tables.NotifyPointer;
 import com.worksap.stm2016.jooq.domain.tables.RecruitAgency;
 import com.worksap.stm2016.jooq.domain.tables.RecruitApplyment;
 import com.worksap.stm2016.jooq.domain.tables.RecruitApplymentLog;
@@ -56,7 +57,7 @@ import org.jooq.impl.SchemaImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class Ss1604c195Rd4 extends SchemaImpl {
 
-	private static final long serialVersionUID = 183212135;
+	private static final long serialVersionUID = 75095992;
 
 	/**
 	 * The reference instance of <code>ss1604c195_rd4</code>
@@ -86,6 +87,7 @@ public class Ss1604c195Rd4 extends SchemaImpl {
 			Sequences.COMMENTS_ID_SEQ,
 			Sequences.DEPARTMENT_DEPARTMENTID_SEQ,
 			Sequences.FTE_FTEID_SEQ,
+			Sequences.NOTIFY_POINTER_ID_SEQ,
 			Sequences.POSTS_ID_SEQ,
 			Sequences.RECRUIT_AGENCY_AGENCYID_SEQ,
 			Sequences.RECRUIT_APPLYMENT_APPLYMENTID_SEQ,
@@ -119,6 +121,7 @@ public class Ss1604c195Rd4 extends SchemaImpl {
 			InfoDepartment.INFO_DEPARTMENT,
 			InfoFte.INFO_FTE,
 			InfoSte.INFO_STE,
+			NotifyPointer.NOTIFY_POINTER,
 			RecruitAgency.RECRUIT_AGENCY,
 			RecruitApplyment.RECRUIT_APPLYMENT,
 			RecruitApplymentLog.RECRUIT_APPLYMENT_LOG,

@@ -243,6 +243,7 @@ public class RecruitService
 		//cancel all the past applyment
 		dsl.update(RECRUIT_APPLYMENT)
 			.set(RECRUIT_APPLYMENT.STATE,0)
+			.where(RECRUIT_APPLYMENT.STEID.eq(steid))
 			.execute();
 		Timestamp createdAt=new Timestamp(System.currentTimeMillis());
 		Timestamp updatedAt=createdAt;

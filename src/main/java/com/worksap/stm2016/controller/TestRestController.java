@@ -1,7 +1,7 @@
 package com.worksap.stm2016.controller;
 
-import java.util.Date;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -12,6 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
+
+import com.worksap.stm2016.util.HttpUtil;
 
 @RestController
 public class TestRestController {
@@ -20,17 +24,21 @@ public class TestRestController {
 	private JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public TestRestController(JdbcTemplate jdbcTemplate) {
+    public TestRestController(JdbcTemplate jdbcTemplate){
         this.jdbcTemplate = jdbcTemplate;
     }
     
     @RequestMapping("/xxx")
-    public String index() {
+    public String index(){
+		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+
         return "Greetings from Spring Boot!";
     }
     
     @RequestMapping("/yyy")
-    public List<String> yyyy() {
+    public List<String> yyyy(){
+		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+
     	List<String> list=new ArrayList<String>();
     	list.add("sdfasfd");
     	list.add("三法师");
@@ -38,7 +46,9 @@ public class TestRestController {
     }
     
     @RequestMapping("/zzz")
-    public List<Map<String,Object>> zzz() {
+    public List<Map<String,Object>> zzz(){
+		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+
     	List<Map<String,Object>> list=new ArrayList<Map<String,Object>>();
     	Map<String,Object> map=new HashMap<String,Object>();
     	map.put("a", "aaaa");
@@ -53,7 +63,9 @@ public class TestRestController {
     }
     
     @RequestMapping("/ttt")
-    public String asssd() {
+    public String asssd(){
+		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+
     	String str= jdbcTemplate.queryForObject("select password from tbl_account where email=?",new Object[]{"wang_xiaox@worksap.co.jp"}, String.class);
 		System.out.println(str);	
     	return str;

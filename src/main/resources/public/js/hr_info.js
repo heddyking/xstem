@@ -192,7 +192,11 @@ function setData(msg){
 	$("#inputTelephone").val(msg.telephone);
 	$("#Phone").val(msg.phone);
 	$("#inputLocation").val(msg.location);
-	$("#inputSkills").val(eval("("+msg.skills+")")).select2();
+
+	try{
+	    $("#inputSkills").val(eval("("+msg.skills+")")).select2();
+	}catch(exp){}
+
 	$("#inputExperience").val(msg.experiences);
 
 	$("#resume_download").attr("href",msg.resume_url);

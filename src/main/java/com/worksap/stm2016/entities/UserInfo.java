@@ -80,6 +80,11 @@ public class UserInfo implements Principal{
 		map.put("departmentname",departmentname);
 		return map;
 	}
+	
+	@Override
+	public String toString(){
+		return toMap().toString();
+	}
 
 	public String getPositionname() {
 		return positionname;

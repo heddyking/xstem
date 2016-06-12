@@ -45,5 +45,8 @@ public class ApplicationTests
 		Timestamp ts=Timestamp.valueOf("2016-06-02 16:08:00");
 		System.out.println(ts.toLocaleString());
 		System.out.println(Role.ADMIN.toString());
+		Timestamp updatedat=Timestamp.valueOf("2016-12-01 00:00:00");
+		updatedat.setMonth(updatedat.getMonth()+1);
+		System.out.println(updatedat.toString());
 	}
 }

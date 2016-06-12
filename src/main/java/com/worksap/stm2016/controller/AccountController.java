@@ -9,9 +9,12 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.worksap.stm2016.entities.UserInfo;
 import com.worksap.stm2016.service.AccountService;
+import com.worksap.stm2016.util.HttpUtil;
 
 @RestController
 public class AccountController {
@@ -23,6 +26,8 @@ public class AccountController {
 	//http://localhost/regist?email=testemail323@qq.com&name=testname324&password=123&
 	@RequestMapping(value = "/regist", method = RequestMethod.GET)
 	public Integer regist(String email,String name, String password){
+		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+		
 		return accountService.regist(email, name, password);
 	}
 

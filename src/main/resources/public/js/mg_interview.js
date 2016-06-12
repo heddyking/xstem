@@ -48,8 +48,12 @@ function getInterviews(){
 			if(msg[k].skill_req3) skillArr_req.push(msg[k].skill_req3);
 			if(msg[k].skill_req4) skillArr_req.push(msg[k].skill_req4);
 			if(msg[k].skill_req5) skillArr_req.push(msg[k].skill_req5);
-			
-			var skillArr=eval("("+msg[k].skills+")");
+
+			var skillArr;
+			try{
+			    skillArr=eval("("+msg[k].skills+")");
+			}catch(exp){}
+
 			msg[k].skillArr=skillArr;
 			msg[k].skills="";
 			for(var i=0;i<skillArr.length;i++){

@@ -59,6 +59,11 @@ public class Sequences {
 	public static final Sequence<Long> FTE_FTEID_SEQ = new SequenceImpl<Long>("fte_fteid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
+	 * The sequence <code>ss1604c195_rd4.notify_pointer_ID_seq</code>
+	 */
+	public static final Sequence<Long> NOTIFY_POINTER_ID_SEQ = new SequenceImpl<Long>("notify_pointer_ID_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+
+	/**
 	 * The sequence <code>ss1604c195_rd4.POSTS_ID_seq</code>
 	 */
 	public static final Sequence<Long> POSTS_ID_SEQ = new SequenceImpl<Long>("POSTS_ID_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));

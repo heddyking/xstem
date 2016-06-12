@@ -11,6 +11,7 @@ import com.worksap.stm2016.jooq.domain.tables.InfoAccount;
 import com.worksap.stm2016.jooq.domain.tables.InfoDepartment;
 import com.worksap.stm2016.jooq.domain.tables.InfoFte;
 import com.worksap.stm2016.jooq.domain.tables.InfoSte;
+import com.worksap.stm2016.jooq.domain.tables.NotifyPointer;
 import com.worksap.stm2016.jooq.domain.tables.RecruitAgency;
 import com.worksap.stm2016.jooq.domain.tables.RecruitApplyment;
 import com.worksap.stm2016.jooq.domain.tables.RecruitApplymentLog;
@@ -33,6 +34,7 @@ import com.worksap.stm2016.jooq.domain.tables.records.InfoAccountRecord;
 import com.worksap.stm2016.jooq.domain.tables.records.InfoDepartmentRecord;
 import com.worksap.stm2016.jooq.domain.tables.records.InfoFteRecord;
 import com.worksap.stm2016.jooq.domain.tables.records.InfoSteRecord;
+import com.worksap.stm2016.jooq.domain.tables.records.NotifyPointerRecord;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitAgencyRecord;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitApplymentLogRecord;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitApplymentRecord;
@@ -82,6 +84,7 @@ public class Keys {
 	public static final Identity<InfoDepartmentRecord, Integer> IDENTITY_INFO_DEPARTMENT = Identities0.IDENTITY_INFO_DEPARTMENT;
 	public static final Identity<InfoFteRecord, Integer> IDENTITY_INFO_FTE = Identities0.IDENTITY_INFO_FTE;
 	public static final Identity<InfoSteRecord, Integer> IDENTITY_INFO_STE = Identities0.IDENTITY_INFO_STE;
+	public static final Identity<NotifyPointerRecord, Integer> IDENTITY_NOTIFY_POINTER = Identities0.IDENTITY_NOTIFY_POINTER;
 	public static final Identity<RecruitAgencyRecord, Integer> IDENTITY_RECRUIT_AGENCY = Identities0.IDENTITY_RECRUIT_AGENCY;
 	public static final Identity<RecruitApplymentRecord, Integer> IDENTITY_RECRUIT_APPLYMENT = Identities0.IDENTITY_RECRUIT_APPLYMENT;
 	public static final Identity<RecruitApplymentLogRecord, Integer> IDENTITY_RECRUIT_APPLYMENT_LOG = Identities0.IDENTITY_RECRUIT_APPLYMENT_LOG;
@@ -110,6 +113,7 @@ public class Keys {
 	public static final UniqueKey<InfoDepartmentRecord> INFO_DEPARTMENT_PKEY = UniqueKeys0.INFO_DEPARTMENT_PKEY;
 	public static final UniqueKey<InfoFteRecord> INFO_FTE_PKEY = UniqueKeys0.INFO_FTE_PKEY;
 	public static final UniqueKey<InfoSteRecord> INFO_STE_PKEY = UniqueKeys0.INFO_STE_PKEY;
+	public static final UniqueKey<NotifyPointerRecord> NOTIFY_POINTER_PKEY = UniqueKeys0.NOTIFY_POINTER_PKEY;
 	public static final UniqueKey<RecruitAgencyRecord> RECRUIT_AGENCY_PKEY = UniqueKeys0.RECRUIT_AGENCY_PKEY;
 	public static final UniqueKey<RecruitApplymentRecord> RECRUIT_APPLYMENT_PKEY = UniqueKeys0.RECRUIT_APPLYMENT_PKEY;
 	public static final UniqueKey<RecruitApplymentLogRecord> RECRUIT_APPLYMENT_LOG_PKEY = UniqueKeys0.RECRUIT_APPLYMENT_LOG_PKEY;
@@ -144,6 +148,7 @@ public class Keys {
 		public static Identity<InfoDepartmentRecord, Integer> IDENTITY_INFO_DEPARTMENT = createIdentity(InfoDepartment.INFO_DEPARTMENT, InfoDepartment.INFO_DEPARTMENT.DEPARTMENTID);
 		public static Identity<InfoFteRecord, Integer> IDENTITY_INFO_FTE = createIdentity(InfoFte.INFO_FTE, InfoFte.INFO_FTE.FTEID);
 		public static Identity<InfoSteRecord, Integer> IDENTITY_INFO_STE = createIdentity(InfoSte.INFO_STE, InfoSte.INFO_STE.STEID);
+		public static Identity<NotifyPointerRecord, Integer> IDENTITY_NOTIFY_POINTER = createIdentity(NotifyPointer.NOTIFY_POINTER, NotifyPointer.NOTIFY_POINTER.ID);
 		public static Identity<RecruitAgencyRecord, Integer> IDENTITY_RECRUIT_AGENCY = createIdentity(RecruitAgency.RECRUIT_AGENCY, RecruitAgency.RECRUIT_AGENCY.AGENCYID);
 		public static Identity<RecruitApplymentRecord, Integer> IDENTITY_RECRUIT_APPLYMENT = createIdentity(RecruitApplyment.RECRUIT_APPLYMENT, RecruitApplyment.RECRUIT_APPLYMENT.APPLYMENTID);
 		public static Identity<RecruitApplymentLogRecord, Integer> IDENTITY_RECRUIT_APPLYMENT_LOG = createIdentity(RecruitApplymentLog.RECRUIT_APPLYMENT_LOG, RecruitApplymentLog.RECRUIT_APPLYMENT_LOG.ID);
@@ -170,6 +175,7 @@ public class Keys {
 		public static final UniqueKey<InfoDepartmentRecord> INFO_DEPARTMENT_PKEY = createUniqueKey(InfoDepartment.INFO_DEPARTMENT, InfoDepartment.INFO_DEPARTMENT.DEPARTMENTID);
 		public static final UniqueKey<InfoFteRecord> INFO_FTE_PKEY = createUniqueKey(InfoFte.INFO_FTE, InfoFte.INFO_FTE.FTEID);
 		public static final UniqueKey<InfoSteRecord> INFO_STE_PKEY = createUniqueKey(InfoSte.INFO_STE, InfoSte.INFO_STE.STEID);
+		public static final UniqueKey<NotifyPointerRecord> NOTIFY_POINTER_PKEY = createUniqueKey(NotifyPointer.NOTIFY_POINTER, NotifyPointer.NOTIFY_POINTER.ID);
 		public static final UniqueKey<RecruitAgencyRecord> RECRUIT_AGENCY_PKEY = createUniqueKey(RecruitAgency.RECRUIT_AGENCY, RecruitAgency.RECRUIT_AGENCY.AGENCYID);
 		public static final UniqueKey<RecruitApplymentRecord> RECRUIT_APPLYMENT_PKEY = createUniqueKey(RecruitApplyment.RECRUIT_APPLYMENT, RecruitApplyment.RECRUIT_APPLYMENT.APPLYMENTID);
 		public static final UniqueKey<RecruitApplymentLogRecord> RECRUIT_APPLYMENT_LOG_PKEY = createUniqueKey(RecruitApplymentLog.RECRUIT_APPLYMENT_LOG, RecruitApplymentLog.RECRUIT_APPLYMENT_LOG.ID);

@@ -11,6 +11,7 @@ import com.worksap.stm2016.jooq.domain.tables.InfoAccount;
 import com.worksap.stm2016.jooq.domain.tables.InfoDepartment;
 import com.worksap.stm2016.jooq.domain.tables.InfoFte;
 import com.worksap.stm2016.jooq.domain.tables.InfoSte;
+import com.worksap.stm2016.jooq.domain.tables.NotifyPointer;
 import com.worksap.stm2016.jooq.domain.tables.RecruitAgency;
 import com.worksap.stm2016.jooq.domain.tables.RecruitApplyment;
 import com.worksap.stm2016.jooq.domain.tables.RecruitApplymentLog;
@@ -82,6 +83,11 @@ public class Tables {
 	 * The table ss1604c195_rd4.info_ste
 	 */
 	public static final InfoSte INFO_STE = com.worksap.stm2016.jooq.domain.tables.InfoSte.INFO_STE;
+
+	/**
+	 * The table ss1604c195_rd4.notify_pointer
+	 */
+	public static final NotifyPointer NOTIFY_POINTER = com.worksap.stm2016.jooq.domain.tables.NotifyPointer.NOTIFY_POINTER;
 
 	/**
 	 * The table ss1604c195_rd4.recruit_agency

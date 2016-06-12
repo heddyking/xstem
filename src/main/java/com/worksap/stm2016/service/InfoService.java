@@ -115,9 +115,17 @@ public class InfoService
 		Integer positionid=(Integer) map.get("positionid");
 		
 		//update info_ste
-		dsl.update(INFO_STE).set(INFO_STE.DEPARTMENTID,departmentid).set(INFO_STE.POSITIONID,positionid).execute();
+		dsl.update(INFO_STE)
+			.set(INFO_STE.DEPARTMENTID,departmentid)
+			.set(INFO_STE.POSITIONID,positionid)
+			.where(INFO_STE.STEID.eq(steid))
+			.execute();
 		//update state
-		dsl.update(RECRUIT_APPLYMENT).set(RECRUIT_APPLYMENT.STATE,12).where(RECRUIT_APPLYMENT.STATE.eq(10)).execute();
+		dsl.update(RECRUIT_APPLYMENT)
+			.set(RECRUIT_APPLYMENT.STATE,12)
+			.where(RECRUIT_APPLYMENT.STATE.eq(10))
+			.and(RECRUIT_APPLYMENT.STEID.eq(steid))
+			.execute();
 		
 		return dsl.update(INFO_STE)
 				.set(INFO_STE.CONTRACT_URL,contract_url)

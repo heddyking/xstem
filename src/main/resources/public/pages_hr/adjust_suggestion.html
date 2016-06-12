@@ -88,8 +88,8 @@ desired effect
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
-          <li class="dropdown messages-menu">
-            <!-- Menu toggle button -->
+          <!-- <li class="dropdown messages-menu">
+            Menu toggle button
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
               <span class="label label-success">4</span>
@@ -97,30 +97,30 @@ desired effect
             <ul class="dropdown-menu">
               <li class="header">You have 4 messages</li>
               <li>
-                <!-- inner menu: contains the messages -->
+                inner menu: contains the messages
                 <ul class="menu">
-                  <li><!-- start message -->
+                  <li>start message
                     <a href="#">
                       <div class="pull-left">
-                        <!-- User Image -->
+                        User Image
                         <img src="" class="myimg img-circle" alt="User Image">
                       </div>
-                      <!-- Message title and timestamp -->
+                      Message title and timestamp
                       <h4>
                         Support Team
                         <small><i class="fa fa-clock-o"></i> 5 mins</small>
                       </h4>
-                      <!-- The message -->
+                      The message
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
-                  <!-- end message -->
+                  end message
                 </ul>
-                <!-- /.menu -->
+                /.menu
               </li>
               <li class="footer"><a href="#">See All Messages</a></li>
             </ul>
-          </li>
+          </li> -->
           <!-- /.messages-menu -->
 
           <!-- Notifications Menu -->
@@ -128,22 +128,22 @@ desired effect
             <!-- Menu toggle button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
+              <span id="notify_num" class="label label-warning"></span>
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
+              <li id="notify_header" class="header">You have 0 notifications</li>
               <li>
                 <!-- Inner Menu: contains the notifications -->
                 <ul class="menu">
                   <li><!-- start notification -->
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    <a id="notify_summary" href="/pages_hr/index.html">
+                      <i class="fa fa-users text-aqua"></i> 0 events waiting to be handled
                     </a>
                   </li>
                   <!-- end notification -->
                 </ul>
               </li>
-              <li class="footer"><a href="#">View all</a></li>
+              <li class="footer"><a href="/pages_hr/index.html">View all</a></li>
             </ul>
           </li>
           <!-- Tasks Menu -->
@@ -481,11 +481,13 @@ desired effect
 <!-- <script src="../plugins/datatables/dataTables.editor.min.js"></script> -->
 <!-- AdminLTE App -->
 <script src="../dist/js/app.min.js"></script><script src="/js/ajax.js"></script><script src="/js/reset.js"></script>
-
+<script src="/js/notify.js"></script>
 
 
 <script>
   $(function(){
+	  notify.getNotifyHR(true);
+	  
       var table = $('#example').DataTable({
       "order": [[ 0, "desc" ]],
       "paging": true,
