@@ -30,52 +30,52 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class NotifyPointerRecord extends UpdatableRecordImpl<NotifyPointerRecord> implements Record5<Integer, Integer, Integer, Integer, Timestamp> {
 
-	private static final long serialVersionUID = 705896977;
+	private static final long serialVersionUID = 831770057;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.notify_pointer.ID</code>.
+	 * Setter for <code>ss1604c195_rd2.notify_pointer.ID</code>.
 	 */
 	public void setId(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.notify_pointer.ID</code>.
+	 * Getter for <code>ss1604c195_rd2.notify_pointer.ID</code>.
 	 */
 	public Integer getId() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.notify_pointer.role</code>.
+	 * Setter for <code>ss1604c195_rd2.notify_pointer.role</code>.
 	 */
 	public void setRole(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.notify_pointer.role</code>.
+	 * Getter for <code>ss1604c195_rd2.notify_pointer.role</code>.
 	 */
 	public Integer getRole() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.notify_pointer.ref_id</code>.
+	 * Setter for <code>ss1604c195_rd2.notify_pointer.ref_id</code>.
 	 */
 	public void setRefId(Integer value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.notify_pointer.ref_id</code>.
+	 * Getter for <code>ss1604c195_rd2.notify_pointer.ref_id</code>.
 	 */
 	public Integer getRefId() {
 		return (Integer) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.notify_pointer.type</code>. 1- inquiry ste applycation
+	 * Setter for <code>ss1604c195_rd2.notify_pointer.type</code>. 1- inquiry ste applycation
 2- inquiry ste salary
 3- inqury hr salary
 	 */
@@ -84,7 +84,7 @@ public class NotifyPointerRecord extends UpdatableRecordImpl<NotifyPointerRecord
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.notify_pointer.type</code>. 1- inquiry ste applycation
+	 * Getter for <code>ss1604c195_rd2.notify_pointer.type</code>. 1- inquiry ste applycation
 2- inquiry ste salary
 3- inqury hr salary
 	 */
@@ -93,14 +93,14 @@ public class NotifyPointerRecord extends UpdatableRecordImpl<NotifyPointerRecord
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.notify_pointer.inquiry_time</code>.
+	 * Setter for <code>ss1604c195_rd2.notify_pointer.inquiry_time</code>.
 	 */
 	public void setInquiryTime(Timestamp value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.notify_pointer.inquiry_time</code>.
+	 * Getter for <code>ss1604c195_rd2.notify_pointer.inquiry_time</code>.
 	 */
 	public Timestamp getInquiryTime() {
 		return (Timestamp) getValue(4);

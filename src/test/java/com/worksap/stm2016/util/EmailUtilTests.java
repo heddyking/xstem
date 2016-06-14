@@ -19,7 +19,7 @@ public class EmailUtilTests {
 	public void blank(){
 	}
 	
-	@Test
+//	@Test
     public void sendEmail(){
 		String title="WAP Interview Reminder";
 		String msg="Hi @STE:\n\n"+

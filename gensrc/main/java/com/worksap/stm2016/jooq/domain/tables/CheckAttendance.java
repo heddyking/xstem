@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.CheckAttendanceRecord;
 
 import java.sql.Date;
@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CheckAttendance extends TableImpl<CheckAttendanceRecord> {
 
-	private static final long serialVersionUID = 341697632;
+	private static final long serialVersionUID = 1071878364;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.check_attendance</code>
+	 * The reference instance of <code>ss1604c195_rd2.check_attendance</code>
 	 */
 	public static final CheckAttendance CHECK_ATTENDANCE = new CheckAttendance();
 
@@ -52,55 +52,55 @@ public class CheckAttendance extends TableImpl<CheckAttendanceRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_attendance.attendanceid</code>.
+	 * The column <code>ss1604c195_rd2.check_attendance.attendanceid</code>.
 	 */
 	public final TableField<CheckAttendanceRecord, Integer> ATTENDANCEID = createField("attendanceid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_attendance.steid</code>.
+	 * The column <code>ss1604c195_rd2.check_attendance.steid</code>.
 	 */
 	public final TableField<CheckAttendanceRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_attendance.date</code>.
+	 * The column <code>ss1604c195_rd2.check_attendance.date</code>.
 	 */
 	public final TableField<CheckAttendanceRecord, Date> DATE = createField("date", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_attendance.hours</code>.
+	 * The column <code>ss1604c195_rd2.check_attendance.hours</code>.
 	 */
 	public final TableField<CheckAttendanceRecord, Integer> HOURS = createField("hours", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_attendance.state</code>. 1. wait check
+	 * The column <code>ss1604c195_rd2.check_attendance.state</code>. 1. wait check
 2. checked
 	 */
 	public final TableField<CheckAttendanceRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "1. wait check\r\n2. checked");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_attendance.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.check_attendance.updatedby</code>.
 	 */
 	public final TableField<CheckAttendanceRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_attendance.createdat</code>.
+	 * The column <code>ss1604c195_rd2.check_attendance.createdat</code>.
 	 */
 	public final TableField<CheckAttendanceRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_attendance.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.check_attendance.updatedat</code>.
 	 */
 	public final TableField<CheckAttendanceRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.check_attendance</code> table reference
+	 * Create a <code>ss1604c195_rd2.check_attendance</code> table reference
 	 */
 	public CheckAttendance() {
 		this("check_attendance", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.check_attendance</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.check_attendance</code> table reference
 	 */
 	public CheckAttendance(String alias) {
 		this(alias, CHECK_ATTENDANCE);
@@ -111,7 +111,7 @@ public class CheckAttendance extends TableImpl<CheckAttendanceRecord> {
 	}
 
 	private CheckAttendance(String alias, Table<CheckAttendanceRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

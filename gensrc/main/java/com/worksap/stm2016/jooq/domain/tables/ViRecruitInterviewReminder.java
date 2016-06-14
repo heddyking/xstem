@@ -4,7 +4,7 @@
 package com.worksap.stm2016.jooq.domain.tables;
 
 
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.ViRecruitInterviewReminderRecord;
 
 import java.sql.Date;
@@ -31,10 +31,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViRecruitInterviewReminder extends TableImpl<ViRecruitInterviewReminderRecord> {
 
-	private static final long serialVersionUID = 642417981;
+	private static final long serialVersionUID = 656778049;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.vi_recruit_interview_reminder</code>
+	 * The reference instance of <code>ss1604c195_rd2.vi_recruit_interview_reminder</code>
 	 */
 	public static final ViRecruitInterviewReminder VI_RECRUIT_INTERVIEW_REMINDER = new ViRecruitInterviewReminder();
 
@@ -47,194 +47,194 @@ public class ViRecruitInterviewReminder extends TableImpl<ViRecruitInterviewRemi
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.interviewid</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.interviewid</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Integer> INTERVIEWID = createField("interviewid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.endtime</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.endtime</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Timestamp> ENDTIME = createField("endtime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.location</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.location</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> LOCATION = createField("location", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.contact_person</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.contact_person</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> CONTACT_PERSON = createField("contact_person", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.contact_phone</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.contact_phone</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> CONTACT_PHONE = createField("contact_phone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.replenish</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.replenish</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> REPLENISH = createField("replenish", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.applymentid</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.applymentid</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Integer> APPLYMENTID = createField("applymentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.starttime</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.starttime</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Timestamp> STARTTIME = createField("starttime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.state</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.state</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.createdat</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.createdat</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.updatedat</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.updatedby</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.positionname</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.positionname</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> POSITIONNAME = createField("positionname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.number</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.number</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Integer> NUMBER = createField("number", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.location_req</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.location_req</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> LOCATION_REQ = createField("location_req", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.date_req</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.date_req</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Date> DATE_REQ = createField("date_req", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.duration_req</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.duration_req</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Integer> DURATION_REQ = createField("duration_req", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req1</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req1</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> SKILL_REQ1 = createField("skill_req1", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req2</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req2</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> SKILL_REQ2 = createField("skill_req2", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req3</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req3</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> SKILL_REQ3 = createField("skill_req3", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req4</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req4</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> SKILL_REQ4 = createField("skill_req4", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req5</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req5</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> SKILL_REQ5 = createField("skill_req5", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.description</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.description</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.departmentid</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.departmentid</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Integer> DEPARTMENTID = createField("departmentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.departmentname</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.departmentname</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> DEPARTMENTNAME = createField("departmentname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.parent_departmentid</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.parent_departmentid</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Integer> PARENT_DEPARTMENTID = createField("parent_departmentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.name</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.name</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.birthday</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.birthday</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Date> BIRTHDAY = createField("birthday", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.gender</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.gender</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, Boolean> GENDER = createField("gender", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.email</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.email</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> EMAIL = createField("email", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.email_self</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.email_self</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> EMAIL_SELF = createField("email_self", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.phone</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.phone</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> PHONE = createField("phone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.telephone</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.telephone</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> TELEPHONE = createField("telephone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.skills</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.skills</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> SKILLS = createField("skills", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.experiences</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.experiences</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> EXPERIENCES = createField("experiences", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_reminder.resume_url</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_reminder.resume_url</code>.
 	 */
 	public final TableField<ViRecruitInterviewReminderRecord, String> RESUME_URL = createField("resume_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.vi_recruit_interview_reminder</code> table reference
+	 * Create a <code>ss1604c195_rd2.vi_recruit_interview_reminder</code> table reference
 	 */
 	public ViRecruitInterviewReminder() {
 		this("vi_recruit_interview_reminder", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.vi_recruit_interview_reminder</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.vi_recruit_interview_reminder</code> table reference
 	 */
 	public ViRecruitInterviewReminder(String alias) {
 		this(alias, VI_RECRUIT_INTERVIEW_REMINDER);
@@ -245,7 +245,7 @@ public class ViRecruitInterviewReminder extends TableImpl<ViRecruitInterviewRemi
 	}
 
 	private ViRecruitInterviewReminder(String alias, Table<ViRecruitInterviewReminderRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

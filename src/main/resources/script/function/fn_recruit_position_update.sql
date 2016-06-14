@@ -2,7 +2,7 @@ CREATE OR REPLACE FUNCTION fn_recruit_position_update()
 RETURNS trigger AS  
 $$  
 BEGIN  
-    INSERT INTO ss1604c195_rd4.recruit_position_log(
+    INSERT INTO ss1604c195_rd2.recruit_position_log(
             positionname, "number", location_req, date_req, duration_req, 
             skill_req1, skill_req2, skill_req3, skill_req4, skill_req5, createdby, 
             updatedby, createdat, updatedat, departmentid, positionid, description,isvalid)

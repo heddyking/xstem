@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.CheckPerformanceRecord;
 
 import java.sql.Date;
@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CheckPerformance extends TableImpl<CheckPerformanceRecord> {
 
-	private static final long serialVersionUID = 472606543;
+	private static final long serialVersionUID = -252015469;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.check_performance</code>
+	 * The reference instance of <code>ss1604c195_rd2.check_performance</code>
 	 */
 	public static final CheckPerformance CHECK_PERFORMANCE = new CheckPerformance();
 
@@ -52,65 +52,65 @@ public class CheckPerformance extends TableImpl<CheckPerformanceRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.performanceid</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.performanceid</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Integer> PERFORMANCEID = createField("performanceid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.steid</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.steid</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.week_lastday</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.week_lastday</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Date> WEEK_LASTDAY = createField("week_lastday", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.hours</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.hours</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Integer> HOURS = createField("hours", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.description</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.description</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.state</code>. 1-wait check
+	 * The column <code>ss1604c195_rd2.check_performance.state</code>. 1-wait check
 2-checked
 	 */
 	public final TableField<CheckPerformanceRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "1-wait check\r\n2-checked");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.updatedby</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.createdat</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.createdat</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.updatedat</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_performance.week_firstday</code>.
+	 * The column <code>ss1604c195_rd2.check_performance.week_firstday</code>.
 	 */
 	public final TableField<CheckPerformanceRecord, Date> WEEK_FIRSTDAY = createField("week_firstday", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.check_performance</code> table reference
+	 * Create a <code>ss1604c195_rd2.check_performance</code> table reference
 	 */
 	public CheckPerformance() {
 		this("check_performance", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.check_performance</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.check_performance</code> table reference
 	 */
 	public CheckPerformance(String alias) {
 		this(alias, CHECK_PERFORMANCE);
@@ -121,7 +121,7 @@ public class CheckPerformance extends TableImpl<CheckPerformanceRecord> {
 	}
 
 	private CheckPerformance(String alias, Table<CheckPerformanceRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

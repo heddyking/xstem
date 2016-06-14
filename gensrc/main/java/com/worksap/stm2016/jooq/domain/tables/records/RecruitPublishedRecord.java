@@ -28,45 +28,45 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPublishedRecord extends UpdatableRecordImpl<RecruitPublishedRecord> implements Record3<Integer, Integer, Integer> {
 
-	private static final long serialVersionUID = -1003901545;
+	private static final long serialVersionUID = 752866647;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_published.publishedid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_published.publishedid</code>.
 	 */
 	public void setPublishedid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_published.publishedid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_published.publishedid</code>.
 	 */
 	public Integer getPublishedid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_published.poolid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_published.poolid</code>.
 	 */
 	public void setPoolid(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_published.poolid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_published.poolid</code>.
 	 */
 	public Integer getPoolid() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_published.agencyid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_published.agencyid</code>.
 	 */
 	public void setAgencyid(Integer value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_published.agencyid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_published.agencyid</code>.
 	 */
 	public Integer getAgencyid() {
 		return (Integer) getValue(2);

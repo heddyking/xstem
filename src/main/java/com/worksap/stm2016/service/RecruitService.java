@@ -441,8 +441,12 @@ public class RecruitService
 				.replace("@PHONE", contact_phone)
 				.replace("@REPLENISH", replenish);
 		
-		new Thread(() -> {EmailUtil.sendEmail(mgEmail, Constants.email_title, mg_msg);}).start();
-		new Thread(() -> {EmailUtil.sendEmail(steEmail, Constants.email_title, ste_msg);}).start();
+		if(steSend){
+			new Thread(() -> {EmailUtil.sendEmail(steEmail, Constants.email_title, ste_msg);}).start();
+		}
+		if(mgSend) {
+			new Thread(() -> {EmailUtil.sendEmail(mgEmail, Constants.email_title, mg_msg);}).start();
+		}
 		
 		int id=dsl.insertInto(RECRUIT_INTERVIEW)
 				.set(RECRUIT_INTERVIEW.APPLYMENTID,applymentid)

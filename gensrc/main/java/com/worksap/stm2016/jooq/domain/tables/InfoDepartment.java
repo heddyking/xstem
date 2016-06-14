@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.InfoDepartmentRecord;
 
 import java.util.Arrays;
@@ -34,10 +34,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoDepartment extends TableImpl<InfoDepartmentRecord> {
 
-	private static final long serialVersionUID = -1000725352;
+	private static final long serialVersionUID = -697937762;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.info_department</code>
+	 * The reference instance of <code>ss1604c195_rd2.info_department</code>
 	 */
 	public static final InfoDepartment INFO_DEPARTMENT = new InfoDepartment();
 
@@ -50,29 +50,29 @@ public class InfoDepartment extends TableImpl<InfoDepartmentRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_department.departmentid</code>.
+	 * The column <code>ss1604c195_rd2.info_department.departmentid</code>.
 	 */
 	public final TableField<InfoDepartmentRecord, Integer> DEPARTMENTID = createField("departmentid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_department.departmentname</code>.
+	 * The column <code>ss1604c195_rd2.info_department.departmentname</code>.
 	 */
 	public final TableField<InfoDepartmentRecord, String> DEPARTMENTNAME = createField("departmentname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_department.parent_departmentid</code>.
+	 * The column <code>ss1604c195_rd2.info_department.parent_departmentid</code>.
 	 */
 	public final TableField<InfoDepartmentRecord, Integer> PARENT_DEPARTMENTID = createField("parent_departmentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.info_department</code> table reference
+	 * Create a <code>ss1604c195_rd2.info_department</code> table reference
 	 */
 	public InfoDepartment() {
 		this("info_department", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.info_department</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.info_department</code> table reference
 	 */
 	public InfoDepartment(String alias) {
 		this(alias, INFO_DEPARTMENT);
@@ -83,7 +83,7 @@ public class InfoDepartment extends TableImpl<InfoDepartmentRecord> {
 	}
 
 	private InfoDepartment(String alias, Table<InfoDepartmentRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

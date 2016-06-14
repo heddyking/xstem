@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitApplymentRecord;
 
 import java.sql.Timestamp;
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitApplyment extends TableImpl<RecruitApplymentRecord> {
 
-	private static final long serialVersionUID = -742177699;
+	private static final long serialVersionUID = 1450598319;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.recruit_applyment</code>
+	 * The reference instance of <code>ss1604c195_rd2.recruit_applyment</code>
 	 */
 	public static final RecruitApplyment RECRUIT_APPLYMENT = new RecruitApplyment();
 
@@ -51,17 +51,17 @@ public class RecruitApplyment extends TableImpl<RecruitApplymentRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment.steid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment.steid</code>.
 	 */
 	public final TableField<RecruitApplymentRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment.positionid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment.positionid</code>.
 	 */
 	public final TableField<RecruitApplymentRecord, Integer> POSITIONID = createField("positionid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment.state</code>. 0-self cancelled
+	 * The column <code>ss1604c195_rd2.recruit_applyment.state</code>. 0-self cancelled
 1- wait hr check
 2- wait mg check
 3- wait arrange interview
@@ -73,34 +73,34 @@ public class RecruitApplyment extends TableImpl<RecruitApplymentRecord> {
 	public final TableField<RecruitApplymentRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "0-self cancelled\r\n1- wait hr check\r\n2- wait mg check\r\n3- wait arrange interview\r\n4- interview\r\n5- pass\r\n6- fail\r\n");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment.updatedby</code>.
 	 */
 	public final TableField<RecruitApplymentRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment.createdat</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment.createdat</code>.
 	 */
 	public final TableField<RecruitApplymentRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment.updatedat</code>.
 	 */
 	public final TableField<RecruitApplymentRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment.applymentid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment.applymentid</code>.
 	 */
 	public final TableField<RecruitApplymentRecord, Integer> APPLYMENTID = createField("applymentid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.recruit_applyment</code> table reference
+	 * Create a <code>ss1604c195_rd2.recruit_applyment</code> table reference
 	 */
 	public RecruitApplyment() {
 		this("recruit_applyment", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.recruit_applyment</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.recruit_applyment</code> table reference
 	 */
 	public RecruitApplyment(String alias) {
 		this(alias, RECRUIT_APPLYMENT);
@@ -111,7 +111,7 @@ public class RecruitApplyment extends TableImpl<RecruitApplymentRecord> {
 	}
 
 	private RecruitApplyment(String alias, Table<RecruitApplymentRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

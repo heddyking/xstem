@@ -31,80 +31,80 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CheckPerformanceRecord extends UpdatableRecordImpl<CheckPerformanceRecord> implements Record10<Integer, Integer, Date, Integer, String, Integer, Integer, Timestamp, Timestamp, Date> {
 
-	private static final long serialVersionUID = -334085351;
+	private static final long serialVersionUID = 2129077717;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.performanceid</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.performanceid</code>.
 	 */
 	public void setPerformanceid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.performanceid</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.performanceid</code>.
 	 */
 	public Integer getPerformanceid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.steid</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.steid</code>.
 	 */
 	public void setSteid(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.steid</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.steid</code>.
 	 */
 	public Integer getSteid() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.week_lastday</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.week_lastday</code>.
 	 */
 	public void setWeekLastday(Date value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.week_lastday</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.week_lastday</code>.
 	 */
 	public Date getWeekLastday() {
 		return (Date) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.hours</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.hours</code>.
 	 */
 	public void setHours(Integer value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.hours</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.hours</code>.
 	 */
 	public Integer getHours() {
 		return (Integer) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.description</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.description</code>.
 	 */
 	public void setDescription(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.description</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.description</code>.
 	 */
 	public String getDescription() {
 		return (String) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.state</code>. 1-wait check
+	 * Setter for <code>ss1604c195_rd2.check_performance.state</code>. 1-wait check
 2-checked
 	 */
 	public void setState(Integer value) {
@@ -112,7 +112,7 @@ public class CheckPerformanceRecord extends UpdatableRecordImpl<CheckPerformance
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.state</code>. 1-wait check
+	 * Getter for <code>ss1604c195_rd2.check_performance.state</code>. 1-wait check
 2-checked
 	 */
 	public Integer getState() {
@@ -120,56 +120,56 @@ public class CheckPerformanceRecord extends UpdatableRecordImpl<CheckPerformance
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.updatedby</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.updatedby</code>.
 	 */
 	public void setUpdatedby(Integer value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.updatedby</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.updatedby</code>.
 	 */
 	public Integer getUpdatedby() {
 		return (Integer) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.createdat</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.createdat</code>.
 	 */
 	public void setCreatedat(Timestamp value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.createdat</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.createdat</code>.
 	 */
 	public Timestamp getCreatedat() {
 		return (Timestamp) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.updatedat</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.updatedat</code>.
 	 */
 	public void setUpdatedat(Timestamp value) {
 		setValue(8, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.updatedat</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.updatedat</code>.
 	 */
 	public Timestamp getUpdatedat() {
 		return (Timestamp) getValue(8);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_performance.week_firstday</code>.
+	 * Setter for <code>ss1604c195_rd2.check_performance.week_firstday</code>.
 	 */
 	public void setWeekFirstday(Date value) {
 		setValue(9, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_performance.week_firstday</code>.
+	 * Getter for <code>ss1604c195_rd2.check_performance.week_firstday</code>.
 	 */
 	public Date getWeekFirstday() {
 		return (Date) getValue(9);

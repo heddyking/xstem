@@ -2,7 +2,7 @@ CREATE OR REPLACE FUNCTION fn_staffing_change_update()
 RETURNS trigger AS  
 $$  
 BEGIN  
-    INSERT INTO ss1604c195_rd4.staffing_change_log(
+    INSERT INTO ss1604c195_rd2.staffing_change_log(
             steid, from_positionid, to_positionid, date_req, duration_req, 
             createdby, updatedby, createdat, updatedat, state, changeid)
     VALUES (

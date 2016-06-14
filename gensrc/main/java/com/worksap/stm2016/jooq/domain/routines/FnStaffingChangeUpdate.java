@@ -4,7 +4,7 @@
 package com.worksap.stm2016.jooq.domain.routines;
 
 
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 
 import javax.annotation.Generated;
 
@@ -25,10 +25,10 @@ import org.jooq.impl.AbstractRoutine;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class FnStaffingChangeUpdate extends AbstractRoutine<Object> {
 
-	private static final long serialVersionUID = -937935035;
+	private static final long serialVersionUID = 25297665;
 
 	/**
-	 * The parameter <code>ss1604c195_rd4.fn_staffing_change_update.RETURN_VALUE</code>.
+	 * The parameter <code>ss1604c195_rd2.fn_staffing_change_update.RETURN_VALUE</code>.
 	 */
 	public static final Parameter<Object> RETURN_VALUE = createParameter("RETURN_VALUE", org.jooq.impl.DefaultDataType.getDefaultDataType("trigger"), false);
 
@@ -36,7 +36,7 @@ public class FnStaffingChangeUpdate extends AbstractRoutine<Object> {
 	 * Create a new routine call instance
 	 */
 	public FnStaffingChangeUpdate() {
-		super("fn_staffing_change_update", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.DefaultDataType.getDefaultDataType("trigger"));
+		super("fn_staffing_change_update", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.DefaultDataType.getDefaultDataType("trigger"));
 
 		setReturnParameter(RETURN_VALUE);
 	}

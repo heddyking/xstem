@@ -30,150 +30,150 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoSteRecord extends UpdatableRecordImpl<InfoSteRecord> implements Record17<Integer, String, Boolean, Date, String, String, String, String, String, Integer, Integer, String, String, Integer, String, String, String> {
 
-	private static final long serialVersionUID = -273124289;
+	private static final long serialVersionUID = 1028107843;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.steid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.steid</code>.
 	 */
 	public void setSteid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.steid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.steid</code>.
 	 */
 	public Integer getSteid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.name</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.name</code>.
 	 */
 	public void setName(String value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.name</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.name</code>.
 	 */
 	public String getName() {
 		return (String) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.gender</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.gender</code>.
 	 */
 	public void setGender(Boolean value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.gender</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.gender</code>.
 	 */
 	public Boolean getGender() {
 		return (Boolean) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.birthday</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.birthday</code>.
 	 */
 	public void setBirthday(Date value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.birthday</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.birthday</code>.
 	 */
 	public Date getBirthday() {
 		return (Date) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.location</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.location</code>.
 	 */
 	public void setLocation(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.location</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.location</code>.
 	 */
 	public String getLocation() {
 		return (String) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.email</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.email</code>.
 	 */
 	public void setEmail(String value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.email</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.email</code>.
 	 */
 	public String getEmail() {
 		return (String) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.email_self</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.email_self</code>.
 	 */
 	public void setEmailSelf(String value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.email_self</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.email_self</code>.
 	 */
 	public String getEmailSelf() {
 		return (String) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.phone</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.phone</code>.
 	 */
 	public void setPhone(String value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.phone</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.phone</code>.
 	 */
 	public String getPhone() {
 		return (String) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.telephone</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.telephone</code>.
 	 */
 	public void setTelephone(String value) {
 		setValue(8, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.telephone</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.telephone</code>.
 	 */
 	public String getTelephone() {
 		return (String) getValue(8);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.departmentid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.departmentid</code>.
 	 */
 	public void setDepartmentid(Integer value) {
 		setValue(9, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.departmentid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.departmentid</code>.
 	 */
 	public Integer getDepartmentid() {
 		return (Integer) getValue(9);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.role</code>. 10-candidate ste
+	 * Setter for <code>ss1604c195_rd2.info_ste.role</code>. 10-candidate ste
 11-ste
 12-dismissed ste
 	 */
@@ -182,7 +182,7 @@ public class InfoSteRecord extends UpdatableRecordImpl<InfoSteRecord> implements
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.role</code>. 10-candidate ste
+	 * Getter for <code>ss1604c195_rd2.info_ste.role</code>. 10-candidate ste
 11-ste
 12-dismissed ste
 	 */
@@ -191,84 +191,84 @@ public class InfoSteRecord extends UpdatableRecordImpl<InfoSteRecord> implements
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.offer_url</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.offer_url</code>.
 	 */
 	public void setOfferUrl(String value) {
 		setValue(11, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.offer_url</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.offer_url</code>.
 	 */
 	public String getOfferUrl() {
 		return (String) getValue(11);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.contract_url</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.contract_url</code>.
 	 */
 	public void setContractUrl(String value) {
 		setValue(12, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.contract_url</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.contract_url</code>.
 	 */
 	public String getContractUrl() {
 		return (String) getValue(12);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.positionid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.positionid</code>.
 	 */
 	public void setPositionid(Integer value) {
 		setValue(13, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.positionid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.positionid</code>.
 	 */
 	public Integer getPositionid() {
 		return (Integer) getValue(13);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.skills</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.skills</code>.
 	 */
 	public void setSkills(String value) {
 		setValue(14, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.skills</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.skills</code>.
 	 */
 	public String getSkills() {
 		return (String) getValue(14);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.experiences</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.experiences</code>.
 	 */
 	public void setExperiences(String value) {
 		setValue(15, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.experiences</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.experiences</code>.
 	 */
 	public String getExperiences() {
 		return (String) getValue(15);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_ste.resume_url</code>.
+	 * Setter for <code>ss1604c195_rd2.info_ste.resume_url</code>.
 	 */
 	public void setResumeUrl(String value) {
 		setValue(16, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_ste.resume_url</code>.
+	 * Getter for <code>ss1604c195_rd2.info_ste.resume_url</code>.
 	 */
 	public String getResumeUrl() {
 		return (String) getValue(16);

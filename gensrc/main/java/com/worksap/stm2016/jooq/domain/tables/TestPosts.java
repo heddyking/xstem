@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.TestPostsRecord;
 
 import java.sql.Timestamp;
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TestPosts extends TableImpl<TestPostsRecord> {
 
-	private static final long serialVersionUID = 1638390713;
+	private static final long serialVersionUID = 363384509;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.test_posts</code>
+	 * The reference instance of <code>ss1604c195_rd2.test_posts</code>
 	 */
 	public static final TestPosts TEST_POSTS = new TestPosts();
 
@@ -51,34 +51,34 @@ public class TestPosts extends TableImpl<TestPostsRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_posts.ID</code>.
+	 * The column <code>ss1604c195_rd2.test_posts.ID</code>.
 	 */
 	public final TableField<TestPostsRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_posts.TITLE</code>.
+	 * The column <code>ss1604c195_rd2.test_posts.TITLE</code>.
 	 */
 	public final TableField<TestPostsRecord, String> TITLE = createField("TITLE", org.jooq.impl.SQLDataType.VARCHAR.nullable(false), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_posts.CONTENT</code>.
+	 * The column <code>ss1604c195_rd2.test_posts.CONTENT</code>.
 	 */
 	public final TableField<TestPostsRecord, String> CONTENT = createField("CONTENT", org.jooq.impl.SQLDataType.CLOB, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_posts.CREATED_ON</code>.
+	 * The column <code>ss1604c195_rd2.test_posts.CREATED_ON</code>.
 	 */
 	public final TableField<TestPostsRecord, Timestamp> CREATED_ON = createField("CREATED_ON", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.test_posts</code> table reference
+	 * Create a <code>ss1604c195_rd2.test_posts</code> table reference
 	 */
 	public TestPosts() {
 		this("test_posts", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.test_posts</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.test_posts</code> table reference
 	 */
 	public TestPosts(String alias) {
 		this(alias, TEST_POSTS);
@@ -89,7 +89,7 @@ public class TestPosts extends TableImpl<TestPostsRecord> {
 	}
 
 	private TestPosts(String alias, Table<TestPostsRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

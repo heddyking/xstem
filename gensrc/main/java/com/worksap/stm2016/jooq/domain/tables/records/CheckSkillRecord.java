@@ -30,38 +30,38 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CheckSkillRecord extends UpdatableRecordImpl<CheckSkillRecord> implements Record9<Integer, String, Integer, Integer, Timestamp, Timestamp, Integer, String, Integer> {
 
-	private static final long serialVersionUID = 945134571;
+	private static final long serialVersionUID = 1800646955;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.steid</code>.
+	 * Setter for <code>ss1604c195_rd2.check_skill.steid</code>.
 	 */
 	public void setSteid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.steid</code>.
+	 * Getter for <code>ss1604c195_rd2.check_skill.steid</code>.
 	 */
 	public Integer getSteid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.description</code>.
+	 * Setter for <code>ss1604c195_rd2.check_skill.description</code>.
 	 */
 	public void setDescription(String value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.description</code>.
+	 * Getter for <code>ss1604c195_rd2.check_skill.description</code>.
 	 */
 	public String getDescription() {
 		return (String) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.state</code>. 1-wait check
+	 * Setter for <code>ss1604c195_rd2.check_skill.state</code>. 1-wait check
 2-checked
 	 */
 	public void setState(Integer value) {
@@ -69,7 +69,7 @@ public class CheckSkillRecord extends UpdatableRecordImpl<CheckSkillRecord> impl
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.state</code>. 1-wait check
+	 * Getter for <code>ss1604c195_rd2.check_skill.state</code>. 1-wait check
 2-checked
 	 */
 	public Integer getState() {
@@ -77,84 +77,84 @@ public class CheckSkillRecord extends UpdatableRecordImpl<CheckSkillRecord> impl
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.updatedby</code>.
+	 * Setter for <code>ss1604c195_rd2.check_skill.updatedby</code>.
 	 */
 	public void setUpdatedby(Integer value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.updatedby</code>.
+	 * Getter for <code>ss1604c195_rd2.check_skill.updatedby</code>.
 	 */
 	public Integer getUpdatedby() {
 		return (Integer) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.createdat</code>.
+	 * Setter for <code>ss1604c195_rd2.check_skill.createdat</code>.
 	 */
 	public void setCreatedat(Timestamp value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.createdat</code>.
+	 * Getter for <code>ss1604c195_rd2.check_skill.createdat</code>.
 	 */
 	public Timestamp getCreatedat() {
 		return (Timestamp) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.updatedat</code>.
+	 * Setter for <code>ss1604c195_rd2.check_skill.updatedat</code>.
 	 */
 	public void setUpdatedat(Timestamp value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.updatedat</code>.
+	 * Getter for <code>ss1604c195_rd2.check_skill.updatedat</code>.
 	 */
 	public Timestamp getUpdatedat() {
 		return (Timestamp) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.skillid</code>.
+	 * Setter for <code>ss1604c195_rd2.check_skill.skillid</code>.
 	 */
 	public void setSkillid(Integer value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.skillid</code>.
+	 * Getter for <code>ss1604c195_rd2.check_skill.skillid</code>.
 	 */
 	public Integer getSkillid() {
 		return (Integer) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.skill</code>.
+	 * Setter for <code>ss1604c195_rd2.check_skill.skill</code>.
 	 */
 	public void setSkill(String value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.skill</code>.
+	 * Getter for <code>ss1604c195_rd2.check_skill.skill</code>.
 	 */
 	public String getSkill() {
 		return (String) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_skill.score</code>.
+	 * Setter for <code>ss1604c195_rd2.check_skill.score</code>.
 	 */
 	public void setScore(Integer value) {
 		setValue(8, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_skill.score</code>.
+	 * Getter for <code>ss1604c195_rd2.check_skill.score</code>.
 	 */
 	public Integer getScore() {
 		return (Integer) getValue(8);

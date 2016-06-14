@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.StaffingChangeRecord;
 
 import java.sql.Date;
@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class StaffingChange extends TableImpl<StaffingChangeRecord> {
 
-	private static final long serialVersionUID = -1705330902;
+	private static final long serialVersionUID = -1505816528;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.staffing_change</code>
+	 * The reference instance of <code>ss1604c195_rd2.staffing_change</code>
 	 */
 	public static final StaffingChange STAFFING_CHANGE = new StaffingChange();
 
@@ -52,53 +52,53 @@ public class StaffingChange extends TableImpl<StaffingChangeRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.steid</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change.steid</code>.
 	 */
 	public final TableField<StaffingChangeRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.from_positionid</code>. null if from candidate
+	 * The column <code>ss1604c195_rd2.staffing_change.from_positionid</code>. null if from candidate
 	 */
 	public final TableField<StaffingChangeRecord, Integer> FROM_POSITIONID = createField("from_positionid", org.jooq.impl.SQLDataType.INTEGER, this, "null if from candidate");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.to_positionid</code>. null if dismissed
+	 * The column <code>ss1604c195_rd2.staffing_change.to_positionid</code>. null if dismissed
 0 if regularization
 	 */
 	public final TableField<StaffingChangeRecord, Integer> TO_POSITIONID = createField("to_positionid", org.jooq.impl.SQLDataType.INTEGER, this, "null if dismissed\r\n0 if regularization");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.date_req</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change.date_req</code>.
 	 */
 	public final TableField<StaffingChangeRecord, Date> DATE_REQ = createField("date_req", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.duration_req</code>. months
+	 * The column <code>ss1604c195_rd2.staffing_change.duration_req</code>. months
 	 */
 	public final TableField<StaffingChangeRecord, Integer> DURATION_REQ = createField("duration_req", org.jooq.impl.SQLDataType.INTEGER, this, "months");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.createdby</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change.createdby</code>.
 	 */
 	public final TableField<StaffingChangeRecord, Integer> CREATEDBY = createField("createdby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change.updatedby</code>.
 	 */
 	public final TableField<StaffingChangeRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.createdat</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change.createdat</code>.
 	 */
 	public final TableField<StaffingChangeRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change.updatedat</code>.
 	 */
 	public final TableField<StaffingChangeRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.state</code>. 0-ste apply check fail
+	 * The column <code>ss1604c195_rd2.staffing_change.state</code>. 0-ste apply check fail
 1-ste apply wait mg check
 2-ste apply mg checked wait hr check
 3-ste apply pass
@@ -110,19 +110,19 @@ public class StaffingChange extends TableImpl<StaffingChangeRecord> {
 	public final TableField<StaffingChangeRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "0-ste apply check fail\r\n1-ste apply wait mg check\r\n2-ste apply mg checked wait hr check\r\n3-ste apply pass\r\n\r\n10-hr apply check fail\r\n11-hr apply wait mg check\r\n12-hr apply pass");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change.changeid</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change.changeid</code>.
 	 */
 	public final TableField<StaffingChangeRecord, Integer> CHANGEID = createField("changeid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.staffing_change</code> table reference
+	 * Create a <code>ss1604c195_rd2.staffing_change</code> table reference
 	 */
 	public StaffingChange() {
 		this("staffing_change", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.staffing_change</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.staffing_change</code> table reference
 	 */
 	public StaffingChange(String alias) {
 		this(alias, STAFFING_CHANGE);
@@ -133,7 +133,7 @@ public class StaffingChange extends TableImpl<StaffingChangeRecord> {
 	}
 
 	private StaffingChange(String alias, Table<StaffingChangeRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

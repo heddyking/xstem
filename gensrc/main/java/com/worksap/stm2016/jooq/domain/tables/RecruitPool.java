@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitPoolRecord;
 
 import java.sql.Date;
@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPool extends TableImpl<RecruitPoolRecord> {
 
-	private static final long serialVersionUID = -705803771;
+	private static final long serialVersionUID = -1263400905;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.recruit_pool</code>
+	 * The reference instance of <code>ss1604c195_rd2.recruit_pool</code>
 	 */
 	public static final RecruitPool RECRUIT_POOL = new RecruitPool();
 
@@ -52,69 +52,69 @@ public class RecruitPool extends TableImpl<RecruitPoolRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.poolid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.poolid</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Integer> POOLID = createField("poolid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.positionid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.positionid</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Integer> POSITIONID = createField("positionid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.realnumber</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.realnumber</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Integer> REALNUMBER = createField("realnumber", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.apply_due</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.apply_due</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Date> APPLY_DUE = createField("apply_due", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.apply_start</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.apply_start</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Date> APPLY_START = createField("apply_start", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.poster_url</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.poster_url</code>.
 	 */
 	public final TableField<RecruitPoolRecord, String> POSTER_URL = createField("poster_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.createdby</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.createdby</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Integer> CREATEDBY = createField("createdby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.updatedby</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.createdat</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.createdat</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.updatedat</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool.isvalid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool.isvalid</code>.
 	 */
 	public final TableField<RecruitPoolRecord, Boolean> ISVALID = createField("isvalid", org.jooq.impl.SQLDataType.BOOLEAN.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.recruit_pool</code> table reference
+	 * Create a <code>ss1604c195_rd2.recruit_pool</code> table reference
 	 */
 	public RecruitPool() {
 		this("recruit_pool", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.recruit_pool</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.recruit_pool</code> table reference
 	 */
 	public RecruitPool(String alias) {
 		this(alias, RECRUIT_POOL);
@@ -125,7 +125,7 @@ public class RecruitPool extends TableImpl<RecruitPoolRecord> {
 	}
 
 	private RecruitPool(String alias, Table<RecruitPoolRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

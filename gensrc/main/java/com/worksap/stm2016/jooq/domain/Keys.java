@@ -60,7 +60,7 @@ import org.jooq.impl.AbstractKeys;
 
 
 /**
- * A class modelling foreign key relationships between tables of the <code>ss1604c195_rd4</code> 
+ * A class modelling foreign key relationships between tables of the <code>ss1604c195_rd2</code> 
  * schema
  */
 @Generated(

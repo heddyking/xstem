@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW "ss1604c195_rd4"."vi_recruit_applyment_history" AS 
+CREATE OR REPLACE VIEW "ss1604c195_rd2"."vi_recruit_applyment_history" AS
  SELECT 
 		a.steid,
 		g.gender,
@@ -50,11 +50,11 @@ CREATE OR REPLACE VIEW "ss1604c195_rd4"."vi_recruit_applyment_history" AS
             recruit_applyment_log.updatedat,
             recruit_applyment_log.applymentid,
             recruit_applyment_log.id
-           FROM ss1604c195_rd4.recruit_applyment_log
+           FROM ss1604c195_rd2.recruit_applyment_log
           WHERE (recruit_applyment_log.createdat > ((now())::date - 100))) a
-     JOIN ss1604c195_rd4.recruit_position b ON ((a.positionid = b.positionid)))
-     JOIN ss1604c195_rd4.info_department c ON ((b.departmentid = c.departmentid)))
-     LEFT JOIN ss1604c195_rd4.info_fte d ON (((a.updatedby = d.fteid) AND (a.state > 1))))
-     LEFT JOIN ss1604c195_rd4.info_department e ON ((d.departmentid = e.departmentid)))
-     LEFT JOIN ss1604c195_rd4.recruit_interview f ON ((a.applymentid = f.applymentid)))
-		 JOIN ss1604c195_rd4.info_ste g ON a.steid=g.steid;
+     JOIN ss1604c195_rd2.recruit_position b ON ((a.positionid = b.positionid)))
+     JOIN ss1604c195_rd2.info_department c ON ((b.departmentid = c.departmentid)))
+     LEFT JOIN ss1604c195_rd2.info_fte d ON (((a.updatedby = d.fteid) AND (a.state > 1))))
+     LEFT JOIN ss1604c195_rd2.info_department e ON ((d.departmentid = e.departmentid)))
+     LEFT JOIN ss1604c195_rd2.recruit_interview f ON ((a.applymentid = f.applymentid)))
+		 JOIN ss1604c195_rd2.info_ste g ON a.steid=g.steid;

@@ -27,157 +27,157 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViCareerEachMonthRecord extends TableRecordImpl<ViCareerEachMonthRecord> implements Record11<Integer, String, Integer, Integer, String, String, Long, Long, Long, Long, String> {
 
-	private static final long serialVersionUID = -454410358;
+	private static final long serialVersionUID = 648510274;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.steid</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.steid</code>.
 	 */
 	public void setSteid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.steid</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.steid</code>.
 	 */
 	public Integer getSteid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.name</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.name</code>.
 	 */
 	public void setName(String value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.name</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.name</code>.
 	 */
 	public String getName() {
 		return (String) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.positionid</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.positionid</code>.
 	 */
 	public void setPositionid(Integer value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.positionid</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.positionid</code>.
 	 */
 	public Integer getPositionid() {
 		return (Integer) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.departmentid</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.departmentid</code>.
 	 */
 	public void setDepartmentid(Integer value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.departmentid</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.departmentid</code>.
 	 */
 	public Integer getDepartmentid() {
 		return (Integer) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.positionname</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.positionname</code>.
 	 */
 	public void setPositionname(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.positionname</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.positionname</code>.
 	 */
 	public String getPositionname() {
 		return (String) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.departmentname</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.departmentname</code>.
 	 */
 	public void setDepartmentname(String value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.departmentname</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.departmentname</code>.
 	 */
 	public String getDepartmentname() {
 		return (String) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.attendancenums</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.attendancenums</code>.
 	 */
 	public void setAttendancenums(Long value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.attendancenums</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.attendancenums</code>.
 	 */
 	public Long getAttendancenums() {
 		return (Long) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.attendancehours</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.attendancehours</code>.
 	 */
 	public void setAttendancehours(Long value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.attendancehours</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.attendancehours</code>.
 	 */
 	public Long getAttendancehours() {
 		return (Long) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.performancenums</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.performancenums</code>.
 	 */
 	public void setPerformancenums(Long value) {
 		setValue(8, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.performancenums</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.performancenums</code>.
 	 */
 	public Long getPerformancenums() {
 		return (Long) getValue(8);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.performancehours</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.performancehours</code>.
 	 */
 	public void setPerformancehours(Long value) {
 		setValue(9, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.performancehours</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.performancehours</code>.
 	 */
 	public Long getPerformancehours() {
 		return (Long) getValue(9);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_career_each_month.month</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_career_each_month.month</code>.
 	 */
 	public void setMonth(String value) {
 		setValue(10, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_career_each_month.month</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_career_each_month.month</code>.
 	 */
 	public String getMonth() {
 		return (String) getValue(10);

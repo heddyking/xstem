@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.CheckSkillRecord;
 
 import java.sql.Timestamp;
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CheckSkill extends TableImpl<CheckSkillRecord> {
 
-	private static final long serialVersionUID = -1765003869;
+	private static final long serialVersionUID = 952741977;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.check_skill</code>
+	 * The reference instance of <code>ss1604c195_rd2.check_skill</code>
 	 */
 	public static final CheckSkill CHECK_SKILL = new CheckSkill();
 
@@ -51,60 +51,60 @@ public class CheckSkill extends TableImpl<CheckSkillRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.steid</code>.
+	 * The column <code>ss1604c195_rd2.check_skill.steid</code>.
 	 */
 	public final TableField<CheckSkillRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.description</code>.
+	 * The column <code>ss1604c195_rd2.check_skill.description</code>.
 	 */
 	public final TableField<CheckSkillRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.state</code>. 1-wait check
+	 * The column <code>ss1604c195_rd2.check_skill.state</code>. 1-wait check
 2-checked
 	 */
 	public final TableField<CheckSkillRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "1-wait check\r\n2-checked");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.check_skill.updatedby</code>.
 	 */
 	public final TableField<CheckSkillRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.createdat</code>.
+	 * The column <code>ss1604c195_rd2.check_skill.createdat</code>.
 	 */
 	public final TableField<CheckSkillRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.check_skill.updatedat</code>.
 	 */
 	public final TableField<CheckSkillRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.skillid</code>.
+	 * The column <code>ss1604c195_rd2.check_skill.skillid</code>.
 	 */
 	public final TableField<CheckSkillRecord, Integer> SKILLID = createField("skillid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.skill</code>.
+	 * The column <code>ss1604c195_rd2.check_skill.skill</code>.
 	 */
 	public final TableField<CheckSkillRecord, String> SKILL = createField("skill", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.check_skill.score</code>.
+	 * The column <code>ss1604c195_rd2.check_skill.score</code>.
 	 */
 	public final TableField<CheckSkillRecord, Integer> SCORE = createField("score", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.check_skill</code> table reference
+	 * Create a <code>ss1604c195_rd2.check_skill</code> table reference
 	 */
 	public CheckSkill() {
 		this("check_skill", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.check_skill</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.check_skill</code> table reference
 	 */
 	public CheckSkill(String alias) {
 		this(alias, CHECK_SKILL);
@@ -115,7 +115,7 @@ public class CheckSkill extends TableImpl<CheckSkillRecord> {
 	}
 
 	private CheckSkill(String alias, Table<CheckSkillRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

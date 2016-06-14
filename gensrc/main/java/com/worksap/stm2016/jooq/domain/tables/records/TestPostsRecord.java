@@ -30,59 +30,59 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TestPostsRecord extends UpdatableRecordImpl<TestPostsRecord> implements Record4<Integer, String, String, Timestamp> {
 
-	private static final long serialVersionUID = -1131968746;
+	private static final long serialVersionUID = 706191186;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_posts.ID</code>.
+	 * Setter for <code>ss1604c195_rd2.test_posts.ID</code>.
 	 */
 	public void setId(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_posts.ID</code>.
+	 * Getter for <code>ss1604c195_rd2.test_posts.ID</code>.
 	 */
 	public Integer getId() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_posts.TITLE</code>.
+	 * Setter for <code>ss1604c195_rd2.test_posts.TITLE</code>.
 	 */
 	public void setTitle(String value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_posts.TITLE</code>.
+	 * Getter for <code>ss1604c195_rd2.test_posts.TITLE</code>.
 	 */
 	public String getTitle() {
 		return (String) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_posts.CONTENT</code>.
+	 * Setter for <code>ss1604c195_rd2.test_posts.CONTENT</code>.
 	 */
 	public void setContent(String value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_posts.CONTENT</code>.
+	 * Getter for <code>ss1604c195_rd2.test_posts.CONTENT</code>.
 	 */
 	public String getContent() {
 		return (String) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_posts.CREATED_ON</code>.
+	 * Setter for <code>ss1604c195_rd2.test_posts.CREATED_ON</code>.
 	 */
 	public void setCreatedOn(Timestamp value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_posts.CREATED_ON</code>.
+	 * Getter for <code>ss1604c195_rd2.test_posts.CREATED_ON</code>.
 	 */
 	public Timestamp getCreatedOn() {
 		return (Timestamp) getValue(3);

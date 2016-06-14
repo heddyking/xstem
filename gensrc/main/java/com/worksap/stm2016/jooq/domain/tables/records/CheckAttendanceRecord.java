@@ -31,66 +31,66 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class CheckAttendanceRecord extends UpdatableRecordImpl<CheckAttendanceRecord> implements Record8<Integer, Integer, Date, Integer, Integer, Integer, Timestamp, Timestamp> {
 
-	private static final long serialVersionUID = 440183676;
+	private static final long serialVersionUID = -360434232;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_attendance.attendanceid</code>.
+	 * Setter for <code>ss1604c195_rd2.check_attendance.attendanceid</code>.
 	 */
 	public void setAttendanceid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_attendance.attendanceid</code>.
+	 * Getter for <code>ss1604c195_rd2.check_attendance.attendanceid</code>.
 	 */
 	public Integer getAttendanceid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_attendance.steid</code>.
+	 * Setter for <code>ss1604c195_rd2.check_attendance.steid</code>.
 	 */
 	public void setSteid(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_attendance.steid</code>.
+	 * Getter for <code>ss1604c195_rd2.check_attendance.steid</code>.
 	 */
 	public Integer getSteid() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_attendance.date</code>.
+	 * Setter for <code>ss1604c195_rd2.check_attendance.date</code>.
 	 */
 	public void setDate(Date value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_attendance.date</code>.
+	 * Getter for <code>ss1604c195_rd2.check_attendance.date</code>.
 	 */
 	public Date getDate() {
 		return (Date) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_attendance.hours</code>.
+	 * Setter for <code>ss1604c195_rd2.check_attendance.hours</code>.
 	 */
 	public void setHours(Integer value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_attendance.hours</code>.
+	 * Getter for <code>ss1604c195_rd2.check_attendance.hours</code>.
 	 */
 	public Integer getHours() {
 		return (Integer) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_attendance.state</code>. 1. wait check
+	 * Setter for <code>ss1604c195_rd2.check_attendance.state</code>. 1. wait check
 2. checked
 	 */
 	public void setState(Integer value) {
@@ -98,7 +98,7 @@ public class CheckAttendanceRecord extends UpdatableRecordImpl<CheckAttendanceRe
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_attendance.state</code>. 1. wait check
+	 * Getter for <code>ss1604c195_rd2.check_attendance.state</code>. 1. wait check
 2. checked
 	 */
 	public Integer getState() {
@@ -106,42 +106,42 @@ public class CheckAttendanceRecord extends UpdatableRecordImpl<CheckAttendanceRe
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_attendance.updatedby</code>.
+	 * Setter for <code>ss1604c195_rd2.check_attendance.updatedby</code>.
 	 */
 	public void setUpdatedby(Integer value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_attendance.updatedby</code>.
+	 * Getter for <code>ss1604c195_rd2.check_attendance.updatedby</code>.
 	 */
 	public Integer getUpdatedby() {
 		return (Integer) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_attendance.createdat</code>.
+	 * Setter for <code>ss1604c195_rd2.check_attendance.createdat</code>.
 	 */
 	public void setCreatedat(Timestamp value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_attendance.createdat</code>.
+	 * Getter for <code>ss1604c195_rd2.check_attendance.createdat</code>.
 	 */
 	public Timestamp getCreatedat() {
 		return (Timestamp) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.check_attendance.updatedat</code>.
+	 * Setter for <code>ss1604c195_rd2.check_attendance.updatedat</code>.
 	 */
 	public void setUpdatedat(Timestamp value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.check_attendance.updatedat</code>.
+	 * Getter for <code>ss1604c195_rd2.check_attendance.updatedat</code>.
 	 */
 	public Timestamp getUpdatedat() {
 		return (Timestamp) getValue(7);

@@ -30,38 +30,38 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitApplymentRecord extends UpdatableRecordImpl<RecruitApplymentRecord> implements Record7<Integer, Integer, Integer, Integer, Timestamp, Timestamp, Integer> {
 
-	private static final long serialVersionUID = -1262166265;
+	private static final long serialVersionUID = 1729417799;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_applyment.steid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_applyment.steid</code>.
 	 */
 	public void setSteid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_applyment.steid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_applyment.steid</code>.
 	 */
 	public Integer getSteid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_applyment.positionid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_applyment.positionid</code>.
 	 */
 	public void setPositionid(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_applyment.positionid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_applyment.positionid</code>.
 	 */
 	public Integer getPositionid() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_applyment.state</code>. 0-self cancelled
+	 * Setter for <code>ss1604c195_rd2.recruit_applyment.state</code>. 0-self cancelled
 1- wait hr check
 2- wait mg check
 3- wait arrange interview
@@ -75,7 +75,7 @@ public class RecruitApplymentRecord extends UpdatableRecordImpl<RecruitApplyment
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_applyment.state</code>. 0-self cancelled
+	 * Getter for <code>ss1604c195_rd2.recruit_applyment.state</code>. 0-self cancelled
 1- wait hr check
 2- wait mg check
 3- wait arrange interview
@@ -89,56 +89,56 @@ public class RecruitApplymentRecord extends UpdatableRecordImpl<RecruitApplyment
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_applyment.updatedby</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_applyment.updatedby</code>.
 	 */
 	public void setUpdatedby(Integer value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_applyment.updatedby</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_applyment.updatedby</code>.
 	 */
 	public Integer getUpdatedby() {
 		return (Integer) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_applyment.createdat</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_applyment.createdat</code>.
 	 */
 	public void setCreatedat(Timestamp value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_applyment.createdat</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_applyment.createdat</code>.
 	 */
 	public Timestamp getCreatedat() {
 		return (Timestamp) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_applyment.updatedat</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_applyment.updatedat</code>.
 	 */
 	public void setUpdatedat(Timestamp value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_applyment.updatedat</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_applyment.updatedat</code>.
 	 */
 	public Timestamp getUpdatedat() {
 		return (Timestamp) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_applyment.applymentid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_applyment.applymentid</code>.
 	 */
 	public void setApplymentid(Integer value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_applyment.applymentid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_applyment.applymentid</code>.
 	 */
 	public Integer getApplymentid() {
 		return (Integer) getValue(6);

@@ -580,8 +580,11 @@ desired effect
 
 	<script>
   $(function(){
+	  notify.getNotifySTE(true);
+	  setInterval(function(){
 		 notify.getNotifySTE(true);
-		 
+	  },3000);
+	  
     $("input[id^='inputDate']").datepicker({
       format: 'yyyy-mm-dd',
       autoclose: true

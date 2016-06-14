@@ -31,38 +31,38 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class StaffingChangeRecord extends UpdatableRecordImpl<StaffingChangeRecord> implements Record11<Integer, Integer, Integer, Date, Integer, Integer, Integer, Timestamp, Timestamp, Integer, Integer> {
 
-	private static final long serialVersionUID = 1486551578;
+	private static final long serialVersionUID = -201664286;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.steid</code>.
+	 * Setter for <code>ss1604c195_rd2.staffing_change.steid</code>.
 	 */
 	public void setSteid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.steid</code>.
+	 * Getter for <code>ss1604c195_rd2.staffing_change.steid</code>.
 	 */
 	public Integer getSteid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.from_positionid</code>. null if from candidate
+	 * Setter for <code>ss1604c195_rd2.staffing_change.from_positionid</code>. null if from candidate
 	 */
 	public void setFromPositionid(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.from_positionid</code>. null if from candidate
+	 * Getter for <code>ss1604c195_rd2.staffing_change.from_positionid</code>. null if from candidate
 	 */
 	public Integer getFromPositionid() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.to_positionid</code>. null if dismissed
+	 * Setter for <code>ss1604c195_rd2.staffing_change.to_positionid</code>. null if dismissed
 0 if regularization
 	 */
 	public void setToPositionid(Integer value) {
@@ -70,7 +70,7 @@ public class StaffingChangeRecord extends UpdatableRecordImpl<StaffingChangeReco
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.to_positionid</code>. null if dismissed
+	 * Getter for <code>ss1604c195_rd2.staffing_change.to_positionid</code>. null if dismissed
 0 if regularization
 	 */
 	public Integer getToPositionid() {
@@ -78,91 +78,91 @@ public class StaffingChangeRecord extends UpdatableRecordImpl<StaffingChangeReco
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.date_req</code>.
+	 * Setter for <code>ss1604c195_rd2.staffing_change.date_req</code>.
 	 */
 	public void setDateReq(Date value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.date_req</code>.
+	 * Getter for <code>ss1604c195_rd2.staffing_change.date_req</code>.
 	 */
 	public Date getDateReq() {
 		return (Date) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.duration_req</code>. months
+	 * Setter for <code>ss1604c195_rd2.staffing_change.duration_req</code>. months
 	 */
 	public void setDurationReq(Integer value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.duration_req</code>. months
+	 * Getter for <code>ss1604c195_rd2.staffing_change.duration_req</code>. months
 	 */
 	public Integer getDurationReq() {
 		return (Integer) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.createdby</code>.
+	 * Setter for <code>ss1604c195_rd2.staffing_change.createdby</code>.
 	 */
 	public void setCreatedby(Integer value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.createdby</code>.
+	 * Getter for <code>ss1604c195_rd2.staffing_change.createdby</code>.
 	 */
 	public Integer getCreatedby() {
 		return (Integer) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.updatedby</code>.
+	 * Setter for <code>ss1604c195_rd2.staffing_change.updatedby</code>.
 	 */
 	public void setUpdatedby(Integer value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.updatedby</code>.
+	 * Getter for <code>ss1604c195_rd2.staffing_change.updatedby</code>.
 	 */
 	public Integer getUpdatedby() {
 		return (Integer) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.createdat</code>.
+	 * Setter for <code>ss1604c195_rd2.staffing_change.createdat</code>.
 	 */
 	public void setCreatedat(Timestamp value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.createdat</code>.
+	 * Getter for <code>ss1604c195_rd2.staffing_change.createdat</code>.
 	 */
 	public Timestamp getCreatedat() {
 		return (Timestamp) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.updatedat</code>.
+	 * Setter for <code>ss1604c195_rd2.staffing_change.updatedat</code>.
 	 */
 	public void setUpdatedat(Timestamp value) {
 		setValue(8, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.updatedat</code>.
+	 * Getter for <code>ss1604c195_rd2.staffing_change.updatedat</code>.
 	 */
 	public Timestamp getUpdatedat() {
 		return (Timestamp) getValue(8);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.state</code>. 0-ste apply check fail
+	 * Setter for <code>ss1604c195_rd2.staffing_change.state</code>. 0-ste apply check fail
 1-ste apply wait mg check
 2-ste apply mg checked wait hr check
 3-ste apply pass
@@ -176,7 +176,7 @@ public class StaffingChangeRecord extends UpdatableRecordImpl<StaffingChangeReco
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.state</code>. 0-ste apply check fail
+	 * Getter for <code>ss1604c195_rd2.staffing_change.state</code>. 0-ste apply check fail
 1-ste apply wait mg check
 2-ste apply mg checked wait hr check
 3-ste apply pass
@@ -190,14 +190,14 @@ public class StaffingChangeRecord extends UpdatableRecordImpl<StaffingChangeReco
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.staffing_change.changeid</code>.
+	 * Setter for <code>ss1604c195_rd2.staffing_change.changeid</code>.
 	 */
 	public void setChangeid(Integer value) {
 		setValue(10, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.staffing_change.changeid</code>.
+	 * Getter for <code>ss1604c195_rd2.staffing_change.changeid</code>.
 	 */
 	public Integer getChangeid() {
 		return (Integer) getValue(10);

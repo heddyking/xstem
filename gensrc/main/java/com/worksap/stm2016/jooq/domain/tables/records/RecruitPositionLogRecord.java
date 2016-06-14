@@ -31,269 +31,269 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPositionLogRecord extends UpdatableRecordImpl<RecruitPositionLogRecord> implements Record19<String, Integer, String, Date, Integer, String, String, String, String, String, Integer, Integer, Timestamp, Timestamp, Integer, Integer, Integer, String, Boolean> {
 
-	private static final long serialVersionUID = 1618536730;
+	private static final long serialVersionUID = 2036050;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.positionname</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.positionname</code>.
 	 */
 	public void setPositionname(String value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.positionname</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.positionname</code>.
 	 */
 	public String getPositionname() {
 		return (String) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.number</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.number</code>.
 	 */
 	public void setNumber(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.number</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.number</code>.
 	 */
 	public Integer getNumber() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.location_req</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.location_req</code>.
 	 */
 	public void setLocationReq(String value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.location_req</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.location_req</code>.
 	 */
 	public String getLocationReq() {
 		return (String) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.date_req</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.date_req</code>.
 	 */
 	public void setDateReq(Date value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.date_req</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.date_req</code>.
 	 */
 	public Date getDateReq() {
 		return (Date) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.duration_req</code>. months
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.duration_req</code>. months
 	 */
 	public void setDurationReq(Integer value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.duration_req</code>. months
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.duration_req</code>. months
 	 */
 	public Integer getDurationReq() {
 		return (Integer) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.skill_req1</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.skill_req1</code>.
 	 */
 	public void setSkillReq1(String value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.skill_req1</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.skill_req1</code>.
 	 */
 	public String getSkillReq1() {
 		return (String) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.skill_req2</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.skill_req2</code>.
 	 */
 	public void setSkillReq2(String value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.skill_req2</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.skill_req2</code>.
 	 */
 	public String getSkillReq2() {
 		return (String) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.skill_req3</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.skill_req3</code>.
 	 */
 	public void setSkillReq3(String value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.skill_req3</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.skill_req3</code>.
 	 */
 	public String getSkillReq3() {
 		return (String) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.skill_req4</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.skill_req4</code>.
 	 */
 	public void setSkillReq4(String value) {
 		setValue(8, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.skill_req4</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.skill_req4</code>.
 	 */
 	public String getSkillReq4() {
 		return (String) getValue(8);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.skill_req5</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.skill_req5</code>.
 	 */
 	public void setSkillReq5(String value) {
 		setValue(9, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.skill_req5</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.skill_req5</code>.
 	 */
 	public String getSkillReq5() {
 		return (String) getValue(9);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.createdby</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.createdby</code>.
 	 */
 	public void setCreatedby(Integer value) {
 		setValue(10, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.createdby</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.createdby</code>.
 	 */
 	public Integer getCreatedby() {
 		return (Integer) getValue(10);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.updatedby</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.updatedby</code>.
 	 */
 	public void setUpdatedby(Integer value) {
 		setValue(11, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.updatedby</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.updatedby</code>.
 	 */
 	public Integer getUpdatedby() {
 		return (Integer) getValue(11);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.createdat</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.createdat</code>.
 	 */
 	public void setCreatedat(Timestamp value) {
 		setValue(12, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.createdat</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.createdat</code>.
 	 */
 	public Timestamp getCreatedat() {
 		return (Timestamp) getValue(12);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.updatedat</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.updatedat</code>.
 	 */
 	public void setUpdatedat(Timestamp value) {
 		setValue(13, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.updatedat</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.updatedat</code>.
 	 */
 	public Timestamp getUpdatedat() {
 		return (Timestamp) getValue(13);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.departmentid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.departmentid</code>.
 	 */
 	public void setDepartmentid(Integer value) {
 		setValue(14, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.departmentid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.departmentid</code>.
 	 */
 	public Integer getDepartmentid() {
 		return (Integer) getValue(14);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.positionid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.positionid</code>.
 	 */
 	public void setPositionid(Integer value) {
 		setValue(15, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.positionid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.positionid</code>.
 	 */
 	public Integer getPositionid() {
 		return (Integer) getValue(15);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.id</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.id</code>.
 	 */
 	public void setId(Integer value) {
 		setValue(16, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.id</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.id</code>.
 	 */
 	public Integer getId() {
 		return (Integer) getValue(16);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.description</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.description</code>.
 	 */
 	public void setDescription(String value) {
 		setValue(17, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.description</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.description</code>.
 	 */
 	public String getDescription() {
 		return (String) getValue(17);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_position_log.isvalid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_position_log.isvalid</code>.
 	 */
 	public void setIsvalid(Boolean value) {
 		setValue(18, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_position_log.isvalid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_position_log.isvalid</code>.
 	 */
 	public Boolean getIsvalid() {
 		return (Boolean) getValue(18);

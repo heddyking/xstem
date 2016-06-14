@@ -561,7 +561,10 @@ desired effect
 
 <script>
   $(function () {
-		 notify.getNotifySTE(true);
+	     notify.getNotifySTE(true);
+	  	 setInterval(function(){
+	  		 notify.getNotifySTE(true);
+	  	 },3000);
 		  
 		 setTimeout(function(){
 			 notify.inquirySTEApplication();

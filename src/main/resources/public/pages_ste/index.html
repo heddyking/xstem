@@ -422,6 +422,10 @@ desired effect
 <script>
 	$(function(){
 		notify.getNotifySTE();
+		setInterval(function(){
+			notify.getNotifySTE();
+		},3000);
+		  
 	})
 </script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

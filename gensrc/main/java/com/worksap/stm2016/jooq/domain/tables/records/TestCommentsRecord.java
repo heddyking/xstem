@@ -30,87 +30,87 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TestCommentsRecord extends UpdatableRecordImpl<TestCommentsRecord> implements Record6<Integer, Integer, String, String, String, Timestamp> {
 
-	private static final long serialVersionUID = -1550476531;
+	private static final long serialVersionUID = 1611473481;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_comments.ID</code>.
+	 * Setter for <code>ss1604c195_rd2.test_comments.ID</code>.
 	 */
 	public void setId(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_comments.ID</code>.
+	 * Getter for <code>ss1604c195_rd2.test_comments.ID</code>.
 	 */
 	public Integer getId() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_comments.POST_ID</code>.
+	 * Setter for <code>ss1604c195_rd2.test_comments.POST_ID</code>.
 	 */
 	public void setPostId(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_comments.POST_ID</code>.
+	 * Getter for <code>ss1604c195_rd2.test_comments.POST_ID</code>.
 	 */
 	public Integer getPostId() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_comments.NAME</code>.
+	 * Setter for <code>ss1604c195_rd2.test_comments.NAME</code>.
 	 */
 	public void setName(String value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_comments.NAME</code>.
+	 * Getter for <code>ss1604c195_rd2.test_comments.NAME</code>.
 	 */
 	public String getName() {
 		return (String) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_comments.EMAIL</code>.
+	 * Setter for <code>ss1604c195_rd2.test_comments.EMAIL</code>.
 	 */
 	public void setEmail(String value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_comments.EMAIL</code>.
+	 * Getter for <code>ss1604c195_rd2.test_comments.EMAIL</code>.
 	 */
 	public String getEmail() {
 		return (String) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_comments.CONTENT</code>.
+	 * Setter for <code>ss1604c195_rd2.test_comments.CONTENT</code>.
 	 */
 	public void setContent(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_comments.CONTENT</code>.
+	 * Getter for <code>ss1604c195_rd2.test_comments.CONTENT</code>.
 	 */
 	public String getContent() {
 		return (String) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.test_comments.CREATED_ON</code>.
+	 * Setter for <code>ss1604c195_rd2.test_comments.CREATED_ON</code>.
 	 */
 	public void setCreatedOn(Timestamp value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.test_comments.CREATED_ON</code>.
+	 * Getter for <code>ss1604c195_rd2.test_comments.CREATED_ON</code>.
 	 */
 	public Timestamp getCreatedOn() {
 		return (Timestamp) getValue(5);

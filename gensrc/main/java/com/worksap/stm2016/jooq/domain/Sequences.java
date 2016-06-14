@@ -11,7 +11,7 @@ import org.jooq.impl.SequenceImpl;
 
 
 /**
- * Convenience access to all sequences in ss1604c195_rd4
+ * Convenience access to all sequences in ss1604c195_rd2
  */
 @Generated(
 	value = {
@@ -24,117 +24,117 @@ import org.jooq.impl.SequenceImpl;
 public class Sequences {
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.account_accountid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.account_accountid_seq</code>
 	 */
-	public static final Sequence<Long> ACCOUNT_ACCOUNTID_SEQ = new SequenceImpl<Long>("account_accountid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> ACCOUNT_ACCOUNTID_SEQ = new SequenceImpl<Long>("account_accountid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.check_attendance_attendanceid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.check_attendance_attendanceid_seq</code>
 	 */
-	public static final Sequence<Long> CHECK_ATTENDANCE_ATTENDANCEID_SEQ = new SequenceImpl<Long>("check_attendance_attendanceid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> CHECK_ATTENDANCE_ATTENDANCEID_SEQ = new SequenceImpl<Long>("check_attendance_attendanceid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.check_performance_performanceid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.check_performance_performanceid_seq</code>
 	 */
-	public static final Sequence<Long> CHECK_PERFORMANCE_PERFORMANCEID_SEQ = new SequenceImpl<Long>("check_performance_performanceid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> CHECK_PERFORMANCE_PERFORMANCEID_SEQ = new SequenceImpl<Long>("check_performance_performanceid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.check_skill_skillid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.check_skill_skillid_seq</code>
 	 */
-	public static final Sequence<Long> CHECK_SKILL_SKILLID_SEQ = new SequenceImpl<Long>("check_skill_skillid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> CHECK_SKILL_SKILLID_SEQ = new SequenceImpl<Long>("check_skill_skillid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.COMMENTS_ID_seq</code>
+	 * The sequence <code>ss1604c195_rd2.COMMENTS_ID_seq</code>
 	 */
-	public static final Sequence<Long> COMMENTS_ID_SEQ = new SequenceImpl<Long>("COMMENTS_ID_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> COMMENTS_ID_SEQ = new SequenceImpl<Long>("COMMENTS_ID_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.department_departmentid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.department_departmentid_seq</code>
 	 */
-	public static final Sequence<Long> DEPARTMENT_DEPARTMENTID_SEQ = new SequenceImpl<Long>("department_departmentid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> DEPARTMENT_DEPARTMENTID_SEQ = new SequenceImpl<Long>("department_departmentid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.fte_fteid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.fte_fteid_seq</code>
 	 */
-	public static final Sequence<Long> FTE_FTEID_SEQ = new SequenceImpl<Long>("fte_fteid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> FTE_FTEID_SEQ = new SequenceImpl<Long>("fte_fteid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.notify_pointer_ID_seq</code>
+	 * The sequence <code>ss1604c195_rd2.notify_pointer_ID_seq</code>
 	 */
-	public static final Sequence<Long> NOTIFY_POINTER_ID_SEQ = new SequenceImpl<Long>("notify_pointer_ID_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> NOTIFY_POINTER_ID_SEQ = new SequenceImpl<Long>("notify_pointer_ID_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.POSTS_ID_seq</code>
+	 * The sequence <code>ss1604c195_rd2.POSTS_ID_seq</code>
 	 */
-	public static final Sequence<Long> POSTS_ID_SEQ = new SequenceImpl<Long>("POSTS_ID_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> POSTS_ID_SEQ = new SequenceImpl<Long>("POSTS_ID_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_agency_agencyid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_agency_agencyid_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_AGENCY_AGENCYID_SEQ = new SequenceImpl<Long>("recruit_agency_agencyid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_AGENCY_AGENCYID_SEQ = new SequenceImpl<Long>("recruit_agency_agencyid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_applyment_applymentid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_applyment_applymentid_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_APPLYMENT_APPLYMENTID_SEQ = new SequenceImpl<Long>("recruit_applyment_applymentid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_APPLYMENT_APPLYMENTID_SEQ = new SequenceImpl<Long>("recruit_applyment_applymentid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_applyment_log_id_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_applyment_log_id_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_APPLYMENT_LOG_ID_SEQ = new SequenceImpl<Long>("recruit_applyment_log_id_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_APPLYMENT_LOG_ID_SEQ = new SequenceImpl<Long>("recruit_applyment_log_id_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_interview_interviewid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_interview_interviewid_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_INTERVIEW_INTERVIEWID_SEQ = new SequenceImpl<Long>("recruit_interview_interviewid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_INTERVIEW_INTERVIEWID_SEQ = new SequenceImpl<Long>("recruit_interview_interviewid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_pool_log_id_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_pool_log_id_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_POOL_LOG_ID_SEQ = new SequenceImpl<Long>("recruit_pool_log_id_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_POOL_LOG_ID_SEQ = new SequenceImpl<Long>("recruit_pool_log_id_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_pool_poolid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_pool_poolid_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_POOL_POOLID_SEQ = new SequenceImpl<Long>("recruit_pool_poolid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_POOL_POOLID_SEQ = new SequenceImpl<Long>("recruit_pool_poolid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_position_copy_id_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_position_copy_id_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_POSITION_COPY_ID_SEQ = new SequenceImpl<Long>("recruit_position_copy_id_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_POSITION_COPY_ID_SEQ = new SequenceImpl<Long>("recruit_position_copy_id_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_position_positionid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_position_positionid_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_POSITION_POSITIONID_SEQ = new SequenceImpl<Long>("recruit_position_positionid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_POSITION_POSITIONID_SEQ = new SequenceImpl<Long>("recruit_position_positionid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.recruit_published_publishedid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.recruit_published_publishedid_seq</code>
 	 */
-	public static final Sequence<Long> RECRUIT_PUBLISHED_PUBLISHEDID_SEQ = new SequenceImpl<Long>("recruit_published_publishedid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> RECRUIT_PUBLISHED_PUBLISHEDID_SEQ = new SequenceImpl<Long>("recruit_published_publishedid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.sns_message_messageid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.sns_message_messageid_seq</code>
 	 */
-	public static final Sequence<Long> SNS_MESSAGE_MESSAGEID_SEQ = new SequenceImpl<Long>("sns_message_messageid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> SNS_MESSAGE_MESSAGEID_SEQ = new SequenceImpl<Long>("sns_message_messageid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.sns_timeline_timelineid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.sns_timeline_timelineid_seq</code>
 	 */
-	public static final Sequence<Long> SNS_TIMELINE_TIMELINEID_SEQ = new SequenceImpl<Long>("sns_timeline_timelineid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> SNS_TIMELINE_TIMELINEID_SEQ = new SequenceImpl<Long>("sns_timeline_timelineid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.staffing_change_changeid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.staffing_change_changeid_seq</code>
 	 */
-	public static final Sequence<Long> STAFFING_CHANGE_CHANGEID_SEQ = new SequenceImpl<Long>("staffing_change_changeid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> STAFFING_CHANGE_CHANGEID_SEQ = new SequenceImpl<Long>("staffing_change_changeid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.staffing_change_log_id_seq</code>
+	 * The sequence <code>ss1604c195_rd2.staffing_change_log_id_seq</code>
 	 */
-	public static final Sequence<Long> STAFFING_CHANGE_LOG_ID_SEQ = new SequenceImpl<Long>("staffing_change_log_id_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> STAFFING_CHANGE_LOG_ID_SEQ = new SequenceImpl<Long>("staffing_change_log_id_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 
 	/**
-	 * The sequence <code>ss1604c195_rd4.ste_steid_seq</code>
+	 * The sequence <code>ss1604c195_rd2.ste_steid_seq</code>
 	 */
-	public static final Sequence<Long> STE_STEID_SEQ = new SequenceImpl<Long>("ste_steid_seq", Ss1604c195Rd4.SS1604C195_RD4, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
+	public static final Sequence<Long> STE_STEID_SEQ = new SequenceImpl<Long>("ste_steid_seq", Ss1604c195Rd2.SS1604C195_RD2, org.jooq.impl.SQLDataType.BIGINT.nullable(false));
 }

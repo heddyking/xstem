@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.SnsTimelineRecord;
 
 import java.sql.Timestamp;
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SnsTimeline extends TableImpl<SnsTimelineRecord> {
 
-	private static final long serialVersionUID = 452682316;
+	private static final long serialVersionUID = -1617966328;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.sns_timeline</code>
+	 * The reference instance of <code>ss1604c195_rd2.sns_timeline</code>
 	 */
 	public static final SnsTimeline SNS_TIMELINE = new SnsTimeline();
 
@@ -51,46 +51,46 @@ public class SnsTimeline extends TableImpl<SnsTimelineRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_timeline.timelineid</code>.
+	 * The column <code>ss1604c195_rd2.sns_timeline.timelineid</code>.
 	 */
 	public final TableField<SnsTimelineRecord, Integer> TIMELINEID = createField("timelineid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_timeline.refid</code>.
+	 * The column <code>ss1604c195_rd2.sns_timeline.refid</code>.
 	 */
 	public final TableField<SnsTimelineRecord, Integer> REFID = createField("refid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_timeline.refrole</code>.
+	 * The column <code>ss1604c195_rd2.sns_timeline.refrole</code>.
 	 */
 	public final TableField<SnsTimelineRecord, Integer> REFROLE = createField("refrole", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_timeline.time</code>.
+	 * The column <code>ss1604c195_rd2.sns_timeline.time</code>.
 	 */
 	public final TableField<SnsTimelineRecord, Timestamp> TIME = createField("time", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_timeline.content</code>.
+	 * The column <code>ss1604c195_rd2.sns_timeline.content</code>.
 	 */
 	public final TableField<SnsTimelineRecord, String> CONTENT = createField("content", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_timeline.status</code>. 0-sending
+	 * The column <code>ss1604c195_rd2.sns_timeline.status</code>. 0-sending
 1-displaying
 2-deleted
 	 */
 	public final TableField<SnsTimelineRecord, Integer> STATUS = createField("status", org.jooq.impl.SQLDataType.INTEGER, this, "0-sending\r\n1-displaying\r\n2-deleted");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.sns_timeline</code> table reference
+	 * Create a <code>ss1604c195_rd2.sns_timeline</code> table reference
 	 */
 	public SnsTimeline() {
 		this("sns_timeline", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.sns_timeline</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.sns_timeline</code> table reference
 	 */
 	public SnsTimeline(String alias) {
 		this(alias, SNS_TIMELINE);
@@ -101,7 +101,7 @@ public class SnsTimeline extends TableImpl<SnsTimelineRecord> {
 	}
 
 	private SnsTimeline(String alias, Table<SnsTimelineRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

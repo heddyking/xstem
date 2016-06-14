@@ -41,7 +41,6 @@ var notify=new (function(){
 		var cb=function(msg){
 //			alert(JSON.stringify(msg));
 			if(!msg){
-
 				return;
 			}
 
@@ -74,7 +73,8 @@ var notify=new (function(){
 			}
 
 			if(!justNum) $("#main_body").html(content);
-			$("#notify_num").html(r);
+			if(r!=0)$("#notify_num").html(r);
+			else $("#notify_num").html("");
 			$("#notify_header").html('You have '+r+' notifications');
 			$("#notify_summary").html('<i class="fa fa-star text-aqua"></i> '+r+' events waiting to be handled');
 
@@ -137,7 +137,8 @@ var notify=new (function(){
 			}
 
 			if(!justNum) $("#main_body").html(content);
-			$("#notify_num").html(r);
+			if(r!=0)$("#notify_num").html(r);
+			else $("#notify_num").html("");
 			$("#notify_header").html('You have '+r+' notifications');
 			$("#notify_summary").html('<i class="fa fa-star text-aqua"></i> '+r+' events waiting to be handled');
 
@@ -164,6 +165,9 @@ var notify=new (function(){
 			var r=msg["r"];
 			var r1=msg["r1"];
 			var r2=msg["r2"];
+			var r3=msg["r3"];
+			var r4=msg["r4"];
+			var r5=msg["r5"];
 
 			var content="";
 			if(r1+r2!=0){
@@ -180,8 +184,27 @@ var notify=new (function(){
 				content+='</div>';
 			}
 			
+			if(r3+r4+r5!=0){
+				content+='<div class="callout callout-success">'+
+						 '<h4>Career Management</h4>';
+				if(r3!=0){
+					content+=
+						'<p><small class="label bg-yellow" margin-top="-2px"> '+r3+' </small> <a style="margin-left:5px" href="/pages_mg/attendance.html">There are attendance records waiting to be verify.</a></p>'
+				}
+				if(r4!=0){
+					content+=
+						'<p><small class="label bg-yellow" margin-top="-2px"> '+r4+' </small><a style="margin-left:5px" href="/pages_mg/performance.html">There are performance records waiting to be verify.</a></p>'
+				}
+				if(r5!=0){
+					content+=
+						'<p><small class="label bg-yellow" margin-top="-2px"> '+r5+' </small><a style="margin-left:5px" href="/pages_mg/skills.html">There are skill records waiting to be verify.</a></p>'
+				}
+				content+='</div>';
+			}
+			
 			if(!justNum) $("#main_body").html(content);
-			$("#notify_num").html(r);
+			if(r!=0)$("#notify_num").html(r);
+			else $("#notify_num").html("");
 			$("#notify_header").html('You have '+r+' notifications');
 			$("#notify_summary").html('<i class="fa fa-star text-aqua"></i> '+r+' events waiting to be handled');
 

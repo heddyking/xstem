@@ -28,73 +28,73 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitAgencyRecord extends UpdatableRecordImpl<RecruitAgencyRecord> implements Record5<Integer, String, String, String, String> {
 
-	private static final long serialVersionUID = 293657266;
+	private static final long serialVersionUID = 2109265598;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_agency.agencyid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_agency.agencyid</code>.
 	 */
 	public void setAgencyid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_agency.agencyid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_agency.agencyid</code>.
 	 */
 	public Integer getAgencyid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_agency.agency_url</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_agency.agency_url</code>.
 	 */
 	public void setAgencyUrl(String value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_agency.agency_url</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_agency.agency_url</code>.
 	 */
 	public String getAgencyUrl() {
 		return (String) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_agency.agency_tpl</code>. template
+	 * Setter for <code>ss1604c195_rd2.recruit_agency.agency_tpl</code>. template
 	 */
 	public void setAgencyTpl(String value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_agency.agency_tpl</code>. template
+	 * Getter for <code>ss1604c195_rd2.recruit_agency.agency_tpl</code>. template
 	 */
 	public String getAgencyTpl() {
 		return (String) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_agency.agency_auth</code>. auth string
+	 * Setter for <code>ss1604c195_rd2.recruit_agency.agency_auth</code>. auth string
 	 */
 	public void setAgencyAuth(String value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_agency.agency_auth</code>. auth string
+	 * Getter for <code>ss1604c195_rd2.recruit_agency.agency_auth</code>. auth string
 	 */
 	public String getAgencyAuth() {
 		return (String) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_agency.agencyname</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_agency.agencyname</code>.
 	 */
 	public void setAgencyname(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_agency.agencyname</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_agency.agencyname</code>.
 	 */
 	public String getAgencyname() {
 		return (String) getValue(4);

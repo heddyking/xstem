@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.InfoAccountRecord;
 
 import java.util.Arrays;
@@ -34,10 +34,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoAccount extends TableImpl<InfoAccountRecord> {
 
-	private static final long serialVersionUID = 1436756228;
+	private static final long serialVersionUID = 1247672514;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.info_account</code>
+	 * The reference instance of <code>ss1604c195_rd2.info_account</code>
 	 */
 	public static final InfoAccount INFO_ACCOUNT = new InfoAccount();
 
@@ -50,27 +50,27 @@ public class InfoAccount extends TableImpl<InfoAccountRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_account.accountid</code>.
+	 * The column <code>ss1604c195_rd2.info_account.accountid</code>.
 	 */
 	public final TableField<InfoAccountRecord, Integer> ACCOUNTID = createField("accountid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_account.email</code>.
+	 * The column <code>ss1604c195_rd2.info_account.email</code>.
 	 */
 	public final TableField<InfoAccountRecord, String> EMAIL = createField("email", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_account.password</code>.
+	 * The column <code>ss1604c195_rd2.info_account.password</code>.
 	 */
 	public final TableField<InfoAccountRecord, String> PASSWORD = createField("password", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_account.refid</code>.
+	 * The column <code>ss1604c195_rd2.info_account.refid</code>.
 	 */
 	public final TableField<InfoAccountRecord, Integer> REFID = createField("refid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_account.role</code>. 0-admin
+	 * The column <code>ss1604c195_rd2.info_account.role</code>. 0-admin
 1-hrm
 2-hr
 3-mg
@@ -83,14 +83,14 @@ public class InfoAccount extends TableImpl<InfoAccountRecord> {
 	public final TableField<InfoAccountRecord, Integer> ROLE = createField("role", org.jooq.impl.SQLDataType.INTEGER, this, "0-admin\r\n1-hrm\r\n2-hr\r\n3-mg\r\n4-other\r\n\r\n10-candidate ste\r\n11-ste\r\n12-dismissed ste");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.info_account</code> table reference
+	 * Create a <code>ss1604c195_rd2.info_account</code> table reference
 	 */
 	public InfoAccount() {
 		this("info_account", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.info_account</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.info_account</code> table reference
 	 */
 	public InfoAccount(String alias) {
 		this(alias, INFO_ACCOUNT);
@@ -101,7 +101,7 @@ public class InfoAccount extends TableImpl<InfoAccountRecord> {
 	}
 
 	private InfoAccount(String alias, Table<InfoAccountRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

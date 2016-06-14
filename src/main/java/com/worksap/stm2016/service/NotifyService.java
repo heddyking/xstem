@@ -11,6 +11,9 @@ import static com.worksap.stm2016.jooq.domain.tables.RecruitPosition.RECRUIT_POS
 import static com.worksap.stm2016.jooq.domain.tables.ViCareerEachMonth.VI_CAREER_EACH_MONTH;
 import static com.worksap.stm2016.jooq.domain.tables.ViCareerLastMonth.VI_CAREER_LAST_MONTH;
 import static com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory.VI_RECRUIT_APPLYMENT_HISTORY;
+import static com.worksap.stm2016.jooq.domain.tables.CheckAttendance.CHECK_ATTENDANCE;
+import static com.worksap.stm2016.jooq.domain.tables.CheckPerformance.CHECK_PERFORMANCE;
+import static com.worksap.stm2016.jooq.domain.tables.CheckSkill.CHECK_SKILL;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -31,37 +34,37 @@ public class NotifyService
 {
 	@Autowired
 	private DSLContext dsl;
-	
+
 	public int pendingSelfInfo(int steid){
 		try{
 			Map<String,Object> map=dsl.selectFrom(INFO_STE)
 					.where(INFO_STE.STEID.eq(steid))
 					.fetchOne().intoMap();
-				
-				if(map.get("name")==null ||
-				map.get("gender")==null ||
-				map.get("birthday")==null ||
-				map.get("email")==null ||
-				map.get("telephone")==null ||
-				map.get("skills")==null ||
-				map.get("resume_url")==null){
-					return 1;
-				}
-				return 0;
+
+			if(map.get("name")==null ||
+					map.get("gender")==null ||
+					map.get("birthday")==null ||
+					map.get("email")==null ||
+					map.get("telephone")==null ||
+					map.get("skills")==null ||
+					map.get("resume_url")==null){
+				return 1;
+			}
+			return 0;
 		}catch(Exception e){
 			return 0;
 		}
 	}
-	
+
 	public int inquirySelfApplication(int role, int steid){
 		return dsl.insertInto(NOTIFY_POINTER)
-			.set(NOTIFY_POINTER.ROLE,role)
-			.set(NOTIFY_POINTER.REF_ID,steid)
-			.set(NOTIFY_POINTER.TYPE,1)
-			.set(NOTIFY_POINTER.INQUIRY_TIME,new Timestamp(System.currentTimeMillis()))
-			.execute();
+				.set(NOTIFY_POINTER.ROLE,role)
+				.set(NOTIFY_POINTER.REF_ID,steid)
+				.set(NOTIFY_POINTER.TYPE,1)
+				.set(NOTIFY_POINTER.INQUIRY_TIME,new Timestamp(System.currentTimeMillis()))
+				.execute();
 	}
-	
+
 	public int pendingSelfApplication(int steid){
 		try{
 			Timestamp ts=dsl.select(NOTIFY_POINTER.INQUIRY_TIME)
@@ -74,8 +77,8 @@ public class NotifyService
 					.limit(1)
 					.offset(0)
 					.fetchOne(0,Timestamp.class);
-				
-				Integer applymentid=dsl.select(RECRUIT_APPLYMENT.APPLYMENTID)
+
+			Integer applymentid=dsl.select(RECRUIT_APPLYMENT.APPLYMENTID)
 					.from(RECRUIT_APPLYMENT)
 					.where(RECRUIT_APPLYMENT.STEID.eq(steid))
 					.and(RECRUIT_APPLYMENT.STATE.ne(0))  //Not deleted by self
@@ -83,33 +86,33 @@ public class NotifyService
 					.limit(1)
 					.offset(0)
 					.fetchOne(0,Integer.class);
-				
-				if(ts==null){
-					return dsl.selectCount()
-							.from(VI_RECRUIT_APPLYMENT_HISTORY)
-							.where(VI_RECRUIT_APPLYMENT_HISTORY.APPLYMENTID.eq(applymentid))
-							.fetchOne(0,int.class);
-				}
-				
+
+			if(ts==null){
 				return dsl.selectCount()
 						.from(VI_RECRUIT_APPLYMENT_HISTORY)
 						.where(VI_RECRUIT_APPLYMENT_HISTORY.APPLYMENTID.eq(applymentid))
-						.and(VI_RECRUIT_APPLYMENT_HISTORY.UPDATEDAT.gt(ts))
 						.fetchOne(0,int.class);
+			}
+
+			return dsl.selectCount()
+					.from(VI_RECRUIT_APPLYMENT_HISTORY)
+					.where(VI_RECRUIT_APPLYMENT_HISTORY.APPLYMENTID.eq(applymentid))
+					.and(VI_RECRUIT_APPLYMENT_HISTORY.UPDATEDAT.gt(ts))
+					.fetchOne(0,int.class);
 		}catch(Exception e){
 			return 0;
 		}
 	}
-	
+
 	public int inquirySelfSalary(int role, int steid){
 		return dsl.insertInto(NOTIFY_POINTER)
-			.set(NOTIFY_POINTER.ROLE,role)
-			.set(NOTIFY_POINTER.REF_ID,steid)
-			.set(NOTIFY_POINTER.TYPE,2)
-			.set(NOTIFY_POINTER.INQUIRY_TIME,new Timestamp(System.currentTimeMillis()))
-			.execute();
+				.set(NOTIFY_POINTER.ROLE,role)
+				.set(NOTIFY_POINTER.REF_ID,steid)
+				.set(NOTIFY_POINTER.TYPE,2)
+				.set(NOTIFY_POINTER.INQUIRY_TIME,new Timestamp(System.currentTimeMillis()))
+				.execute();
 	}
-	
+
 	public int pendingSelfSalary(int steid){
 		try{
 			Timestamp ts=dsl.select(NOTIFY_POINTER.INQUIRY_TIME)
@@ -122,15 +125,15 @@ public class NotifyService
 					.limit(1)
 					.offset(0)
 					.fetchOne(0,Timestamp.class);
-			
+
 			String month=dsl.select(VI_CAREER_EACH_MONTH.MONTH)
-				.from(VI_CAREER_EACH_MONTH)
-				.where(VI_CAREER_EACH_MONTH.STEID.eq(steid))
-				.orderBy(VI_CAREER_EACH_MONTH.MONTH.desc())
-				.limit(1)
-				.offset(0)
-				.fetchOne(0,String.class);
-			
+					.from(VI_CAREER_EACH_MONTH)
+					.where(VI_CAREER_EACH_MONTH.STEID.eq(steid))
+					.orderBy(VI_CAREER_EACH_MONTH.MONTH.desc())
+					.limit(1)
+					.offset(0)
+					.fetchOne(0,String.class);
+
 			if(month==null || month.isEmpty()) return 0;
 			if(ts==null) return 1;
 			Timestamp updatedat=Timestamp.valueOf(month+"-01 00:00:00");
@@ -141,16 +144,16 @@ public class NotifyService
 			return 0;
 		}
 	}
-	
+
 	public int inquiryHRSalary(int role, int fteid){
 		return dsl.insertInto(NOTIFY_POINTER)
-			.set(NOTIFY_POINTER.ROLE,role)
-			.set(NOTIFY_POINTER.REF_ID,fteid)
-			.set(NOTIFY_POINTER.TYPE,3)
-			.set(NOTIFY_POINTER.INQUIRY_TIME,new Timestamp(System.currentTimeMillis()))
-			.execute();
+				.set(NOTIFY_POINTER.ROLE,role)
+				.set(NOTIFY_POINTER.REF_ID,fteid)
+				.set(NOTIFY_POINTER.TYPE,3)
+				.set(NOTIFY_POINTER.INQUIRY_TIME,new Timestamp(System.currentTimeMillis()))
+				.execute();
 	}
-	
+
 	public int pendingHRSalary(int fteid){
 		try{
 			Timestamp ts=dsl.select(NOTIFY_POINTER.INQUIRY_TIME)
@@ -163,14 +166,14 @@ public class NotifyService
 					.limit(1)
 					.offset(0)
 					.fetchOne(0,Timestamp.class);
-			
+
 			String month=dsl.select(VI_CAREER_LAST_MONTH.MONTH)
-				.from(VI_CAREER_LAST_MONTH)
-				.orderBy(VI_CAREER_LAST_MONTH.STEID.asc())
-				.limit(1)
-				.offset(0)
-				.fetchOne(0,String.class);
-			
+					.from(VI_CAREER_LAST_MONTH)
+					.orderBy(VI_CAREER_LAST_MONTH.STEID.asc())
+					.limit(1)
+					.offset(0)
+					.fetchOne(0,String.class);
+
 			if(month==null || month.isEmpty()) return 0;
 			if(ts==null) return 1;
 			Timestamp updatedat=Timestamp.valueOf(month+"-01 00:00:00");
@@ -181,7 +184,7 @@ public class NotifyService
 			return 0;
 		}
 	}
-	
+
 	public int pendingHRPublish(){
 		try{
 			List<Map<String,Object>> list=dsl.select(RECRUIT_POSITION.NUMBER,RECRUIT_POOL.REALNUMBER)
@@ -189,20 +192,20 @@ public class NotifyService
 					.leftJoin(RECRUIT_POOL)
 					.on(RECRUIT_POSITION.POSITIONID.eq(RECRUIT_POOL.POSITIONID))
 					.fetchMaps();
-				int r=0;
-				for(Map<String,Object> map: list){
-					Integer n=(Integer)map.get("number");
-					Integer m=(Integer)map.get("realnumber");
-					if(m==null || m<n){
-						++r;
-					}
+			int r=0;
+			for(Map<String,Object> map: list){
+				Integer n=(Integer)map.get("number");
+				Integer m=(Integer)map.get("realnumber");
+				if(m==null || m<n){
+					++r;
 				}
-				return r;
+			}
+			return r;
 		}catch(Exception e){
 			return 0;
 		}
 	}
-	
+
 	public int pendingHRFilter(){
 		try{
 			return (Integer)dsl.selectCount()
@@ -213,8 +216,8 @@ public class NotifyService
 			return 0;
 		}
 	}
-	
-	
+
+
 	public int pendingHRArrange(){
 		try{
 			return (Integer)dsl.selectCount()
@@ -225,7 +228,7 @@ public class NotifyService
 			return 0;
 		}
 	}
-	
+
 	public int pendingHROfferStage(){
 		try{
 			return (Integer)dsl.selectCount()
@@ -238,7 +241,7 @@ public class NotifyService
 			return 0;
 		}
 	}
-	
+
 	public int pendingMGFilter(int departmentid){
 		try{
 			return (Integer)dsl.selectCount()
@@ -252,7 +255,7 @@ public class NotifyService
 			return 0;
 		}
 	}
-	
+
 	public int pendingMGInterview(int departmentid){
 		try{
 			return (Integer)dsl.selectCount()
@@ -261,6 +264,48 @@ public class NotifyService
 					.on(RECRUIT_POSITION.POSITIONID.eq(RECRUIT_APPLYMENT.POSITIONID))
 					.where(RECRUIT_APPLYMENT.STATE.eq(4))
 					.and(RECRUIT_POSITION.DEPARTMENTID.eq(departmentid))
+					.fetchOne(0, int.class);
+		}catch(Exception e){
+			return 0;
+		}
+	}
+
+	public int pendingMGAttendance(int departmentid){
+		try{
+			return (Integer)dsl.selectCount()
+					.from(CHECK_ATTENDANCE)
+					.join(INFO_STE)
+					.on(CHECK_ATTENDANCE.STEID.eq(INFO_STE.STEID))
+					.where(CHECK_ATTENDANCE.STATE.eq(1))
+					.and(INFO_STE.DEPARTMENTID.eq(departmentid))
+					.fetchOne(0, int.class);
+		}catch(Exception e){
+			return 0;
+		}
+	}
+
+	public int pendingMGPerformance(int departmentid){
+		try{
+			return (Integer)dsl.selectCount()
+					.from(CHECK_PERFORMANCE)
+					.join(INFO_STE)
+					.on(CHECK_PERFORMANCE.STEID.eq(INFO_STE.STEID))
+					.where(CHECK_PERFORMANCE.STATE.eq(1))
+					.and(INFO_STE.DEPARTMENTID.eq(departmentid))
+					.fetchOne(0, int.class);
+		}catch(Exception e){
+			return 0;
+		}
+	}
+
+	public int pendingMGSkill(int departmentid){
+		try{
+			return (Integer)dsl.selectCount()
+					.from(CHECK_SKILL)
+					.join(INFO_STE)
+					.on(CHECK_SKILL.STEID.eq(INFO_STE.STEID))
+					.where(CHECK_SKILL.STATE.eq(1))
+					.and(INFO_STE.DEPARTMENTID.eq(departmentid))
 					.fetchOne(0, int.class);
 		}catch(Exception e){
 			return 0;

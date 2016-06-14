@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.TestCommentsRecord;
 
 import java.sql.Timestamp;
@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class TestComments extends TableImpl<TestCommentsRecord> {
 
-	private static final long serialVersionUID = 1361444152;
+	private static final long serialVersionUID = -346707400;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.test_comments</code>
+	 * The reference instance of <code>ss1604c195_rd2.test_comments</code>
 	 */
 	public static final TestComments TEST_COMMENTS = new TestComments();
 
@@ -52,44 +52,44 @@ public class TestComments extends TableImpl<TestCommentsRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_comments.ID</code>.
+	 * The column <code>ss1604c195_rd2.test_comments.ID</code>.
 	 */
 	public final TableField<TestCommentsRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_comments.POST_ID</code>.
+	 * The column <code>ss1604c195_rd2.test_comments.POST_ID</code>.
 	 */
 	public final TableField<TestCommentsRecord, Integer> POST_ID = createField("POST_ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_comments.NAME</code>.
+	 * The column <code>ss1604c195_rd2.test_comments.NAME</code>.
 	 */
 	public final TableField<TestCommentsRecord, String> NAME = createField("NAME", org.jooq.impl.SQLDataType.VARCHAR.nullable(false), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_comments.EMAIL</code>.
+	 * The column <code>ss1604c195_rd2.test_comments.EMAIL</code>.
 	 */
 	public final TableField<TestCommentsRecord, String> EMAIL = createField("EMAIL", org.jooq.impl.SQLDataType.VARCHAR.nullable(false), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_comments.CONTENT</code>.
+	 * The column <code>ss1604c195_rd2.test_comments.CONTENT</code>.
 	 */
 	public final TableField<TestCommentsRecord, String> CONTENT = createField("CONTENT", org.jooq.impl.SQLDataType.CLOB, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.test_comments.CREATED_ON</code>.
+	 * The column <code>ss1604c195_rd2.test_comments.CREATED_ON</code>.
 	 */
 	public final TableField<TestCommentsRecord, Timestamp> CREATED_ON = createField("CREATED_ON", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.test_comments</code> table reference
+	 * Create a <code>ss1604c195_rd2.test_comments</code> table reference
 	 */
 	public TestComments() {
 		this("test_comments", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.test_comments</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.test_comments</code> table reference
 	 */
 	public TestComments(String alias) {
 		this(alias, TEST_COMMENTS);
@@ -100,7 +100,7 @@ public class TestComments extends TableImpl<TestCommentsRecord> {
 	}
 
 	private TestComments(String alias, Table<TestCommentsRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

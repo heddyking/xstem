@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.NotifyPointerRecord;
 
 import java.sql.Timestamp;
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class NotifyPointer extends TableImpl<NotifyPointerRecord> {
 
-	private static final long serialVersionUID = 227037915;
+	private static final long serialVersionUID = 1296949705;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.notify_pointer</code>
+	 * The reference instance of <code>ss1604c195_rd2.notify_pointer</code>
 	 */
 	public static final NotifyPointer NOTIFY_POINTER = new NotifyPointer();
 
@@ -51,41 +51,41 @@ public class NotifyPointer extends TableImpl<NotifyPointerRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.notify_pointer.ID</code>.
+	 * The column <code>ss1604c195_rd2.notify_pointer.ID</code>.
 	 */
 	public final TableField<NotifyPointerRecord, Integer> ID = createField("ID", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.notify_pointer.role</code>.
+	 * The column <code>ss1604c195_rd2.notify_pointer.role</code>.
 	 */
 	public final TableField<NotifyPointerRecord, Integer> ROLE = createField("role", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.notify_pointer.ref_id</code>.
+	 * The column <code>ss1604c195_rd2.notify_pointer.ref_id</code>.
 	 */
 	public final TableField<NotifyPointerRecord, Integer> REF_ID = createField("ref_id", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.notify_pointer.type</code>. 1- inquiry ste applycation
+	 * The column <code>ss1604c195_rd2.notify_pointer.type</code>. 1- inquiry ste applycation
 2- inquiry ste salary
 3- inqury hr salary
 	 */
-	public final TableField<NotifyPointerRecord, Integer> TYPE = createField("type", org.jooq.impl.SQLDataType.INTEGER, this, "1- inquiry ste applycation\n2- inquiry ste salary\n3- inqury hr salary");
+	public final TableField<NotifyPointerRecord, Integer> TYPE = createField("type", org.jooq.impl.SQLDataType.INTEGER, this, "1- inquiry ste applycation\r\n2- inquiry ste salary\r\n3- inqury hr salary");
 
 	/**
-	 * The column <code>ss1604c195_rd4.notify_pointer.inquiry_time</code>.
+	 * The column <code>ss1604c195_rd2.notify_pointer.inquiry_time</code>.
 	 */
 	public final TableField<NotifyPointerRecord, Timestamp> INQUIRY_TIME = createField("inquiry_time", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.notify_pointer</code> table reference
+	 * Create a <code>ss1604c195_rd2.notify_pointer</code> table reference
 	 */
 	public NotifyPointer() {
 		this("notify_pointer", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.notify_pointer</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.notify_pointer</code> table reference
 	 */
 	public NotifyPointer(String alias) {
 		this(alias, NOTIFY_POINTER);
@@ -96,7 +96,7 @@ public class NotifyPointer extends TableImpl<NotifyPointerRecord> {
 	}
 
 	private NotifyPointer(String alias, Table<NotifyPointerRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

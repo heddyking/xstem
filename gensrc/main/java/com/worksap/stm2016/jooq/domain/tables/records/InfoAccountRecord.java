@@ -28,66 +28,66 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoAccountRecord extends UpdatableRecordImpl<InfoAccountRecord> implements Record5<Integer, String, String, Integer, Integer> {
 
-	private static final long serialVersionUID = -2079389042;
+	private static final long serialVersionUID = -2116693990;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_account.accountid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_account.accountid</code>.
 	 */
 	public void setAccountid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_account.accountid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_account.accountid</code>.
 	 */
 	public Integer getAccountid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_account.email</code>.
+	 * Setter for <code>ss1604c195_rd2.info_account.email</code>.
 	 */
 	public void setEmail(String value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_account.email</code>.
+	 * Getter for <code>ss1604c195_rd2.info_account.email</code>.
 	 */
 	public String getEmail() {
 		return (String) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_account.password</code>.
+	 * Setter for <code>ss1604c195_rd2.info_account.password</code>.
 	 */
 	public void setPassword(String value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_account.password</code>.
+	 * Getter for <code>ss1604c195_rd2.info_account.password</code>.
 	 */
 	public String getPassword() {
 		return (String) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_account.refid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_account.refid</code>.
 	 */
 	public void setRefid(Integer value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_account.refid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_account.refid</code>.
 	 */
 	public Integer getRefid() {
 		return (Integer) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_account.role</code>. 0-admin
+	 * Setter for <code>ss1604c195_rd2.info_account.role</code>. 0-admin
 1-hrm
 2-hr
 3-mg
@@ -102,7 +102,7 @@ public class InfoAccountRecord extends UpdatableRecordImpl<InfoAccountRecord> im
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_account.role</code>. 0-admin
+	 * Getter for <code>ss1604c195_rd2.info_account.role</code>. 0-admin
 1-hrm
 2-hr
 3-mg

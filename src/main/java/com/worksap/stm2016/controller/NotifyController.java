@@ -3,8 +3,6 @@ package com.worksap.stm2016.controller;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletRequest;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +26,10 @@ public class NotifyController {
 	//http://localhost/ste/pendingSTE
 	@RequestMapping("/ste/pendingSTE")
 	public Map<String,Object> pendingSTE(){
-		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
-		
+//		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
+//		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
 
 		int r1=notifyService.pendingSelfInfo(userinfo.getUserid());
 		int r2=notifyService.pendingSelfApplication(userinfo.getUserid());
@@ -114,10 +112,10 @@ public class NotifyController {
 	//http://localhost/hr/pendingHR
 	@RequestMapping("/hr/pendingHR")
 	public Map<String,Object> pendingHR(){
-		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+//		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
 
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
+//		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
 
 		int r1=notifyService.pendingHRPublish();
 		int r2=notifyService.pendingHRFilter();
@@ -181,18 +179,24 @@ public class NotifyController {
 	//http://localhost/mg/pendingMG
 	@RequestMapping("/mg/pendingMG")
 	public Map<String,Object> pendingMG(){
-		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+//		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
 
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
+//		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
 
 		int r1=notifyService.pendingMGFilter(userinfo.getDepartmentid());
 		int r2=notifyService.pendingMGInterview(userinfo.getDepartmentid());
-		int r=(r1==0?0:1)+(r2==0?0:1);
+		int r3=notifyService.pendingMGAttendance(userinfo.getDepartmentid());
+		int r4=notifyService.pendingMGPerformance(userinfo.getDepartmentid());
+		int r5=notifyService.pendingMGSkill(userinfo.getDepartmentid());
+		int r=(r1==0?0:1)+(r2==0?0:1)+(r3==0?0:1)+(r4==0?0:1)+(r5==0?0:1);
 		Map<String,Object> map=new HashMap<String,Object>();
 		map.put("r", r);
 		map.put("r1", r1);
 		map.put("r2", r2);
+		map.put("r3", r3);
+		map.put("r4", r4);
+		map.put("r5", r5);
 		return map;
 	}
 
@@ -217,5 +221,38 @@ public class NotifyController {
 		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
 
 		return notifyService.pendingMGInterview(userinfo.getDepartmentid());
+	}
+
+	//http://localhost/mg/pendingMGAttendance
+	@RequestMapping("/mg/pendingMGAttendance")
+	public int pendingMGAttendance(){
+		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
+
+		return notifyService.pendingMGAttendance(userinfo.getDepartmentid());
+	}
+
+	//http://localhost/mg/pendingMGPerformance
+	@RequestMapping("/mg/pendingMGPerformance")
+	public int pendingMGPerformance(){
+		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
+
+		return notifyService.pendingMGPerformance(userinfo.getDepartmentid());
+	}
+
+	//http://localhost/mg/pendingMGSkill
+	@RequestMapping("/mg/pendingMGSkill")
+	public int pendingMGSkill(){
+		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
+
+		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		logger.info(userinfo==null? "no userinfo" : userinfo.toString());
+
+		return notifyService.pendingMGSkill(userinfo.getDepartmentid());
 	}
 }

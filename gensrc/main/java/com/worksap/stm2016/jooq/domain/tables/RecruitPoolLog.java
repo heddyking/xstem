@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitPoolLogRecord;
 
 import java.sql.Date;
@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPoolLog extends TableImpl<RecruitPoolLogRecord> {
 
-	private static final long serialVersionUID = 1264684244;
+	private static final long serialVersionUID = -735751796;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.recruit_pool_log</code>
+	 * The reference instance of <code>ss1604c195_rd2.recruit_pool_log</code>
 	 */
 	public static final RecruitPoolLog RECRUIT_POOL_LOG = new RecruitPoolLog();
 
@@ -52,74 +52,74 @@ public class RecruitPoolLog extends TableImpl<RecruitPoolLogRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.positionid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.positionid</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Integer> POSITIONID = createField("positionid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.realnumber</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.realnumber</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Integer> REALNUMBER = createField("realnumber", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.apply_due</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.apply_due</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Date> APPLY_DUE = createField("apply_due", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.apply_start</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.apply_start</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Date> APPLY_START = createField("apply_start", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.poster_url</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.poster_url</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, String> POSTER_URL = createField("poster_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.createdby</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.createdby</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Integer> CREATEDBY = createField("createdby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.updatedby</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.createdat</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.createdat</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.updatedat</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.poolid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.poolid</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Integer> POOLID = createField("poolid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.id</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.id</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_pool_log.isvalid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_pool_log.isvalid</code>.
 	 */
 	public final TableField<RecruitPoolLogRecord, Boolean> ISVALID = createField("isvalid", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.recruit_pool_log</code> table reference
+	 * Create a <code>ss1604c195_rd2.recruit_pool_log</code> table reference
 	 */
 	public RecruitPoolLog() {
 		this("recruit_pool_log", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.recruit_pool_log</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.recruit_pool_log</code> table reference
 	 */
 	public RecruitPoolLog(String alias) {
 		this(alias, RECRUIT_POOL_LOG);
@@ -130,7 +130,7 @@ public class RecruitPoolLog extends TableImpl<RecruitPoolLogRecord> {
 	}
 
 	private RecruitPoolLog(String alias, Table<RecruitPoolLogRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

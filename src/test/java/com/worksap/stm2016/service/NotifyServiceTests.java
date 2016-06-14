@@ -23,15 +23,15 @@ public class NotifyServiceTests
 {
 	@Autowired
 	private NotifyService notifyService;
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(NotifyServiceTests.class);
-	
+
 	@Test
 	public void blank(){
-		
+
 	}
-	
-	
+
+
 	//@Test
 	public void pendingSelfInfo(){
 		logger.info("pendingSelfInfo: "+notifyService.pendingSelfInfo(1));
@@ -95,5 +95,20 @@ public class NotifyServiceTests
 	//@Test
 	public void pendingMGInterview(){
 		logger.info("pendingMGInterview: "+notifyService.pendingMGInterview(5));
+	}
+
+	//@Test
+	public void pendingMGAttendance(){
+		logger.info("pendingMGAttendance: "+notifyService.pendingMGAttendance(5));
+	}
+
+	//@Test
+	public void pendingMGPerformance(){
+		logger.info("pendingMGPerformance: "+notifyService.pendingMGPerformance(5));
+	}
+
+	//@Test
+	public void pendingMGSkill(){
+		logger.info("pendingMGSkill: "+notifyService.pendingMGSkill(5));
 	}
 }

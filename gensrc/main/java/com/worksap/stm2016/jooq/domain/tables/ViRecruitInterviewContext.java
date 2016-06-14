@@ -4,7 +4,7 @@
 package com.worksap.stm2016.jooq.domain.tables;
 
 
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.ViRecruitInterviewContextRecord;
 
 import java.sql.Date;
@@ -31,10 +31,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViRecruitInterviewContext extends TableImpl<ViRecruitInterviewContextRecord> {
 
-	private static final long serialVersionUID = 325999950;
+	private static final long serialVersionUID = -1651538598;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.vi_recruit_interview_context</code>
+	 * The reference instance of <code>ss1604c195_rd2.vi_recruit_interview_context</code>
 	 */
 	public static final ViRecruitInterviewContext VI_RECRUIT_INTERVIEW_CONTEXT = new ViRecruitInterviewContext();
 
@@ -47,194 +47,194 @@ public class ViRecruitInterviewContext extends TableImpl<ViRecruitInterviewConte
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.interviewid</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.interviewid</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> INTERVIEWID = createField("interviewid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.endtime</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.endtime</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Timestamp> ENDTIME = createField("endtime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.location</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.location</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> LOCATION = createField("location", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.contact_person</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.contact_person</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> CONTACT_PERSON = createField("contact_person", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.contact_phone</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.contact_phone</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> CONTACT_PHONE = createField("contact_phone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.replenish</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.replenish</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> REPLENISH = createField("replenish", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.applymentid</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.applymentid</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> APPLYMENTID = createField("applymentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.starttime</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.starttime</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Timestamp> STARTTIME = createField("starttime", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.state</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.state</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.createdat</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.createdat</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.updatedat</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.updatedby</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.positionname</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.positionname</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> POSITIONNAME = createField("positionname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.number</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.number</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> NUMBER = createField("number", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.location_req</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.location_req</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> LOCATION_REQ = createField("location_req", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.date_req</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.date_req</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Date> DATE_REQ = createField("date_req", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.duration_req</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.duration_req</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> DURATION_REQ = createField("duration_req", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.skill_req1</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.skill_req1</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> SKILL_REQ1 = createField("skill_req1", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.skill_req2</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.skill_req2</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> SKILL_REQ2 = createField("skill_req2", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.skill_req3</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.skill_req3</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> SKILL_REQ3 = createField("skill_req3", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.skill_req4</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.skill_req4</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> SKILL_REQ4 = createField("skill_req4", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.skill_req5</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.skill_req5</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> SKILL_REQ5 = createField("skill_req5", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.description</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.description</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> DESCRIPTION = createField("description", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.departmentid</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.departmentid</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> DEPARTMENTID = createField("departmentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.departmentname</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.departmentname</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> DEPARTMENTNAME = createField("departmentname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.parent_departmentid</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.parent_departmentid</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Integer> PARENT_DEPARTMENTID = createField("parent_departmentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.name</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.name</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.birthday</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.birthday</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Date> BIRTHDAY = createField("birthday", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.gender</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.gender</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, Boolean> GENDER = createField("gender", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.email</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.email</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> EMAIL = createField("email", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.email_self</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.email_self</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> EMAIL_SELF = createField("email_self", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.phone</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.phone</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> PHONE = createField("phone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.telephone</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.telephone</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> TELEPHONE = createField("telephone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.skills</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.skills</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> SKILLS = createField("skills", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.experiences</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.experiences</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> EXPERIENCES = createField("experiences", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_recruit_interview_context.resume_url</code>.
+	 * The column <code>ss1604c195_rd2.vi_recruit_interview_context.resume_url</code>.
 	 */
 	public final TableField<ViRecruitInterviewContextRecord, String> RESUME_URL = createField("resume_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.vi_recruit_interview_context</code> table reference
+	 * Create a <code>ss1604c195_rd2.vi_recruit_interview_context</code> table reference
 	 */
 	public ViRecruitInterviewContext() {
 		this("vi_recruit_interview_context", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.vi_recruit_interview_context</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.vi_recruit_interview_context</code> table reference
 	 */
 	public ViRecruitInterviewContext(String alias) {
 		this(alias, VI_RECRUIT_INTERVIEW_CONTEXT);
@@ -245,7 +245,7 @@ public class ViRecruitInterviewContext extends TableImpl<ViRecruitInterviewConte
 	}
 
 	private ViRecruitInterviewContext(String alias, Table<ViRecruitInterviewContextRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

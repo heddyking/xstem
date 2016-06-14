@@ -28,45 +28,45 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoDepartmentRecord extends UpdatableRecordImpl<InfoDepartmentRecord> implements Record3<Integer, String, Integer> {
 
-	private static final long serialVersionUID = 2095888078;
+	private static final long serialVersionUID = 2107854862;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_department.departmentid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_department.departmentid</code>.
 	 */
 	public void setDepartmentid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_department.departmentid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_department.departmentid</code>.
 	 */
 	public Integer getDepartmentid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_department.departmentname</code>.
+	 * Setter for <code>ss1604c195_rd2.info_department.departmentname</code>.
 	 */
 	public void setDepartmentname(String value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_department.departmentname</code>.
+	 * Getter for <code>ss1604c195_rd2.info_department.departmentname</code>.
 	 */
 	public String getDepartmentname() {
 		return (String) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_department.parent_departmentid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_department.parent_departmentid</code>.
 	 */
 	public void setParentDepartmentid(Integer value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_department.parent_departmentid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_department.parent_departmentid</code>.
 	 */
 	public Integer getParentDepartmentid() {
 		return (Integer) getValue(2);

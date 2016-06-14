@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitPublishedRecord;
 
 import java.util.Arrays;
@@ -34,10 +34,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPublished extends TableImpl<RecruitPublishedRecord> {
 
-	private static final long serialVersionUID = 876953992;
+	private static final long serialVersionUID = -1276617586;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.recruit_published</code>
+	 * The reference instance of <code>ss1604c195_rd2.recruit_published</code>
 	 */
 	public static final RecruitPublished RECRUIT_PUBLISHED = new RecruitPublished();
 
@@ -50,29 +50,29 @@ public class RecruitPublished extends TableImpl<RecruitPublishedRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_published.publishedid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_published.publishedid</code>.
 	 */
 	public final TableField<RecruitPublishedRecord, Integer> PUBLISHEDID = createField("publishedid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_published.poolid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_published.poolid</code>.
 	 */
 	public final TableField<RecruitPublishedRecord, Integer> POOLID = createField("poolid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_published.agencyid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_published.agencyid</code>.
 	 */
 	public final TableField<RecruitPublishedRecord, Integer> AGENCYID = createField("agencyid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.recruit_published</code> table reference
+	 * Create a <code>ss1604c195_rd2.recruit_published</code> table reference
 	 */
 	public RecruitPublished() {
 		this("recruit_published", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.recruit_published</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.recruit_published</code> table reference
 	 */
 	public RecruitPublished(String alias) {
 		this(alias, RECRUIT_PUBLISHED);
@@ -83,7 +83,7 @@ public class RecruitPublished extends TableImpl<RecruitPublishedRecord> {
 	}
 
 	private RecruitPublished(String alias, Table<RecruitPublishedRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

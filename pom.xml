@@ -225,8 +225,8 @@
 						<configuration>
 							<jdbc>
 								<driver>org.postgresql.Driver</driver>
-								<!-- <url>jdbc:postgresql://172.26.131.120:5432/stm?currentSchema=ss1604c195_rd4</url> -->
-								<url>jdbc:postgresql://localhost:5432/stm?currentSchema=ss1604c195_rd4</url>
+								<!-- <url>jdbc:postgresql://172.26.131.120:5432/stm?currentSchema=ss1604c195_rd2</url> -->
+								<url>jdbc:postgresql://localhost:5432/stm?currentSchema=ss1604c195_rd2</url>
 								<user>ss1604c195</user>
 								<password>7a940306</password>
 							</jdbc>
@@ -236,7 +236,7 @@
 									<name>org.jooq.util.postgres.PostgresDatabase</name>
 									<includes>.*</includes>
 									<excludes />
-									<inputSchema>ss1604c195_rd4</inputSchema>
+									<inputSchema>ss1604c195_rd2</inputSchema>
 								</database>
 								<target>
 									<packageName>com.worksap.stm2016.jooq.domain</packageName>

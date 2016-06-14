@@ -27,8 +27,8 @@ function getInterviews(){
 //		alert(JSON.stringify(msg));
 		for(var k=0;k<msg.length;k++){
 			msg[k].updatedat=getSmpFormatDateByLong(msg[k].updatedat,true);
-			msg[k].starttime=getSmpFormatDateByLong(msg[k].endtime,true);
-			msg[k].endtime=getSmpFormatDateByLong(msg[k].updatedat,true);
+			msg[k].starttime=getSmpFormatDateByLong(msg[k].starttime,true);
+			msg[k].endtime=getSmpFormatDateByLong(msg[k].endtime,true);
 			msg[k].operation='<button class="btn btn-primary btn-xs edit" data-toggle="modal" data-target="#myModal" >Detail</button> <button class="btn btn-success btn-xs edit">Approve</button> <button class="btn btn-danger btn-xs delete">Deny</button>';
 			msg[k].recruitnumber='<small class="label bg-blue" margin-top="-2px"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+msg[k].realnumber+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </small>';
 			

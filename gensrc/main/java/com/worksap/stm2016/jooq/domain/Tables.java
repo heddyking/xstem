@@ -37,7 +37,7 @@ import javax.annotation.Generated;
 
 
 /**
- * Convenience access to all tables in ss1604c195_rd4
+ * Convenience access to all tables in ss1604c195_rd2
  */
 @Generated(
 	value = {
@@ -50,142 +50,142 @@ import javax.annotation.Generated;
 public class Tables {
 
 	/**
-	 * The table ss1604c195_rd4.check_attendance
+	 * The table ss1604c195_rd2.check_attendance
 	 */
 	public static final CheckAttendance CHECK_ATTENDANCE = com.worksap.stm2016.jooq.domain.tables.CheckAttendance.CHECK_ATTENDANCE;
 
 	/**
-	 * The table ss1604c195_rd4.check_performance
+	 * The table ss1604c195_rd2.check_performance
 	 */
 	public static final CheckPerformance CHECK_PERFORMANCE = com.worksap.stm2016.jooq.domain.tables.CheckPerformance.CHECK_PERFORMANCE;
 
 	/**
-	 * The table ss1604c195_rd4.check_skill
+	 * The table ss1604c195_rd2.check_skill
 	 */
 	public static final CheckSkill CHECK_SKILL = com.worksap.stm2016.jooq.domain.tables.CheckSkill.CHECK_SKILL;
 
 	/**
-	 * The table ss1604c195_rd4.info_account
+	 * The table ss1604c195_rd2.info_account
 	 */
 	public static final InfoAccount INFO_ACCOUNT = com.worksap.stm2016.jooq.domain.tables.InfoAccount.INFO_ACCOUNT;
 
 	/**
-	 * The table ss1604c195_rd4.info_department
+	 * The table ss1604c195_rd2.info_department
 	 */
 	public static final InfoDepartment INFO_DEPARTMENT = com.worksap.stm2016.jooq.domain.tables.InfoDepartment.INFO_DEPARTMENT;
 
 	/**
-	 * The table ss1604c195_rd4.info_fte
+	 * The table ss1604c195_rd2.info_fte
 	 */
 	public static final InfoFte INFO_FTE = com.worksap.stm2016.jooq.domain.tables.InfoFte.INFO_FTE;
 
 	/**
-	 * The table ss1604c195_rd4.info_ste
+	 * The table ss1604c195_rd2.info_ste
 	 */
 	public static final InfoSte INFO_STE = com.worksap.stm2016.jooq.domain.tables.InfoSte.INFO_STE;
 
 	/**
-	 * The table ss1604c195_rd4.notify_pointer
+	 * The table ss1604c195_rd2.notify_pointer
 	 */
 	public static final NotifyPointer NOTIFY_POINTER = com.worksap.stm2016.jooq.domain.tables.NotifyPointer.NOTIFY_POINTER;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_agency
+	 * The table ss1604c195_rd2.recruit_agency
 	 */
 	public static final RecruitAgency RECRUIT_AGENCY = com.worksap.stm2016.jooq.domain.tables.RecruitAgency.RECRUIT_AGENCY;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_applyment
+	 * The table ss1604c195_rd2.recruit_applyment
 	 */
 	public static final RecruitApplyment RECRUIT_APPLYMENT = com.worksap.stm2016.jooq.domain.tables.RecruitApplyment.RECRUIT_APPLYMENT;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_applyment_log
+	 * The table ss1604c195_rd2.recruit_applyment_log
 	 */
 	public static final RecruitApplymentLog RECRUIT_APPLYMENT_LOG = com.worksap.stm2016.jooq.domain.tables.RecruitApplymentLog.RECRUIT_APPLYMENT_LOG;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_interview
+	 * The table ss1604c195_rd2.recruit_interview
 	 */
 	public static final RecruitInterview RECRUIT_INTERVIEW = com.worksap.stm2016.jooq.domain.tables.RecruitInterview.RECRUIT_INTERVIEW;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_pool
+	 * The table ss1604c195_rd2.recruit_pool
 	 */
 	public static final RecruitPool RECRUIT_POOL = com.worksap.stm2016.jooq.domain.tables.RecruitPool.RECRUIT_POOL;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_pool_log
+	 * The table ss1604c195_rd2.recruit_pool_log
 	 */
 	public static final RecruitPoolLog RECRUIT_POOL_LOG = com.worksap.stm2016.jooq.domain.tables.RecruitPoolLog.RECRUIT_POOL_LOG;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_position
+	 * The table ss1604c195_rd2.recruit_position
 	 */
 	public static final RecruitPosition RECRUIT_POSITION = com.worksap.stm2016.jooq.domain.tables.RecruitPosition.RECRUIT_POSITION;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_position_log
+	 * The table ss1604c195_rd2.recruit_position_log
 	 */
 	public static final RecruitPositionLog RECRUIT_POSITION_LOG = com.worksap.stm2016.jooq.domain.tables.RecruitPositionLog.RECRUIT_POSITION_LOG;
 
 	/**
-	 * The table ss1604c195_rd4.recruit_published
+	 * The table ss1604c195_rd2.recruit_published
 	 */
 	public static final RecruitPublished RECRUIT_PUBLISHED = com.worksap.stm2016.jooq.domain.tables.RecruitPublished.RECRUIT_PUBLISHED;
 
 	/**
-	 * The table ss1604c195_rd4.sns_message
+	 * The table ss1604c195_rd2.sns_message
 	 */
 	public static final SnsMessage SNS_MESSAGE = com.worksap.stm2016.jooq.domain.tables.SnsMessage.SNS_MESSAGE;
 
 	/**
-	 * The table ss1604c195_rd4.sns_timeline
+	 * The table ss1604c195_rd2.sns_timeline
 	 */
 	public static final SnsTimeline SNS_TIMELINE = com.worksap.stm2016.jooq.domain.tables.SnsTimeline.SNS_TIMELINE;
 
 	/**
-	 * The table ss1604c195_rd4.staffing_change
+	 * The table ss1604c195_rd2.staffing_change
 	 */
 	public static final StaffingChange STAFFING_CHANGE = com.worksap.stm2016.jooq.domain.tables.StaffingChange.STAFFING_CHANGE;
 
 	/**
-	 * The table ss1604c195_rd4.staffing_change_log
+	 * The table ss1604c195_rd2.staffing_change_log
 	 */
 	public static final StaffingChangeLog STAFFING_CHANGE_LOG = com.worksap.stm2016.jooq.domain.tables.StaffingChangeLog.STAFFING_CHANGE_LOG;
 
 	/**
-	 * The table ss1604c195_rd4.test_comments
+	 * The table ss1604c195_rd2.test_comments
 	 */
 	public static final TestComments TEST_COMMENTS = com.worksap.stm2016.jooq.domain.tables.TestComments.TEST_COMMENTS;
 
 	/**
-	 * The table ss1604c195_rd4.test_posts
+	 * The table ss1604c195_rd2.test_posts
 	 */
 	public static final TestPosts TEST_POSTS = com.worksap.stm2016.jooq.domain.tables.TestPosts.TEST_POSTS;
 
 	/**
-	 * The table ss1604c195_rd4.vi_career_each_month
+	 * The table ss1604c195_rd2.vi_career_each_month
 	 */
 	public static final ViCareerEachMonth VI_CAREER_EACH_MONTH = com.worksap.stm2016.jooq.domain.tables.ViCareerEachMonth.VI_CAREER_EACH_MONTH;
 
 	/**
-	 * The table ss1604c195_rd4.vi_career_last_month
+	 * The table ss1604c195_rd2.vi_career_last_month
 	 */
 	public static final ViCareerLastMonth VI_CAREER_LAST_MONTH = com.worksap.stm2016.jooq.domain.tables.ViCareerLastMonth.VI_CAREER_LAST_MONTH;
 
 	/**
-	 * The table ss1604c195_rd4.vi_recruit_applyment_history
+	 * The table ss1604c195_rd2.vi_recruit_applyment_history
 	 */
 	public static final ViRecruitApplymentHistory VI_RECRUIT_APPLYMENT_HISTORY = com.worksap.stm2016.jooq.domain.tables.ViRecruitApplymentHistory.VI_RECRUIT_APPLYMENT_HISTORY;
 
 	/**
-	 * The table ss1604c195_rd4.vi_recruit_interview_context
+	 * The table ss1604c195_rd2.vi_recruit_interview_context
 	 */
 	public static final ViRecruitInterviewContext VI_RECRUIT_INTERVIEW_CONTEXT = com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewContext.VI_RECRUIT_INTERVIEW_CONTEXT;
 
 	/**
-	 * The table ss1604c195_rd4.vi_recruit_interview_reminder
+	 * The table ss1604c195_rd2.vi_recruit_interview_reminder
 	 */
 	public static final ViRecruitInterviewReminder VI_RECRUIT_INTERVIEW_REMINDER = com.worksap.stm2016.jooq.domain.tables.ViRecruitInterviewReminder.VI_RECRUIT_INTERVIEW_REMINDER;
 }

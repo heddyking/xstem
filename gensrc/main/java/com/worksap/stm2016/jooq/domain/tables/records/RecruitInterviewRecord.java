@@ -30,115 +30,115 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitInterviewRecord extends UpdatableRecordImpl<RecruitInterviewRecord> implements Record8<Integer, Timestamp, String, String, String, String, Integer, Timestamp> {
 
-	private static final long serialVersionUID = -1321180898;
+	private static final long serialVersionUID = -1595129442;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_interview.interviewid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_interview.interviewid</code>.
 	 */
 	public void setInterviewid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_interview.interviewid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_interview.interviewid</code>.
 	 */
 	public Integer getInterviewid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_interview.endtime</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_interview.endtime</code>.
 	 */
 	public void setEndtime(Timestamp value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_interview.endtime</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_interview.endtime</code>.
 	 */
 	public Timestamp getEndtime() {
 		return (Timestamp) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_interview.location</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_interview.location</code>.
 	 */
 	public void setLocation(String value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_interview.location</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_interview.location</code>.
 	 */
 	public String getLocation() {
 		return (String) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_interview.contact_person</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_interview.contact_person</code>.
 	 */
 	public void setContactPerson(String value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_interview.contact_person</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_interview.contact_person</code>.
 	 */
 	public String getContactPerson() {
 		return (String) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_interview.contact_phone</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_interview.contact_phone</code>.
 	 */
 	public void setContactPhone(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_interview.contact_phone</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_interview.contact_phone</code>.
 	 */
 	public String getContactPhone() {
 		return (String) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_interview.replenish</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_interview.replenish</code>.
 	 */
 	public void setReplenish(String value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_interview.replenish</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_interview.replenish</code>.
 	 */
 	public String getReplenish() {
 		return (String) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_interview.applymentid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_interview.applymentid</code>.
 	 */
 	public void setApplymentid(Integer value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_interview.applymentid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_interview.applymentid</code>.
 	 */
 	public Integer getApplymentid() {
 		return (Integer) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_interview.starttime</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_interview.starttime</code>.
 	 */
 	public void setStarttime(Timestamp value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_interview.starttime</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_interview.starttime</code>.
 	 */
 	public Timestamp getStarttime() {
 		return (Timestamp) getValue(7);

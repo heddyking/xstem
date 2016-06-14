@@ -721,6 +721,9 @@ desired effect
 <script>
   $(function(){
 	  notify.getNotifyHR(true);
+	  setInterval(function(){
+	  	notify.getNotifyHR(true);
+	  },3000);
 	  
 	  $("input[id^='inputDate']").datepicker({
 	      format: 'yyyy-mm-dd',

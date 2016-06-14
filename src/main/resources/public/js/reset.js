@@ -26,3 +26,5 @@ $(function(){
 	}
 	ajax(url,type,data,cb,eb);
 })
+
+//http://cdn.v2ex.co/gravatar/anyhash?s=73&d=retro    another icon generater

@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitAgencyRecord;
 
 import java.util.Arrays;
@@ -34,10 +34,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitAgency extends TableImpl<RecruitAgencyRecord> {
 
-	private static final long serialVersionUID = -1087946724;
+	private static final long serialVersionUID = 2077366618;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.recruit_agency</code>
+	 * The reference instance of <code>ss1604c195_rd2.recruit_agency</code>
 	 */
 	public static final RecruitAgency RECRUIT_AGENCY = new RecruitAgency();
 
@@ -50,39 +50,39 @@ public class RecruitAgency extends TableImpl<RecruitAgencyRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_agency.agencyid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_agency.agencyid</code>.
 	 */
 	public final TableField<RecruitAgencyRecord, Integer> AGENCYID = createField("agencyid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_agency.agency_url</code>.
+	 * The column <code>ss1604c195_rd2.recruit_agency.agency_url</code>.
 	 */
 	public final TableField<RecruitAgencyRecord, String> AGENCY_URL = createField("agency_url", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_agency.agency_tpl</code>. template
+	 * The column <code>ss1604c195_rd2.recruit_agency.agency_tpl</code>. template
 	 */
 	public final TableField<RecruitAgencyRecord, String> AGENCY_TPL = createField("agency_tpl", org.jooq.impl.SQLDataType.CHAR.length(1), this, "template");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_agency.agency_auth</code>. auth string
+	 * The column <code>ss1604c195_rd2.recruit_agency.agency_auth</code>. auth string
 	 */
 	public final TableField<RecruitAgencyRecord, String> AGENCY_AUTH = createField("agency_auth", org.jooq.impl.SQLDataType.VARCHAR, this, "auth string");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_agency.agencyname</code>.
+	 * The column <code>ss1604c195_rd2.recruit_agency.agencyname</code>.
 	 */
 	public final TableField<RecruitAgencyRecord, String> AGENCYNAME = createField("agencyname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.recruit_agency</code> table reference
+	 * Create a <code>ss1604c195_rd2.recruit_agency</code> table reference
 	 */
 	public RecruitAgency() {
 		this("recruit_agency", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.recruit_agency</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.recruit_agency</code> table reference
 	 */
 	public RecruitAgency(String alias) {
 		this(alias, RECRUIT_AGENCY);
@@ -93,7 +93,7 @@ public class RecruitAgency extends TableImpl<RecruitAgencyRecord> {
 	}
 
 	private RecruitAgency(String alias, Table<RecruitAgencyRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

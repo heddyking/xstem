@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.RecruitApplymentLogRecord;
 
 import java.sql.Timestamp;
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitApplymentLog extends TableImpl<RecruitApplymentLogRecord> {
 
-	private static final long serialVersionUID = -1649085162;
+	private static final long serialVersionUID = 818269722;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.recruit_applyment_log</code>
+	 * The reference instance of <code>ss1604c195_rd2.recruit_applyment_log</code>
 	 */
 	public static final RecruitApplymentLog RECRUIT_APPLYMENT_LOG = new RecruitApplymentLog();
 
@@ -51,17 +51,17 @@ public class RecruitApplymentLog extends TableImpl<RecruitApplymentLogRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment_log.steid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment_log.steid</code>.
 	 */
 	public final TableField<RecruitApplymentLogRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment_log.positionid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment_log.positionid</code>.
 	 */
 	public final TableField<RecruitApplymentLogRecord, Integer> POSITIONID = createField("positionid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment_log.state</code>. 0-self cancelled
+	 * The column <code>ss1604c195_rd2.recruit_applyment_log.state</code>. 0-self cancelled
 1- wait hr check
 2- wait mg check
 3- wait arrange interview
@@ -73,39 +73,39 @@ public class RecruitApplymentLog extends TableImpl<RecruitApplymentLogRecord> {
 	public final TableField<RecruitApplymentLogRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "0-self cancelled\r\n1- wait hr check\r\n2- wait mg check\r\n3- wait arrange interview\r\n4- interview\r\n5- pass\r\n6- fail\r\n");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment_log.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment_log.updatedby</code>.
 	 */
 	public final TableField<RecruitApplymentLogRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment_log.createdat</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment_log.createdat</code>.
 	 */
 	public final TableField<RecruitApplymentLogRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment_log.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment_log.updatedat</code>.
 	 */
 	public final TableField<RecruitApplymentLogRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment_log.applymentid</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment_log.applymentid</code>.
 	 */
 	public final TableField<RecruitApplymentLogRecord, Integer> APPLYMENTID = createField("applymentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.recruit_applyment_log.id</code>.
+	 * The column <code>ss1604c195_rd2.recruit_applyment_log.id</code>.
 	 */
 	public final TableField<RecruitApplymentLogRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.recruit_applyment_log</code> table reference
+	 * Create a <code>ss1604c195_rd2.recruit_applyment_log</code> table reference
 	 */
 	public RecruitApplymentLog() {
 		this("recruit_applyment_log", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.recruit_applyment_log</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.recruit_applyment_log</code> table reference
 	 */
 	public RecruitApplymentLog(String alias) {
 		this(alias, RECRUIT_APPLYMENT_LOG);
@@ -116,7 +116,7 @@ public class RecruitApplymentLog extends TableImpl<RecruitApplymentLogRecord> {
 	}
 
 	private RecruitApplymentLog(String alias, Table<RecruitApplymentLogRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

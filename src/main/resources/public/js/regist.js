@@ -42,6 +42,7 @@ function regist(){
 		  }
 		  else{
 			  alert("Regist Success! You can Signin.");
+			  window.location = "/pages_ste/index.html";
 		  }
 	  }
 	  ajax(url,type,data,cb);

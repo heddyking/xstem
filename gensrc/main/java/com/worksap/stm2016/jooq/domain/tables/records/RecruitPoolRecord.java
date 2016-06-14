@@ -31,157 +31,157 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class RecruitPoolRecord extends UpdatableRecordImpl<RecruitPoolRecord> implements Record11<Integer, Integer, Integer, Date, Date, String, Integer, Integer, Timestamp, Timestamp, Boolean> {
 
-	private static final long serialVersionUID = 1211050690;
+	private static final long serialVersionUID = 1444907906;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.poolid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.poolid</code>.
 	 */
 	public void setPoolid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.poolid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.poolid</code>.
 	 */
 	public Integer getPoolid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.positionid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.positionid</code>.
 	 */
 	public void setPositionid(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.positionid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.positionid</code>.
 	 */
 	public Integer getPositionid() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.realnumber</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.realnumber</code>.
 	 */
 	public void setRealnumber(Integer value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.realnumber</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.realnumber</code>.
 	 */
 	public Integer getRealnumber() {
 		return (Integer) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.apply_due</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.apply_due</code>.
 	 */
 	public void setApplyDue(Date value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.apply_due</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.apply_due</code>.
 	 */
 	public Date getApplyDue() {
 		return (Date) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.apply_start</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.apply_start</code>.
 	 */
 	public void setApplyStart(Date value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.apply_start</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.apply_start</code>.
 	 */
 	public Date getApplyStart() {
 		return (Date) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.poster_url</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.poster_url</code>.
 	 */
 	public void setPosterUrl(String value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.poster_url</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.poster_url</code>.
 	 */
 	public String getPosterUrl() {
 		return (String) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.createdby</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.createdby</code>.
 	 */
 	public void setCreatedby(Integer value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.createdby</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.createdby</code>.
 	 */
 	public Integer getCreatedby() {
 		return (Integer) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.updatedby</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.updatedby</code>.
 	 */
 	public void setUpdatedby(Integer value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.updatedby</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.updatedby</code>.
 	 */
 	public Integer getUpdatedby() {
 		return (Integer) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.createdat</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.createdat</code>.
 	 */
 	public void setCreatedat(Timestamp value) {
 		setValue(8, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.createdat</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.createdat</code>.
 	 */
 	public Timestamp getCreatedat() {
 		return (Timestamp) getValue(8);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.updatedat</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.updatedat</code>.
 	 */
 	public void setUpdatedat(Timestamp value) {
 		setValue(9, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.updatedat</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.updatedat</code>.
 	 */
 	public Timestamp getUpdatedat() {
 		return (Timestamp) getValue(9);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.recruit_pool.isvalid</code>.
+	 * Setter for <code>ss1604c195_rd2.recruit_pool.isvalid</code>.
 	 */
 	public void setIsvalid(Boolean value) {
 		setValue(10, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.recruit_pool.isvalid</code>.
+	 * Getter for <code>ss1604c195_rd2.recruit_pool.isvalid</code>.
 	 */
 	public Boolean getIsvalid() {
 		return (Boolean) getValue(10);

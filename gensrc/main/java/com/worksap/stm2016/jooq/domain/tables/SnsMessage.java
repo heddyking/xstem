@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.SnsMessageRecord;
 
 import java.sql.Timestamp;
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SnsMessage extends TableImpl<SnsMessageRecord> {
 
-	private static final long serialVersionUID = 1051514163;
+	private static final long serialVersionUID = -1104450625;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.sns_message</code>
+	 * The reference instance of <code>ss1604c195_rd2.sns_message</code>
 	 */
 	public static final SnsMessage SNS_MESSAGE = new SnsMessage();
 
@@ -51,56 +51,56 @@ public class SnsMessage extends TableImpl<SnsMessageRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_message.messageid</code>.
+	 * The column <code>ss1604c195_rd2.sns_message.messageid</code>.
 	 */
 	public final TableField<SnsMessageRecord, Integer> MESSAGEID = createField("messageid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_message.sendfrom</code>.
+	 * The column <code>ss1604c195_rd2.sns_message.sendfrom</code>.
 	 */
 	public final TableField<SnsMessageRecord, Integer> SENDFROM = createField("sendfrom", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_message.rolefrom</code>.
+	 * The column <code>ss1604c195_rd2.sns_message.rolefrom</code>.
 	 */
 	public final TableField<SnsMessageRecord, Integer> ROLEFROM = createField("rolefrom", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_message.sendto</code>.
+	 * The column <code>ss1604c195_rd2.sns_message.sendto</code>.
 	 */
 	public final TableField<SnsMessageRecord, Integer> SENDTO = createField("sendto", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_message.roleto</code>.
+	 * The column <code>ss1604c195_rd2.sns_message.roleto</code>.
 	 */
 	public final TableField<SnsMessageRecord, Integer> ROLETO = createField("roleto", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_message.message</code>.
+	 * The column <code>ss1604c195_rd2.sns_message.message</code>.
 	 */
 	public final TableField<SnsMessageRecord, String> MESSAGE = createField("message", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_message.time</code>.
+	 * The column <code>ss1604c195_rd2.sns_message.time</code>.
 	 */
 	public final TableField<SnsMessageRecord, Timestamp> TIME = createField("time", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.sns_message.status</code>. 0-sending
+	 * The column <code>ss1604c195_rd2.sns_message.status</code>. 0-sending
 1-sent
 2-withdraw
 	 */
 	public final TableField<SnsMessageRecord, Integer> STATUS = createField("status", org.jooq.impl.SQLDataType.INTEGER, this, "0-sending\r\n1-sent\r\n2-withdraw");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.sns_message</code> table reference
+	 * Create a <code>ss1604c195_rd2.sns_message</code> table reference
 	 */
 	public SnsMessage() {
 		this("sns_message", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.sns_message</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.sns_message</code> table reference
 	 */
 	public SnsMessage(String alias) {
 		this(alias, SNS_MESSAGE);
@@ -111,7 +111,7 @@ public class SnsMessage extends TableImpl<SnsMessageRecord> {
 	}
 
 	private SnsMessage(String alias, Table<SnsMessageRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

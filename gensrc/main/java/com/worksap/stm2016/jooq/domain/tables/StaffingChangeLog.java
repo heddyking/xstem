@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.StaffingChangeLogRecord;
 
 import java.sql.Date;
@@ -36,10 +36,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class StaffingChangeLog extends TableImpl<StaffingChangeLogRecord> {
 
-	private static final long serialVersionUID = 424964701;
+	private static final long serialVersionUID = -1870242531;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.staffing_change_log</code>
+	 * The reference instance of <code>ss1604c195_rd2.staffing_change_log</code>
 	 */
 	public static final StaffingChangeLog STAFFING_CHANGE_LOG = new StaffingChangeLog();
 
@@ -52,53 +52,53 @@ public class StaffingChangeLog extends TableImpl<StaffingChangeLogRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.steid</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change_log.steid</code>.
 	 */
 	public final TableField<StaffingChangeLogRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.from_positionid</code>. null if from candidate
+	 * The column <code>ss1604c195_rd2.staffing_change_log.from_positionid</code>. null if from candidate
 	 */
 	public final TableField<StaffingChangeLogRecord, Integer> FROM_POSITIONID = createField("from_positionid", org.jooq.impl.SQLDataType.INTEGER, this, "null if from candidate");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.to_positionid</code>. null if dismissed
+	 * The column <code>ss1604c195_rd2.staffing_change_log.to_positionid</code>. null if dismissed
 0 if regularization
 	 */
 	public final TableField<StaffingChangeLogRecord, Integer> TO_POSITIONID = createField("to_positionid", org.jooq.impl.SQLDataType.INTEGER, this, "null if dismissed\r\n0 if regularization");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.date_req</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change_log.date_req</code>.
 	 */
 	public final TableField<StaffingChangeLogRecord, Date> DATE_REQ = createField("date_req", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.duration_req</code>. months
+	 * The column <code>ss1604c195_rd2.staffing_change_log.duration_req</code>. months
 	 */
 	public final TableField<StaffingChangeLogRecord, Integer> DURATION_REQ = createField("duration_req", org.jooq.impl.SQLDataType.INTEGER, this, "months");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.createdby</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change_log.createdby</code>.
 	 */
 	public final TableField<StaffingChangeLogRecord, Integer> CREATEDBY = createField("createdby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.updatedby</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change_log.updatedby</code>.
 	 */
 	public final TableField<StaffingChangeLogRecord, Integer> UPDATEDBY = createField("updatedby", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.createdat</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change_log.createdat</code>.
 	 */
 	public final TableField<StaffingChangeLogRecord, Timestamp> CREATEDAT = createField("createdat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.updatedat</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change_log.updatedat</code>.
 	 */
 	public final TableField<StaffingChangeLogRecord, Timestamp> UPDATEDAT = createField("updatedat", org.jooq.impl.SQLDataType.TIMESTAMP, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.state</code>. 0-ste apply check fail
+	 * The column <code>ss1604c195_rd2.staffing_change_log.state</code>. 0-ste apply check fail
 1-ste apply wait mg check
 2-ste apply mg checked wait hr check
 3-ste apply pass
@@ -110,24 +110,24 @@ public class StaffingChangeLog extends TableImpl<StaffingChangeLogRecord> {
 	public final TableField<StaffingChangeLogRecord, Integer> STATE = createField("state", org.jooq.impl.SQLDataType.INTEGER, this, "0-ste apply check fail\r\n1-ste apply wait mg check\r\n2-ste apply mg checked wait hr check\r\n3-ste apply pass\r\n\r\n10-hr apply check fail\r\n11-hr apply wait mg check\r\n12-hr apply pass");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.changeid</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change_log.changeid</code>.
 	 */
 	public final TableField<StaffingChangeLogRecord, Integer> CHANGEID = createField("changeid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.staffing_change_log.id</code>.
+	 * The column <code>ss1604c195_rd2.staffing_change_log.id</code>.
 	 */
 	public final TableField<StaffingChangeLogRecord, Integer> ID = createField("id", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.staffing_change_log</code> table reference
+	 * Create a <code>ss1604c195_rd2.staffing_change_log</code> table reference
 	 */
 	public StaffingChangeLog() {
 		this("staffing_change_log", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.staffing_change_log</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.staffing_change_log</code> table reference
 	 */
 	public StaffingChangeLog(String alias) {
 		this(alias, STAFFING_CHANGE_LOG);
@@ -138,7 +138,7 @@ public class StaffingChangeLog extends TableImpl<StaffingChangeLogRecord> {
 	}
 
 	private StaffingChangeLog(String alias, Table<StaffingChangeLogRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

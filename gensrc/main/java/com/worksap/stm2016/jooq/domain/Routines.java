@@ -20,7 +20,7 @@ import org.jooq.Field;
 
 
 /**
- * Convenience access to all stored procedures and functions in ss1604c195_rd4
+ * Convenience access to all stored procedures and functions in ss1604c195_rd2
  */
 @Generated(
 	value = {
@@ -33,7 +33,7 @@ import org.jooq.Field;
 public class Routines {
 
 	/**
-	 * Call <code>ss1604c195_rd4.fn_recruit_applyment_insert</code>
+	 * Call <code>ss1604c195_rd2.fn_recruit_applyment_insert</code>
 	 */
 	public static Object fnRecruitApplymentInsert(Configuration configuration) {
 		FnRecruitApplymentInsert f = new FnRecruitApplymentInsert();
@@ -43,7 +43,7 @@ public class Routines {
 	}
 
 	/**
-	 * Get <code>ss1604c195_rd4.fn_recruit_applyment_insert</code> as a field.
+	 * Get <code>ss1604c195_rd2.fn_recruit_applyment_insert</code> as a field.
 	 */
 	public static Field<Object> fnRecruitApplymentInsert() {
 		FnRecruitApplymentInsert f = new FnRecruitApplymentInsert();
@@ -52,7 +52,7 @@ public class Routines {
 	}
 
 	/**
-	 * Call <code>ss1604c195_rd4.fn_recruit_applyment_update</code>
+	 * Call <code>ss1604c195_rd2.fn_recruit_applyment_update</code>
 	 */
 	public static Object fnRecruitApplymentUpdate(Configuration configuration) {
 		FnRecruitApplymentUpdate f = new FnRecruitApplymentUpdate();
@@ -62,7 +62,7 @@ public class Routines {
 	}
 
 	/**
-	 * Get <code>ss1604c195_rd4.fn_recruit_applyment_update</code> as a field.
+	 * Get <code>ss1604c195_rd2.fn_recruit_applyment_update</code> as a field.
 	 */
 	public static Field<Object> fnRecruitApplymentUpdate() {
 		FnRecruitApplymentUpdate f = new FnRecruitApplymentUpdate();
@@ -71,7 +71,7 @@ public class Routines {
 	}
 
 	/**
-	 * Call <code>ss1604c195_rd4.fn_recruit_pool_insert</code>
+	 * Call <code>ss1604c195_rd2.fn_recruit_pool_insert</code>
 	 */
 	public static Object fnRecruitPoolInsert(Configuration configuration) {
 		FnRecruitPoolInsert f = new FnRecruitPoolInsert();
@@ -81,7 +81,7 @@ public class Routines {
 	}
 
 	/**
-	 * Get <code>ss1604c195_rd4.fn_recruit_pool_insert</code> as a field.
+	 * Get <code>ss1604c195_rd2.fn_recruit_pool_insert</code> as a field.
 	 */
 	public static Field<Object> fnRecruitPoolInsert() {
 		FnRecruitPoolInsert f = new FnRecruitPoolInsert();
@@ -90,7 +90,7 @@ public class Routines {
 	}
 
 	/**
-	 * Call <code>ss1604c195_rd4.fn_recruit_pool_update</code>
+	 * Call <code>ss1604c195_rd2.fn_recruit_pool_update</code>
 	 */
 	public static Object fnRecruitPoolUpdate(Configuration configuration) {
 		FnRecruitPoolUpdate f = new FnRecruitPoolUpdate();
@@ -100,7 +100,7 @@ public class Routines {
 	}
 
 	/**
-	 * Get <code>ss1604c195_rd4.fn_recruit_pool_update</code> as a field.
+	 * Get <code>ss1604c195_rd2.fn_recruit_pool_update</code> as a field.
 	 */
 	public static Field<Object> fnRecruitPoolUpdate() {
 		FnRecruitPoolUpdate f = new FnRecruitPoolUpdate();
@@ -109,7 +109,7 @@ public class Routines {
 	}
 
 	/**
-	 * Call <code>ss1604c195_rd4.fn_recruit_position_insert</code>
+	 * Call <code>ss1604c195_rd2.fn_recruit_position_insert</code>
 	 */
 	public static Object fnRecruitPositionInsert(Configuration configuration) {
 		FnRecruitPositionInsert f = new FnRecruitPositionInsert();
@@ -119,7 +119,7 @@ public class Routines {
 	}
 
 	/**
-	 * Get <code>ss1604c195_rd4.fn_recruit_position_insert</code> as a field.
+	 * Get <code>ss1604c195_rd2.fn_recruit_position_insert</code> as a field.
 	 */
 	public static Field<Object> fnRecruitPositionInsert() {
 		FnRecruitPositionInsert f = new FnRecruitPositionInsert();
@@ -128,7 +128,7 @@ public class Routines {
 	}
 
 	/**
-	 * Call <code>ss1604c195_rd4.fn_recruit_position_update</code>
+	 * Call <code>ss1604c195_rd2.fn_recruit_position_update</code>
 	 */
 	public static Object fnRecruitPositionUpdate(Configuration configuration) {
 		FnRecruitPositionUpdate f = new FnRecruitPositionUpdate();
@@ -138,7 +138,7 @@ public class Routines {
 	}
 
 	/**
-	 * Get <code>ss1604c195_rd4.fn_recruit_position_update</code> as a field.
+	 * Get <code>ss1604c195_rd2.fn_recruit_position_update</code> as a field.
 	 */
 	public static Field<Object> fnRecruitPositionUpdate() {
 		FnRecruitPositionUpdate f = new FnRecruitPositionUpdate();
@@ -147,7 +147,7 @@ public class Routines {
 	}
 
 	/**
-	 * Call <code>ss1604c195_rd4.fn_staffing_change_insert</code>
+	 * Call <code>ss1604c195_rd2.fn_staffing_change_insert</code>
 	 */
 	public static Object fnStaffingChangeInsert(Configuration configuration) {
 		FnStaffingChangeInsert f = new FnStaffingChangeInsert();
@@ -157,7 +157,7 @@ public class Routines {
 	}
 
 	/**
-	 * Get <code>ss1604c195_rd4.fn_staffing_change_insert</code> as a field.
+	 * Get <code>ss1604c195_rd2.fn_staffing_change_insert</code> as a field.
 	 */
 	public static Field<Object> fnStaffingChangeInsert() {
 		FnStaffingChangeInsert f = new FnStaffingChangeInsert();
@@ -166,7 +166,7 @@ public class Routines {
 	}
 
 	/**
-	 * Call <code>ss1604c195_rd4.fn_staffing_change_update</code>
+	 * Call <code>ss1604c195_rd2.fn_staffing_change_update</code>
 	 */
 	public static Object fnStaffingChangeUpdate(Configuration configuration) {
 		FnStaffingChangeUpdate f = new FnStaffingChangeUpdate();
@@ -176,7 +176,7 @@ public class Routines {
 	}
 
 	/**
-	 * Get <code>ss1604c195_rd4.fn_staffing_change_update</code> as a field.
+	 * Get <code>ss1604c195_rd2.fn_staffing_change_update</code> as a field.
 	 */
 	public static Field<Object> fnStaffingChangeUpdate() {
 		FnStaffingChangeUpdate f = new FnStaffingChangeUpdate();

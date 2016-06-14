@@ -26,7 +26,7 @@ public class DataTests
 	}
 	
 //	@Test
-	public void generate()  {
+	public void generate(){
 		dsl.execute(reset);
 		dsl.execute(data);
 	}

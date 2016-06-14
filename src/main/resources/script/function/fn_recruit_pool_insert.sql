@@ -2,7 +2,7 @@ CREATE OR REPLACE FUNCTION fn_recruit_pool_insert()
 RETURNS trigger AS  
 $$  
 BEGIN  
-    INSERT INTO ss1604c195_rd4.recruit_pool_log(
+    INSERT INTO ss1604c195_rd2.recruit_pool_log(
             poolid, positionid, realnumber, apply_due, apply_start, poster_url, 
             createdby, updatedby, createdat, updatedat,isvalid)
     VALUES (new.poolid, new.positionid, new.realnumber, new.apply_due, new.apply_start, new.poster_url, 

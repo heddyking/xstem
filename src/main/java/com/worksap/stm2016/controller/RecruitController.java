@@ -471,8 +471,8 @@ public class RecruitController {
 	//http://localhost/hr/arrangeInterviewEmail
 	@RequestMapping("/hr/arrangeInterviewEmail")
 	public int arrangeInterviewEmail(Integer applymentid,String starttime, String endtime,
-			String location,String contact_person, String contact_phone,String replenish,String mgEmail, String steEmail, Boolean mgSend, 
-			String steName,Boolean steGender,String steTelephone,String resume, Boolean steSend){
+			String location,String contact_person, String contact_phone,String replenish,String mgEmail, String steEmail, 
+			Boolean mgSend, Boolean steSend, String steName,Boolean steGender,String steTelephone,String resume){
 		logger.info(HttpUtil.url(((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest()));
 
 		UserInfo userinfo=(UserInfo)SecurityContextHolder.getContext().getAuthentication().getPrincipal();

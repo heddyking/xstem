@@ -27,507 +27,507 @@ import org.jooq.impl.TableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViRecruitInterviewReminderRecord extends TableRecordImpl<ViRecruitInterviewReminderRecord> {
 
-	private static final long serialVersionUID = -24155708;
+	private static final long serialVersionUID = -700082620;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.interviewid</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.interviewid</code>.
 	 */
 	public void setInterviewid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.interviewid</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.interviewid</code>.
 	 */
 	public Integer getInterviewid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.endtime</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.endtime</code>.
 	 */
 	public void setEndtime(Timestamp value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.endtime</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.endtime</code>.
 	 */
 	public Timestamp getEndtime() {
 		return (Timestamp) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.location</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.location</code>.
 	 */
 	public void setLocation(String value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.location</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.location</code>.
 	 */
 	public String getLocation() {
 		return (String) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.contact_person</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.contact_person</code>.
 	 */
 	public void setContactPerson(String value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.contact_person</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.contact_person</code>.
 	 */
 	public String getContactPerson() {
 		return (String) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.contact_phone</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.contact_phone</code>.
 	 */
 	public void setContactPhone(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.contact_phone</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.contact_phone</code>.
 	 */
 	public String getContactPhone() {
 		return (String) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.replenish</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.replenish</code>.
 	 */
 	public void setReplenish(String value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.replenish</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.replenish</code>.
 	 */
 	public String getReplenish() {
 		return (String) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.applymentid</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.applymentid</code>.
 	 */
 	public void setApplymentid(Integer value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.applymentid</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.applymentid</code>.
 	 */
 	public Integer getApplymentid() {
 		return (Integer) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.starttime</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.starttime</code>.
 	 */
 	public void setStarttime(Timestamp value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.starttime</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.starttime</code>.
 	 */
 	public Timestamp getStarttime() {
 		return (Timestamp) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.state</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.state</code>.
 	 */
 	public void setState(Integer value) {
 		setValue(8, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.state</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.state</code>.
 	 */
 	public Integer getState() {
 		return (Integer) getValue(8);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.createdat</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.createdat</code>.
 	 */
 	public void setCreatedat(Timestamp value) {
 		setValue(9, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.createdat</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.createdat</code>.
 	 */
 	public Timestamp getCreatedat() {
 		return (Timestamp) getValue(9);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.updatedat</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.updatedat</code>.
 	 */
 	public void setUpdatedat(Timestamp value) {
 		setValue(10, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.updatedat</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.updatedat</code>.
 	 */
 	public Timestamp getUpdatedat() {
 		return (Timestamp) getValue(10);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.updatedby</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.updatedby</code>.
 	 */
 	public void setUpdatedby(Integer value) {
 		setValue(11, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.updatedby</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.updatedby</code>.
 	 */
 	public Integer getUpdatedby() {
 		return (Integer) getValue(11);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.positionname</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.positionname</code>.
 	 */
 	public void setPositionname(String value) {
 		setValue(12, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.positionname</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.positionname</code>.
 	 */
 	public String getPositionname() {
 		return (String) getValue(12);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.number</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.number</code>.
 	 */
 	public void setNumber(Integer value) {
 		setValue(13, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.number</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.number</code>.
 	 */
 	public Integer getNumber() {
 		return (Integer) getValue(13);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.location_req</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.location_req</code>.
 	 */
 	public void setLocationReq(String value) {
 		setValue(14, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.location_req</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.location_req</code>.
 	 */
 	public String getLocationReq() {
 		return (String) getValue(14);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.date_req</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.date_req</code>.
 	 */
 	public void setDateReq(Date value) {
 		setValue(15, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.date_req</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.date_req</code>.
 	 */
 	public Date getDateReq() {
 		return (Date) getValue(15);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.duration_req</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.duration_req</code>.
 	 */
 	public void setDurationReq(Integer value) {
 		setValue(16, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.duration_req</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.duration_req</code>.
 	 */
 	public Integer getDurationReq() {
 		return (Integer) getValue(16);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req1</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req1</code>.
 	 */
 	public void setSkillReq1(String value) {
 		setValue(17, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req1</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req1</code>.
 	 */
 	public String getSkillReq1() {
 		return (String) getValue(17);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req2</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req2</code>.
 	 */
 	public void setSkillReq2(String value) {
 		setValue(18, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req2</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req2</code>.
 	 */
 	public String getSkillReq2() {
 		return (String) getValue(18);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req3</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req3</code>.
 	 */
 	public void setSkillReq3(String value) {
 		setValue(19, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req3</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req3</code>.
 	 */
 	public String getSkillReq3() {
 		return (String) getValue(19);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req4</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req4</code>.
 	 */
 	public void setSkillReq4(String value) {
 		setValue(20, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req4</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req4</code>.
 	 */
 	public String getSkillReq4() {
 		return (String) getValue(20);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req5</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req5</code>.
 	 */
 	public void setSkillReq5(String value) {
 		setValue(21, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skill_req5</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skill_req5</code>.
 	 */
 	public String getSkillReq5() {
 		return (String) getValue(21);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.description</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.description</code>.
 	 */
 	public void setDescription(String value) {
 		setValue(22, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.description</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.description</code>.
 	 */
 	public String getDescription() {
 		return (String) getValue(22);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.departmentid</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.departmentid</code>.
 	 */
 	public void setDepartmentid(Integer value) {
 		setValue(23, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.departmentid</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.departmentid</code>.
 	 */
 	public Integer getDepartmentid() {
 		return (Integer) getValue(23);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.departmentname</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.departmentname</code>.
 	 */
 	public void setDepartmentname(String value) {
 		setValue(24, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.departmentname</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.departmentname</code>.
 	 */
 	public String getDepartmentname() {
 		return (String) getValue(24);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.parent_departmentid</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.parent_departmentid</code>.
 	 */
 	public void setParentDepartmentid(Integer value) {
 		setValue(25, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.parent_departmentid</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.parent_departmentid</code>.
 	 */
 	public Integer getParentDepartmentid() {
 		return (Integer) getValue(25);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.name</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.name</code>.
 	 */
 	public void setName(String value) {
 		setValue(26, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.name</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.name</code>.
 	 */
 	public String getName() {
 		return (String) getValue(26);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.birthday</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.birthday</code>.
 	 */
 	public void setBirthday(Date value) {
 		setValue(27, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.birthday</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.birthday</code>.
 	 */
 	public Date getBirthday() {
 		return (Date) getValue(27);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.gender</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.gender</code>.
 	 */
 	public void setGender(Boolean value) {
 		setValue(28, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.gender</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.gender</code>.
 	 */
 	public Boolean getGender() {
 		return (Boolean) getValue(28);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.email</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.email</code>.
 	 */
 	public void setEmail(String value) {
 		setValue(29, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.email</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.email</code>.
 	 */
 	public String getEmail() {
 		return (String) getValue(29);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.email_self</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.email_self</code>.
 	 */
 	public void setEmailSelf(String value) {
 		setValue(30, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.email_self</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.email_self</code>.
 	 */
 	public String getEmailSelf() {
 		return (String) getValue(30);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.phone</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.phone</code>.
 	 */
 	public void setPhone(String value) {
 		setValue(31, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.phone</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.phone</code>.
 	 */
 	public String getPhone() {
 		return (String) getValue(31);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.telephone</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.telephone</code>.
 	 */
 	public void setTelephone(String value) {
 		setValue(32, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.telephone</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.telephone</code>.
 	 */
 	public String getTelephone() {
 		return (String) getValue(32);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skills</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skills</code>.
 	 */
 	public void setSkills(String value) {
 		setValue(33, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.skills</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.skills</code>.
 	 */
 	public String getSkills() {
 		return (String) getValue(33);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.experiences</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.experiences</code>.
 	 */
 	public void setExperiences(String value) {
 		setValue(34, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.experiences</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.experiences</code>.
 	 */
 	public String getExperiences() {
 		return (String) getValue(34);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.resume_url</code>.
+	 * Setter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.resume_url</code>.
 	 */
 	public void setResumeUrl(String value) {
 		setValue(35, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.vi_recruit_interview_reminder.resume_url</code>.
+	 * Getter for <code>ss1604c195_rd2.vi_recruit_interview_reminder.resume_url</code>.
 	 */
 	public String getResumeUrl() {
 		return (String) getValue(35);

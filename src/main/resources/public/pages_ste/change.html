@@ -616,8 +616,11 @@ desired effect
 
 <script>
   $(function(){
+	  notify.getNotifySTE(true);
+	  setInterval(function(){
 		 notify.getNotifySTE(true);
-		 
+	  },3000);
+	  
     $('#date_ext').datepicker({
       format: 'yyyy-mm-dd',
       autoclose: true

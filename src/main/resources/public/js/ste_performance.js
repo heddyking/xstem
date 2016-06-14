@@ -85,7 +85,7 @@ function addPerformance(){
 	if(!dateFormatCheck(from)){alert("From Date wrong format");return;}
 	if(!dateFormatCheck(to)){alert("To Date wrong format");return;}
 	if(!hours || hours==0){alert("Please select Hours!"); return;}
-	if(!integerFormatCheck(hours)||hours<0||hours>24) {alert("Hours wrong format"); return;}
+	if(!integerFormatCheck(hours)||hours<0||hours>50) {alert("Hours wrong format"); return;}
 	if(!description) {alert("Please input some description");return;}
 	if(description.length>64){alert("Description is too long");return;}
 	

@@ -30,80 +30,80 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SnsTimelineRecord extends UpdatableRecordImpl<SnsTimelineRecord> implements Record6<Integer, Integer, Integer, Timestamp, String, Integer> {
 
-	private static final long serialVersionUID = -64657035;
+	private static final long serialVersionUID = 1548780421;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_timeline.timelineid</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_timeline.timelineid</code>.
 	 */
 	public void setTimelineid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_timeline.timelineid</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_timeline.timelineid</code>.
 	 */
 	public Integer getTimelineid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_timeline.refid</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_timeline.refid</code>.
 	 */
 	public void setRefid(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_timeline.refid</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_timeline.refid</code>.
 	 */
 	public Integer getRefid() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_timeline.refrole</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_timeline.refrole</code>.
 	 */
 	public void setRefrole(Integer value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_timeline.refrole</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_timeline.refrole</code>.
 	 */
 	public Integer getRefrole() {
 		return (Integer) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_timeline.time</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_timeline.time</code>.
 	 */
 	public void setTime(Timestamp value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_timeline.time</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_timeline.time</code>.
 	 */
 	public Timestamp getTime() {
 		return (Timestamp) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_timeline.content</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_timeline.content</code>.
 	 */
 	public void setContent(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_timeline.content</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_timeline.content</code>.
 	 */
 	public String getContent() {
 		return (String) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_timeline.status</code>. 0-sending
+	 * Setter for <code>ss1604c195_rd2.sns_timeline.status</code>. 0-sending
 1-displaying
 2-deleted
 	 */
@@ -112,7 +112,7 @@ public class SnsTimelineRecord extends UpdatableRecordImpl<SnsTimelineRecord> im
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_timeline.status</code>. 0-sending
+	 * Getter for <code>ss1604c195_rd2.sns_timeline.status</code>. 0-sending
 1-displaying
 2-deleted
 	 */

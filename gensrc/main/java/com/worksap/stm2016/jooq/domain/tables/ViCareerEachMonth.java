@@ -4,7 +4,7 @@
 package com.worksap.stm2016.jooq.domain.tables;
 
 
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.ViCareerEachMonthRecord;
 
 import javax.annotation.Generated;
@@ -28,10 +28,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class ViCareerEachMonth extends TableImpl<ViCareerEachMonthRecord> {
 
-	private static final long serialVersionUID = 657892399;
+	private static final long serialVersionUID = -441070811;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.vi_career_each_month</code>
+	 * The reference instance of <code>ss1604c195_rd2.vi_career_each_month</code>
 	 */
 	public static final ViCareerEachMonth VI_CAREER_EACH_MONTH = new ViCareerEachMonth();
 
@@ -44,69 +44,69 @@ public class ViCareerEachMonth extends TableImpl<ViCareerEachMonthRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.steid</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.steid</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, Integer> STEID = createField("steid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.name</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.name</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.positionid</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.positionid</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, Integer> POSITIONID = createField("positionid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.departmentid</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.departmentid</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, Integer> DEPARTMENTID = createField("departmentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.positionname</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.positionname</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, String> POSITIONNAME = createField("positionname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.departmentname</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.departmentname</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, String> DEPARTMENTNAME = createField("departmentname", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.attendancenums</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.attendancenums</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, Long> ATTENDANCENUMS = createField("attendancenums", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.attendancehours</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.attendancehours</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, Long> ATTENDANCEHOURS = createField("attendancehours", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.performancenums</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.performancenums</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, Long> PERFORMANCENUMS = createField("performancenums", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.performancehours</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.performancehours</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, Long> PERFORMANCEHOURS = createField("performancehours", org.jooq.impl.SQLDataType.BIGINT, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.vi_career_each_month.month</code>.
+	 * The column <code>ss1604c195_rd2.vi_career_each_month.month</code>.
 	 */
 	public final TableField<ViCareerEachMonthRecord, String> MONTH = createField("month", org.jooq.impl.SQLDataType.CLOB, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.vi_career_each_month</code> table reference
+	 * Create a <code>ss1604c195_rd2.vi_career_each_month</code> table reference
 	 */
 	public ViCareerEachMonth() {
 		this("vi_career_each_month", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.vi_career_each_month</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.vi_career_each_month</code> table reference
 	 */
 	public ViCareerEachMonth(String alias) {
 		this(alias, VI_CAREER_EACH_MONTH);
@@ -117,7 +117,7 @@ public class ViCareerEachMonth extends TableImpl<ViCareerEachMonthRecord> {
 	}
 
 	private ViCareerEachMonth(String alias, Table<ViCareerEachMonthRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

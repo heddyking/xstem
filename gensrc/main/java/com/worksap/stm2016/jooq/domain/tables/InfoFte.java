@@ -5,7 +5,7 @@ package com.worksap.stm2016.jooq.domain.tables;
 
 
 import com.worksap.stm2016.jooq.domain.Keys;
-import com.worksap.stm2016.jooq.domain.Ss1604c195Rd4;
+import com.worksap.stm2016.jooq.domain.Ss1604c195Rd2;
 import com.worksap.stm2016.jooq.domain.tables.records.InfoFteRecord;
 
 import java.sql.Date;
@@ -35,10 +35,10 @@ import org.jooq.impl.TableImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoFte extends TableImpl<InfoFteRecord> {
 
-	private static final long serialVersionUID = -1210410404;
+	private static final long serialVersionUID = 435876058;
 
 	/**
-	 * The reference instance of <code>ss1604c195_rd4.info_fte</code>
+	 * The reference instance of <code>ss1604c195_rd2.info_fte</code>
 	 */
 	public static final InfoFte INFO_FTE = new InfoFte();
 
@@ -51,47 +51,47 @@ public class InfoFte extends TableImpl<InfoFteRecord> {
 	}
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.fteid</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.fteid</code>.
 	 */
 	public final TableField<InfoFteRecord, Integer> FTEID = createField("fteid", org.jooq.impl.SQLDataType.INTEGER.nullable(false).defaulted(true), this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.name</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.name</code>.
 	 */
 	public final TableField<InfoFteRecord, String> NAME = createField("name", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.email</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.email</code>.
 	 */
 	public final TableField<InfoFteRecord, String> EMAIL = createField("email", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.gender</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.gender</code>.
 	 */
 	public final TableField<InfoFteRecord, Boolean> GENDER = createField("gender", org.jooq.impl.SQLDataType.BOOLEAN, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.telephone</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.telephone</code>.
 	 */
 	public final TableField<InfoFteRecord, String> TELEPHONE = createField("telephone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.departmentid</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.departmentid</code>.
 	 */
 	public final TableField<InfoFteRecord, Integer> DEPARTMENTID = createField("departmentid", org.jooq.impl.SQLDataType.INTEGER, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.birthday</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.birthday</code>.
 	 */
 	public final TableField<InfoFteRecord, Date> BIRTHDAY = createField("birthday", org.jooq.impl.SQLDataType.DATE, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.location</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.location</code>.
 	 */
 	public final TableField<InfoFteRecord, String> LOCATION = createField("location", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.role</code>. 0-admin
+	 * The column <code>ss1604c195_rd2.info_fte.role</code>. 0-admin
 1-hrm
 2-hr
 3-mg
@@ -100,24 +100,24 @@ public class InfoFte extends TableImpl<InfoFteRecord> {
 	public final TableField<InfoFteRecord, Integer> ROLE = createField("role", org.jooq.impl.SQLDataType.INTEGER, this, "0-admin\r\n1-hrm\r\n2-hr\r\n3-mg\r\n4-other");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.email_self</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.email_self</code>.
 	 */
 	public final TableField<InfoFteRecord, String> EMAIL_SELF = createField("email_self", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * The column <code>ss1604c195_rd4.info_fte.phone</code>.
+	 * The column <code>ss1604c195_rd2.info_fte.phone</code>.
 	 */
 	public final TableField<InfoFteRecord, String> PHONE = createField("phone", org.jooq.impl.SQLDataType.VARCHAR, this, "");
 
 	/**
-	 * Create a <code>ss1604c195_rd4.info_fte</code> table reference
+	 * Create a <code>ss1604c195_rd2.info_fte</code> table reference
 	 */
 	public InfoFte() {
 		this("info_fte", null);
 	}
 
 	/**
-	 * Create an aliased <code>ss1604c195_rd4.info_fte</code> table reference
+	 * Create an aliased <code>ss1604c195_rd2.info_fte</code> table reference
 	 */
 	public InfoFte(String alias) {
 		this(alias, INFO_FTE);
@@ -128,7 +128,7 @@ public class InfoFte extends TableImpl<InfoFteRecord> {
 	}
 
 	private InfoFte(String alias, Table<InfoFteRecord> aliased, Field<?>[] parameters) {
-		super(alias, Ss1604c195Rd4.SS1604C195_RD4, aliased, parameters, "");
+		super(alias, Ss1604c195Rd2.SS1604C195_RD2, aliased, parameters, "");
 	}
 
 	/**

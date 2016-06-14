@@ -30,122 +30,122 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class InfoFteRecord extends UpdatableRecordImpl<InfoFteRecord> implements Record11<Integer, String, String, Boolean, String, Integer, Date, String, Integer, String, String> {
 
-	private static final long serialVersionUID = 1759767125;
+	private static final long serialVersionUID = 1507412373;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.fteid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.fteid</code>.
 	 */
 	public void setFteid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.fteid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.fteid</code>.
 	 */
 	public Integer getFteid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.name</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.name</code>.
 	 */
 	public void setName(String value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.name</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.name</code>.
 	 */
 	public String getName() {
 		return (String) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.email</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.email</code>.
 	 */
 	public void setEmail(String value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.email</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.email</code>.
 	 */
 	public String getEmail() {
 		return (String) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.gender</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.gender</code>.
 	 */
 	public void setGender(Boolean value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.gender</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.gender</code>.
 	 */
 	public Boolean getGender() {
 		return (Boolean) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.telephone</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.telephone</code>.
 	 */
 	public void setTelephone(String value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.telephone</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.telephone</code>.
 	 */
 	public String getTelephone() {
 		return (String) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.departmentid</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.departmentid</code>.
 	 */
 	public void setDepartmentid(Integer value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.departmentid</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.departmentid</code>.
 	 */
 	public Integer getDepartmentid() {
 		return (Integer) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.birthday</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.birthday</code>.
 	 */
 	public void setBirthday(Date value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.birthday</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.birthday</code>.
 	 */
 	public Date getBirthday() {
 		return (Date) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.location</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.location</code>.
 	 */
 	public void setLocation(String value) {
 		setValue(7, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.location</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.location</code>.
 	 */
 	public String getLocation() {
 		return (String) getValue(7);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.role</code>. 0-admin
+	 * Setter for <code>ss1604c195_rd2.info_fte.role</code>. 0-admin
 1-hrm
 2-hr
 3-mg
@@ -156,7 +156,7 @@ public class InfoFteRecord extends UpdatableRecordImpl<InfoFteRecord> implements
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.role</code>. 0-admin
+	 * Getter for <code>ss1604c195_rd2.info_fte.role</code>. 0-admin
 1-hrm
 2-hr
 3-mg
@@ -167,28 +167,28 @@ public class InfoFteRecord extends UpdatableRecordImpl<InfoFteRecord> implements
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.email_self</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.email_self</code>.
 	 */
 	public void setEmailSelf(String value) {
 		setValue(9, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.email_self</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.email_self</code>.
 	 */
 	public String getEmailSelf() {
 		return (String) getValue(9);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.info_fte.phone</code>.
+	 * Setter for <code>ss1604c195_rd2.info_fte.phone</code>.
 	 */
 	public void setPhone(String value) {
 		setValue(10, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.info_fte.phone</code>.
+	 * Getter for <code>ss1604c195_rd2.info_fte.phone</code>.
 	 */
 	public String getPhone() {
 		return (String) getValue(10);

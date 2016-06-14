@@ -30,108 +30,108 @@ import org.jooq.impl.UpdatableRecordImpl;
 @SuppressWarnings({ "all", "unchecked", "rawtypes" })
 public class SnsMessageRecord extends UpdatableRecordImpl<SnsMessageRecord> implements Record8<Integer, Integer, Integer, Integer, Integer, String, Timestamp, Integer> {
 
-	private static final long serialVersionUID = 319056607;
+	private static final long serialVersionUID = 1643222947;
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_message.messageid</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_message.messageid</code>.
 	 */
 	public void setMessageid(Integer value) {
 		setValue(0, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_message.messageid</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_message.messageid</code>.
 	 */
 	public Integer getMessageid() {
 		return (Integer) getValue(0);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_message.sendfrom</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_message.sendfrom</code>.
 	 */
 	public void setSendfrom(Integer value) {
 		setValue(1, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_message.sendfrom</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_message.sendfrom</code>.
 	 */
 	public Integer getSendfrom() {
 		return (Integer) getValue(1);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_message.rolefrom</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_message.rolefrom</code>.
 	 */
 	public void setRolefrom(Integer value) {
 		setValue(2, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_message.rolefrom</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_message.rolefrom</code>.
 	 */
 	public Integer getRolefrom() {
 		return (Integer) getValue(2);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_message.sendto</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_message.sendto</code>.
 	 */
 	public void setSendto(Integer value) {
 		setValue(3, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_message.sendto</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_message.sendto</code>.
 	 */
 	public Integer getSendto() {
 		return (Integer) getValue(3);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_message.roleto</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_message.roleto</code>.
 	 */
 	public void setRoleto(Integer value) {
 		setValue(4, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_message.roleto</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_message.roleto</code>.
 	 */
 	public Integer getRoleto() {
 		return (Integer) getValue(4);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_message.message</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_message.message</code>.
 	 */
 	public void setMessage(String value) {
 		setValue(5, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_message.message</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_message.message</code>.
 	 */
 	public String getMessage() {
 		return (String) getValue(5);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_message.time</code>.
+	 * Setter for <code>ss1604c195_rd2.sns_message.time</code>.
 	 */
 	public void setTime(Timestamp value) {
 		setValue(6, value);
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_message.time</code>.
+	 * Getter for <code>ss1604c195_rd2.sns_message.time</code>.
 	 */
 	public Timestamp getTime() {
 		return (Timestamp) getValue(6);
 	}
 
 	/**
-	 * Setter for <code>ss1604c195_rd4.sns_message.status</code>. 0-sending
+	 * Setter for <code>ss1604c195_rd2.sns_message.status</code>. 0-sending
 1-sent
 2-withdraw
 	 */
@@ -140,7 +140,7 @@ public class SnsMessageRecord extends UpdatableRecordImpl<SnsMessageRecord> impl
 	}
 
 	/**
-	 * Getter for <code>ss1604c195_rd4.sns_message.status</code>. 0-sending
+	 * Getter for <code>ss1604c195_rd2.sns_message.status</code>. 0-sending
 1-sent
 2-withdraw
 	 */

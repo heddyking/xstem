@@ -630,6 +630,9 @@ desired effect
 <script>
   $(function(){
 	  notify.getNotifyHR(true);
+	  setInterval(function(){
+	  	notify.getNotifyHR(true);
+	  },3000);
 	  
       var table = $('#example').DataTable({
       "order": [[ 0, "desc" ]],

@@ -11,8 +11,8 @@ function ajax(url,type,data,cb,eb){
 				eb(msg);
 			}
 			else{
-				alert(JSON.stringify(msg)); 
-//				alert('System Error! Please Retry.');
+//				alert(JSON.stringify(msg)); 
+				alert('System Error! Please Retry.');
 			}
 			return;
 		},
